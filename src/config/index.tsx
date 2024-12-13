@@ -53,9 +53,9 @@ export interface AppConfig {
  */
 const config: AppConfig = {
   meta: {
-    title: 'Food HUB',
+    title: 'Satisfactory Tool',
     version: 'v0.0.1',
-    url: 'recipes.appelent.site',
+    url: 'satisfactory.appelent.nl',
     copyright: 'AppElent',
   },
   paths: {

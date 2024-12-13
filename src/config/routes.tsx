@@ -9,6 +9,18 @@ import DataSources from '@/pages/default/test/data-sources/index';
 import FileUploads from '@/pages/default/test/file-uploads';
 import Forms from '@/pages/default/test/forms';
 import Translations from '@/pages/default/test/translations';
+import Calculator from '@/pages/satisfactory/calculator';
+import Belts from '@/pages/satisfactory/codex/belts';
+import Buildables from '@/pages/satisfactory/codex/buildables';
+import Buildings from '@/pages/satisfactory/codex/buildings';
+import Generators from '@/pages/satisfactory/codex/generators';
+import Miners from '@/pages/satisfactory/codex/miners';
+import Products from '@/pages/satisfactory/codex/products';
+import Recipes from '@/pages/satisfactory/codex/recipes';
+import Resources from '@/pages/satisfactory/codex/resources';
+import Schematics from '@/pages/satisfactory/codex/schematics';
+import RawData from '@/pages/satisfactory/raw-data';
+import { Games } from '@mui/icons-material';
 import { CustomRouteObject, routes as routesImport } from './routing';
 
 const routeElements: { [key: string]: JSX.Element } = {
@@ -20,27 +32,20 @@ const routeElements: { [key: string]: JSX.Element } = {
     </PaperbaseLayout>
   ),
   homeIndex: <>Home</>,
-  // Recipe pages
-  // homeIndex: <HomePage />,
-  // recipesIndex: <RecipeOverviewPage />,
-  // myRecipes: <MyRecipeOverviewPage />,
-  // myRecipesIndex: <MyRecipeOverviewPage />,
-  // recipeDetails: <RecipeDetailsPage />,
-  // myRecipeDetails: <RecipeDetailsPage />,
   // Satisfactory pages
-  // satisfactoryIndex: <>TEST</>,
-  // products: <Products />,
-  // recipes: <Recipes />,
-  // rawData: <RawData />,
-  // generators: <Generators />,
-  // buildables: <Buildables />,
-  // buildings: <Buildings />,
-  // schematics: <Schematics />,
-  // belts: <Belts />,
-  // miners: <Miners />,
-  // resources: <Resources />,
-  // calculator: <Calculator />,
-  // games: <Games />,
+  satisfactoryIndex: <>TEST</>,
+  products: <Products />,
+  recipes: <Recipes />,
+  rawData: <RawData />,
+  generators: <Generators />,
+  buildables: <Buildables />,
+  buildings: <Buildings />,
+  schematics: <Schematics />,
+  belts: <Belts />,
+  miners: <Miners />,
+  resources: <Resources />,
+  calculator: <Calculator />,
+  games: <Games />,
   // Test pages
   testDataSources: <DataSources />,
   testFileUploads: <FileUploads />,
@@ -78,21 +83,5 @@ function generateRouteObjects(routes: CustomRouteObject[]): RouteObject[] {
 }
 
 const routes = generateRouteObjects(routesImport);
-
-// export const paths = getAllPaths(routes);
-// console.log(paths);
-
-// Function to create a flat list of all paths with custom properties
-// export function getAllPaths(routes: CustomRouteObject[], parentPath: string = ''): any[] {
-//   return routes.flatMap((route) => {
-//     const currentPath = route.path
-//       ? `${parentPath}/${route.path}`.replace(/\/+/g, '/')
-//       : parentPath;
-//     const { children, ...routeInfo } = route;
-//     const currentRoute = { ...routeInfo, to: currentPath };
-//     const childrenPaths = children ? getAllPaths(children, currentPath) : [];
-//     return [currentRoute, ...childrenPaths];
-//   });
-// }
 
 export default routes;

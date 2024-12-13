@@ -17,15 +17,19 @@ interface MenuCategory {
   id: string;
   label: string;
   translationKey?: string;
+  collapsed?: boolean;
   showInMenu?: boolean | (() => boolean);
 }
 
 const menuCategories: MenuCategory[] = [
-  // {
-  //   id: 'recipes',
-  //   label: 'Recipes',
-  //   translationKey: 'foodhub:menu.recipes',
-  // },
+  {
+    id: 'codex',
+    label: 'Codex',
+  },
+  {
+    id: 'gameplay',
+    label: 'Gameplay',
+  },
   {
     id: 'settings',
     label: 'Settings',
@@ -34,12 +38,9 @@ const menuCategories: MenuCategory[] = [
   {
     id: 'test',
     label: 'Test pages',
+    collapsed: true,
     showInMenu: debug,
   },
-  // {
-  //   id: 'satisfactory',
-  //   label: 'Satisfactory',
-  // },
 ];
 
 export const getPath = (id: string) => paths.find((path) => path.id === id);
@@ -58,6 +59,7 @@ const generateMenu = () => {
         id: category.id,
         label: category.label,
         translationKey: category.translationKey,
+        collapsed: category.collapsed,
         children: items.map((item) => ({
           id: item.id,
           label: item.label,
