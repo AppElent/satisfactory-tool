@@ -123,3 +123,23 @@ Default dependencies:
   }
 
 ```
+
+## Actions after starting template:
+
+- Change title on HTML page
+- Change package.json properties
+- Change config folder
+  Firebase configuration:
+
+```
+firebase init
+# hosting
+# public dir: dist
+
+# create sites if needed
+firebase hosting:sites:list
+firebase hosting:sites:create appelent-stg
+# Add targets
+firebase target:apply hosting stg appelent-stg
+firebase target:apply hosting prd appelent
+```
