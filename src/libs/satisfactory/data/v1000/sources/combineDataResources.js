@@ -14,10 +14,10 @@ const isFuel = (item) => item.energyValue > 0;
 const getTier = (item) => {
   const searchKey = item.liquid ? 'fluids' : 'items';
   const foundSimpleItem = simple[searchKey].find((i) => i.name === item.name);
-  return foundSimpleItem ? foundSimpleItem.tier : 999;
+  return foundSimpleItem ? (foundSimpleItem.tier === -1 ? 0 : foundSimpleItem.tier) : 999;
 };
 const getRating = (recipe) => {
-  const foundRating = ratings.find((r) => r.name === recipe.name);
+  const foundRating = ratings.find((r) => r.name === recipe.name.replace('Alternate: ', ''));
   return foundRating;
 };
 
