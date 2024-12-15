@@ -19,8 +19,8 @@ export default class Node implements NodeInterface {
   public type: NodeType;
   public item: string;
   public amount: number;
-  public grossAmount: number = 0;
-  public usedAmount: number | { [key: string]: number } = 0; // USEDAMOUNT has to be object with keys because recipe can have multiple outputs
+  public grossAmount: { [key: string]: number } = {};
+  public usedAmount: { [key: string]: number } = {};
 
   constructor(
     node: {
@@ -42,9 +42,29 @@ export default class Node implements NodeInterface {
           this.usedAmount[product.item] = 0;
         }
       }
+    } else {
+      this.usedAmount = {
+        [node.item]: 0,
+      };
     }
-    this.grossAmount =
-      node.type === 'recipe' ? this.amount * (this.getRecipe()?.cyclesMin || 0) : node.amount;
+    if (node.type === 'recipe') {
+      const recipe = this.getRecipe();
+      if (recipe) {
+        for (const product of recipe.products) {
+          this.grossAmount[product.item] = product.amountMin * this.amount;
+        }
+      }
+    } else {
+      this.grossAmount = {
+        [node.item]: this.amount,
+      };
+    }
+    // this.grossAmount =
+    //   node.type === 'recipe'
+    //     ? this.amount * (this.getRecipe()?.cyclesMin || 0)
+    //     : {
+    //         [node.item]: this.amount,
+    //       };
   }
 
   getInputs = (): ItemAmount[] => {
@@ -57,7 +77,7 @@ export default class Node implements NodeInterface {
         this.getRecipe()?.ingredients.map((i) => {
           return {
             item: i.item,
-            amount: i.amountMin * this.amount,
+            amount: Math.round(i.amountMin * this.amount * 1000) / 1000,
           };
         }) || []
       );
@@ -101,17 +121,21 @@ export default class Node implements NodeInterface {
     return this.type === 'recipe' ? this.calculator.data.getRecipe(this.item) : undefined;
   };
 
-  useAmount = (amount: number) => {
+  useAmount = (item: string, amount: number) => {
+    console.log('amount', amount);
     // Check usedAmount against amount and return the amount that can be used
     // Also account for overflow
     // TODO: add item to params and add to usedAmount
-    if (this.usedAmount + amount > this.grossAmount) {
-      const remaining = this.grossAmount - this.usedAmount;
-      this.usedAmount = this.grossAmount;
+    const usedAmount = this.usedAmount[item];
+    const grossAmount = this.grossAmount[item];
+    console.log(usedAmount, grossAmount, this.grossAmount);
+    if (usedAmount + amount > grossAmount) {
+      const remaining = Math.round((grossAmount - usedAmount) * 1000) / 1000;
+      this.usedAmount[item] = grossAmount;
       // If remaining is negative, return 0
       return remaining < 0 ? 0 : remaining;
     } else {
-      this.usedAmount += amount;
+      this.usedAmount[item] += amount;
       return amount;
     }
   };

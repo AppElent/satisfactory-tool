@@ -1,6 +1,11 @@
-import { SatisfactoryMiner } from '..';
+import { SatisfactoryBaseItem } from '..';
 import BaseItem from './base-item';
-import SatisfactoryData from './satisfactory-data';
+import { SatisfactoryData } from './satisfactory-data';
+
+export interface SatisfactoryMiner extends SatisfactoryBaseItem {
+  allowedResources: string[];
+  extractionRate: number;
+}
 
 export default class Miner extends BaseItem implements SatisfactoryMiner {
   public allowedResources: string[];

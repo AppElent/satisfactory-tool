@@ -1,48 +1,25 @@
-// import buildableRecipes_v700 from './data/v700/buildableRecipes.json';
-// import buildables_v700 from './data/v700/buildables.json';
-// import items_v700 from './data/v700/items.json';
-// import productionRecipes_v700 from './data/v700/productionRecipes.json';
-// import resources_v700 from './data/v700/resources.json';
-// import schematics_v700 from './data/v700/schematics.json';
-// import tierList_v700 from './data/v700/tierList.json';
-// import buildableRecipes_v800 from './data/v800/buildableRecipes.json';
-// import buildables_v800 from './data/v800/buildables.json';
-// import items_v800 from './data/v800/items.json';
-// import productionRecipes_v800 from './data/v800/productionRecipes.json';
-// import resources_v800 from './data/v800/resources.json';
-// import schematics_v800 from './data/v800/schematics.json';
-// import buildableRecipes_v1000 from './data/v800/buildableRecipes.json';
-// import buildables_v1000 from './data/v800/buildables.json';
-// import items_v1000 from './data/v800/items.json';
-// import productionRecipes_v1000 from './data/v800/productionRecipes.json';
-// import resources_v1000 from './data/v800/resources.json';
-// import schematics_v1000 from './data/v800/schematics.json';
-
-// import data_v1000 from './data/v1000/data.json';
-// import SatisfactoryDataType from './SatisfactoryDataType';
-
-import {
-  SatisfactoryBelts,
-  SatisfactoryBuildable,
-  SatisfactoryBuildableRecipe,
-  SatisfactoryBuilding,
-  SatisfactoryGenerator,
-  SatisfactoryItem,
-  SatisfactoryMiner,
-  SatisfactoryRecipe,
-  SatisfactoryResource,
-  SatisfactorySchematic,
-} from '..';
+// import {
+//   SatisfactoryBelts,
+//   SatisfactoryBuildable,
+//   SatisfactoryBuildableRecipe,
+//   SatisfactoryBuilding,
+//   SatisfactoryGenerator,
+//   SatisfactoryItem,
+//   SatisfactoryMiner,
+//   SatisfactoryRecipe,
+//   SatisfactoryResource,
+//   SatisfactorySchematic,
+// } from '..';
 import BaseItem from './base-item';
-import Belt from './belt';
-import Buildable from './buildable';
-import Building from './building';
-import Generator from './generator';
-import Miner from './miner';
-import Product from './product';
-import Recipe from './recipe';
-import Resource from './resource';
-import Schematic from './schematic';
+import Belt, { SatisfactoryBelts } from './belt';
+import Buildable, { SatisfactoryBuildable } from './buildable';
+import Building, { SatisfactoryBuilding } from './building';
+import Generator, { SatisfactoryGenerator } from './generator';
+import Miner, { SatisfactoryMiner } from './miner';
+import Product, { SatisfactoryItem } from './product';
+import Recipe, { SatisfactoryBuildableRecipe, SatisfactoryRecipe } from './recipe';
+import Resource, { SatisfactoryResource } from './resource';
+import Schematic, { SatisfactorySchematic } from './schematic';
 import data_v1000 from './v1000/data.json';
 import data_v1000_F from './v1000_F/data.json';
 
@@ -88,6 +65,12 @@ const satisfactoryVersions = [
     key: 'v1000_F',
   },
 ];
+
+export interface SatisfactoryBaseItem {
+  className: string;
+  name: string;
+  slug: string;
+}
 
 export class SatisfactoryData {
   [key: string]: any;

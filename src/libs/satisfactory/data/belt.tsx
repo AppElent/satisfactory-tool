@@ -1,12 +1,10 @@
-import { SatisfactoryBelts } from '..';
+import { SatisfactoryBaseItem } from '..';
 import BaseItem from './base-item';
-import SatisfactoryData from './satisfactory-data';
+import { SatisfactoryData } from './satisfactory-data';
 
-// interface ProductClass extends BaseItem {
-//   liquid: boolean;
-//   stackSize: number;
-//   sinkPoints: number;
-// }
+export interface SatisfactoryBelts extends SatisfactoryBaseItem {
+  rate: number;
+}
 
 export default class Belt extends BaseItem implements SatisfactoryBelts {
   public rate: number;

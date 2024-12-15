@@ -2,7 +2,6 @@ import CalculatorClass from '@/libs/satisfactory/calculator';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import DefaultPage from '@/pages/default/DefaultPage';
 import { useEffect, useState } from 'react';
-import RecipeSelector from './_components/recipe-selector';
 
 const Calculator = () => {
   const calculator = new CalculatorClass(satisfactoryData);
@@ -29,7 +28,7 @@ const Calculator = () => {
       <br />
       {/* <JsonEditor data={result} /> */}
       {/* <pre>{JSON.stringify(result, null, 2)}</pre> */}
-      <RecipeSelector recipes={satisfactoryData.recipes} />
+      {/* <RecipeSelector recipes={satisfactoryData.recipes} /> */}
     </DefaultPage>
   );
 };

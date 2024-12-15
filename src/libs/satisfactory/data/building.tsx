@@ -1,12 +1,15 @@
-import { SatisfactoryBuilding } from '..';
+import { SatisfactoryBaseItem } from '..';
 import BaseItem from './base-item';
-import SatisfactoryData from './satisfactory-data';
+import { SatisfactoryData } from './satisfactory-data';
 
-// interface ProductClass extends BaseItem {
-//   liquid: boolean;
-//   stackSize: number;
-//   sinkPoints: number;
-// }
+export interface SatisfactoryBuilding extends SatisfactoryBaseItem {
+  description: string;
+  metadata: {
+    powerConsumption: number;
+    powerConsumptionExponent: number;
+    manufacturingSpeed: number;
+  };
+}
 
 export default class Building extends BaseItem implements SatisfactoryBuilding {
   public description: string;

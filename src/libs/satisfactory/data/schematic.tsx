@@ -1,12 +1,24 @@
-import { SatisfactorySchematic } from '..';
+import { SatisfactoryBaseItem } from '..';
 import BaseItem from './base-item';
-import SatisfactoryData from './satisfactory-data';
+import { SatisfactoryData } from './satisfactory-data';
 
-// interface ProductClass extends BaseItem {
-//   liquid: boolean;
-//   stackSize: number;
-//   sinkPoints: number;
-// }
+export interface SatisfactorySchematic extends SatisfactoryBaseItem {
+  type: string;
+  cost: {
+    item: string;
+    amount: number;
+  }[];
+  unlock: {
+    recipes: string[];
+    scannerResources: string[];
+    inventorySlots: number;
+    giveItems: { item: string; amount: number }[];
+  };
+  tier: number;
+  time: number;
+  mam: boolean;
+  alternate: boolean;
+}
 
 export default class Schematic extends BaseItem implements SatisfactorySchematic {
   public type: string;

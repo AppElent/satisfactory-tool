@@ -1,6 +1,17 @@
-import { SatisfactoryItem, SatisfactoryResource } from '..';
+import { SatisfactoryBaseItem } from '..';
 import BaseItem from './base-item';
-import SatisfactoryData from './satisfactory-data';
+import { SatisfactoryItem } from './product';
+import { SatisfactoryData } from './satisfactory-data';
+
+export interface SatisfactoryResource extends SatisfactoryBaseItem {
+  pingColor: {
+    r: number;
+    g: number;
+    b: number;
+    a: number;
+  };
+  max: number;
+}
 
 export default class Resource extends BaseItem implements SatisfactoryResource {
   public pingColor: {

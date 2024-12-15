@@ -1,6 +1,11 @@
-import { SatisfactoryGenerator } from '..';
+import { SatisfactoryBaseItem } from '..';
 import BaseItem from './base-item';
-import SatisfactoryData from './satisfactory-data';
+import { SatisfactoryData } from './satisfactory-data';
+
+export interface SatisfactoryGenerator extends SatisfactoryBaseItem {
+  fuel: string[];
+  powerProduction: number;
+}
 
 export default class Generator extends BaseItem implements SatisfactoryGenerator {
   public fuel: string[];

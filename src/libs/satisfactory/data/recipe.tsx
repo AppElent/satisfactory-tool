@@ -1,12 +1,35 @@
-import { SatisfactoryRecipe } from '..';
+import { SatisfactoryBaseItem } from '..';
 import BaseItem from './base-item';
 import { SatisfactoryData } from './satisfactory-data';
 
-// interface ProductClass extends BaseItem {
-//   liquid: boolean;
-//   stackSize: number;
-//   sinkPoints: number;
-// }
+export interface SatisfactoryRecipe extends SatisfactoryBaseItem {
+  alternate: boolean;
+  time: number;
+  inHand: boolean;
+  forBuilding: boolean;
+  inWorkshop: boolean;
+  inMachine: boolean;
+  manualTimeMultiplier: number;
+  ingredients: {
+    item: string;
+    amount: number;
+    name: string;
+    amountMin: number;
+  }[];
+  products: {
+    item: string;
+    amount: number;
+    name: string;
+    amountMin: number;
+  }[];
+  producedIn: string;
+  cyclesMin: number;
+  isVariablePower: boolean;
+  minPower: number;
+  maxPower: number;
+}
+
+export type SatisfactoryBuildableRecipe = Omit<SatisfactoryRecipe, 'producedIn'>;
 
 export default class Recipe extends BaseItem implements SatisfactoryRecipe {
   public alternate: boolean;

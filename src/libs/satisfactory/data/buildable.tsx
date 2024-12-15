@@ -1,6 +1,15 @@
-import { SatisfactoryBuildable } from '..';
+import { SatisfactoryBaseItem } from '..';
 import BaseItem from './base-item';
-import SatisfactoryData from './satisfactory-data';
+import { SatisfactoryData } from './satisfactory-data';
+
+export interface SatisfactoryBuildable extends SatisfactoryBaseItem {
+  description: string;
+  metadata: {
+    powerConsumption: number;
+    powerConsumptionExponent: number;
+    manufacturingSpeed: number;
+  };
+}
 
 export default class Buildable extends BaseItem implements SatisfactoryBuildable {
   public description: string;

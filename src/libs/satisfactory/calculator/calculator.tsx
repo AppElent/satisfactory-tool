@@ -22,9 +22,10 @@ export default class Calculator {
       console.log('INPUTS', node.id, inputs);
       for (const input of inputs) {
         let inputAmount = input.amount;
+        console.log('inputamount', input.amount);
         const products = nodes.filter((n) => n.item === input.item && n.id !== node.id);
         for (const product of products) {
-          const usedAmount = product?.useAmount(inputAmount) || 0;
+          const usedAmount = product?.useAmount(product.item, inputAmount) || 0;
           if (usedAmount > 0) {
             const edge = new Edge(
               { source: product.id, target: node.id, amount: usedAmount, item: input.item },
@@ -39,7 +40,8 @@ export default class Calculator {
         );
         for (const recipeNode of recipeNodes) {
           // TODO: deze useamount hier is niet goed
-          const usedAmount = recipeNode.useAmount(inputAmount);
+          const product = recipeNode.getRecipe()?.products.find((i) => i.item === input.item);
+          const usedAmount = recipeNode.useAmount(product?.item as string, inputAmount);
           console.log('RECIPE', node.item, recipeNode.id, usedAmount, inputAmount);
           if (usedAmount > 0) {
             const edge = new Edge(
