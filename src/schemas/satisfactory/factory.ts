@@ -15,3 +15,19 @@ export const factoryYupSchema = Yup.object().shape({
 });
 
 export type Factory = Yup.InferType<typeof factoryYupSchema>;
+
+export default class FactoryClass implements Factory {
+  id: string;
+  name: string;
+  description?: string;
+  calculator: any;
+  recipes?: any[];
+
+  constructor(factory: Factory) {
+    this.id = factory.id;
+    this.name = factory.name;
+    this.description = factory.description;
+    this.calculator = factory.calculator;
+    this.recipes = factory.recipes;
+  }
+}

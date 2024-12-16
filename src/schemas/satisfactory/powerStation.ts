@@ -12,3 +12,21 @@ export const powerStationYupSchema = Yup.object().shape({
 });
 
 export type PowerStation = Yup.InferType<typeof powerStationYupSchema>;
+
+export default class PowerStationClass implements PowerStation {
+  id: string;
+  name: string;
+  generators?: any[];
+
+  constructor(powerStation: PowerStation) {
+    this.id = powerStation.id;
+    this.name = powerStation.name;
+    this.generators = powerStation.generators;
+  }
+
+  getTotalPower = () => {
+    return this.generators?.reduce((acc, generator) => {
+      return acc + generator.amount;
+    }, 0);
+  };
+}
