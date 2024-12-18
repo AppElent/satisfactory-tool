@@ -3,6 +3,7 @@ import BaseItem from '@/libs/satisfactory/data/base-item';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import { Grid } from '@mui/material';
 import DefaultPage from '../../default/DefaultPage';
+import useRouter from '@/hooks/use-router';
 
 const Resources = () => {
   // const { data: filteredItems, ...filterOptions } = useFilter(data.resources, {
@@ -14,6 +15,7 @@ const Resources = () => {
   //   searchableFields: ['name'],
   //   debounceTime: 100,
   // });
+  const router = useRouter();
 
   return (
     <DefaultPage>
@@ -40,6 +42,9 @@ const Resources = () => {
               xs={6}
               sm={2}
               md={2}
+              onClick={() => {
+                router.push(`${item.className}`);
+              }}
             >
               <ItemCard item={item} />
             </Grid>

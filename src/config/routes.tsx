@@ -10,17 +10,28 @@ import FileUploads from '@/pages/default/test/file-uploads';
 import Forms from '@/pages/default/test/forms';
 import Translations from '@/pages/default/test/translations';
 import Calculator from '@/pages/satisfactory/calculator';
+import BeltsDetail from '@/pages/satisfactory/codex/belt-details';
 import Belts from '@/pages/satisfactory/codex/belts';
+import BuildableDetails from '@/pages/satisfactory/codex/buildable-details';
+import BuildableRecipeDetails from '@/pages/satisfactory/codex/buildable-recipe-details';
+import BuildableRecipes from '@/pages/satisfactory/codex/buildable-recipes';
 import Buildables from '@/pages/satisfactory/codex/buildables';
+import BuildingDetails from '@/pages/satisfactory/codex/building-details';
 import Buildings from '@/pages/satisfactory/codex/buildings';
+import GeneratorDetails from '@/pages/satisfactory/codex/generator-details';
 import Generators from '@/pages/satisfactory/codex/generators';
+import MinerDetails from '@/pages/satisfactory/codex/miner-details';
 import Miners from '@/pages/satisfactory/codex/miners';
+import ProductDetails from '@/pages/satisfactory/codex/product-details';
 import Products from '@/pages/satisfactory/codex/products';
+import RecipeDetails from '@/pages/satisfactory/codex/recipe-details';
 import Recipes from '@/pages/satisfactory/codex/recipes';
+import ResourceDetails from '@/pages/satisfactory/codex/resource-details';
 import Resources from '@/pages/satisfactory/codex/resources';
+import SchematicDetails from '@/pages/satisfactory/codex/schematic-details';
 import Schematics from '@/pages/satisfactory/codex/schematics';
+import Games from '@/pages/satisfactory/games';
 import RawData from '@/pages/satisfactory/raw-data';
-import { Games } from '@mui/icons-material';
 import { CustomRouteObject, routes as routesImport } from './routing';
 
 const routeElements: { [key: string]: JSX.Element } = {
@@ -34,16 +45,27 @@ const routeElements: { [key: string]: JSX.Element } = {
   homeIndex: <>Home</>,
   // Satisfactory pages
   satisfactoryIndex: <>TEST</>,
-  products: <Products />,
-  recipes: <Recipes />,
+  productsIndex: <Products />,
+  productDetails: <ProductDetails />,
+  recipesIndex: <Recipes />,
+  recipeDetails: <RecipeDetails />,
   rawData: <RawData />,
-  generators: <Generators />,
-  buildables: <Buildables />,
-  buildings: <Buildings />,
-  schematics: <Schematics />,
-  belts: <Belts />,
-  miners: <Miners />,
-  resources: <Resources />,
+  generatorsIndex: <Generators />,
+  generatorDetails: <GeneratorDetails />,
+  buildablesIndex: <Buildables />,
+  buildableDetails: <BuildableDetails />,
+  buildableRecipesIndex: <BuildableRecipes />,
+  buildableRecipeDetails: <BuildableRecipeDetails />,
+  buildingsIndex: <Buildings />,
+  buildingDetails: <BuildingDetails />,
+  schematicsIndex: <Schematics />,
+  schematicDetails: <SchematicDetails />,
+  beltsIndex: <Belts />,
+  beltDetails: <BeltsDetail />,
+  minersIndex: <Miners />,
+  minerDetails: <MinerDetails />,
+  resourcesIndex: <Resources />,
+  resourceDetails: <ResourceDetails />,
   calculator: <Calculator />,
   games: <Games />,
   // Test pages

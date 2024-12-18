@@ -3,7 +3,7 @@
     "default": "appelent-satisfactory"
   },
   "targets": {
-    "appelent-recipes": {
+    "appelent-satisfactory": {
       "hosting": {
         "stg": [
           "appelent-satisfactory-stg"

@@ -62,6 +62,19 @@ export const routes: CustomRouteObject[] = [
                 Icon: <BarChartIcon fontSize="inherit" />,
                 path: 'products',
                 category: 'codex',
+                element: <Outlet />,
+                children: [
+                  {
+                    id: 'productsIndex',
+                    index: true,
+                  },
+                  {
+                    id: 'productDetails',
+                    label: 'Product Details',
+                    Icon: <BarChartIcon fontSize="inherit" />,
+                    path: ':id',
+                  },
+                ],
               },
               {
                 id: 'recipes',
@@ -69,6 +82,19 @@ export const routes: CustomRouteObject[] = [
                 Icon: <BarChartIcon fontSize="inherit" />,
                 path: 'recipes',
                 category: 'codex',
+                element: <Outlet />,
+                children: [
+                  {
+                    id: 'recipesIndex',
+                    index: true,
+                  },
+                  {
+                    id: 'recipeDetails',
+                    label: 'Recipe Details',
+                    Icon: <BarChartIcon fontSize="inherit" />,
+                    path: ':id',
+                  },
+                ],
               },
               {
                 id: 'generators',
@@ -76,6 +102,19 @@ export const routes: CustomRouteObject[] = [
                 Icon: <BarChartIcon fontSize="inherit" />,
                 path: 'generators',
                 category: 'codex',
+                element: <Outlet />,
+                children: [
+                  {
+                    id: 'generatorsIndex',
+                    index: true,
+                  },
+                  {
+                    id: 'generatorDetails',
+                    label: 'Generator Details',
+                    Icon: <BarChartIcon fontSize="inherit" />,
+                    path: ':id',
+                  },
+                ],
               },
               {
                 id: 'buildables',
@@ -83,6 +122,38 @@ export const routes: CustomRouteObject[] = [
                 Icon: <BarChartIcon fontSize="inherit" />,
                 path: 'buildables',
                 category: 'codex',
+                element: <Outlet />,
+                children: [
+                  {
+                    id: 'buildablesIndex',
+                    index: true,
+                  },
+                  {
+                    id: 'buildableDetails',
+                    label: 'Buildable Details',
+                    Icon: <BarChartIcon fontSize="inherit" />,
+                    path: ':id',
+                  },
+                ],
+              },
+              {
+                id: 'buildableRecipes',
+                label: 'Buildable Recipes',
+                Icon: <BarChartIcon fontSize="inherit" />,
+                path: 'buildable-recipes',
+                element: <Outlet />,
+                children: [
+                  {
+                    id: 'buildableRecipesIndex',
+                    index: true,
+                  },
+                  {
+                    id: 'buildableRecipeDetails',
+                    label: 'Buildable Recipe Details',
+                    Icon: <BarChartIcon fontSize="inherit" />,
+                    path: ':id',
+                  },
+                ],
               },
               {
                 id: 'buildings',
@@ -90,6 +161,19 @@ export const routes: CustomRouteObject[] = [
                 Icon: <BarChartIcon fontSize="inherit" />,
                 path: 'buildings',
                 category: 'codex',
+                element: <Outlet />,
+                children: [
+                  {
+                    id: 'buildingsIndex',
+                    index: true,
+                  },
+                  {
+                    id: 'buildingDetails',
+                    label: 'Building Details',
+                    Icon: <BarChartIcon fontSize="inherit" />,
+                    path: ':id',
+                  },
+                ],
               },
               {
                 id: 'schematics',
@@ -97,6 +181,19 @@ export const routes: CustomRouteObject[] = [
                 Icon: <BarChartIcon fontSize="inherit" />,
                 path: 'schematics',
                 category: 'codex',
+                element: <Outlet />,
+                children: [
+                  {
+                    id: 'schematicsIndex',
+                    index: true,
+                  },
+                  {
+                    id: 'schematicDetails',
+                    label: 'Schematic Details',
+                    Icon: <BarChartIcon fontSize="inherit" />,
+                    path: ':id',
+                  },
+                ],
               },
               {
                 id: 'belts',
@@ -104,6 +201,19 @@ export const routes: CustomRouteObject[] = [
                 Icon: <BarChartIcon fontSize="inherit" />,
                 path: 'belts',
                 category: 'codex',
+                element: <Outlet />,
+                children: [
+                  {
+                    id: 'beltsIndex',
+                    index: true,
+                  },
+                  {
+                    id: 'beltDetails',
+                    label: 'Belt Details',
+                    Icon: <BarChartIcon fontSize="inherit" />,
+                    path: ':id',
+                  },
+                ],
               },
               {
                 id: 'miners',
@@ -111,6 +221,19 @@ export const routes: CustomRouteObject[] = [
                 Icon: <BarChartIcon fontSize="inherit" />,
                 path: 'miners',
                 category: 'codex',
+                element: <Outlet />,
+                children: [
+                  {
+                    id: 'minersIndex',
+                    index: true,
+                  },
+                  {
+                    id: 'minerDetails',
+                    label: 'Miner Details',
+                    Icon: <BarChartIcon fontSize="inherit" />,
+                    path: ':id',
+                  },
+                ],
               },
               {
                 id: 'resources',
@@ -118,6 +241,19 @@ export const routes: CustomRouteObject[] = [
                 Icon: <BarChartIcon fontSize="inherit" />,
                 path: 'resources',
                 category: 'codex',
+                element: <Outlet />,
+                children: [
+                  {
+                    id: 'resourcesIndex',
+                    index: true,
+                  },
+                  {
+                    id: 'resourceDetails',
+                    label: 'Resource Details',
+                    Icon: <BarChartIcon fontSize="inherit" />,
+                    path: ':id',
+                  },
+                ],
               },
             ],
           },

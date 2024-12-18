@@ -13,6 +13,7 @@
 import BaseItem from './base-item';
 import Belt, { SatisfactoryBelts } from './belt';
 import Buildable, { SatisfactoryBuildable } from './buildable';
+import BuildableRecipe from './buildable-recipe';
 import Building, { SatisfactoryBuilding } from './building';
 import Generator, { SatisfactoryGenerator } from './generator';
 import Miner, { SatisfactoryMiner } from './miner';
@@ -106,7 +107,9 @@ export class SatisfactoryData {
     this.buildables = this.data.buildables.map((item: any) => new Buildable(item, this));
     this.buildings = this.data.buildings.map((item: any) => new Building(item, this));
 
-    this.buildableRecipes = this.data.buildableRecipes.map((item: any) => new Recipe(item, this));
+    this.buildableRecipes = this.data.buildableRecipes.map(
+      (item: any) => new BuildableRecipe(item, this)
+    );
     this.resources = this.data.resources.map((item: any) => new Resource(item, this));
     this.belts = this.data.belts.map((item: any) => new Belt(item, this));
     this.generators = this.data.generators.map((item: any) => new Generator(item, this));

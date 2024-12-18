@@ -1,6 +1,5 @@
-import { SatisfactoryBaseItem } from '..';
 import BaseItem from './base-item';
-import { SatisfactoryData } from './satisfactory-data';
+import { SatisfactoryBaseItem, SatisfactoryData } from './satisfactory-data';
 
 export interface SatisfactoryBelts extends SatisfactoryBaseItem {
   rate: number;
@@ -19,5 +18,12 @@ export default class Belt extends BaseItem implements SatisfactoryBelts {
 
   getBuildable = () => {
     return this.data.findBuildable(this.className);
+  };
+
+  toObject = () => {
+    return {
+      ...super.toObject(),
+      rate: this.rate,
+    };
   };
 }

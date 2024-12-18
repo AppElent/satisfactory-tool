@@ -6,30 +6,32 @@ import { FirebaseAuthProvider } from '@/libs/auth';
 import FirestoreDataSource from '@/libs/data-sources/data-sources/FirestoreDataSource';
 import LocalStorageDataSource from '@/libs/data-sources/data-sources/LocalStorageDataSource';
 
-import { recipeYupSchema } from '@/schemas/recipe';
 import theme from '@/theme/paperbase/theme';
 import './App.css';
 import config from './config';
 import { getPath } from './config/paths';
 import Dashboard from './Dashboard';
 import { Recipe } from './schemas/recipe';
+import { gameYupSchema } from './schemas/satisfactory/game';
 
 const firebaseProvider = new FirebaseAuthProvider({
   login: getPath('login').to,
   logout: '/logout',
 });
 
-const devFilter = import.meta.env.DEV ? 'ja' : 'ZMG16rhpzbdKd8LXUIiNOD7Jul23';
+// const devFilter = import.meta.env.DEV ? 'ja' : 'ZMG16rhpzbdKd8LXUIiNOD7Jul23';
 
 const dataSources = {
-  recipes: new FirestoreDataSource<Recipe>(
+  games: new FirestoreDataSource<Recipe>(
     {
-      target: 'recipes',
+      target: 'satisfactory_games',
       targetMode: 'collection',
-      YupValidationSchema: recipeYupSchema,
+      YupValidationSchema: gameYupSchema,
       subscribe: true,
       targetFilter: {
-        filters: [{ field: 'owner', operator: '!=', value: devFilter }],
+        filters: [
+          { field: 'owner', operator: '==', value: () => firebaseProvider.getCurrentUser()?.id },
+        ],
         orderBy: [{ field: 'name', direction: 'asc' }],
       },
     },

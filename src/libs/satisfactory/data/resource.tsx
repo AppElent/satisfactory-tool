@@ -1,7 +1,6 @@
-import { SatisfactoryBaseItem } from '..';
 import BaseItem from './base-item';
 import { SatisfactoryItem } from './product';
-import { SatisfactoryData } from './satisfactory-data';
+import { SatisfactoryBaseItem, SatisfactoryData } from './satisfactory-data';
 
 export interface SatisfactoryResource extends SatisfactoryBaseItem {
   pingColor: {

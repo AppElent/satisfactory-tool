@@ -1,4 +1,5 @@
 import BeltCard from '@/components/satisfactory/cards/belt-card';
+import useRouter from '@/hooks/use-router';
 import Belt from '@/libs/satisfactory/data/belt';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import { Grid } from '@mui/material';
@@ -14,6 +15,7 @@ const Belts = () => {
   //   searchableFields: ['name'],
   //   debounceTime: 100,
   // });
+  const router = useRouter();
 
   return (
     <DefaultPage>
@@ -40,6 +42,9 @@ const Belts = () => {
               xs={6}
               sm={3}
               md={3}
+              onClick={() => {
+                router.push(`${item.className}`);
+              }}
             >
               <BeltCard item={item} />
             </Grid>

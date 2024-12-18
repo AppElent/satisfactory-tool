@@ -4,6 +4,7 @@ import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import { Grid } from '@mui/material';
 import _ from 'lodash';
 import DefaultPage from '../../default/DefaultPage';
+import useRouter from '@/hooks/use-router';
 
 const Miners = () => {
   // const { data: filteredItems, ...filterOptions } = useFilter(data.miners, {
@@ -15,6 +16,7 @@ const Miners = () => {
   //   searchableFields: ['name'],
   //   debounceTime: 100,
   // });
+  const router = useRouter();
 
   return (
     <DefaultPage>
@@ -41,6 +43,9 @@ const Miners = () => {
               xs={6}
               sm={2}
               md={2}
+              onClick={() => {
+                router.push(`${item.className}`);
+              }}
             >
               <ItemCard item={item} />
             </Grid>

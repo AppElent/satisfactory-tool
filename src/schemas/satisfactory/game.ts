@@ -1,4 +1,5 @@
 import * as Yup from 'yup';
+import DefaultSchema from '..';
 import FactoryClass, { Factory, factoryYupSchema } from './factory';
 import PowerStationClass, { PowerStation, powerStationYupSchema } from './powerStation';
 
@@ -12,6 +13,12 @@ export const gameYupSchema = Yup.object().shape({
   version: Yup.string().required(),
 });
 
+export class GameSchema extends DefaultSchema<Game> {
+  constructor(public yupSchema: Yup.ObjectSchema<any>) {
+    super(yupSchema);
+  }
+}
+
 export type Game = Yup.InferType<typeof gameYupSchema>;
 
 export default class GameClass implements Game {
@@ -22,6 +29,7 @@ export default class GameClass implements Game {
   todos?: string[];
   powerStations?: PowerStation[];
   version: string;
+  schema: GameSchema;
 
   constructor(game: Game) {
     this.id = game.id;
@@ -33,6 +41,7 @@ export default class GameClass implements Game {
       (powerStation) => new PowerStationClass(powerStation)
     );
     this.version = game.version;
+    this.schema = new GameSchema(gameYupSchema);
   }
 }
 

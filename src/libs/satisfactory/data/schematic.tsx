@@ -1,6 +1,5 @@
-import { SatisfactoryBaseItem } from '..';
 import BaseItem from './base-item';
-import { SatisfactoryData } from './satisfactory-data';
+import { SatisfactoryBaseItem, SatisfactoryData } from './satisfactory-data';
 
 export interface SatisfactorySchematic extends SatisfactoryBaseItem {
   type: string;

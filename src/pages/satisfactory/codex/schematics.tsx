@@ -5,6 +5,7 @@ import BaseItem from '@/libs/satisfactory/data/base-item';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import { Box, Grid, Pagination, Stack } from '@mui/material';
 import DefaultPage from '../../default/DefaultPage';
+import useRouter from '@/hooks/use-router';
 
 const Schematics = () => {
   const { data: filteredItems, ...filterOptions } = useFilter(satisfactoryData.schematics, {
@@ -16,8 +17,7 @@ const Schematics = () => {
     searchableFields: ['name'],
     debounceTime: 100,
   });
-
-  console.log(filteredItems);
+  const router = useRouter();
 
   return (
     <DefaultPage>
@@ -44,6 +44,9 @@ const Schematics = () => {
               xs={6}
               sm={2}
               md={2}
+              onClick={() => {
+                router.push(`${item.className}`);
+              }}
             >
               <ItemCard item={item} />
             </Grid>

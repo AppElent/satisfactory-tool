@@ -3,6 +3,7 @@ import DefaultPage from '@/pages/default/DefaultPage';
 import TabFactories from './_components/tab-factories';
 import TabGameInfo from './_components/tab-game-info';
 import TabNotepad from './_components/tab-notepad';
+import { useData } from '@/libs/data-sources';
 
 const tabsData = [
   {
@@ -23,6 +24,8 @@ const tabsData = [
 ];
 
 const Games = () => {
+  const games = useData('games');
+  console.log('Games', games);
   return (
     <DefaultPage>
       <h1>Games</h1>

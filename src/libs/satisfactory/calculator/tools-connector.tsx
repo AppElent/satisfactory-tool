@@ -165,7 +165,7 @@ export default class ToolsConnector {
     return [nodes, edges];
   };
 
-  solveProduction = async (request: Partial<ToolsRequest>): Promise<Node[]> => {
+  solveProduction = async (request: Partial<ToolsRequest>): Promise<[Node[], Edge[]]> => {
     const result = await fetch(this.baseUrl + '/v2/solver', {
       method: 'POST',
       headers: {

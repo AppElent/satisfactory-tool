@@ -1,4 +1,5 @@
 import ItemCard from '@/components/satisfactory/cards/item-card';
+import useRouter from '@/hooks/use-router';
 import BaseItem from '@/libs/satisfactory/data/base-item';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import { Grid } from '@mui/material';
@@ -15,6 +16,7 @@ const Buildings = () => {
   //   searchableFields: ['name'],
   //   debounceTime: 100,
   // });
+  const router = useRouter();
 
   return (
     <DefaultPage>
@@ -41,6 +43,9 @@ const Buildings = () => {
               xs={6}
               sm={2}
               md={2}
+              onClick={() => {
+                router.push(`${item.className}`);
+              }}
             >
               <ItemCard item={item} />
             </Grid>

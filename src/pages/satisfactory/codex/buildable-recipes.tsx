@@ -1,14 +1,14 @@
 import SearchBar from '@/components/default/ui/search-bar';
 import RecipeCard from '@/components/satisfactory/cards/recipe-card';
 import useFilter from '@/hooks/use-filter';
+import useRouter from '@/hooks/use-router';
 import Recipe from '@/libs/satisfactory/data/recipe';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import { Box, Grid, Pagination, Stack } from '@mui/material';
 import DefaultPage from '../../default/DefaultPage';
-import useRouter from '@/hooks/use-router';
 
-const Recipes = () => {
-  const { data: filteredItems, ...filterOptions } = useFilter(satisfactoryData.recipes, {
+const BuildableRecipes = () => {
+  const { data: filteredItems, ...filterOptions } = useFilter(satisfactoryData.buildableRecipes, {
     initialSortField: 'name',
     initialSortDirection: 'asc',
     initialRowsPerPage: 24,
@@ -64,4 +64,4 @@ const Recipes = () => {
   );
 };
 
-export default Recipes;
+export default BuildableRecipes;

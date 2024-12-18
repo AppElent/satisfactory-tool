@@ -7,7 +7,7 @@ const Calculator = () => {
   const calculator = new CalculatorClass(satisfactoryData);
 
   const [request, setRequest] = useState<any>();
-  const [result, setResult] = useState<any[]>();
+  const [, setResult] = useState<any[]>();
 
   useEffect(() => {
     const load = async () => {

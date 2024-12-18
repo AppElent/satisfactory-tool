@@ -3,7 +3,7 @@ import { usePopover } from '@/hooks/use-popover';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import { Button, Chip, ListItemIcon, MenuItem, Tooltip } from '@mui/material';
 
-const VersionedAvatar = ({ version = '1.0', size = 40 }) => (
+const VersionedAvatar = ({ version = '1.0' }) => (
   <Chip
     color="info"
     label={version}

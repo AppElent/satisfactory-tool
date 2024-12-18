@@ -1,6 +1,7 @@
 import SearchBar from '@/components/default/ui/search-bar';
 import ProductCard from '@/components/satisfactory/cards/product-card';
 import useFilter from '@/hooks/use-filter';
+import useRouter from '@/hooks/use-router';
 import Product from '@/libs/satisfactory/data/product';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import { Box, Grid, Pagination, Stack } from '@mui/material';
@@ -16,6 +17,7 @@ const Products = () => {
     searchableFields: ['name', 'description', 'products', 'ingredients'],
     debounceTime: 100,
   });
+  const router = useRouter();
 
   return (
     <DefaultPage>
@@ -41,6 +43,9 @@ const Products = () => {
             xs={6}
             sm={2}
             md={2}
+            onClick={() => {
+              router.push(`${product.className}`);
+            }}
           >
             <ProductCard product={product} />
           </Grid>
