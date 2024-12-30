@@ -1,34 +1,38 @@
-import CalculatorClass from '@/libs/satisfactory/calculator';
-import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
+import useRouter from '@/hooks/use-router';
+import { useData } from '@/libs/data-sources';
+import Tabs from '@/libs/tabs';
 import DefaultPage from '@/pages/default/DefaultPage';
-import { useEffect, useState } from 'react';
+import calculatorSchemaClass from '@/schemas/satisfactory/calculator';
+import { Button } from '@mui/material';
+import TabTest from './_components/tab-test';
+
+const tabsData = [
+  {
+    label: 'Test',
+    value: 'test',
+    component: <TabTest />,
+  },
+];
 
 const Calculator = () => {
-  const calculator = new CalculatorClass(satisfactoryData);
+  const data = useData('calculator_configs');
+  const router = useRouter();
+  // const calculator = new CalculatorClass(satisfactoryData);
 
-  const [request, setRequest] = useState<any>();
-  const [, setResult] = useState<any[]>();
+  // const [request, setRequest] = useState<any>();
+  // const [, setResult] = useState<any[]>();
 
-  useEffect(() => {
-    const load = async () => {
-      const config = await calculator.tools.getProductionConfig('oMCaJpL6YIQrmQ6ON7Oq');
-      setRequest(config.request);
-      const result = await calculator.tools.solveProduction(config.request);
-      setResult(result);
-      console.log(result);
-    };
-    load();
-  }, []);
+  const createNewConfig = async () => {
+    const config = calculatorSchemaClass.getTemplate();
+    const newItem = await data.actions.add(config);
+    console.log(config, data, newItem);
+    router.push(`${config.id}`);
+  };
 
   return (
     <DefaultPage>
-      Request:
-      <pre>{JSON.stringify(request, null, 2)}</pre>
-      Result:
-      <br />
-      {/* <JsonEditor data={result} /> */}
-      {/* <pre>{JSON.stringify(result, null, 2)}</pre> */}
-      {/* <RecipeSelector recipes={satisfactoryData.recipes} /> */}
+      <Button onClick={createNewConfig}>Create config</Button>
+      <Tabs tabs={tabsData} />
     </DefaultPage>
   );
 };

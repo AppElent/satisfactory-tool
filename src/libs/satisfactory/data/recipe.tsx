@@ -66,6 +66,10 @@ export default class Recipe extends BaseItem implements SatisfactoryRecipe {
     this.data = data;
   }
 
+  getMachine = () => {
+    return this.data.buildings.find((m) => m.className === this.producedIn);
+  };
+
   getIngredients = () => {
     return this.ingredients.map((ingredient) => {
       const product = this.data.products.find((product) => product.className === ingredient.item);

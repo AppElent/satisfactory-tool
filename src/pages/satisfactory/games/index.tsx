@@ -1,9 +1,10 @@
+import { useData } from '@/libs/data-sources';
 import Tabs from '@/libs/tabs';
 import DefaultPage from '@/pages/default/DefaultPage';
 import TabFactories from './_components/tab-factories';
 import TabGameInfo from './_components/tab-game-info';
 import TabNotepad from './_components/tab-notepad';
-import { useData } from '@/libs/data-sources';
+import TabTest from './_components/tab-test';
 
 const tabsData = [
   {
@@ -20,6 +21,11 @@ const tabsData = [
     label: 'Notepad',
     value: 'notepad',
     component: <TabNotepad />,
+  },
+  {
+    label: 'Test',
+    value: 'test',
+    component: <TabTest />,
   },
 ];
 

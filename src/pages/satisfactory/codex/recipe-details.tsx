@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import ItemCard from '@/components/satisfactory/cards/item-card';
 import RecipeGraph from '@/components/satisfactory/recipe-graph';
 import useParamItem from '@/hooks/use-param-item';

@@ -1,5 +1,5 @@
 import Calculator from './calculator';
-import Node, { NodeType } from './node';
+import SatisfactoryNode, { NodeType } from './network/satisfactory-node';
 
 interface SatisfactoryModelerJson {
   Version: string;
@@ -19,7 +19,7 @@ export default class SatisfactoryModelerConnector {
   constructor(public calculator: Calculator) {}
 
   getNodes = (input: SatisfactoryModelerJson) => {
-    const nodes: Node[] = [];
+    const nodes: SatisfactoryNode[] = [];
     for (const node of input.Data) {
       if (node.machine) {
         // Node is a miner
@@ -29,7 +29,7 @@ export default class SatisfactoryModelerConnector {
           item: node.Name,
           amount: node.Max || 0,
         };
-        nodes.push(new Node(template, this.calculator));
+        nodes.push(new SatisfactoryNode(template));
       }
     }
     //const recipes = this.input.Data.filter(r => this.data.).map()

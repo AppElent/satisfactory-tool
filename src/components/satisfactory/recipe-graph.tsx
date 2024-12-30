@@ -22,11 +22,11 @@ const RecipeGraph = ({ recipe }: { recipe: SatisfactoryRecipe }) => {
   });
   recipe.products.forEach((product) => {
     graphString += `
-            ${product.item} --> ${recipe.className};`;
+            ${recipe.className} --> ${product.item};`;
   });
   recipe.ingredients.forEach((ingredient) => {
     graphString += `
-            ${recipe.className} --> ${ingredient.item};`;
+            ${ingredient.item} --> ${recipe.className};`;
   });
 
   //   console.log(recipe);

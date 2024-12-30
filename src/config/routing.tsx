@@ -263,6 +263,19 @@ export const routes: CustomRouteObject[] = [
             Icon: <BarChartIcon fontSize="inherit" />,
             path: 'calculator',
             category: 'gameplay',
+            element: <Outlet />,
+            children: [
+              {
+                id: 'calculatorIndex',
+                index: true,
+              },
+              {
+                id: 'calculatorDetails',
+                label: 'Calculator Details',
+                Icon: <BarChartIcon fontSize="inherit" />,
+                path: ':id',
+              },
+            ],
           },
           {
             id: 'games',

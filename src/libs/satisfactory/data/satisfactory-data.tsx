@@ -10,6 +10,7 @@
 //   SatisfactoryResource,
 //   SatisfactorySchematic,
 // } from '..';
+import _ from 'lodash';
 import BaseItem from './base-item';
 import Belt, { SatisfactoryBelts } from './belt';
 import Buildable, { SatisfactoryBuildable } from './buildable';
@@ -102,19 +103,47 @@ export class SatisfactoryData {
   initData = () => {
     // Data
     this.data = satisfactory_data[this.version.key];
-    this.recipes = this.data.recipes.map((item: SatisfactoryRecipe) => new Recipe(item, this));
-    this.products = this.data.items.map((item: SatisfactoryItem) => new Product(item, this));
-    this.buildables = this.data.buildables.map((item: any) => new Buildable(item, this));
-    this.buildings = this.data.buildings.map((item: any) => new Building(item, this));
-
-    this.buildableRecipes = this.data.buildableRecipes.map(
-      (item: any) => new BuildableRecipe(item, this)
+    this.recipes = _.sortBy(
+      this.data.recipes.map((item: SatisfactoryRecipe) => new Recipe(item, this)),
+      'name'
     );
-    this.resources = this.data.resources.map((item: any) => new Resource(item, this));
-    this.belts = this.data.belts.map((item: any) => new Belt(item, this));
-    this.generators = this.data.generators.map((item: any) => new Generator(item, this));
-    this.miners = this.data.miners.map((item: any) => new Miner(item, this));
-    this.schematics = this.data.schematics.map((item: any) => new Schematic(item, this));
+    this.products = _.sortBy(
+      this.data.items.map((item: SatisfactoryItem) => new Product(item, this)),
+      'name'
+    );
+    this.buildables = _.sortBy(
+      this.data.buildables.map((item: any) => new Buildable(item, this)),
+      'name'
+    );
+    this.buildings = _.sortBy(
+      this.data.buildings.map((item: any) => new Building(item, this)),
+      'name'
+    );
+
+    this.buildableRecipes = _.sortBy(
+      this.data.buildableRecipes.map((item: any) => new BuildableRecipe(item, this)),
+      'name'
+    );
+    this.resources = _.sortBy(
+      this.data.resources.map((item: any) => new Resource(item, this)),
+      'name'
+    );
+    this.belts = _.sortBy(
+      this.data.belts.map((item: any) => new Belt(item, this)),
+      'name'
+    );
+    this.generators = _.sortBy(
+      this.data.generators.map((item: any) => new Generator(item, this)),
+      'name'
+    );
+    this.miners = _.sortBy(
+      this.data.miners.map((item: any) => new Miner(item, this)),
+      'name'
+    );
+    this.schematics = _.sortBy(
+      this.data.schematics.map((item: any) => new Schematic(item, this)),
+      'name'
+    );
     console.log(this);
   };
 
@@ -203,6 +232,22 @@ export class SatisfactoryData {
       acc[resource.className] = resource.max;
       return acc;
     }, {});
+  }
+
+  toObject() {
+    return {
+      version: this.version,
+      products: this.products.map((p) => p.toObject()),
+      buildings: this.buildings.map((b) => b.toObject()),
+      recipes: this.recipes.map((r) => r.toObject()),
+      buildableRecipes: this.buildableRecipes.map((r) => r.toObject()),
+      resources: this.resources.map((r) => r.toObject()),
+      belts: this.belts.map((b) => b.toObject()),
+      buildables: this.buildables.map((b) => b.toObject()),
+      generators: this.generators.map((g) => g.toObject()),
+      miners: this.miners.map((m) => m.toObject()),
+      schematics: this.schematics.map((s) => s.toObject()),
+    };
   }
 }
 

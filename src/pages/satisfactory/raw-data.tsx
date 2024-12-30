@@ -1,8 +1,13 @@
+import JsonEditor from '@/components/default/json-editor';
 import DefaultPage from '../default/DefaultPage';
+import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 
 const RawData = () => {
-  // const data = new SatisfactoryData();
-  return <DefaultPage>{/* <JsonEditor data={data} /> */}</DefaultPage>;
+  return (
+    <DefaultPage>
+      <JsonEditor data={satisfactoryData.toObject()} />
+    </DefaultPage>
+  );
 };
 
 export default RawData;

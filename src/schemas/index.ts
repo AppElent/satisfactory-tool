@@ -62,9 +62,25 @@ export default class DefaultSchema<T> {
     return data as T;
   };
 
-  getTemplate = () => {
-    return this.yupSchema.getDefault();
+  _generateId = () => {
+    return faker.string.uuid();
   };
+
+  _generateUlid = () => {
+    return faker.string.ulid();
+  };
+
+  _generateNanoId = (options?: number | { min: number; max: number }) => {
+    return faker.string.nanoid(options);
+  };
+
+  _generateUuid = () => {
+    return faker.string.uuid();
+  };
+
+  getTemplate() {
+    return this.yupSchema.getDefault();
+  }
 
   getTestData = (count?: number): T | T[] => {
     // If number is 1, return a single object
@@ -85,7 +101,9 @@ export default class DefaultSchema<T> {
     }
   };
 
-  getFieldDefinitions = (fieldConfig?: { [key: string]: Partial<FieldConfig> }) => {
+  getFieldDefinitions(fieldConfig?: { [key: string]: Partial<FieldConfig> }): {
+    [key: string]: FieldConfig;
+  } {
     // Go through all fields and add them to the return schema.
     // Merge with fieldConfig if it exists.
     // If there are meta fields, also add them
@@ -111,6 +129,11 @@ export default class DefaultSchema<T> {
 
         if (field.describe().type === 'object') {
           extractFields(field as Yup.ObjectSchema<any>, newField.name);
+        } else if (field.describe().type === 'array') {
+          const itemType = (field as Yup.ArraySchema<any, any, any, any>).innerType;
+          if (itemType instanceof Yup.ObjectSchema) {
+            extractFields(itemType as Yup.ObjectSchema<any>, newField.name);
+          }
         }
         result[newKey] = newField;
       });
@@ -118,7 +141,7 @@ export default class DefaultSchema<T> {
     extractFields(this.yupSchema);
     const merged = merge({}, result, fieldConfig);
     return merged;
-  };
+  }
 }
 
 export const extractFieldDefinitionFromYupSchema = (
@@ -150,6 +173,9 @@ export const extractFieldDefinitionFromYupSchema = (
 
       if (field.describe().type === 'object') {
         extractFields(field as Yup.ObjectSchema<any>, newField.name);
+      } else if (field.describe().type === 'array') {
+        const itemType = (field as Yup.ArraySchema<any, any, any, any>).innerType;
+        extractFields(itemType as Yup.ObjectSchema<any>, newField.name);
       }
       result[newKey] = newField;
     });

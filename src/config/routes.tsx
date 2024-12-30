@@ -33,6 +33,7 @@ import Schematics from '@/pages/satisfactory/codex/schematics';
 import Games from '@/pages/satisfactory/games';
 import RawData from '@/pages/satisfactory/raw-data';
 import { CustomRouteObject, routes as routesImport } from './routing';
+import CalculatorDetails from '@/pages/satisfactory/calculator-details';
 
 const routeElements: { [key: string]: JSX.Element } = {
   home: (
@@ -66,7 +67,8 @@ const routeElements: { [key: string]: JSX.Element } = {
   minerDetails: <MinerDetails />,
   resourcesIndex: <Resources />,
   resourceDetails: <ResourceDetails />,
-  calculator: <Calculator />,
+  calculatorIndex: <Calculator />,
+  calculatorDetails: <CalculatorDetails />,
   games: <Games />,
   // Test pages
   testDataSources: <DataSources />,

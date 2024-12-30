@@ -38,6 +38,12 @@ const dataSources = {
     { db }
   ),
   settings: new LocalStorageDataSource({ target: 'settings', targetMode: 'document' }),
+  calculator_configs: new LocalStorageDataSource({
+    target: 'calculator_configs',
+    targetMode: 'collection',
+    defaultData: [],
+    subscribe: true,
+  }),
 };
 
 function App() {

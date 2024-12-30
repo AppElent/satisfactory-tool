@@ -1,6 +1,9 @@
+import { Calculator as CalculatorType } from '@/schemas/satisfactory/calculator';
 import Calculator from './calculator';
-import Edge from './edge';
-import Node, { NodeType } from './node';
+import ProductNode from './network/product-node';
+import RecipeNode from './network/recipe-node';
+import SatisfactoryNetwork from './network/satisfactory-network';
+import SatisfactoryNode, { NodeType } from './network/satisfactory-node';
 
 interface ProductionItem {
   item: string;
@@ -113,6 +116,7 @@ export default class ToolsConnector {
     resourceWeight: this.resourceWeight,
     gameVersion: this.apiVersion,
   };
+  public request?: ToolsRequest;
 
   constructor(public calculator: Calculator) {
     this.defaultSolveRequest.gameVersion = this.calculator.data.version.tools.api;
@@ -125,8 +129,8 @@ export default class ToolsConnector {
     };
   }
 
-  parseToolsResponse = (response: ToolsResponse): [Node[], Edge[]] => {
-    const nodes: Node[] = [];
+  parseToolsResponse = (response: ToolsResponse): SatisfactoryNetwork => {
+    const nodes: SatisfactoryNode[] = [];
     const customTypes = ['Mine', 'Sink', 'Product', 'Byproduct', 'Input'];
     for (const recipeData in response) {
       const amount = parseFloat(response[recipeData] + '');
@@ -134,7 +138,7 @@ export default class ToolsConnector {
       if (machineData === 'special__power') continue;
       if (customTypes.includes(machineClass)) {
         nodes.push(
-          new Node(
+          new ProductNode(
             // `${machineData}-${machineClass.toLowerCase()}`,
             // machineClass.toLowerCase() as NodeType,
             // machineData,
@@ -143,35 +147,52 @@ export default class ToolsConnector {
               type: machineClass.toLowerCase() as NodeType,
               item: machineData,
               amount,
-            },
-            this.calculator
+            }
           )
         );
       } else {
         const [recipeClass] = machineData.split('@');
         nodes.push(
-          new Node(
-            {
-              type: 'recipe',
-              item: recipeClass,
-              amount,
-            },
-            this.calculator
-          )
+          new RecipeNode({
+            type: 'recipe',
+            item: recipeClass,
+            amount,
+          })
         );
       }
     }
     const edges = this.calculator.generateEdges(nodes);
-    return [nodes, edges];
+    console.log(nodes);
+    return new SatisfactoryNetwork(nodes, edges);
   };
 
-  solveProduction = async (request: Partial<ToolsRequest>): Promise<[Node[], Edge[]]> => {
+  setConfig = (config: CalculatorType): void => {
+    this.request = {
+      allowedAlternateRecipes: config.allowedAlternateRecipes,
+      blockedRecipes: config.blockedRecipes,
+      blockedResources: config.blockedResources,
+      sinkableResources: config.sinkableResources,
+      //blockedMachines: config.blockedMachines,
+      resourceMax: config.resourceMax,
+      input: config.input,
+      resourceWeight: this.resourceWeight,
+      gameVersion: this.apiVersion,
+      production: config.production.map((production) => ({
+        amount: production.amount,
+        item: production.item,
+        ratio: production.ratio,
+        type: production.mode,
+      })),
+    };
+  };
+
+  solveProduction = async (): Promise<SatisfactoryNetwork> => {
     const result = await fetch(this.baseUrl + '/v2/solver', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ ...this.defaultSolveRequest, ...request }),
+      body: JSON.stringify(this.request),
     });
     const res = await result.json();
     console.log(res);
