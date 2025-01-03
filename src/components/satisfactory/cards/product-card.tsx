@@ -1,5 +1,5 @@
 import Product from '@/libs/satisfactory/data/product';
-import { Box, Card, CardContent, CardMedia, Chip, Typography } from '@mui/material';
+import { Box, Card, CardContent, CardMedia, Chip, Tooltip, Typography } from '@mui/material';
 import { styled } from '@mui/system';
 
 interface ProductCardProps {
@@ -45,6 +45,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             sx={{ mb: 1 }}
           />
         )}
+        <Chip
+          label={`Tier ${product.tier}`}
+          size="small"
+          sx={{ mb: 1, ml: 1 }}
+        />
 
         <TruncatedTypography
           variant="body2"
@@ -67,11 +72,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               gap={1}
             >
               {itemsToShow.map((item, index) => (
-                <Chip
+                <Tooltip
+                  title={item.name}
                   key={index}
-                  label={item.name}
-                  size="small"
-                />
+                >
+                  <Chip
+                    key={index}
+                    label={item.name}
+                    size="small"
+                  />
+                </Tooltip>
               ))}
               {hasMoreItems && (
                 <Chip

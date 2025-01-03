@@ -16,15 +16,30 @@ import {
   TextField,
 } from '@mui/material';
 import _ from 'lodash';
-import { useEffect, useState } from 'react';
+import { useMemo, useState } from 'react';
 
 interface CustomCheckboxListProps {
   name?: string;
   field?: FieldConfig;
   muiListProps?: ListProps;
+  options?: CustomCheckboxListOptions;
 }
 
-const CheckboxList = ({ name, field: fieldConfig }: CustomCheckboxListProps) => {
+interface CustomCheckboxListOptions {
+  search?: boolean;
+  selectAll?: boolean;
+  selectNone?: boolean;
+  inverted?: boolean;
+}
+
+const defaultOptions: CustomCheckboxListOptions = {
+  search: false,
+  selectAll: false,
+  selectNone: false,
+  inverted: false,
+};
+
+const CheckboxList = ({ name, field: fieldConfig, options }: CustomCheckboxListProps) => {
   if (!name && !fieldConfig) {
     throw new Error('Either name or field must be provided');
   }
@@ -33,16 +48,22 @@ const CheckboxList = ({ name, field: fieldConfig }: CustomCheckboxListProps) => 
   const data = useFormField(fieldName as string, fieldConfig);
   const { field, helpers } = data;
 
-  const optionList = fieldConfig?.options || [];
-  //   const checked = field.value || [];
-  const [checkedItems, setCheckedItems] = useState(new Set(field.value || []));
+  // spread options
+  const { search, selectAll, selectNone, inverted } = _.merge(defaultOptions, options);
 
-  useEffect(() => {
-    const newCheckedItems = new Set(field.value || []);
-    if (!_.isEqual(Array.from(newCheckedItems), Array.from(checkedItems))) {
-      setCheckedItems(newCheckedItems);
-    }
-  }, [field.value, checkedItems]);
+  const optionList = fieldConfig?.options || [];
+  const checkedItems = useMemo(() => {
+    return new Set(field.value || []);
+  }, [field.value]);
+  console.log(checkedItems);
+  //const [checkedItems, setCheckedItems] = useState(new Set(field.value || []));
+
+  // useEffect(() => {
+  //   const newCheckedItems = new Set(field.value || []);
+  //   if (!_.isEqual(Array.from(newCheckedItems), Array.from(checkedItems))) {
+  //     setCheckedItems(newCheckedItems);
+  //   }
+  // }, [field.value, checkedItems]);
 
   // const label = fieldConfig?.translationKey
   //   ? t(fieldConfig?.translationKey, { defaultValue: fieldConfig?.label || fieldName })
@@ -68,7 +89,6 @@ const CheckboxList = ({ name, field: fieldConfig }: CustomCheckboxListProps) => 
       newCheckedItems.add(key);
     }
 
-    setCheckedItems(newCheckedItems);
     helpers.setValue(Array.from(newCheckedItems));
   };
 
@@ -85,41 +105,47 @@ const CheckboxList = ({ name, field: fieldConfig }: CustomCheckboxListProps) => 
         alignItems="center"
         mb={2}
       >
-        <TextField
-          label="Search"
-          variant="outlined"
-          value={searchQuery}
-          onChange={(e: any) => setSearchQuery(e.target.value)}
-          sx={{ mr: 1 }}
-          size="small"
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  onClick={() => setSearchQuery('')}
-                  edge="end"
-                >
-                  <ClearIcon />
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-        />
-        <Button
-          variant="contained"
-          onClick={() => {
-            helpers.setValue(optionList.map((item) => item.key));
-          }}
-        >
-          Select all
-        </Button>
-        <Button
-          onClick={() => {
-            helpers.setValue([]);
-          }}
-        >
-          Select none
-        </Button>
+        {search && (
+          <TextField
+            label="Search"
+            variant="outlined"
+            value={searchQuery}
+            onChange={(e: any) => setSearchQuery(e.target.value)}
+            sx={{ mr: 1 }}
+            size="small"
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton
+                    onClick={() => setSearchQuery('')}
+                    edge="end"
+                  >
+                    <ClearIcon />
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+          />
+        )}
+        {selectAll && (
+          <Button
+            variant="contained"
+            onClick={() => {
+              helpers.setValue(optionList.map((item) => item.key));
+            }}
+          >
+            Select all
+          </Button>
+        )}
+        {selectNone && (
+          <Button
+            onClick={() => {
+              helpers.setValue([]);
+            }}
+          >
+            Select none
+          </Button>
+        )}
       </Box>
       <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
         {filteredOptions.map((item) => {
@@ -150,7 +176,7 @@ const CheckboxList = ({ name, field: fieldConfig }: CustomCheckboxListProps) => 
                 <ListItemIcon>
                   <Checkbox
                     edge="start"
-                    checked={checkedItems.has(item.key)}
+                    checked={inverted ? !checkedItems.has(item.key) : checkedItems.has(item.key)}
                     tabIndex={-1}
                     disableRipple
                     inputProps={{ 'aria-labelledby': labelId }}

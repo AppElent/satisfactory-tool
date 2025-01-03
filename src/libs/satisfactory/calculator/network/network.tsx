@@ -61,4 +61,11 @@ export default class Network implements NetworkInterface {
       })),
     };
   };
+
+  toObject = () => {
+    return {
+      nodes: this.nodes.map((n) => n.toObject()),
+      edges: this.edges.map((e) => e.toObject()),
+    };
+  };
 }

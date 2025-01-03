@@ -10,6 +10,7 @@ import FileUploads from '@/pages/default/test/file-uploads';
 import Forms from '@/pages/default/test/forms';
 import Translations from '@/pages/default/test/translations';
 import Calculator from '@/pages/satisfactory/calculator';
+import CalculatorDetails from '@/pages/satisfactory/calculator-details';
 import BeltsDetail from '@/pages/satisfactory/codex/belt-details';
 import Belts from '@/pages/satisfactory/codex/belts';
 import BuildableDetails from '@/pages/satisfactory/codex/buildable-details';
@@ -18,6 +19,8 @@ import BuildableRecipes from '@/pages/satisfactory/codex/buildable-recipes';
 import Buildables from '@/pages/satisfactory/codex/buildables';
 import BuildingDetails from '@/pages/satisfactory/codex/building-details';
 import Buildings from '@/pages/satisfactory/codex/buildings';
+import Equipment from '@/pages/satisfactory/codex/equipment';
+import EquipmentDetails from '@/pages/satisfactory/codex/equipment-details';
 import GeneratorDetails from '@/pages/satisfactory/codex/generator-details';
 import Generators from '@/pages/satisfactory/codex/generators';
 import MinerDetails from '@/pages/satisfactory/codex/miner-details';
@@ -32,8 +35,8 @@ import SchematicDetails from '@/pages/satisfactory/codex/schematic-details';
 import Schematics from '@/pages/satisfactory/codex/schematics';
 import Games from '@/pages/satisfactory/games';
 import RawData from '@/pages/satisfactory/raw-data';
+import Statistics from '@/pages/satisfactory/statistics';
 import { CustomRouteObject, routes as routesImport } from './routing';
-import CalculatorDetails from '@/pages/satisfactory/calculator-details';
 
 const routeElements: { [key: string]: JSX.Element } = {
   home: (
@@ -50,6 +53,8 @@ const routeElements: { [key: string]: JSX.Element } = {
   productDetails: <ProductDetails />,
   recipesIndex: <Recipes />,
   recipeDetails: <RecipeDetails />,
+  equipmentIndex: <Equipment />,
+  equipmentDetails: <EquipmentDetails />,
   rawData: <RawData />,
   generatorsIndex: <Generators />,
   generatorDetails: <GeneratorDetails />,
@@ -70,6 +75,7 @@ const routeElements: { [key: string]: JSX.Element } = {
   calculatorIndex: <Calculator />,
   calculatorDetails: <CalculatorDetails />,
   games: <Games />,
+  statistics: <Statistics />,
   // Test pages
   testDataSources: <DataSources />,
   testFileUploads: <FileUploads />,

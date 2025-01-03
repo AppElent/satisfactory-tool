@@ -1,3 +1,5 @@
+import { Tooltip } from '@mui/material';
+
 export interface BaseItemClass {
   className: string;
   slug: string;
@@ -26,6 +28,40 @@ export default class BaseItem implements BaseItemClass {
 
   getImage = () => {
     return this.staticFilePath + this.className.replace(/_/g, '-').toLowerCase() + '_256.png';
+  };
+
+  getImageComponent = (size?: number) => {
+    return (
+      <Tooltip title={this.name}>
+        <img
+          src={this.getImage()}
+          alt={this.name}
+          style={{
+            width: size || 250,
+            height: size || 250,
+            borderRadius: '50%',
+            marginRight: 4,
+          }}
+        />
+      </Tooltip>
+    );
+  };
+
+  getIconComponent = (size?: number) => {
+    return (
+      <Tooltip title={this.name}>
+        <img
+          src={this.getIcon()}
+          alt={this.name}
+          style={{
+            width: size || 24,
+            height: size || 24,
+            borderRadius: '50%',
+            marginRight: 4,
+          }}
+        />
+      </Tooltip>
+    );
   };
 
   toObject() {

@@ -1,22 +1,23 @@
 import useRouter from '@/hooks/use-router';
 import { useData } from '@/libs/data-sources';
-import Tabs from '@/libs/tabs';
 import DefaultPage from '@/pages/default/DefaultPage';
-import calculatorSchemaClass from '@/schemas/satisfactory/calculator';
-import { Button } from '@mui/material';
-import TabTest from './_components/tab-test';
+import calculatorSchemaClass, {
+  Calculator as CalculatorType,
+} from '@/schemas/satisfactory/calculator';
+import { Button, Card } from '@mui/material';
 
-const tabsData = [
-  {
-    label: 'Test',
-    value: 'test',
-    component: <TabTest />,
-  },
-];
+// const tabsData = [
+//   {
+//     label: 'Test',
+//     value: 'test',
+//     component: <TabTest />,
+//   },
+// ];
 
 const Calculator = () => {
-  const data = useData('calculator_configs');
+  const data = useData<CalculatorType>('calculator_configs');
   const router = useRouter();
+  console.log(data);
   // const calculator = new CalculatorClass(satisfactoryData);
 
   // const [request, setRequest] = useState<any>();
@@ -32,7 +33,17 @@ const Calculator = () => {
   return (
     <DefaultPage>
       <Button onClick={createNewConfig}>Create config</Button>
-      <Tabs tabs={tabsData} />
+      {/* <Tabs tabs={tabsData} /> */}
+      {data?.data?.map((config) => {
+        return (
+          <Card
+            key={config.id}
+            onClick={() => router.push(`${config.id}`)}
+          >
+            {config?.name}
+          </Card>
+        );
+      })}
     </DefaultPage>
   );
 };

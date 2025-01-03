@@ -36,9 +36,11 @@ interface UseFilterReturn {
   setData: (data: any[]) => void;
 }
 
+//TODO: use type in usefilter call
+
 const useFilter = (initialData: any[] = [], options: Options = {}): UseFilterReturn => {
   const {
-    initialPage = 0,
+    initialPage = 1,
     initialRowsPerPage = 10,
     limit = Infinity,
     initialSortField = null,
@@ -77,11 +79,6 @@ const useFilter = (initialData: any[] = [], options: Options = {}): UseFilterRet
     debouncedSetSearchQuery(query);
   };
 
-  /**
-   * Adds or updates a filter.
-   * @param {string} key - The key identifying the filter.
-   * @param {Function|any} filterFunctionOrValue - The filter function or value to be applied.
-   */
   const addFilter = (key: string, filterFunctionOrValue: string | (() => void)) => {
     setFilters((prevFilters) => ({
       ...prevFilters,
@@ -89,10 +86,6 @@ const useFilter = (initialData: any[] = [], options: Options = {}): UseFilterRet
     }));
   };
 
-  /**
-   * Removes a filter.
-   * @param {string} key - The key identifying the filter to be removed.
-   */
   const removeFilter = (key: string) => {
     setFilters((prevFilters) => {
       const newFilters = { ...prevFilters };
@@ -101,11 +94,6 @@ const useFilter = (initialData: any[] = [], options: Options = {}): UseFilterRet
     });
   };
 
-  /**
-   * Applies sorting to the given data array based on the specified sort field and direction.
-   * @param {any[]} data - The array of data to be sorted.
-   * @returns {any[]} The sorted array.
-   */
   const applySort = (data: any[]): any[] => {
     if (!sortField) return data;
 
@@ -122,11 +110,6 @@ const useFilter = (initialData: any[] = [], options: Options = {}): UseFilterRet
     );
   };
 
-  /**
-   * Applies custom filters to the dataset.
-   * @param {Array} data - The dataset to be filtered.
-   * @returns {Array} The filtered dataset.
-   */
   const applyFilters = (data: any[]) => {
     return data.filter((item: any) => {
       return Object.keys(filters).every((key) => {
@@ -139,11 +122,6 @@ const useFilter = (initialData: any[] = [], options: Options = {}): UseFilterRet
     });
   };
 
-  /**
-   * Applies text search to the dataset based on searchable fields or all fields.
-   * @param {Array} data - The dataset to be searched.
-   * @returns {Array} The filtered dataset that matches the search query.
-   */
   const applyTextSearch = (data: any[]) => {
     if (!searchQuery) return data; // If no search query, return data unchanged
 
@@ -163,21 +141,12 @@ const useFilter = (initialData: any[] = [], options: Options = {}): UseFilterRet
     });
   };
 
-  /**
-   * Applies pagination to the dataset based on the current page (0-based) and rowsPerPage.
-   * Then enforces the hard limit if necessary.
-   * @param {Array} data - The dataset to be paginated.
-   * @returns {Array} The paginated dataset.
-   */
   const applyPagination = (data: any[]) => {
-    const startIndex = page * rowsPerPage; // Start index for the current page (0-based)
+    const startIndex = (page - 1) * rowsPerPage; // Start index for the current page (1-based)
     const endIndex = Math.min(startIndex + rowsPerPage, limit); // Ensure no more than `limit` items are returned
     return data.slice(startIndex, endIndex);
   };
 
-  /**
-   * Total items after applying filters and search, but before pagination is applied.
-   */
   const totalFilteredItems = useMemo(() => {
     let processedData = applyFilters(data);
     processedData = applyTextSearch(processedData);
@@ -193,20 +162,12 @@ const useFilter = (initialData: any[] = [], options: Options = {}): UseFilterRet
     return applyPagination(processedData);
   }, [data, filters, searchQuery, sortField, sortDirection, page, rowsPerPage, limit]);
 
-  /**
-   * Reset the page to 0 whenever filters, searchQuery, sortField, or sortDirection change,
-   * but only if the current page is not already 0 to avoid unnecessary resets.
-   */
   useEffect(() => {
-    if (page !== 0) {
-      setPage(0);
+    if (page !== 1) {
+      setPage(1);
     }
   }, [filters, searchQuery, sortField, sortDirection]);
 
-  /**
-   * Sets the number of rows per page and resets the page to 0.
-   * @param {number} newRowsPerPage - The new number of rows per page.
-   */
   const updateRowsPerPage = (newRowsPerPage: number) => {
     setRowsPerPage(newRowsPerPage);
     setPage(0); // Reset to page 0 when changing rows per page

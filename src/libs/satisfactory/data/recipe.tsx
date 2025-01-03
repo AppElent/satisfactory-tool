@@ -1,3 +1,4 @@
+import { Chip, Tooltip } from '@mui/material';
 import BaseItem from './base-item';
 import { SatisfactoryBaseItem, SatisfactoryData } from './satisfactory-data';
 
@@ -26,6 +27,10 @@ export interface SatisfactoryRecipe extends SatisfactoryBaseItem {
   isVariablePower: boolean;
   minPower: number;
   maxPower: number;
+  rating?: {
+    score: string;
+    description: string;
+  };
 }
 
 export type SatisfactoryBuildableRecipe = Omit<SatisfactoryRecipe, 'producedIn'>;
@@ -45,6 +50,7 @@ export default class Recipe extends BaseItem implements SatisfactoryRecipe {
   public minPower: number;
   public maxPower: number;
   public cyclesMin: number;
+  public rating?: SatisfactoryRecipe['rating'];
   public data: SatisfactoryData;
 
   constructor(recipe: SatisfactoryRecipe, data: SatisfactoryData) {
@@ -63,6 +69,7 @@ export default class Recipe extends BaseItem implements SatisfactoryRecipe {
     this.minPower = recipe.minPower;
     this.maxPower = recipe.maxPower;
     this.cyclesMin = recipe.cyclesMin;
+    this.rating = recipe.rating;
     this.data = data;
   }
 
@@ -109,5 +116,32 @@ export default class Recipe extends BaseItem implements SatisfactoryRecipe {
     return this.data.products
       .find((p) => p.className === this.getProduct().item)
       ?.getImage() as string;
+  };
+
+  getRatingChip = () => {
+    if (!this.rating) return null;
+    const chipClass = {
+      S: 'success',
+      A: 'info',
+      B: 'primary',
+      C: 'warning',
+      D: 'error',
+      F: 'error',
+    }[this.rating.score as 'S' | 'A' | 'B' | 'C' | 'D' | 'F'] as
+      | 'success'
+      | 'info'
+      | 'primary'
+      | 'warning'
+      | 'default'
+      | 'secondary'
+      | 'error';
+    return (
+      <Tooltip title={this.rating.description}>
+        <Chip
+          label={`Rating: ${this.rating.score}`}
+          color={chipClass}
+        />
+      </Tooltip>
+    );
   };
 }

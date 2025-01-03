@@ -24,4 +24,14 @@ export default class Edge implements EdgeInterface {
   getLabel = (): string => {
     return this.label;
   };
+
+  toObject = (): EdgeInterface => {
+    return {
+      id: this.id,
+      source: this.source,
+      target: this.target,
+      label: this.label,
+      class: this.class,
+    };
+  };
 }

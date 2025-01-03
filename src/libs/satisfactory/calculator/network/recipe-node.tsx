@@ -5,7 +5,7 @@ import SatisfactoryNode, { SatisfactoryNodeProps } from './satisfactory-node';
 const getLabel = (item: string, amount: number) => {
   const recipe = satisfactoryData.getRecipe(item);
   const machineName = recipe?.getMachine()?.name;
-  return `${recipe?.name as string}\n${amount}x ${machineName}`;
+  return `${recipe?.name as string}\n${+amount.toFixed(3)}x ${machineName}`;
 };
 
 export default class RecipeNode extends SatisfactoryNode {

@@ -30,13 +30,15 @@ export default class Calculator {
   public modeler: SatisfactoryModelerConnector;
   public data = satisfactoryData;
   public result?: SatisfactoryNetwork;
+  public config?: CalculatorType;
 
-  constructor(public config?: CalculatorType) {
+  constructor(config?: CalculatorType) {
     this.tools = new ToolsConnector(this);
     this.modeler = new SatisfactoryModelerConnector(this);
+    this.setConfig(config);
   }
 
-  setConfig = (config: CalculatorType) => {
+  setConfig = (config?: CalculatorType) => {
     if (config) {
       this.config = {
         ...config,
@@ -50,8 +52,39 @@ export default class Calculator {
           ratio: 100,
           mode: p.mode ?? 'perMinute',
         })),
+        input: config.input.map((i) => ({
+          ...i,
+          amount: Number(i.amount),
+        })),
       };
       console.log(this.config);
+    }
+  };
+
+  getSatisfactoryToolsConfig = async (externalId: string): Promise<CalculatorType> => {
+    if (!this.config) {
+      throw new Error('No config set. Set config using setConfig() first.');
+    }
+    const result = await this.tools.getProductionConfig(externalId);
+    console.log(result);
+    return {
+      ...this.config,
+      ...result,
+      id: this.config.id,
+    };
+  };
+
+  saveSatisfactoryTools = async (): Promise<string> => {
+    if (!this.config) {
+      throw new Error('No config set. Set config using setConfig() first.');
+    }
+    this.tools.setConfig(this.config);
+    if (this.tools.request) {
+      const result = await this.tools.saveProductionConfig();
+      this.config.externalId = result;
+      return result;
+    } else {
+      throw new Error('No request set');
     }
   };
 
@@ -76,7 +109,9 @@ export default class Calculator {
       for (const input of inputs) {
         let inputAmount = input.amount;
         console.log('inputamount', input.amount);
-        const products = nodes.filter((n) => n.item === input.item && n.id !== node.id);
+        const products = nodes.filter(
+          (n) => n.item === input.item && n.id !== node.id && n.type !== 'product'
+        );
         for (const product of products) {
           const usedAmount = product?.useAmount(product.item, inputAmount) || 0;
           if (usedAmount > 0) {
@@ -100,8 +135,8 @@ export default class Calculator {
           console.log('RECIPE', node.item, recipeNode.id, usedAmount, inputAmount);
           if (usedAmount > 0) {
             const edge = new SatisfactoryEdge({
-              source: recipeNode.item,
-              target: node.item,
+              source: recipeNode.id,
+              target: node.id,
               amount: usedAmount,
               item: input.item,
             });

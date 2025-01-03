@@ -89,18 +89,24 @@ const Autocomplete = ({ name, field: fieldConfig, ...props }: AutocompleteChipLi
                     display: 'flex',
                     alignItems: 'center',
                     marginRight: 1,
+                    width: 24,
+                    height: 24,
                   }}
                 >
-                  <img
-                    src={selectedOption.img}
-                    alt={selectedOption.label}
-                    style={{
-                      width: 24,
-                      height: 24,
-                      borderRadius: '50%',
-                      marginRight: 4,
-                    }}
-                  />
+                  {typeof selectedOption.img === 'string' ? (
+                    <img
+                      src={selectedOption.img}
+                      alt={selectedOption.label}
+                      style={{
+                        width: 24,
+                        height: 24,
+                        borderRadius: '50%',
+                        marginRight: 4,
+                      }}
+                    />
+                  ) : (
+                    <>{selectedOption.img}</>
+                  )}
                 </Box>
               ) : null,
           }}
@@ -113,11 +119,20 @@ const Autocomplete = ({ name, field: fieldConfig, ...props }: AutocompleteChipLi
           key={option.key}
           sx={{ display: 'flex', alignItems: 'center', gap: 1, padding: '5px' }}
         >
-          <img
-            src={option.img}
-            alt={option.label}
-            style={{ width: 30, height: 30, borderRadius: '50%' }}
-          />
+          {option.img && (
+            <>
+              {typeof option.img === 'string' ? (
+                <img
+                  src={option.img}
+                  alt={option.label}
+                  style={{ width: 30, height: 30, borderRadius: '50%' }}
+                />
+              ) : (
+                <>{option.img}</>
+              )}
+            </>
+          )}
+
           <Typography>{option.label}</Typography>
         </Box>
       )}

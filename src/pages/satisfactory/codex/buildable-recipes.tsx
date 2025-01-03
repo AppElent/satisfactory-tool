@@ -1,7 +1,6 @@
 import SearchBar from '@/components/default/ui/search-bar';
 import RecipeCard from '@/components/satisfactory/cards/recipe-card';
 import useFilter from '@/hooks/use-filter';
-import useRouter from '@/hooks/use-router';
 import Recipe from '@/libs/satisfactory/data/recipe';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import { Box, Grid, Pagination, Stack } from '@mui/material';
@@ -17,7 +16,6 @@ const BuildableRecipes = () => {
     searchableFields: ['name', 'products', 'ingredients'],
     debounceTime: 100,
   });
-  const router = useRouter();
 
   return (
     <DefaultPage>
@@ -44,9 +42,6 @@ const BuildableRecipes = () => {
               xs={6}
               sm={2}
               md={2}
-              onClick={() => {
-                router.push(`${recipe.className}`);
-              }}
             >
               <RecipeCard recipe={recipe} />
             </Grid>

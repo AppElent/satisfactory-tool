@@ -2,23 +2,42 @@ import * as fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import data from './data-ficsmas.json' with { type: 'json' };
+import data_normal from './data.json' with { type: 'json' };
+import equipment from './equipment.json' with { type: 'json' };
+import minerData from './miners.json' with { type: 'json' };
+import ratings from './ratings.json' with { type: 'json' };
 import simple from './simple.json' with { type: 'json' };
-import ratings from './tierList.json' with { type: 'json' };
 
 // simple.json is found on https://github.com/KirkMcDonald/satisfactory-calculator/blob/master/data/data.json
 // data.json is found on https://github.com/greeny/SatisfactoryTools/tree/master/data
 
-const isEquipment = (item) => item.className.startsWith('BP_Equipment');
+const isEquipment = (item) => {
+  return equipment.includes(item.name);
+};
+const isFicsmas = (item) => {
+  return data_normal.items[item.className] ? false : true;
+};
 const isRadioactive = (item) => item.radioactiveDecay > 0;
 const isFuel = (item) => item.energyValue > 0;
 const getTier = (item) => {
+  const isFicsmasItem = isFicsmas(item);
   const searchKey = item.liquid ? 'fluids' : 'items';
   const foundSimpleItem = simple[searchKey].find((i) => i.name === item.name);
-  return foundSimpleItem ? (foundSimpleItem.tier === -1 ? 0 : foundSimpleItem.tier) : 999;
+  return foundSimpleItem
+    ? foundSimpleItem.tier === -1
+      ? '0'
+      : foundSimpleItem.tier + ''
+    : isFicsmasItem
+      ? 'ficsmas'
+      : '999';
 };
 const getRating = (recipe) => {
-  const foundRating = ratings.find((r) => r.name === recipe.name.replace('Alternate: ', ''));
-  return foundRating;
+  const foundRating = ratings.find((r) => r.recipe === recipe.name.replace('Alternate: ', ''));
+  if (!foundRating) return undefined;
+  return {
+    score: foundRating?.rating || undefined,
+    description: foundRating?.description || undefined,
+  };
 };
 
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
@@ -176,7 +195,7 @@ const miners = Object.keys(data.miners).map((key) => {
     name: building.name,
     slug: building.slug,
     allowedResources: miner.allowedResources,
-    extractionRate: 0, // TODO: FIX
+    extractionRate: minerData[miner.className].rate,
   };
 });
 

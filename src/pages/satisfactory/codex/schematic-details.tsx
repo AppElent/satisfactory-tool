@@ -1,18 +1,26 @@
-import ItemCard from '@/components/satisfactory/cards/item-card';
+import ItemOverview from '@/components/satisfactory/item-overview';
 import useParamItem from '@/hooks/use-param-item';
-import BaseItem from '@/libs/satisfactory/data/base-item';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
+import Schematic from '@/libs/satisfactory/data/schematic';
 import DefaultPage from '@/pages/default/DefaultPage';
+import { Typography } from '@mui/material';
 
 const SchematicDetails = () => {
   const items = satisfactoryData.schematics;
-  const item = useParamItem<BaseItem>({
+  const item = useParamItem<Schematic>({
     items: items || [],
     field: 'className',
-  }) as BaseItem;
+  }) as Schematic;
   return (
     <DefaultPage currentPage={item?.name}>
-      <ItemCard item={item} />
+      <ItemOverview item={item}>
+        <Typography
+          variant="body1"
+          component="p"
+        >
+          {item.type}
+        </Typography>
+      </ItemOverview>
     </DefaultPage>
   );
 };

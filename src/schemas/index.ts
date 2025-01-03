@@ -121,6 +121,7 @@ export default class DefaultSchema<T> {
         const meta = 'meta' in description ? description.meta : {};
         const newField: FieldConfig = {
           name: newKey,
+          id: key,
           label,
           type: description.type,
           default: defaultValue,

@@ -20,29 +20,34 @@ type MuiProps = {
 };
 
 interface TableProps {
-  columns?: {
-    label: string;
-    key: string;
-    render?: (value: any) => any;
-    defaultValue?: any;
-    type?:
-      | 'text'
-      | 'number'
-      | 'date'
-      | 'datetime'
-      | 'time'
-      | 'currency'
-      | 'select'
-      | 'boolean'
-      | 'autocomplete';
-    options?: {
-      key: string;
-      value: any;
-    }[];
-    fieldDefinition?: FieldConfig;
-  }[];
+  // columns?: {
+  //   config: FieldConfig;
+  //   label: string;
+  //   key: string;
+  //   render?: (value: any) => any;
+  //   defaultValue?: any;
+  //   type?:
+  //     | 'text'
+  //     | 'number'
+  //     | 'date'
+  //     | 'datetime'
+  //     | 'time'
+  //     | 'currency'
+  //     | 'select'
+  //     | 'boolean'
+  //     | 'autocomplete';
+  //   options?: {
+  //     key: string;
+  //     value: any;
+  //   }[];
+  //   fieldDefinition?: FieldConfig;
+  // }[];
+  columns: {
+    [key: string]: FieldConfig;
+  };
   editable?: boolean;
   selectable?: boolean;
+  reorderable?: boolean;
   title?: string;
 }
 

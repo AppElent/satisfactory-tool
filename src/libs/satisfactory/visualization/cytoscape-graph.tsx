@@ -21,7 +21,7 @@ const CytoscapeGraph = ({ network }: { network: SatisfactoryNetwork }) => {
         nodes: cyNetwork.nodes,
         edges: cyNetwork.edges,
       },
-      minZoom: 0.8,
+      minZoom: 0.1,
       maxZoom: 1.5,
     }).get();
     console.log('CY', cyNetwork);

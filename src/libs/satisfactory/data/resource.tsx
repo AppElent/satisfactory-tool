@@ -33,4 +33,10 @@ export default class Resource extends BaseItem implements SatisfactoryResource {
   getProduct = () => {
     return this.data.findItem(this.className) as SatisfactoryItem;
   };
+
+  getConverterRecipes = () => {
+    return this.data.recipes.filter((recipe) =>
+      recipe.ingredients.find((i) => i.item === this.className)
+    );
+  };
 }

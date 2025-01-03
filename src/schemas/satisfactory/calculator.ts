@@ -5,8 +5,8 @@ import * as Yup from 'yup';
 import DefaultSchema from '..';
 
 export const productionInputYupSchema = Yup.object().shape({
-  item: Yup.string().required(),
-  amount: Yup.number().required(),
+  item: Yup.string().required().label('Product'),
+  amount: Yup.number().required().label('Amount'),
 });
 
 export type ProductionInput = Yup.InferType<typeof productionInputYupSchema>;
@@ -44,7 +44,7 @@ export type ResourceList = Yup.InferType<typeof resourceListSchema>;
 
 export const calculatorYupSchema = Yup.object().shape({
   id: Yup.string().required().min(3),
-  externalId: Yup.string().min(3),
+  externalId: Yup.string().min(3).label('External ID'),
   name: Yup.string().required().min(3).default('').label('Name'),
   production: Yup.array().of(productionItemYupSchema).default([]).label('Production'),
   input: Yup.array().of(productionInputYupSchema).default([]),
@@ -74,29 +74,32 @@ class CalculatorSchemaClass extends DefaultSchema<Calculator> {
     [key: string]: FieldConfig;
   } => {
     const defaultFieldDefinitions = super.getFieldDefinitions();
-    defaultFieldDefinitions['production.item'].options = satisfactoryData.products.map(
-      (product) => ({
+    defaultFieldDefinitions['production.item'] = {
+      ...defaultFieldDefinitions['production.item'],
+      options: satisfactoryData.products.map((product) => ({
         key: product.className,
         label: product.name,
-        img: product.getIcon(),
-      })
-    );
+        img: product.getIconComponent(),
+      })),
+      definition: 'autocomplete',
+    };
     _.set(defaultFieldDefinitions['production.item'], 'custom.muiTableCellProps', {
-      width: 300,
+      width: 450,
+    });
+    _.set(defaultFieldDefinitions['input.item'], 'custom.muiTableCellProps', {
+      width: 450,
     });
     // _.set(defaultFieldDefinitions['production.item'], 'custom.muiAutocompleteProps', {
     //   width: 300,
     // });
-    defaultFieldDefinitions['production.mode'].options = [
-      {
-        key: 'perMinute',
-        value: 'Per minute',
-      },
-      {
-        key: 'max',
-        value: 'Max',
-      },
-    ];
+    defaultFieldDefinitions['production.mode'] = {
+      ...defaultFieldDefinitions['production.mode'],
+      options: [
+        { key: 'perMinute', value: 'Per Minute' },
+        { key: 'max', value: 'Max' },
+      ],
+      definition: 'select',
+    };
     defaultFieldDefinitions.allowedAlternateRecipes.options = satisfactoryData.recipes
       .filter((r) => r.alternate)
       .map((recipe) => {
@@ -117,6 +120,23 @@ class CalculatorSchemaClass extends DefaultSchema<Calculator> {
           img: recipe.getIcon(),
         };
       });
+    defaultFieldDefinitions.blockedMachines.options = satisfactoryData.buildings.map((machine) => {
+      return {
+        key: machine.className,
+        value: machine.className,
+        label: machine.name,
+        img: machine.getIcon(),
+      };
+    });
+    defaultFieldDefinitions['input.item'] = {
+      ...defaultFieldDefinitions['production.item'],
+      options: satisfactoryData.products.map((product) => ({
+        key: product.className,
+        label: product.name,
+        img: product.getIconComponent(),
+      })),
+      definition: 'autocomplete',
+    };
 
     return defaultFieldDefinitions;
   };

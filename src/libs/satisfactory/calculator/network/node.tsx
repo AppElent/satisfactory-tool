@@ -18,4 +18,12 @@ export default class Node implements NodeInterface {
   getLabel = (): string => {
     return this.label;
   };
+
+  toObject() {
+    return {
+      id: this.id,
+      label: this.label,
+      class: this.class,
+    };
+  }
 }

@@ -11,7 +11,7 @@ interface SatisfactoryEdgeProps {
 
 const getLabel = (item: string, amount: number) => {
   const prodName = satisfactoryData.getProduct(item)?.name as string;
-  return `${prodName}\n${amount} / min`;
+  return `${prodName}\n${+amount.toFixed(3)} / min`;
 };
 
 export default class SatisfactoryEdge extends Edge {

@@ -45,7 +45,7 @@ const Table = ({ name, field: fieldConfig }: AutocompleteChipListProps) => {
   //   field.value.map((row: any, index: number) => ({ ...row, id: index }))
   // );
 
-  const { editable, selectable, columns = [], title } = fieldConfig?.custom?.table || {};
+  const { editable, selectable, columns = {}, title } = fieldConfig?.custom?.table || {};
 
   // useEffect(() => {
   //     if (field.value.length === 0) {
@@ -60,32 +60,36 @@ const Table = ({ name, field: fieldConfig }: AutocompleteChipListProps) => {
     setSelected([]);
   };
 
-  const renderCell = (row: any, index: number, column: any) => {
-    if (column.render) {
-      return column.render(row[column.key]);
-    } else if (column.type === 'select') {
+  const renderCell = (_row: any, index: number, fieldDefinition: FieldConfig) => {
+    // if (fieldDefinition.render) {
+    //   return fieldDefinition.render(row[fieldDefinition?.id]);
+    // } else  // TODO: Implement
+
+    if (fieldDefinition.definition === 'select') {
       return (
         <Select
-          name={`${fieldName}.${index}.${column.key}`}
-          field={column.fieldDefinition}
+          name={`${fieldName}.${index}.${fieldDefinition?.id}`}
+          field={fieldDefinition}
         />
       );
-    } else if (column.type === 'autocomplete') {
+    } else if (fieldDefinition.definition === 'autocomplete') {
       return (
         <Autocomplete
-          name={`${fieldName}.${index}.${column.key}`}
-          field={column.fieldDefinition}
+          name={`${fieldName}.${index}.${fieldDefinition?.id}`}
+          field={fieldDefinition}
         />
       );
     }
     return (
       <TextField
-        name={`${fieldName}.${index}.${column.key}`}
-        field={column.fieldDefinition}
+        name={`${fieldName}.${index}.${fieldDefinition?.id}`}
+        field={fieldDefinition}
         // field={fieldConfig}
       />
     );
   };
+
+  console.log(columns);
 
   // const handleDeleteRow = (rowId: number) => {
   //   setRows(rows.filter((row: any) => row.id !== rowId));
@@ -147,8 +151,8 @@ const Table = ({ name, field: fieldConfig }: AutocompleteChipListProps) => {
             <DTable>
               <TableHead>
                 <MUITableRow>
-                  {columns.map((column, index) => (
-                    <TableCell key={index}>{column.label}</TableCell>
+                  {Object.keys(columns).map((column, index) => (
+                    <TableCell key={index}>{columns[column].label}</TableCell>
                   ))}
                   {(editable || selectable) && <TableCell>Actions</TableCell>}
                 </MUITableRow>
@@ -157,24 +161,25 @@ const Table = ({ name, field: fieldConfig }: AutocompleteChipListProps) => {
                 {field.value.map((row: any, index: number) => (
                   <React.Fragment key={index}>
                     <MUITableRow key={index}>
-                      {columns.map((column, columnIndex) => {
-                        const tableCellProps =
-                          column.fieldDefinition?.custom?.muiTableCellProps || {};
+                      {Object.keys(columns).map((column, columnIndex) => {
+                        const tableCellProps = columns[column]?.custom?.muiTableCellProps || {};
                         return (
                           <TableCell
                             key={columnIndex}
                             {...tableCellProps}
                           >
-                            {renderCell(row, index, column)}
+                            {renderCell(row, index, columns[column])}
                             {/* <TextField name={`${fieldName}.${index}.${column.key}`} /> */}
                           </TableCell>
                         );
                       })}
                       {(editable || selectable) && (
                         <TableCell>
-                          <IconButton onClick={() => remove(index)}>
-                            <DeleteIcon color="error" />
-                          </IconButton>
+                          <Tooltip title="Delete">
+                            <IconButton onClick={() => remove(index)}>
+                              <DeleteIcon color="error" />
+                            </IconButton>
+                          </Tooltip>
                         </TableCell>
                       )}
                     </MUITableRow>

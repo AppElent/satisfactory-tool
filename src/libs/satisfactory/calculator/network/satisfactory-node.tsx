@@ -82,4 +82,13 @@ export default class SatisfactoryNode extends Node implements SatisfactoryNodePr
       return amount;
     }
   };
+
+  toObject = () => {
+    return {
+      ...super.toObject(),
+      type: this.type,
+      item: this.item,
+      amount: this.amount,
+    };
+  };
 }

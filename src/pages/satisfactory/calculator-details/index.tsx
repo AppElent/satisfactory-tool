@@ -1,52 +1,66 @@
-import { CalculatorContext } from '@/context/calculator-context';
 import useParamItem from '@/hooks/use-param-item';
 import { useData } from '@/libs/data-sources';
-import CalculatorClass from '@/libs/satisfactory/calculator';
-import Tabs from '@/libs/tabs';
 import DefaultPage from '@/pages/default/DefaultPage';
 import { Calculator } from '@/schemas/satisfactory/calculator';
-import { useEffect, useMemo } from 'react';
-import TabBuildList from './_components/tab-build-list';
-import TabConfigure from './_components/tab-configure';
+import CalculatorSection from '@/sections/satisfactory/calculator-section';
+// import TabBuildList from './_components/tab-build-list';
+// import TabConfigure from './_components/tab-configure';
+// import TabGraph from './_components/tab-graph';
 
-const tabsData = [
-  {
-    label: 'Configure',
-    value: 'config',
-    component: <TabConfigure />,
-  },
-  {
-    label: 'Graph',
-    value: 'graph',
-    component: <></>,
-  },
-  {
-    label: 'Build list',
-    value: 'list',
-    component: <TabBuildList />,
-  },
-];
+// const tabsData = [
+//   {
+//     label: 'Configure',
+//     value: 'config',
+//     component: <TabConfigure />,
+//   },
+//   {
+//     label: 'Graph',
+//     value: 'graph',
+//     component: <TabGraph />,
+//   },
+//   {
+//     label: 'Build list',
+//     value: 'list',
+//     component: <TabBuildList />,
+//   },
+// ];
 
 const CalculatorDetails = () => {
-  const data = useData<Calculator[]>('calculator_configs');
+  const data = useData<Calculator, Calculator[]>('calculator_configs');
   const item = useParamItem({
     items: data.data || [],
-  }) as Calculator;
+  });
 
-  useEffect(() => {
-    calculator.setConfig(item);
-  }, [item]);
+  const setConfig = async (config: Calculator) => {
+    data.actions.update(config, config.id);
+  };
 
-  const calculator = useMemo(() => new CalculatorClass(), []);
+  // useEffect(() => {
+  //   calculator.setConfig(item);
+  // }, [item]);
 
-  console.log(calculator);
+  // const calculator = useMemo(() => new CalculatorClass(), []);
+
+  // console.log(calculator);
 
   return (
+    //
+    //   <SatisfactoryCalculatorContextProvider config={item}>
+    //     {item && <Tabs tabs={tabsData} />}
+    //   </SatisfactoryCalculatorContextProvider>
+    //   {!item && <>Calculator configuration not found</>}
+    // </DefaultPage>
     <DefaultPage currentPage={item?.name}>
-      <CalculatorContext.Provider value={calculator}>
-        {item && <Tabs tabs={tabsData} />}
-      </CalculatorContext.Provider>
-      {!item && <>Calculator configuration not found</>}
+      {item && (
+        <CalculatorSection
+          config={item}
+          setConfig={setConfig}
+          saveResult={(result) => {
+            console.log('save result');
+            console.log(result);
+          }}
+        />
+      )}
     </DefaultPage>
   );
 };

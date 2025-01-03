@@ -1,18 +1,26 @@
-import ItemCard from '@/components/satisfactory/cards/item-card';
+import ItemOverview from '@/components/satisfactory/item-overview';
 import useParamItem from '@/hooks/use-param-item';
-import BaseItem from '@/libs/satisfactory/data/base-item';
+import Product from '@/libs/satisfactory/data/product';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import DefaultPage from '@/pages/default/DefaultPage';
+import { Typography } from '@mui/material';
 
 const ProductDetails = () => {
   const items = satisfactoryData.products;
-  const item = useParamItem<BaseItem>({
+  const item = useParamItem<Product>({
     items: items || [],
     field: 'className',
-  }) as BaseItem;
+  }) as Product;
   return (
     <DefaultPage currentPage={item?.name}>
-      <ItemCard item={item} />
+      <ItemOverview item={item}>
+        <Typography
+          variant="body1"
+          component="p"
+        >
+          {item.description}
+        </Typography>
+      </ItemOverview>
     </DefaultPage>
   );
 };

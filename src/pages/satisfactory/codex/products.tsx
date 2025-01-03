@@ -1,11 +1,27 @@
-import SearchBar from '@/components/default/ui/search-bar';
-import ProductCard from '@/components/satisfactory/cards/product-card';
+import Pagination from '@/components/default/filters/pagination';
+import SearchBarFilter from '@/components/default/filters/search-bar-filter';
+import SortOptionsFilter from '@/components/default/filters/sort-options-filter';
+import ItemCard from '@/components/satisfactory/cards/item-card';
 import useFilter from '@/hooks/use-filter';
-import useRouter from '@/hooks/use-router';
 import Product from '@/libs/satisfactory/data/product';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
-import { Box, Grid, Pagination, Stack } from '@mui/material';
+import { Box, Chip, Grid, Stack, styled, Tooltip, Typography } from '@mui/material';
 import DefaultPage from '../../default/DefaultPage';
+
+const sortOptions = [
+  { value: 'name-asc', label: 'Name (A-Z)' },
+  { value: 'name-desc', label: 'Name (Z-A)' },
+  { value: 'tier-asc', label: 'Tier (Low-High)' },
+  { value: 'tier-desc', label: 'Tier (High-Low)' },
+];
+
+const TruncatedTypography = styled(Typography)({
+  display: '-webkit-box',
+  WebkitBoxOrient: 'vertical',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  WebkitLineClamp: 3,
+});
 
 const Products = () => {
   const { data: filteredItems, ...filterOptions } = useFilter(satisfactoryData.products, {
@@ -17,7 +33,6 @@ const Products = () => {
     searchableFields: ['name', 'description', 'products', 'ingredients'],
     debounceTime: 100,
   });
-  const router = useRouter();
 
   return (
     <DefaultPage>
@@ -25,38 +40,101 @@ const Products = () => {
         spacing={2}
         mb={2}
       >
-        <SearchBar
-          onClear={() => filterOptions.setSearchQuery('')}
-          value={filterOptions.inputQuery}
-          onChange={(e) => filterOptions.setSearchQuery(e.target.value)}
-          placeholder={`Search products`}
+        <SearchBarFilter filter={filterOptions} />
+      </Stack>
+      <Stack
+        direction={'row'}
+        sx={{ mb: 1 }}
+      >
+        <SortOptionsFilter
+          filter={filterOptions}
+          options={sortOptions}
         />
       </Stack>
       <Grid
         container
         spacing={3}
       >
-        {filteredItems.map((product: Product) => (
-          <Grid
-            item
-            key={product.className}
-            xs={6}
-            sm={2}
-            md={2}
-            onClick={() => {
-              router.push(`${product.className}`);
-            }}
-          >
-            <ProductCard product={product} />
-          </Grid>
-        ))}
+        {filteredItems.map((product: Product) => {
+          const maxItemsToShow = 3;
+          const usedForItems = product.getUsedFor();
+          const itemsToShow = usedForItems.slice(0, maxItemsToShow);
+          const hasMoreItems = usedForItems.length > maxItemsToShow;
+
+          return (
+            <Grid
+              item
+              key={product.className}
+              xs={6}
+              sm={2}
+              md={2}
+            >
+              {/* <ProductCard product={product} /> */}
+              <ItemCard item={product}>
+                <>
+                  {product.getProductionRate() > 0 && (
+                    <Chip
+                      label={`${product.getProductionRate()} / min`}
+                      size="small"
+                      color="primary"
+                      sx={{ mb: 1 }}
+                    />
+                  )}
+                  <Chip
+                    label={`Tier ${product.tier}`}
+                    size="small"
+                    sx={{ mb: 1, ml: 1 }}
+                  />
+
+                  <TruncatedTypography
+                    variant="body2"
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    {product.description}
+                  </TruncatedTypography>
+                  {itemsToShow.length > 0 && (
+                    <Box mt={2}>
+                      <Typography
+                        variant="body2"
+                        gutterBottom
+                      >
+                        Used in:
+                      </Typography>
+                      <Box
+                        display="flex"
+                        flexWrap="wrap"
+                        gap={1}
+                      >
+                        {itemsToShow.map((item, index) => (
+                          <Tooltip
+                            title={item.name}
+                            key={index}
+                          >
+                            <Chip
+                              key={index}
+                              label={item.name}
+                              size="small"
+                            />
+                          </Tooltip>
+                        ))}
+                        {hasMoreItems && (
+                          <Chip
+                            label={`+${usedForItems.length - maxItemsToShow} more`}
+                            size="small"
+                          />
+                        )}
+                      </Box>
+                    </Box>
+                  )}
+                </>
+              </ItemCard>
+            </Grid>
+          );
+        })}
       </Grid>
       <Box sx={{ mt: 2 }}>
-        <Pagination
-          count={filterOptions.pages || 0}
-          page={filteredItems?.length > 0 ? filterOptions.page - 1 : 0}
-          onChange={(_e, newPage) => filterOptions.setPage(newPage - 1)}
-        />
+        <Pagination filter={filterOptions} />
       </Box>
     </DefaultPage>
   );

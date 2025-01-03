@@ -34,7 +34,7 @@ const TextField = ({ name, field: fieldConfig, ...props }: CustomTextFieldProps)
       onBlur={field.onBlur}
       error={meta.touched && Boolean(meta.error)}
       helperText={meta.touched && meta.error}
-      type={fieldConfig?.type || 'text'}
+      //type={fieldConfig?.type || 'text'}
       {...newProps?.muiTextFieldProps}
     />
   );

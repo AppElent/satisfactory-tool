@@ -97,6 +97,26 @@ export const routes: CustomRouteObject[] = [
                 ],
               },
               {
+                id: 'equipment',
+                label: 'Equipment',
+                Icon: <BarChartIcon fontSize="inherit" />,
+                path: 'equipment',
+                category: 'codex',
+                element: <Outlet />,
+                children: [
+                  {
+                    id: 'equipmentIndex',
+                    index: true,
+                  },
+                  {
+                    id: 'equipmentDetails',
+                    label: 'Equipment Details',
+                    Icon: <BarChartIcon fontSize="inherit" />,
+                    path: ':id',
+                  },
+                ],
+              },
+              {
                 id: 'generators',
                 label: 'Generators',
                 Icon: <BarChartIcon fontSize="inherit" />,
@@ -282,6 +302,13 @@ export const routes: CustomRouteObject[] = [
             label: 'Games',
             Icon: <BarChartIcon fontSize="inherit" />,
             path: 'games',
+            category: 'gameplay',
+          },
+          {
+            id: 'statistics',
+            label: 'Statistics',
+            Icon: <BarChartIcon fontSize="inherit" />,
+            path: 'statistics',
             category: 'gameplay',
           },
           {

@@ -1,18 +1,26 @@
-import ItemCard from '@/components/satisfactory/cards/item-card';
+import ItemOverview from '@/components/satisfactory/item-overview';
 import useParamItem from '@/hooks/use-param-item';
-import BaseItem from '@/libs/satisfactory/data/base-item';
+import Miner from '@/libs/satisfactory/data/miner';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import DefaultPage from '@/pages/default/DefaultPage';
+import { Typography } from '@mui/material';
 
 const MinerDetails = () => {
   const items = satisfactoryData.miners;
-  const item = useParamItem<BaseItem>({
+  const item = useParamItem<Miner>({
     items: items || [],
     field: 'className',
-  }) as BaseItem;
+  }) as Miner;
   return (
     <DefaultPage currentPage={item?.name}>
-      <ItemCard item={item} />
+      <ItemOverview item={item}>
+        <Typography
+          variant="body1"
+          component="p"
+        >
+          Extraction rate: {item.extractionRate}
+        </Typography>
+      </ItemOverview>
     </DefaultPage>
   );
 };

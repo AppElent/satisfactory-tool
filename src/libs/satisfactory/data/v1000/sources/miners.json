@@ -1,0 +1,58 @@
+{
+  "BP_ItemDescriptorPortableMiner_C": {
+    "rate": 40,
+    "NodePurityModifiers": {
+      "Impure": 0.5,
+      "Normal": 1.0,
+      "Pure": 2.0
+    }
+  },
+  "Desc_MinerMk1_C": {
+    "rate": 60,
+    "purityModifiers": {
+      "Impure": 0.5,
+      "Normal": 1.0,
+      "Pure": 2.0
+    }
+  },
+  "Desc_MinerMk2_C": {
+    "rate": 120,
+    "purityModifiers": {
+      "Impure": 0.5,
+      "Normal": 1.0,
+      "Pure": 2.0
+    }
+  },
+  "Desc_MinerMk3_C": {
+    "rate": 240,
+    "purityModifiers": {
+      "Impure": 0.5,
+      "Normal": 1.0,
+      "Pure": 2.0
+    }
+  },
+  "Desc_OilPump_C": {
+    "rate": 120,
+    "purityModifiers": {
+      "Impure": 0.5,
+      "Normal": 1.0,
+      "Pure": 2.0
+    }
+  },
+  "Desc_WaterPump_C": {
+    "rate": 120,
+    "purityModifiers": {
+      "Impure": 1.0,
+      "Normal": 1.0,
+      "Pure": 1.0
+    }
+  },
+  "Desc_FrackingExtractor_C": {
+    "rate": 0,
+    "purityModifiers": {
+      "Impure": 0.5,
+      "Normal": 1.0,
+      "Pure": 2.0
+    }
+  }
+}

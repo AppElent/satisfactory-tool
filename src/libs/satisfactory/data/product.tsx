@@ -1,3 +1,4 @@
+import { Chip, Tooltip } from '@mui/material';
 import BaseItem from './base-item';
 import { SatisfactoryBaseItem, SatisfactoryData } from './satisfactory-data';
 
@@ -7,7 +8,7 @@ export interface SatisfactoryItem extends SatisfactoryBaseItem {
   stackSize: number;
   energyValue: number;
   liquid: boolean;
-  tier: number;
+  tier: string;
   isEquipment: boolean;
   isRadioactive: boolean;
   isFuel: boolean;
@@ -19,7 +20,7 @@ export default class Product extends BaseItem implements SatisfactoryItem {
   public liquid: boolean = false;
   public stackSize: number = 0;
   public sinkPoints: number;
-  public tier: number;
+  public tier: string;
   public energyValue: number;
   public isEquipment: boolean;
   public isRadioactive: boolean;
@@ -49,7 +50,15 @@ export default class Product extends BaseItem implements SatisfactoryItem {
   };
 
   getDefaultRecipe = () => {
-    return this.getRecipes().find((recipe) => !recipe.alternate);
+    const recipes = this.getDefaultRecipes().filter(
+      (recipe) =>
+        !['Desc_Packager_C', 'Desc_Converter_C'].includes(recipe.getMachine()?.className as string)
+    );
+    return recipes?.[0];
+  };
+
+  getDefaultRecipes = () => {
+    return this.getRecipes().filter((recipe) => !recipe.alternate);
   };
 
   getProductionRate = () => {
@@ -65,6 +74,14 @@ export default class Product extends BaseItem implements SatisfactoryItem {
   getUsedFor = () => {
     return this.data.recipes.filter((recipe) =>
       recipe.ingredients.find((i) => i.item === this.className)
+    );
+  };
+
+  getTierChip = () => {
+    return (
+      <Tooltip title={'This item can be created in tier ' + this.tier}>
+        <Chip label={`Tier: ${this.tier}`} />
+      </Tooltip>
     );
   };
 }

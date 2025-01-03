@@ -1,15 +1,14 @@
+import useRouter from '@/hooks/use-router';
 import BaseItem from '@/libs/satisfactory/data/base-item';
-import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 
 interface ItemCardProps {
   item: BaseItem;
+  children?: React.ReactNode;
 }
 
-const ItemCard: React.FC<ItemCardProps> = ({ item }) => {
-  // const maxItemsToShow = 3;
-  // const usedForItems = product.getUsedFor();
-  // const itemsToShow = usedForItems.slice(0, maxItemsToShow);
-  // const hasMoreItems = usedForItems.length > maxItemsToShow;
+const ItemCard: React.FC<ItemCardProps> = ({ item, children }) => {
+  const router = useRouter();
 
   return (
     <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
@@ -28,7 +27,16 @@ const ItemCard: React.FC<ItemCardProps> = ({ item }) => {
         >
           {item.name}
         </Typography>
+        {children}
       </CardContent>
+      <CardActions>
+        <Button
+          onClick={() => router.push(`${item.className}`)}
+          size="small"
+        >
+          Show details
+        </Button>
+      </CardActions>
     </Card>
   );
 };

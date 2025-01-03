@@ -1,0 +1,172 @@
+[
+  {
+    "recipe": "Heavy Encased Frame",
+    "rating": "S",
+    "description": "Significantly streamlines Heavy Modular Frame production by reducing complexity and resource consumption."
+  },
+  {
+    "recipe": "Caterium Circuit Board",
+    "rating": "S",
+    "description": "Offers a more efficient method for Circuit Board production, utilizing Caterium resources effectively."
+  },
+  {
+    "recipe": "Crystal Computer",
+    "rating": "S",
+    "description": "Enhances Computer manufacturing by incorporating crystal components, improving overall efficiency."
+  },
+  {
+    "recipe": "Silicon Circuit Board",
+    "rating": "S",
+    "description": "Provides an alternative Circuit Board recipe that leverages silicon, optimizing production chains."
+  },
+  {
+    "recipe": "Heavy Flexible Frame",
+    "rating": "S",
+    "description": "Simplifies Heavy Modular Frame assembly by introducing flexible materials, reducing manufacturing steps."
+  },
+  {
+    "recipe": "Cast Screw",
+    "rating": "S",
+    "description": "Eliminates the need for rods in screw production, directly casting screws from ingots, greatly enhancing efficiency."
+  },
+  {
+    "recipe": "Super-State Computer",
+    "rating": "A",
+    "description": "Improves Supercomputer production efficiency by utilizing advanced state components."
+  },
+  {
+    "recipe": "Copper Alloy Ingot",
+    "rating": "A",
+    "description": "Increases Copper Ingot output by combining copper with additional materials, boosting production rates."
+  },
+  {
+    "recipe": "Automated Speed Wiring",
+    "rating": "A",
+    "description": "Streamlines Automated Wiring production, enhancing assembly line speed and efficiency."
+  },
+  {
+    "recipe": "Silicon High-Speed Connector",
+    "rating": "A",
+    "description": "Optimizes High-Speed Connector manufacturing by incorporating silicon, reducing resource strain."
+  },
+  {
+    "recipe": "Coke Steel Ingot",
+    "rating": "A",
+    "description": "Offers an efficient Steel Ingot recipe by utilizing coke, improving steel production processes."
+  },
+  {
+    "recipe": "Iron Wire",
+    "rating": "A",
+    "description": "Allows wire production from iron, offering flexibility when copper is scarce, though less efficient than copper wire."
+  },
+  {
+    "recipe": "Stitched Iron Plate",
+    "rating": "A",
+    "description": "Reduces the need for screws in reinforced iron plate production by substituting with wire, simplifying the process."
+  },
+  {
+    "recipe": "Turbo Pressure Motor",
+    "rating": "B",
+    "description": "Enhances Turbo Motor production by introducing pressure-based components, increasing output efficiency."
+  },
+  {
+    "recipe": "Turbo Blend Fuel",
+    "rating": "B",
+    "description": "Provides an alternative fuel recipe that combines multiple resources, offering a balanced energy source."
+  },
+  {
+    "recipe": "Pure Aluminum Ingot",
+    "rating": "B",
+    "description": "Simplifies Aluminum Ingot production by refining pure aluminum, reducing processing complexity."
+  },
+  {
+    "recipe": "Solid Steel Ingot",
+    "rating": "B",
+    "description": "Introduces a solid-state method for Steel Ingot production, enhancing material strength and quality."
+  },
+  {
+    "recipe": "Steeled Frame",
+    "rating": "B",
+    "description": "Improves Modular Frame assembly by incorporating steel, increasing structural integrity."
+  },
+  {
+    "recipe": "Sloppy Alumina",
+    "rating": "B",
+    "description": "Offers a less precise but faster Alumina Solution production method, trading efficiency for speed."
+  },
+  {
+    "recipe": "Iron Pipe",
+    "rating": "B",
+    "description": "Enables pipe production directly from iron, useful when steel is limited, but less efficient than steel pipes."
+  },
+  {
+    "recipe": "Electric Motor",
+    "rating": "C",
+    "description": "Provides an alternative Motor recipe utilizing electric components, with moderate efficiency improvements."
+  },
+  {
+    "recipe": "Electromagnetic Connection Rod",
+    "rating": "C",
+    "description": "Introduces a method for producing Electromagnetic Control Rods using connection rods, offering slight efficiency gains."
+  },
+  {
+    "recipe": "Electrode Aluminum Scrap",
+    "rating": "C",
+    "description": "Offers an alternative Aluminum Scrap production method using electrodes, with minimal resource savings."
+  },
+  {
+    "recipe": "Adhered Iron Plate",
+    "rating": "C",
+    "description": "Provides a reinforced Iron Plate recipe using adhesive materials, with limited production benefits."
+  },
+  {
+    "recipe": "Diluted Fuel",
+    "rating": "C",
+    "description": "Introduces a fuel dilution process to extend fuel supply, offering marginal efficiency improvements."
+  },
+  {
+    "recipe": "Infused Uranium Cell",
+    "rating": "D",
+    "description": "An alternative for uranium cell production, but the efficiency gain is marginal and not worth the additional complexity."
+  },
+  {
+    "recipe": "Sulfuric Acid Dilution",
+    "rating": "D",
+    "description": "A recipe to dilute sulfuric acid to reduce resource consumption, but the savings are minimal and rarely practical."
+  },
+  {
+    "recipe": "Residual Rubber",
+    "rating": "D",
+    "description": "An option for producing rubber from residual resources, but efficiency is low and production rates are subpar."
+  },
+  {
+    "recipe": "Residual Plastic",
+    "rating": "D",
+    "description": "Similar to Residual Rubber, produces plastic from leftover resources, but the output is inefficient compared to other options."
+  },
+  {
+    "recipe": "Recycled Rubber",
+    "rating": "F",
+    "description": "Attempts to produce Rubber from recycled materials, resulting in inefficient resource usage and lower output quality."
+  },
+  {
+    "recipe": "Pure Caterium Ingot",
+    "rating": "F",
+    "description": "Provides a method for producing Caterium Ingots from pure ore, but with negligible efficiency improvements."
+  },
+  {
+    "recipe": "Pure Copper Ingot",
+    "rating": "F",
+    "description": "Offers a pure Copper Ingot production method, lacking significant benefits over standard processes."
+  },
+  {
+    "recipe": "Instant Scrap",
+    "rating": "F",
+    "description": "Introduces a rapid Aluminum Scrap production method, resulting in resource inefficiencies and lower quality output."
+  },
+  {
+    "recipe": "Radio Connection Unit",
+    "rating": "F",
+    "description": "Provides an alternative Radio Control Unit recipe with increased complexity and minimal efficiency gains."
+  }
+]

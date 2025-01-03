@@ -1,18 +1,26 @@
-import ItemCard from '@/components/satisfactory/cards/item-card';
+import ItemOverview from '@/components/satisfactory/item-overview';
 import useParamItem from '@/hooks/use-param-item';
-import BaseItem from '@/libs/satisfactory/data/base-item';
+import Belt from '@/libs/satisfactory/data/belt';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import DefaultPage from '@/pages/default/DefaultPage';
+import { Typography } from '@mui/material';
 
 const BeltDetails = () => {
   const belts = satisfactoryData.belts;
-  const item = useParamItem<BaseItem>({
+  const item = useParamItem<Belt>({
     items: belts || [],
     field: 'className',
-  }) as BaseItem;
+  }) as Belt;
   return (
     <DefaultPage currentPage={item?.name}>
-      <ItemCard item={item} />
+      <ItemOverview item={item}>
+        <Typography
+          variant="body1"
+          component="p"
+        >
+          Belt rate: {item.rate}
+        </Typography>
+      </ItemOverview>
     </DefaultPage>
   );
 };

@@ -144,7 +144,6 @@ export class SatisfactoryData {
       this.data.schematics.map((item: any) => new Schematic(item, this)),
       'name'
     );
-    console.log(this);
   };
 
   getSavedSatisfactoryVersion = () => {
@@ -204,7 +203,7 @@ export class SatisfactoryData {
       (p) =>
         !p.isEquipment &&
         p.tier !== undefined &&
-        p.tier !== 11 && // ammo
+        p.tier !== '11' && // ammo
         !this.recipes
           .filter((recipe) => !recipe.alternate) // also include alternates?
           .find((r) => r.ingredients.find((i) => i.item === p.className))

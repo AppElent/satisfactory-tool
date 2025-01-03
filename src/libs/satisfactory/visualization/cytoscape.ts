@@ -171,6 +171,9 @@ export default class Cytoscape {
       selectionType: options?.selectionType || 'single',
       ...options, // Spread additional options if provided
     });
+    // this.cy.ready(() => {
+    //   this.cy.fit();
+    // });
   }
 
   get = () => {
