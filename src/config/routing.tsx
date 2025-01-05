@@ -303,6 +303,19 @@ export const routes: CustomRouteObject[] = [
             Icon: <BarChartIcon fontSize="inherit" />,
             path: 'games',
             category: 'gameplay',
+            element: <Outlet />,
+            children: [
+              {
+                id: 'gamesIndex',
+                index: true,
+              },
+              {
+                id: 'gameDetails',
+                label: 'Game Details',
+                Icon: <BarChartIcon fontSize="inherit" />,
+                path: ':id',
+              },
+            ],
           },
           {
             id: 'statistics',

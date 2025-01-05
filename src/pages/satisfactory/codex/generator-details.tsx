@@ -11,8 +11,17 @@ const GeneratorDetails = () => {
     items: items || [],
     field: 'className',
   }) as Generator;
+
+  const switchOptions = satisfactoryData.generators.map((generator) => ({
+    key: generator.className,
+    label: generator.name,
+  }));
+
   return (
-    <DefaultPage currentPage={item?.name}>
+    <DefaultPage
+      currentPage={item?.name}
+      switchOptions={switchOptions}
+    >
       <ItemOverview item={item}>
         <Typography
           variant="body1"

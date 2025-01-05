@@ -11,8 +11,17 @@ const BuildableDetails = () => {
     items: items || [],
     field: 'className',
   }) as Buildable;
+
+  const switchOptions = satisfactoryData.buildables.map((buildable) => ({
+    key: buildable.className,
+    label: buildable.name,
+  }));
+
   return (
-    <DefaultPage currentPage={item?.name}>
+    <DefaultPage
+      currentPage={item?.name}
+      switchOptions={switchOptions}
+    >
       <ItemOverview item={item}>
         <Typography
           variant="body1"

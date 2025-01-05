@@ -11,8 +11,17 @@ const MinerDetails = () => {
     items: items || [],
     field: 'className',
   }) as Miner;
+
+  const switchOptions = satisfactoryData.miners.map((miner) => ({
+    key: miner.className,
+    label: miner.name,
+  }));
+
   return (
-    <DefaultPage currentPage={item?.name}>
+    <DefaultPage
+      currentPage={item?.name}
+      switchOptions={switchOptions}
+    >
       <ItemOverview item={item}>
         <Typography
           variant="body1"

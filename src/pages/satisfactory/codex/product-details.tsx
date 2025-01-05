@@ -11,8 +11,17 @@ const ProductDetails = () => {
     items: items || [],
     field: 'className',
   }) as Product;
+
+  const switchOptions = satisfactoryData.products.map((product) => ({
+    key: product.className,
+    label: product.name,
+  }));
+
   return (
-    <DefaultPage currentPage={item?.name}>
+    <DefaultPage
+      currentPage={item?.name}
+      switchOptions={switchOptions}
+    >
       <ItemOverview item={item}>
         <Typography
           variant="body1"

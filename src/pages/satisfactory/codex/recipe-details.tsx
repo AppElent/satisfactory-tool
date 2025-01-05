@@ -14,8 +14,17 @@ const RecipeDetails = () => {
     items: items || [],
     field: 'className',
   }) as Recipe;
+
+  const switchOptions = satisfactoryData.recipes.map((recipe) => ({
+    key: recipe.className,
+    label: recipe.name,
+  }));
+
   return (
-    <DefaultPage currentPage={item?.name}>
+    <DefaultPage
+      currentPage={item?.name}
+      switchOptions={switchOptions}
+    >
       <ItemOverview item={item}>
         <Typography
           variant="body1"

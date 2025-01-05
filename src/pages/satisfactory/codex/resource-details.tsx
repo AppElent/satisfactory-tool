@@ -11,8 +11,17 @@ const ResourceDetails = () => {
     items: items || [],
     field: 'className',
   }) as Resource;
+
+  const switchOptions = satisfactoryData.resources.map((resource) => ({
+    key: resource.className,
+    label: resource.name,
+  }));
+
   return (
-    <DefaultPage currentPage={item?.name}>
+    <DefaultPage
+      currentPage={item?.name}
+      switchOptions={switchOptions}
+    >
       <ItemOverview item={item}>
         <Typography
           variant="body1"

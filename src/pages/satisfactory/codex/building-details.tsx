@@ -11,8 +11,17 @@ const BuildingDetails = () => {
     items: items || [],
     field: 'className',
   }) as Building;
+
+  const switchOptions = satisfactoryData.buildings.map((building) => ({
+    key: building.className,
+    label: building.name,
+  }));
+
   return (
-    <DefaultPage currentPage={item?.name}>
+    <DefaultPage
+      currentPage={item?.name}
+      switchOptions={switchOptions}
+    >
       <ItemOverview item={item}>
         <Typography
           variant="body1"

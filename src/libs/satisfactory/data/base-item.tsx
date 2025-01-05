@@ -39,8 +39,9 @@ export default class BaseItem implements BaseItemClass {
           style={{
             width: size || 250,
             height: size || 250,
-            borderRadius: '50%',
-            marginRight: 4,
+            //borderRadius: '50%',
+            //marginRight: 4,
+            //backgroundColor: '#d0d0d0',
           }}
         />
       </Tooltip>
