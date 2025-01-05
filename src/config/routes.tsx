@@ -33,6 +33,8 @@ import ResourceDetails from '@/pages/satisfactory/codex/resource-details';
 import Resources from '@/pages/satisfactory/codex/resources';
 import SchematicDetails from '@/pages/satisfactory/codex/schematic-details';
 import Schematics from '@/pages/satisfactory/codex/schematics';
+import Factories from '@/pages/satisfactory/factories';
+import FactoryDetails from '@/pages/satisfactory/factory-details';
 import GameDetails from '@/pages/satisfactory/game-details';
 import Games from '@/pages/satisfactory/games';
 import RawData from '@/pages/satisfactory/raw-data';
@@ -76,7 +78,9 @@ const routeElements: { [key: string]: JSX.Element } = {
   calculatorIndex: <Calculator />,
   calculatorDetails: <CalculatorDetails />,
   gamesIndex: <Games />,
-  gameDetails: <GameDetails />,
+  gameDetailsIndex: <GameDetails />,
+  factoriesIndex: <Factories />,
+  factoryDetails: <FactoryDetails />,
   statistics: <Statistics />,
   // Test pages
   testDataSources: <DataSources />,

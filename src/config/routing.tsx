@@ -313,7 +313,34 @@ export const routes: CustomRouteObject[] = [
                 id: 'gameDetails',
                 label: 'Game Details',
                 Icon: <BarChartIcon fontSize="inherit" />,
-                path: ':id',
+                path: ':gameId',
+                element: <Outlet />,
+                children: [
+                  {
+                    id: 'gameDetailsIndex',
+                    index: true,
+                  },
+                  {
+                    id: 'factories',
+                    label: 'Factories',
+                    Icon: <BarChartIcon fontSize="inherit" />,
+                    path: 'factories',
+                    element: <Outlet />,
+                    children: [
+                      {
+                        id: 'factoriesIndex',
+                        index: true,
+                      },
+                      {
+                        id: 'factoryDetails',
+                        label: 'Factory Details',
+                        getLabel: (params: any) => params.factoryId,
+                        Icon: <BarChartIcon fontSize="inherit" />,
+                        path: ':factoryId',
+                      },
+                    ],
+                  },
+                ],
               },
             ],
           },

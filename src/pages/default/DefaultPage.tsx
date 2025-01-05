@@ -7,10 +7,11 @@ interface DefaultPageProps {
     label: string;
     key: string;
   }[];
+  options?: any;
   children?: React.ReactNode;
 }
 
-const DefaultPage = ({ currentPage, switchOptions, children }: DefaultPageProps) => {
+const DefaultPage = ({ currentPage, switchOptions, options, children }: DefaultPageProps) => {
   return (
     <Container
       maxWidth="lg"
@@ -19,6 +20,7 @@ const DefaultPage = ({ currentPage, switchOptions, children }: DefaultPageProps)
       <CustomBreadcrumbs
         currentPage={currentPage}
         switchOptions={switchOptions}
+        options={options}
       />
       {children}
     </Container>

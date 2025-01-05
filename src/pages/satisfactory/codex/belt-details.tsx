@@ -17,9 +17,19 @@ const BeltDetails = () => {
     label: belt.name,
   }));
 
+  const options = {
+    beltDetails: {
+      getLabel: (_params: any) => item?.name,
+      options: satisfactoryData.belts.map((belt) => ({
+        key: belt.className,
+        label: belt.name,
+      })),
+    },
+  };
+
   return (
     <DefaultPage
-      currentPage={item?.name}
+      options={options}
       switchOptions={switchOptions}
     >
       <ItemOverview item={item}>

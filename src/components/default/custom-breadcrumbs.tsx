@@ -7,7 +7,7 @@ import useRouter from '@/hooks/use-router';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link as RouterLink, matchPath } from 'react-router-dom';
+import { Link as RouterLink, matchPath, useParams } from 'react-router-dom';
 
 const generateBreadcrumbs = (breadcrumbsConfig: PathItem[], pathname: string) => {
   const breadcrumbs: PathItem[] = [];
@@ -43,9 +43,20 @@ interface CustomBreadcrumbsProps {
     label: string;
     key: string;
   }[];
+  options?: {
+    [key: string]: {
+      getLabel?: (params: { [key: string]: string }) => string;
+      getPath?: (params: { [key: string]: string }) => string;
+      options: {
+        label: string;
+        key: string;
+      }[];
+    };
+  };
 }
 
-const CustomBreadcrumbs = ({ currentPage, switchOptions }: CustomBreadcrumbsProps) => {
+const CustomBreadcrumbs = ({ currentPage, switchOptions, options }: CustomBreadcrumbsProps) => {
+  const params = useParams();
   const { t } = useTranslation();
   const isMobile = useIsMobile();
   const items = generateBreadcrumbs(paths, window.location.pathname);
@@ -56,6 +67,9 @@ const CustomBreadcrumbs = ({ currentPage, switchOptions }: CustomBreadcrumbsProp
   const handleClick = (event: any) => {
     setAnchorEl(event.currentTarget);
   };
+
+  console.log(params, options);
+  // TODO: when details, to must be a link
 
   const handleItemClick = (item: { label: string; key: string }) => {
     // Route to the selectem item by replacing the last segment of the url with the className
@@ -85,7 +99,14 @@ const CustomBreadcrumbs = ({ currentPage, switchOptions }: CustomBreadcrumbsProp
             maxItems={isMobile ? 2 : 8}
           >
             {items.map((item, index) => {
-              const value = item.translationKey ? t(item.translationKey) : item.label;
+              const originalValue = item.translationKey ? t(item.translationKey) : item.label;
+              let value = originalValue;
+              if (options?.[item.id]) {
+                if (options[item.id].getLabel) {
+                  value = options[item.id].getLabel?.(params as any) || originalValue;
+                }
+              }
+              const to = options?.[item.id]?.getPath?.(params as any) || item.to;
               return (
                 <Stack
                   direction="row"
@@ -98,7 +119,7 @@ const CustomBreadcrumbs = ({ currentPage, switchOptions }: CustomBreadcrumbsProp
                       <Link
                         key={index}
                         component={RouterLink}
-                        to={item.to}
+                        to={to || item.to}
                         //underline="hover"
                         color="inherit"
                       >
@@ -122,9 +143,6 @@ const CustomBreadcrumbs = ({ currentPage, switchOptions }: CustomBreadcrumbsProp
                                 <ArrowDropDownIcon />
                               </Stack>
                             </Link>
-                            {/* <IconButton size="small">
-                              <ArrowDropDownIcon />
-                            </IconButton> */}
                             <Menu
                               anchorEl={anchorEl}
                               open={Boolean(anchorEl)}
@@ -151,41 +169,6 @@ const CustomBreadcrumbs = ({ currentPage, switchOptions }: CustomBreadcrumbsProp
                   </Box>
                 </Stack>
               );
-              // return item.to ? (
-              //   <Stack
-              //     direction="row"
-              //     alignItems="center"
-              //     key={index}
-              //   >
-              //     <Box sx={{ mr: 0.5 }}>{item.Icon && item.Icon}</Box>
-              //     <Box>
-              //       <Link
-              //         key={index}
-              //         component={RouterLink}
-              //         to={item.to}
-              //         //underline="hover"
-              //         color="inherit"
-              //       >
-              //         {value}
-              //       </Link>
-              //     </Box>
-              //   </Stack>
-              // ) : (
-              //   <Stack
-              //     direction="row"
-              //     alignItems="center"
-              //     key={index}
-              //   >
-              //     <Box sx={{ mr: 0.5 }}>{item.Icon && item.Icon}</Box>
-              //     <Typography
-              //       key={index}
-              //       color="textPrimary"
-              //     >
-              //       {/* {item.Icon && item.Icon} */}
-              //       {value}
-              //     </Typography>
-              //   </Stack>
-              // );
             })}
           </Breadcrumbs>
         </Box>
