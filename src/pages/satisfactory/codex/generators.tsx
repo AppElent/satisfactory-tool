@@ -17,8 +17,8 @@ const Generators = () => {
               item
               key={item.className}
               xs={6}
-              sm={2}
-              md={2}
+              sm={3}
+              md={3}
             >
               <ItemCard item={item} />
             </Grid>

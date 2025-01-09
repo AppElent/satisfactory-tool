@@ -12,16 +12,18 @@ const SchematicDetails = () => {
     field: 'className',
   }) as Schematic;
 
-  const switchOptions = satisfactoryData.schematics.map((schematic) => ({
-    key: schematic.className,
-    label: schematic.name,
-  }));
+  const options = {
+    schematicDetails: {
+      getLabel: (_params: any) => item?.name,
+      options: items.map((schematic) => ({
+        key: schematic.className,
+        label: schematic.name,
+      })),
+    },
+  };
 
   return (
-    <DefaultPage
-      currentPage={item?.name}
-      switchOptions={switchOptions}
-    >
+    <DefaultPage options={options}>
       <ItemOverview item={item}>
         <Typography
           variant="body1"

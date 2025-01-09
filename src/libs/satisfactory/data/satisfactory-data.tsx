@@ -93,6 +93,13 @@ export class SatisfactoryData {
   public generators: Generator[] = [];
   public miners: Miner[] = [];
   public schematics: Schematic[] = [];
+  public excludeBuildProducts = [
+    'Desc_CrystalShard_C', // power shard
+    'Desc_AlienDNACapsule_C', // dna capsule
+    'Desc_AlienProtein_C', // alien protein
+    'Desc_GenericBiomass_C', // biomass
+    'Desc_Biofuel_C', // biofuel
+  ];
 
   constructor(versionKey?: string) {
     this.setVersion(versionKey);
@@ -202,8 +209,10 @@ export class SatisfactoryData {
     return this.products.filter(
       (p) =>
         !p.isEquipment &&
+        !['ficsmas', 'consumable', 'equipment', 'ammo', 'other'].includes(p.tier) &&
         p.tier !== undefined &&
         p.tier !== '11' && // ammo
+        p.getDefaultRecipes().length > 0 &&
         !this.recipes
           .filter((recipe) => !recipe.alternate) // also include alternates?
           .find((r) => r.ingredients.find((i) => i.item === p.className))

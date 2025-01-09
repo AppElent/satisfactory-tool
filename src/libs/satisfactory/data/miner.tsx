@@ -22,4 +22,12 @@ export default class Miner extends BaseItem implements SatisfactoryMiner {
   getBuildable = () => {
     return this.data.findBuildable(this.className);
   };
+
+  toObject = () => {
+    return {
+      ...super.toObject(),
+      allowedResources: this.allowedResources,
+      extractionRate: this.extractionRate,
+    };
+  };
 }

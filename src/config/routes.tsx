@@ -19,6 +19,7 @@ import BuildableRecipes from '@/pages/satisfactory/codex/buildable-recipes';
 import Buildables from '@/pages/satisfactory/codex/buildables';
 import BuildingDetails from '@/pages/satisfactory/codex/building-details';
 import Buildings from '@/pages/satisfactory/codex/buildings';
+import CodexIndex from '@/pages/satisfactory/codex/codex-index';
 import Equipment from '@/pages/satisfactory/codex/equipment';
 import EquipmentDetails from '@/pages/satisfactory/codex/equipment-details';
 import GeneratorDetails from '@/pages/satisfactory/codex/generator-details';
@@ -52,6 +53,7 @@ const routeElements: { [key: string]: JSX.Element } = {
   homeIndex: <>Home</>,
   // Satisfactory pages
   satisfactoryIndex: <>TEST</>,
+  codexIndex: <CodexIndex />,
   productsIndex: <Products />,
   productDetails: <ProductDetails />,
   recipesIndex: <Recipes />,

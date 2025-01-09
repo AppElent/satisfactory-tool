@@ -10,6 +10,11 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "radioactive",
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": true,
       "isFuel": false,
@@ -25,6 +30,11 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "radioactive",
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": true,
       "isFuel": false,
@@ -39,7 +49,11 @@
       "stackSize": 500,
       "energyValue": 0,
       "liquid": false,
-      "tier": "0",
+      "tier": "1",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -55,6 +69,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "4",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -70,6 +88,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "0",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -85,6 +107,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "4",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -100,6 +126,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "7",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -115,6 +145,10 @@
       "energyValue": 6000,
       "liquid": false,
       "tier": "7",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -130,6 +164,10 @@
       "energyValue": 750,
       "liquid": false,
       "tier": "5",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -145,6 +183,10 @@
       "energyValue": 10000,
       "liquid": false,
       "tier": "8",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -160,6 +202,10 @@
       "energyValue": 7200,
       "liquid": false,
       "tier": "8",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -175,6 +221,10 @@
       "energyValue": 2000,
       "liquid": false,
       "tier": "6",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -189,7 +239,11 @@
       "stackSize": 50,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "consumable",
+      "tags": [
+        "consumable"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -205,6 +259,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "0",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -219,7 +277,11 @@
       "stackSize": 500,
       "energyValue": 0,
       "liquid": false,
-      "tier": "0",
+      "tier": "1",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -234,7 +296,11 @@
       "stackSize": 200,
       "energyValue": 0,
       "liquid": false,
-      "tier": "0",
+      "tier": "1",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -250,6 +316,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "0",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -264,7 +334,11 @@
       "stackSize": 100,
       "energyValue": 0,
       "liquid": false,
-      "tier": "0",
+      "tier": "1",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -280,6 +354,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "2",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -295,6 +373,10 @@
       "energyValue": 630,
       "liquid": false,
       "tier": "4",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -310,6 +392,10 @@
       "energyValue": 750,
       "liquid": true,
       "tier": "5",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -325,6 +411,10 @@
       "energyValue": 3600,
       "liquid": true,
       "tier": "8",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -340,6 +430,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "2",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -355,6 +449,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "2",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -369,7 +467,11 @@
       "stackSize": 500,
       "energyValue": 0,
       "liquid": false,
-      "tier": "0",
+      "tier": "1",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -385,6 +487,10 @@
       "energyValue": 0,
       "liquid": true,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -400,6 +506,10 @@
       "energyValue": 2000,
       "liquid": true,
       "tier": "6",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -415,6 +525,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -430,6 +544,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "4",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -445,6 +563,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "4",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -460,6 +582,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "9",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -475,6 +601,10 @@
       "energyValue": 5000,
       "liquid": true,
       "tier": "9",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -490,6 +620,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "5",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -505,6 +639,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -520,6 +658,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "9",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -535,6 +677,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "7",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -550,6 +696,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "9",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -565,6 +715,10 @@
       "energyValue": 0,
       "liquid": true,
       "tier": "9",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -580,6 +734,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "10",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -595,6 +753,10 @@
       "energyValue": 0,
       "liquid": true,
       "tier": "9",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -610,6 +772,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "9",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -625,6 +791,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "7",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -640,6 +810,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "9",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -655,6 +829,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "9",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -670,6 +848,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "9",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -685,6 +867,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -700,6 +886,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "10",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -715,6 +905,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "4",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -730,6 +924,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -745,6 +943,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "7",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -760,6 +962,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "9",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -774,7 +980,11 @@
       "stackSize": 50,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "8",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -790,6 +1000,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "7",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -805,6 +1019,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "3",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -820,6 +1038,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "5",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -835,6 +1057,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "5",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -850,6 +1076,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "5",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -865,6 +1095,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "4",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -880,6 +1114,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "5",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -895,6 +1133,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "5",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -910,6 +1152,10 @@
       "energyValue": 400,
       "liquid": true,
       "tier": "5",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -925,6 +1171,10 @@
       "energyValue": 180,
       "liquid": false,
       "tier": "5",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -940,6 +1190,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "4",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -955,6 +1209,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "4",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -970,6 +1228,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "3",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -985,6 +1247,10 @@
       "energyValue": 320,
       "liquid": false,
       "tier": "5",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -1000,6 +1266,10 @@
       "energyValue": 400,
       "liquid": false,
       "tier": "5",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -1015,6 +1285,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "5",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1029,7 +1303,11 @@
       "stackSize": 100,
       "energyValue": 0,
       "liquid": false,
-      "tier": "0",
+      "tier": "1",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1045,6 +1323,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "7",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1060,6 +1342,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "7",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1075,6 +1361,10 @@
       "energyValue": 0,
       "liquid": true,
       "tier": "7",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1090,6 +1380,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "5",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1105,6 +1399,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "4",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1120,6 +1418,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "2",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1135,6 +1437,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "5",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1150,6 +1456,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "4",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1165,6 +1475,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "4",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1180,6 +1494,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "5",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1195,6 +1513,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "3",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1210,6 +1532,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "5",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1225,6 +1551,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "5",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1240,6 +1570,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1255,6 +1589,11 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "radioactive",
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": true,
       "isFuel": false,
@@ -1270,6 +1609,11 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "radioactive",
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": true,
       "isFuel": false,
@@ -1284,7 +1628,12 @@
       "stackSize": 500,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "8",
+      "category": "product",
+      "tags": [
+        "radioactive",
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": true,
       "isFuel": false,
@@ -1300,6 +1649,10 @@
       "energyValue": 0,
       "liquid": true,
       "tier": "7",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1315,6 +1668,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1330,6 +1687,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1345,6 +1706,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1360,6 +1725,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1375,6 +1744,11 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "radioactive",
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": true,
       "isFuel": false,
@@ -1390,6 +1764,10 @@
       "energyValue": 0,
       "liquid": true,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1405,6 +1783,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1420,6 +1802,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "4",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1435,6 +1821,11 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "9",
+      "category": "product",
+      "tags": [
+        "radioactive",
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": true,
       "isFuel": false,
@@ -1450,6 +1841,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "9",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1465,6 +1860,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "9",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1480,6 +1879,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "6",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1495,6 +1898,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "0",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1510,6 +1917,11 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "0",
+      "category": "product",
+      "tags": [
+        "collectible",
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1525,6 +1937,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "0",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1539,7 +1955,11 @@
       "stackSize": 50,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1555,6 +1975,11 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "0",
+      "category": "product",
+      "tags": [
+        "collectible",
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1570,6 +1995,11 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "0",
+      "category": "product",
+      "tags": [
+        "collectible",
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1585,6 +2015,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "4",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1600,6 +2034,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1615,6 +2053,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1630,6 +2072,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1645,6 +2091,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1660,6 +2110,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1675,6 +2129,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1690,6 +2148,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1705,6 +2167,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1720,6 +2186,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1735,6 +2205,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1750,6 +2224,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1765,6 +2243,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1779,7 +2261,11 @@
       "stackSize": 1,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "equipment",
+      "tags": [
+        "equipment"
+      ],
       "isEquipment": true,
       "isRadioactive": false,
       "isFuel": false,
@@ -1794,7 +2280,11 @@
       "stackSize": 1,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "equipment",
+      "tags": [
+        "equipment"
+      ],
       "isEquipment": true,
       "isRadioactive": false,
       "isFuel": false,
@@ -1810,6 +2300,11 @@
       "energyValue": 750000,
       "liquid": false,
       "tier": "8",
+      "category": "fuel",
+      "tags": [
+        "radioactive",
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": true,
       "isFuel": true,
@@ -1825,6 +2320,11 @@
       "energyValue": 1500000,
       "liquid": false,
       "tier": "8",
+      "category": "fuel",
+      "tags": [
+        "radioactive",
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": true,
       "isFuel": true,
@@ -1840,6 +2340,11 @@
       "energyValue": 150000,
       "liquid": false,
       "tier": "9",
+      "category": "fuel",
+      "tags": [
+        "radioactive",
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": true,
       "isFuel": true,
@@ -1854,7 +2359,11 @@
       "stackSize": 100,
       "energyValue": 0,
       "liquid": false,
-      "tier": "11",
+      "tier": "ammo",
+      "category": "ammo",
+      "tags": [
+        "ammo"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1869,7 +2378,11 @@
       "stackSize": 100,
       "energyValue": 0,
       "liquid": false,
-      "tier": "11",
+      "tier": "ammo",
+      "category": "ammo",
+      "tags": [
+        "ammo"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1884,7 +2397,11 @@
       "stackSize": 500,
       "energyValue": 0,
       "liquid": false,
-      "tier": "11",
+      "tier": "ammo",
+      "category": "ammo",
+      "tags": [
+        "ammo"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1899,7 +2416,11 @@
       "stackSize": 50,
       "energyValue": 0,
       "liquid": false,
-      "tier": "11",
+      "tier": "ammo",
+      "category": "ammo",
+      "tags": [
+        "ammo"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1914,7 +2435,11 @@
       "stackSize": 50,
       "energyValue": 0,
       "liquid": false,
-      "tier": "11",
+      "tier": "ammo",
+      "category": "ammo",
+      "tags": [
+        "ammo"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1929,7 +2454,11 @@
       "stackSize": 50,
       "energyValue": 0,
       "liquid": false,
-      "tier": "11",
+      "tier": "ammo",
+      "category": "ammo",
+      "tags": [
+        "ammo"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1944,7 +2473,11 @@
       "stackSize": 50,
       "energyValue": 0,
       "liquid": false,
-      "tier": "11",
+      "tier": "ammo",
+      "category": "ammo",
+      "tags": [
+        "ammo"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1959,7 +2492,11 @@
       "stackSize": 50,
       "energyValue": 0,
       "liquid": false,
-      "tier": "11",
+      "tier": "ammo",
+      "category": "ammo",
+      "tags": [
+        "ammo"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1975,6 +2512,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -1990,6 +2531,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2005,6 +2550,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2020,6 +2569,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2034,7 +2587,11 @@
       "stackSize": 100,
       "energyValue": 0,
       "liquid": false,
-      "tier": "11",
+      "tier": "ammo",
+      "category": "ammo",
+      "tags": [
+        "ammo"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2049,7 +2606,11 @@
       "stackSize": 1,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "equipment",
+      "tags": [
+        "equipment"
+      ],
       "isEquipment": true,
       "isRadioactive": false,
       "isFuel": false,
@@ -2064,7 +2625,11 @@
       "stackSize": 1,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "equipment",
+      "tags": [
+        "equipment"
+      ],
       "isEquipment": true,
       "isRadioactive": false,
       "isFuel": false,
@@ -2079,8 +2644,12 @@
       "stackSize": 50,
       "energyValue": 0,
       "liquid": false,
-      "tier": "0",
-      "isEquipment": false,
+      "tier": "1",
+      "category": "equipment",
+      "tags": [
+        "equipment"
+      ],
+      "isEquipment": true,
       "isRadioactive": false,
       "isFuel": false,
       "isResource": false
@@ -2094,7 +2663,11 @@
       "stackSize": 1,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "equipment",
+      "tags": [
+        "equipment"
+      ],
       "isEquipment": true,
       "isRadioactive": false,
       "isFuel": false,
@@ -2109,7 +2682,11 @@
       "stackSize": 1,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "equipment",
+      "tags": [
+        "equipment"
+      ],
       "isEquipment": true,
       "isRadioactive": false,
       "isFuel": false,
@@ -2124,7 +2701,11 @@
       "stackSize": 1,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "equipment",
+      "tags": [
+        "equipment"
+      ],
       "isEquipment": true,
       "isRadioactive": false,
       "isFuel": false,
@@ -2139,7 +2720,11 @@
       "stackSize": 1,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "equipment",
+      "tags": [
+        "equipment"
+      ],
       "isEquipment": true,
       "isRadioactive": false,
       "isFuel": false,
@@ -2154,7 +2739,11 @@
       "stackSize": 1,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "equipment",
+      "tags": [
+        "equipment"
+      ],
       "isEquipment": true,
       "isRadioactive": false,
       "isFuel": false,
@@ -2169,7 +2758,11 @@
       "stackSize": 1,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "equipment",
+      "tags": [
+        "equipment"
+      ],
       "isEquipment": true,
       "isRadioactive": false,
       "isFuel": false,
@@ -2184,7 +2777,11 @@
       "stackSize": 1,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "equipment",
+      "tags": [
+        "equipment"
+      ],
       "isEquipment": true,
       "isRadioactive": false,
       "isFuel": false,
@@ -2199,7 +2796,11 @@
       "stackSize": 1,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "equipment",
+      "tags": [
+        "equipment"
+      ],
       "isEquipment": true,
       "isRadioactive": false,
       "isFuel": false,
@@ -2214,7 +2815,11 @@
       "stackSize": 1,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "equipment",
+      "tags": [
+        "equipment"
+      ],
       "isEquipment": true,
       "isRadioactive": false,
       "isFuel": false,
@@ -2230,6 +2835,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2244,7 +2853,11 @@
       "stackSize": 1,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "equipment",
+      "tags": [
+        "equipment"
+      ],
       "isEquipment": true,
       "isRadioactive": false,
       "isFuel": false,
@@ -2259,7 +2872,11 @@
       "stackSize": 1,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2274,7 +2891,11 @@
       "stackSize": 100,
       "energyValue": 0,
       "liquid": false,
-      "tier": "11",
+      "tier": "ammo",
+      "category": "ammo",
+      "tags": [
+        "ammo"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2289,7 +2910,11 @@
       "stackSize": 500,
       "energyValue": 0,
       "liquid": false,
-      "tier": "11",
+      "tier": "ammo",
+      "category": "ammo",
+      "tags": [
+        "ammo"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2304,7 +2929,11 @@
       "stackSize": 500,
       "energyValue": 0,
       "liquid": false,
-      "tier": "11",
+      "tier": "ammo",
+      "category": "ammo",
+      "tags": [
+        "ammo"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2320,6 +2949,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "0",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2335,6 +2968,10 @@
       "energyValue": 0,
       "liquid": true,
       "tier": "3",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2350,6 +2987,10 @@
       "energyValue": 300,
       "liquid": false,
       "tier": "3",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -2365,6 +3006,10 @@
       "energyValue": 0,
       "liquid": true,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2380,6 +3025,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "4",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2395,6 +3044,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "10",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2410,6 +3063,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "7",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2425,6 +3082,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "3",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2439,7 +3100,11 @@
       "stackSize": 100,
       "energyValue": 0,
       "liquid": false,
-      "tier": "0",
+      "tier": "1",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2455,6 +3120,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "4",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2469,7 +3138,11 @@
       "stackSize": 100,
       "energyValue": 0,
       "liquid": false,
-      "tier": "0",
+      "tier": "1",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2485,6 +3158,11 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "radioactive",
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": true,
       "isFuel": false,
@@ -2500,6 +3178,10 @@
       "energyValue": 320,
       "liquid": true,
       "tier": "5",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -2514,7 +3196,12 @@
       "stackSize": 50,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "equipment",
+      "tags": [
+        "equipment",
+        "consumable"
+      ],
       "isEquipment": true,
       "isRadioactive": false,
       "isFuel": false,
@@ -2530,6 +3217,11 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "0",
+      "category": "product",
+      "tags": [
+        "collectible",
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2544,7 +3236,12 @@
       "stackSize": 50,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "product",
+      "tags": [
+        "collectible",
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2560,6 +3257,11 @@
       "energyValue": 15,
       "liquid": false,
       "tier": "0",
+      "category": "fuel",
+      "tags": [
+        "collectible",
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -2575,6 +3277,11 @@
       "energyValue": 100,
       "liquid": false,
       "tier": "0",
+      "category": "fuel",
+      "tags": [
+        "collectible",
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -2589,7 +3296,11 @@
       "stackSize": 200,
       "energyValue": 180,
       "liquid": false,
-      "tier": "0",
+      "tier": "1",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -2605,6 +3316,10 @@
       "energyValue": 450,
       "liquid": false,
       "tier": "1",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -2620,6 +3335,10 @@
       "energyValue": 750,
       "liquid": true,
       "tier": "5",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -2635,6 +3354,10 @@
       "energyValue": 750,
       "liquid": false,
       "tier": "5",
+      "category": "fuel",
+      "tags": [
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -2650,6 +3373,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "7",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2665,6 +3392,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2680,6 +3411,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "8",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2695,6 +3430,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "7",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2710,6 +3449,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "1",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2725,6 +3468,11 @@
       "energyValue": 20,
       "liquid": false,
       "tier": "0",
+      "category": "fuel",
+      "tags": [
+        "collectible",
+        "fuel"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": true,
@@ -2740,6 +3488,11 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "0",
+      "category": "product",
+      "tags": [
+        "collectible",
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2755,6 +3508,11 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "0",
+      "category": "product",
+      "tags": [
+        "collectible",
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2770,6 +3528,11 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "0",
+      "category": "product",
+      "tags": [
+        "collectible",
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2785,6 +3548,11 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "0",
+      "category": "product",
+      "tags": [
+        "collectible",
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2799,7 +3567,11 @@
       "stackSize": 50,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "consumable",
+      "tags": [
+        "consumable"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2814,7 +3586,11 @@
       "stackSize": 100,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "consumable",
+      "tags": [
+        "consumable"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2829,7 +3605,11 @@
       "stackSize": 50,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "consumable",
+      "tags": [
+        "consumable"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2844,7 +3624,11 @@
       "stackSize": 1,
       "energyValue": 0,
       "liquid": false,
-      "tier": "999",
+      "tier": "other",
+      "category": "equipment",
+      "tags": [
+        "equipment"
+      ],
       "isEquipment": true,
       "isRadioactive": false,
       "isFuel": false,
@@ -2860,6 +3644,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "9",
+      "category": "product",
+      "tags": [
+        "product"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -2875,6 +3663,10 @@
       "energyValue": 0,
       "liquid": false,
       "tier": "ficsmas",
+      "category": "ficsmas",
+      "tags": [
+        "ficsmas"
+      ],
       "isEquipment": false,
       "isRadioactive": false,
       "isFuel": false,
@@ -28940,402 +29732,6 @@
           "item": "BP_EquipmentDescriptorNobeliskDetonator_C",
           "amount": 1,
           "name": "Nobelisk Detonator",
-          "amountMin": 0.75
-        }
-      ],
-      "isVariablePower": false,
-      "minPower": 0,
-      "maxPower": 1,
-      "cyclesMin": 0.75
-    },
-    {
-      "slug": "recipe-wreathdecor-c",
-      "name": "FICSMAS Decoration",
-      "className": "Recipe_WreathDecor_C",
-      "alternate": false,
-      "time": 1,
-      "inHand": false,
-      "forBuilding": true,
-      "inWorkshop": false,
-      "inMachine": false,
-      "manualTimeMultiplier": 1,
-      "ingredients": [
-        {
-          "item": "Desc_XmasWreath_C",
-          "amount": 1,
-          "name": "FICSMAS Wreath",
-          "amountMin": 60
-        },
-        {
-          "item": "Desc_XmasBow_C",
-          "amount": 1,
-          "name": "FICSMAS Bow",
-          "amountMin": 60
-        }
-      ],
-      "products": [
-        {
-          "item": "Desc_WreathDecor_C",
-          "amount": 1,
-          "name": "FICSMAS Decoration",
-          "amountMin": 60
-        }
-      ],
-      "isVariablePower": false,
-      "minPower": 0,
-      "maxPower": 1,
-      "cyclesMin": 60
-    },
-    {
-      "slug": "recipe-snowcannon-c",
-      "name": "FICSMAS Snow Cannon",
-      "className": "Recipe_SnowCannon_C",
-      "alternate": false,
-      "time": 1,
-      "inHand": false,
-      "forBuilding": true,
-      "inWorkshop": false,
-      "inMachine": false,
-      "manualTimeMultiplier": 1,
-      "ingredients": [
-        {
-          "item": "Desc_XmasBow_C",
-          "amount": 10,
-          "name": "FICSMAS Bow",
-          "amountMin": 600
-        },
-        {
-          "item": "Desc_Snow_C",
-          "amount": 100,
-          "name": "FICSMAS Actual Snow",
-          "amountMin": 6000
-        },
-        {
-          "item": "Desc_XmasBall3_C",
-          "amount": 20,
-          "name": "Copper FICSMAS Ornament",
-          "amountMin": 1200
-        }
-      ],
-      "products": [
-        {
-          "item": "Desc_SnowCannon_C",
-          "amount": 1,
-          "name": "FICSMAS Snow Cannon",
-          "amountMin": 60
-        }
-      ],
-      "isVariablePower": false,
-      "minPower": 0,
-      "maxPower": 1,
-      "cyclesMin": 60
-    },
-    {
-      "slug": "recipe-snowdispenser-c",
-      "name": "FICSMAS Snow Dispenser",
-      "className": "Recipe_SnowDispenser_C",
-      "alternate": false,
-      "time": 1,
-      "inHand": false,
-      "forBuilding": true,
-      "inWorkshop": false,
-      "inMachine": false,
-      "manualTimeMultiplier": 1,
-      "ingredients": [
-        {
-          "item": "Desc_CandyCane_C",
-          "amount": 10,
-          "name": "Candy Cane",
-          "amountMin": 600
-        },
-        {
-          "item": "Desc_Snow_C",
-          "amount": 100,
-          "name": "FICSMAS Actual Snow",
-          "amountMin": 6000
-        },
-        {
-          "item": "Desc_XmasBall4_C",
-          "amount": 20,
-          "name": "Iron FICSMAS Ornament",
-          "amountMin": 1200
-        }
-      ],
-      "products": [
-        {
-          "item": "Desc_SnowDispenser_C",
-          "amount": 1,
-          "name": "FICSMAS Snow Dispenser",
-          "amountMin": 60
-        }
-      ],
-      "isVariablePower": false,
-      "minPower": 0,
-      "maxPower": 1,
-      "cyclesMin": 60
-    },
-    {
-      "slug": "recipe-xmasslights-c",
-      "name": "FICSMAS Power Light",
-      "className": "Recipe_xmassLights_C",
-      "alternate": false,
-      "time": 1,
-      "inHand": false,
-      "forBuilding": true,
-      "inWorkshop": false,
-      "inMachine": false,
-      "manualTimeMultiplier": 1,
-      "ingredients": [
-        {
-          "item": "Desc_Cable_C",
-          "amount": 1,
-          "name": "Cable",
-          "amountMin": 60
-        },
-        {
-          "item": "Desc_XmasBallCluster_C",
-          "amount": 1,
-          "name": "FICSMAS Ornament Bundle",
-          "amountMin": 60
-        }
-      ],
-      "products": [
-        {
-          "item": "Desc_xmassLights_C",
-          "amount": 1,
-          "name": "FICSMAS Power Light",
-          "amountMin": 60
-        }
-      ],
-      "isVariablePower": false,
-      "minPower": 0,
-      "maxPower": 1,
-      "cyclesMin": 60
-    },
-    {
-      "slug": "recipe-treegiftproducer-c",
-      "name": "FICSMAS Gift Tree",
-      "className": "Recipe_TreeGiftProducer_C",
-      "alternate": false,
-      "time": 1,
-      "inHand": false,
-      "forBuilding": true,
-      "inWorkshop": false,
-      "inMachine": false,
-      "manualTimeMultiplier": 1,
-      "ingredients": [
-        {
-          "item": "Desc_Gift_C",
-          "amount": 50,
-          "name": "FICSMAS Gift",
-          "amountMin": 3000
-        },
-        {
-          "item": "Desc_XmasBranch_C",
-          "amount": 100,
-          "name": "FICSMAS Tree Branch",
-          "amountMin": 6000
-        },
-        {
-          "item": "Desc_XmasBall1_C",
-          "amount": 30,
-          "name": "Red FICSMAS Ornament",
-          "amountMin": 1800
-        },
-        {
-          "item": "Desc_XmasBall2_C",
-          "amount": 30,
-          "name": "Blue FICSMAS Ornament",
-          "amountMin": 1800
-        }
-      ],
-      "products": [
-        {
-          "item": "Desc_TreeGiftProducer_C",
-          "amount": 1,
-          "name": "FICSMAS Gift Tree",
-          "amountMin": 60
-        }
-      ],
-      "isVariablePower": false,
-      "minPower": 0,
-      "maxPower": 1,
-      "cyclesMin": 60
-    },
-    {
-      "slug": "recipe-snowman-c",
-      "name": "FICSMAS Snowman",
-      "className": "Recipe_Snowman_C",
-      "alternate": false,
-      "time": 1,
-      "inHand": false,
-      "forBuilding": true,
-      "inWorkshop": false,
-      "inMachine": false,
-      "manualTimeMultiplier": 1,
-      "ingredients": [
-        {
-          "item": "Desc_Snow_C",
-          "amount": 50,
-          "name": "FICSMAS Actual Snow",
-          "amountMin": 3000
-        },
-        {
-          "item": "Desc_CandyCane_C",
-          "amount": 3,
-          "name": "Candy Cane",
-          "amountMin": 180
-        },
-        {
-          "item": "Desc_XmasBow_C",
-          "amount": 1,
-          "name": "FICSMAS Bow",
-          "amountMin": 60
-        },
-        {
-          "item": "Desc_XmasBall1_C",
-          "amount": 3,
-          "name": "Red FICSMAS Ornament",
-          "amountMin": 180
-        },
-        {
-          "item": "Desc_XmasBall2_C",
-          "amount": 2,
-          "name": "Blue FICSMAS Ornament",
-          "amountMin": 120
-        }
-      ],
-      "products": [
-        {
-          "item": "Desc_Snowman_C",
-          "amount": 1,
-          "name": "FICSMAS Snowman",
-          "amountMin": 60
-        }
-      ],
-      "isVariablePower": false,
-      "minPower": 0,
-      "maxPower": 1,
-      "cyclesMin": 60
-    },
-    {
-      "slug": "recipe-xmasstree-c",
-      "name": "Giant FICSMAS Tree",
-      "className": "Recipe_XMassTree_C",
-      "alternate": false,
-      "time": 1,
-      "inHand": false,
-      "forBuilding": true,
-      "inWorkshop": false,
-      "inMachine": false,
-      "manualTimeMultiplier": 1,
-      "ingredients": [
-        {
-          "item": "Desc_XmasBranch_C",
-          "amount": 100,
-          "name": "FICSMAS Tree Branch",
-          "amountMin": 6000
-        },
-        {
-          "item": "Desc_IronPlateReinforced_C",
-          "amount": 50,
-          "name": "Reinforced Iron Plate",
-          "amountMin": 3000
-        },
-        {
-          "item": "Desc_Cement_C",
-          "amount": 500,
-          "name": "Concrete",
-          "amountMin": 30000
-        }
-      ],
-      "products": [
-        {
-          "item": "Desc_XMassTree_C",
-          "amount": 1,
-          "name": "Giant FICSMAS Tree",
-          "amountMin": 60
-        }
-      ],
-      "isVariablePower": false,
-      "minPower": 0,
-      "maxPower": 1,
-      "cyclesMin": 60
-    },
-    {
-      "slug": "recipe-candycanedecor-c",
-      "name": "FICSMAS Candy Cane",
-      "className": "Recipe_CandyCaneDecor_C",
-      "alternate": false,
-      "time": 1,
-      "inHand": false,
-      "forBuilding": true,
-      "inWorkshop": false,
-      "inMachine": false,
-      "manualTimeMultiplier": 1,
-      "ingredients": [
-        {
-          "item": "Desc_CandyCane_C",
-          "amount": 10,
-          "name": "Candy Cane",
-          "amountMin": 600
-        },
-        {
-          "item": "Desc_XmasBow_C",
-          "amount": 1,
-          "name": "FICSMAS Bow",
-          "amountMin": 60
-        }
-      ],
-      "products": [
-        {
-          "item": "Desc_CandyCaneDecor_C",
-          "amount": 1,
-          "name": "FICSMAS Candy Cane",
-          "amountMin": 60
-        }
-      ],
-      "isVariablePower": false,
-      "minPower": 0,
-      "maxPower": 1,
-      "cyclesMin": 60
-    },
-    {
-      "slug": "recipe-candycanebasher-c",
-      "name": "Candy Cane Basher",
-      "className": "Recipe_CandyCaneBasher_C",
-      "alternate": false,
-      "time": 80,
-      "inHand": false,
-      "forBuilding": false,
-      "inWorkshop": true,
-      "inMachine": false,
-      "manualTimeMultiplier": 1,
-      "ingredients": [
-        {
-          "item": "BP_EquipmentDescriptorShockShank_C",
-          "amount": 2,
-          "name": "Xeno-Zapper",
-          "amountMin": 1.5
-        },
-        {
-          "item": "Desc_CandyCane_C",
-          "amount": 25,
-          "name": "Candy Cane",
-          "amountMin": 18.75
-        },
-        {
-          "item": "Desc_Gift_C",
-          "amount": 15,
-          "name": "FICSMAS Gift",
-          "amountMin": 11.25
-        }
-      ],
-      "products": [
-        {
-          "item": "BP_EquipmentDescriptorCandyCane_C",
-          "amount": 1,
-          "name": "Candy Cane Basher",
           "amountMin": 0.75
         }
       ],

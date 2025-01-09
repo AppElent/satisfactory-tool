@@ -11,8 +11,7 @@ import './App.css';
 import config from './config';
 import { getPath } from './config/paths';
 import Dashboard from './Dashboard';
-import { Recipe } from './schemas/recipe';
-import { gameYupSchema } from './schemas/satisfactory/game';
+import { Game, gameYupSchema } from './schemas/satisfactory/game';
 
 const firebaseProvider = new FirebaseAuthProvider({
   login: getPath('login').to,
@@ -22,7 +21,7 @@ const firebaseProvider = new FirebaseAuthProvider({
 // const devFilter = import.meta.env.DEV ? 'ja' : 'ZMG16rhpzbdKd8LXUIiNOD7Jul23';
 
 const dataSources = {
-  games: new FirestoreDataSource<Recipe>(
+  games: new FirestoreDataSource<Game>(
     {
       target: 'satisfactory_games',
       targetMode: 'collection',

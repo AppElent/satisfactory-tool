@@ -9,6 +9,7 @@ interface UseSatisfactoryCalculatorReturn {
   saveResult?: (result: SatisfactoryNetwork) => Promise<void>;
   result: SatisfactoryNetwork | undefined;
   dirty: boolean;
+  error: string | undefined;
   calculate: () => Promise<void>;
 }
 
@@ -32,6 +33,7 @@ export const SatisfactoryCalculatorContextProvider = ({
   //   const [config, setConfig] = useState<CalculatorType>({});
   const [result, setResult] = useState<SatisfactoryNetwork>();
   const [dirty, setDirty] = useState(false);
+  const [error, setError] = useState<string>();
 
   // Clear result every time config changes
   useEffect(() => {
@@ -42,21 +44,25 @@ export const SatisfactoryCalculatorContextProvider = ({
   // Calculate result
   const calculate = useCallback(async () => {
     const calculator = new Calculator(config);
-    await calculator.calculate();
+    try {
+      await calculator.calculate();
 
-    setResult(calculator.result);
-    setDirty(false);
-    if (saveResult && calculator.result) {
-      //const saveObject = calculator.result.toObject();
-      //const calculatorTest = new SatisfactoryNetwork(saveObject.nodes, saveObject.edges);
-      console.log(calculator.result.toObject());
-      saveResult(calculator.result);
+      setResult(calculator.result);
+      setDirty(false);
+      if (saveResult && calculator.result) {
+        //const saveObject = calculator.result.toObject();
+        //const calculatorTest = new SatisfactoryNetwork(saveObject.nodes, saveObject.edges);
+        console.log(calculator.result.toObject());
+        saveResult(calculator.result);
+      }
+    } catch (e: any) {
+      setError(e.message);
     }
   }, [config, saveResult]);
 
   return (
     <SatisfactoryCalculatorContext.Provider
-      value={{ dirty, config, saveConfig, saveResult, result, calculate }}
+      value={{ dirty, config, saveConfig, saveResult, result, calculate, error }}
     >
       {children}
     </SatisfactoryCalculatorContext.Provider>

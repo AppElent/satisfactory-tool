@@ -12,16 +12,18 @@ const ResourceDetails = () => {
     field: 'className',
   }) as Resource;
 
-  const switchOptions = satisfactoryData.resources.map((resource) => ({
-    key: resource.className,
-    label: resource.name,
-  }));
+  const options = {
+    resourceDetails: {
+      getLabel: (_params: any) => item?.name,
+      options: items.map((resource) => ({
+        key: resource.className,
+        label: resource.name,
+      })),
+    },
+  };
 
   return (
-    <DefaultPage
-      currentPage={item?.name}
-      switchOptions={switchOptions}
-    >
+    <DefaultPage options={options}>
       <ItemOverview item={item}>
         <Typography
           variant="body1"

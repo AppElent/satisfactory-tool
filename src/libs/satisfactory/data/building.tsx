@@ -30,4 +30,12 @@ export default class Building extends BaseItem implements SatisfactoryBuilding {
   getBuildable = () => {
     return this.data.findBuildable(this.className);
   };
+
+  toObject = () => {
+    return {
+      ...super.toObject(),
+      description: this.description,
+      metadata: this.metadata,
+    };
+  };
 }

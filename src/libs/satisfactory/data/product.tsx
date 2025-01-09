@@ -9,6 +9,8 @@ export interface SatisfactoryItem extends SatisfactoryBaseItem {
   energyValue: number;
   liquid: boolean;
   tier: string;
+  category: string;
+  tags: string[];
   isEquipment: boolean;
   isRadioactive: boolean;
   isFuel: boolean;
@@ -21,6 +23,8 @@ export default class Product extends BaseItem implements SatisfactoryItem {
   public stackSize: number = 0;
   public sinkPoints: number;
   public tier: string;
+  public category: string;
+  public tags: string[];
   public energyValue: number;
   public isEquipment: boolean;
   public isRadioactive: boolean;
@@ -35,6 +39,8 @@ export default class Product extends BaseItem implements SatisfactoryItem {
     this.stackSize = product.stackSize;
     this.sinkPoints = product.sinkPoints;
     this.tier = product.tier;
+    this.category = product.category;
+    this.tags = product.tags;
     this.energyValue = product.energyValue;
     this.isEquipment = product.isEquipment;
     this.isRadioactive = product.isRadioactive;
@@ -83,5 +89,23 @@ export default class Product extends BaseItem implements SatisfactoryItem {
         <Chip label={`Tier: ${this.tier}`} />
       </Tooltip>
     );
+  };
+
+  toObject = () => {
+    return {
+      ...super.toObject(),
+      description: this.description,
+      liquid: this.liquid,
+      stackSize: this.stackSize,
+      sinkPoints: this.sinkPoints,
+      tier: this.tier,
+      category: this.category,
+      tags: this.tags,
+      energyValue: this.energyValue,
+      isEquipment: this.isEquipment,
+      isRadioactive: this.isRadioactive,
+      isFuel: this.isFuel,
+      isResource: this.isResource,
+    };
   };
 }

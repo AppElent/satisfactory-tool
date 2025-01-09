@@ -1,9 +1,10 @@
 import SearchBar from '@/components/default/ui/search-bar';
-import RecipeCard from '@/components/satisfactory/cards/recipe-card';
-import useFilter from '@/hooks/use-filter';
+import ItemCard from '@/components/satisfactory/cards/item-card';
+import Pagination from '@/libs/filters/components/pagination';
+import useFilter from '@/libs/filters/use-filter';
 import Recipe from '@/libs/satisfactory/data/recipe';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
-import { Box, Grid, Pagination, Stack } from '@mui/material';
+import { Box, Grid, Stack } from '@mui/material';
 import DefaultPage from '../../default/DefaultPage';
 
 const BuildableRecipes = () => {
@@ -43,17 +44,15 @@ const BuildableRecipes = () => {
               sm={2}
               md={2}
             >
-              <RecipeCard recipe={recipe} />
+              <ItemCard item={recipe}>
+                <>{recipe.getRatingChip()}</>
+              </ItemCard>
             </Grid>
           );
         })}
       </Grid>
       <Box sx={{ mt: 2 }}>
-        <Pagination
-          count={filterOptions.pages || 0}
-          page={filteredItems?.length > 0 ? filterOptions.page - 1 : 0}
-          onChange={(_e, newPage) => filterOptions.setPage(newPage - 1)}
-        />
+        <Pagination filter={filterOptions} />
       </Box>
     </DefaultPage>
   );

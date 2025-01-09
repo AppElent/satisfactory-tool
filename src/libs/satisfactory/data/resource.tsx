@@ -39,4 +39,12 @@ export default class Resource extends BaseItem implements SatisfactoryResource {
       recipe.ingredients.find((i) => i.item === this.className)
     );
   };
+
+  toObject = () => {
+    return {
+      ...super.toObject(),
+      pingColor: this.pingColor,
+      max: this.max,
+    };
+  };
 }

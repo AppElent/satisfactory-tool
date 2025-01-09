@@ -3,7 +3,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import data from './data-ficsmas.json' with { type: 'json' };
 import data_normal from './data.json' with { type: 'json' };
-import equipment from './equipment.json' with { type: 'json' };
 import minerData from './miners.json' with { type: 'json' };
 import ratings from './ratings.json' with { type: 'json' };
 import simple from './simple.json' with { type: 'json' };
@@ -11,25 +10,92 @@ import simple from './simple.json' with { type: 'json' };
 // simple.json is found on https://github.com/KirkMcDonald/satisfactory-calculator/blob/master/data/data.json
 // data.json is found on https://github.com/greeny/SatisfactoryTools/tree/master/data
 
+const consumables = [
+  'Bacon Agaric',
+  'Beryl Nut',
+  'Iodine-Infused Filter',
+  'Paleberry',
+  'Medicinal Inhaler',
+];
+
+const equipment = [
+  'Blade Runners',
+  'Boombox',
+  'Chainsaw',
+  'Cup',
+  'Factory Cart™',
+  'Gas Mask',
+  'Hazmat Suit',
+  'Hoverpack',
+  'Jetpack',
+  'Medicinal Inhaler',
+  'Nobelisk Detonator',
+  'Object Scanner',
+  'Parachute',
+  'Portable Miner',
+  'Rebar Gun',
+  'Rifle',
+  'Xeno-Basher',
+  'Xeno-Zapper',
+  'Zipline',
+];
+
+const collectibles = [
+  'Desc_Wood_C', // wood
+  'Desc_WAT1_C', // somersloop
+  'Desc_CrystalShard_C', // power shard
+  'Desc_HatcherParts_C', // hatcher remains
+  'Desc_HogParts_C', // hog remains
+  'Desc_Leaves_C', // /leaves
+  'Desc_Mycelia_C', // mycelia
+  'Desc_Crystal_C', //blue power slug
+  'Desc_Crystal_mk3_C', //purple power slug
+  'Desc_Crystal_mk2_C', // yellow power slug
+  'Desc_SpitterParts_C', // spitter remains
+  'Desc_StingerParts_C', // stinger remains
+];
+
 const isEquipment = (item) => {
   return equipment.includes(item.name);
+};
+const isCollectible = (item) => {
+  return collectibles.includes(item.className);
 };
 const isFicsmas = (item) => {
   return data_normal.items[item.className] ? false : true;
 };
+const isConsumable = (item) => {
+  return consumables.includes(item.name);
+};
 const isRadioactive = (item) => item.radioactiveDecay > 0;
 const isFuel = (item) => item.energyValue > 0;
+const isAmmo = (item) => getTier(item) === 'ammo';
+
 const getTier = (item) => {
-  const isFicsmasItem = isFicsmas(item);
   const searchKey = item.liquid ? 'fluids' : 'items';
-  const foundSimpleItem = simple[searchKey].find((i) => i.name === item.name);
-  return foundSimpleItem
-    ? foundSimpleItem.tier === -1
-      ? '0'
-      : foundSimpleItem.tier + ''
-    : isFicsmasItem
-      ? 'ficsmas'
-      : '999';
+  const foundSimpleItem = simple[searchKey]?.find((i) => i.name === item.name);
+
+  if (isFicsmas(item)) {
+    return 'ficsmas';
+  }
+
+  if (!foundSimpleItem) {
+    if (item.className === 'Desc_SpaceElevatorPart_10_C') {
+      return '8';
+    }
+    return 'other';
+  }
+
+  switch (foundSimpleItem.tier) {
+    case -1:
+      return '0';
+    case 0:
+      return '1';
+    case 11:
+      return 'ammo';
+    default:
+      return foundSimpleItem.tier.toString();
+  }
 };
 const getRating = (recipe) => {
   const foundRating = ratings.find((r) => r.recipe === recipe.name.replace('Alternate: ', ''));
@@ -40,10 +106,69 @@ const getRating = (recipe) => {
   };
 };
 
+const getCategory = (item) => {
+  if (isFicsmas(item)) {
+    return 'ficsmas';
+  }
+  if (isEquipment(item)) {
+    return 'equipment';
+  }
+  if (isAmmo(item)) {
+    return 'ammo';
+  }
+  if (isConsumable(item)) {
+    return 'consumable';
+  }
+  if (isFuel(item)) {
+    return 'fuel';
+  }
+  return 'product';
+};
+const getTags = (item) => {
+  const tags = [];
+  if (isFicsmas(item)) {
+    tags.push('ficsmas');
+  }
+  if (isCollectible(item)) {
+    tags.push('collectible');
+  }
+  if (isEquipment(item)) {
+    tags.push('equipment');
+  }
+  if (isConsumable(item)) {
+    tags.push('consumable');
+  }
+  if (isAmmo(item)) {
+    tags.push('ammo');
+  }
+  if (isRadioactive(item)) {
+    tags.push('radioactive');
+  }
+  if (isFuel(item)) {
+    tags.push('fuel');
+  }
+  if (getCategory(item) === 'product') {
+    tags.push('product');
+  }
+  return tags;
+};
+
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename); // get the name of the directory
 const parentDir = path.resolve(__dirname, '..');
 console.log(__dirname, parentDir);
+
+const noRecipeProducts = Object.keys(data.items)
+  .filter((prod) => {
+    return !Object.keys(data.recipes).some((recipe) => {
+      return data.recipes[recipe].products.some((p) => p.item === prod);
+    });
+  })
+  .map((pr) => {
+    const product = data.items[pr];
+    return product.name;
+  });
+// console.log(noRecipeProducts);
 
 // products
 const items = Object.keys(data.items).map((key) => {
@@ -58,12 +183,21 @@ const items = Object.keys(data.items).map((key) => {
     energyValue: item.energyValue,
     liquid: item.liquid,
     tier: getTier(item),
+    category: getCategory(item),
+    tags: getTags(item),
     isEquipment: isEquipment(item),
     isRadioactive: isRadioactive(item),
     isFuel: isFuel(item),
     isResource: Object.keys(data.resources).includes(item.className),
   };
 });
+
+// Find all unique tiers
+const tiers = items
+  .map((item) => item.tier)
+  .filter((tier, index, self) => self.indexOf(tier) === index)
+  .sort((a, b) => parseInt(a) - parseInt(b));
+console.log(tiers);
 
 // Show 5 random items from items
 //console.log(items.sort(() => Math.random() - 0.5).slice(0, 5));
@@ -125,17 +259,23 @@ const buildables = Object.keys(data.buildings).map((key) => {
     metadata: buildable.metadata,
   };
 });
-
+const ficsmasRecipes = Object.keys(data.recipes).filter(
+  (key) =>
+    data.recipes[key].name.toLowerCase().includes('ficsmas') ||
+    data.recipes[key].name.toLowerCase().includes('snowman') ||
+    data.recipes[key].name.toLowerCase().includes('candy cane')
+);
 // Recipes for buildables
 const buildableRecipes = Object.keys(data.recipes)
   .filter((key) => data.recipes[key].forBuilding || !data.recipes[key].inMachine)
+  // manually filter some ficsmas recipes
+  .filter((key) => !ficsmasRecipes.includes(key))
   .map((key) => {
     const recipe = data.recipes[key];
-
     return {
       ...recipe,
-      cyclesMin: 60 / recipe.time,
       producedIn: recipe.producedIn[0],
+      cyclesMin: 60 / recipe.time,
       ingredients: recipe.ingredients.map((i) => ({
         ...i,
         name: items.find((item) => item.className === i.item).name,

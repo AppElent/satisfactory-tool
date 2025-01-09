@@ -32,4 +32,12 @@ export default class Buildable extends BaseItem implements SatisfactoryBuildable
       r.products.find((p) => p.item === this.className)
     );
   };
+
+  toObject = () => {
+    return {
+      ...super.toObject(),
+      description: this.description,
+      metadata: this.metadata,
+    };
+  };
 }

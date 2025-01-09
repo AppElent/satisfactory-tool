@@ -1,30 +1,47 @@
+import useRouter from '@/hooks/use-router';
+import { useData } from '@/libs/data-sources';
 import TextField from '@/libs/forms/components/TextField';
-import Calculator from '@/libs/satisfactory/calculator';
 import useSatisfactoryCalculator from '@/libs/satisfactory/calculator/use-satisfactory-calculator';
-import calculatorSchemaClass from '@/schemas/satisfactory/calculator';
-import { Button, Card, CardContent, CardHeader, Grid } from '@mui/material';
+import calculatorSchema, { Calculator } from '@/schemas/satisfactory/calculator';
+import { Button, Card, CardActions, CardContent, CardHeader } from '@mui/material';
 import { useMemo } from 'react';
+import { toast } from 'react-toastify';
 
 const ConfigureMetadataCard = () => {
   const { config } = useSatisfactoryCalculator();
-  const fieldDefinitions = useMemo(() => calculatorSchemaClass.getFieldDefinitions(), []);
+  const configs = useData<Calculator>('calculator_configs');
+  const fieldDefinitions = useMemo(() => calculatorSchema.getFieldDefinitions(), []);
+  const router = useRouter();
 
-  const openInSatisfactoryTools = async () => {
-    console.log('open in satisfactory tools');
-    if (config) {
-      const calculator = new Calculator(config);
-      const link = await calculator.saveSatisfactoryTools();
-      window.open(link, '_blank');
-    }
-  };
+  // const openInSatisfactoryTools = async () => {
+  //   console.log('open in satisfactory tools');
+  //   if (config) {
+  //     const calculator = new Calculator(config);
+  //     const link = await calculator.saveSatisfactoryTools();
+  //     window.open(link, '_blank');
+  //   }
+  // };
 
-  const getFromSatisfactoryTools = async () => {
-    console.log('get from satisfactory tools');
-    if (config) {
-      const calculator = new Calculator(config);
-      const newConfig = await calculator.getSatisfactoryToolsConfig(config.externalId as string);
-      console.log(newConfig);
-    }
+  // const getFromSatisfactoryTools = async () => {
+  //   console.log('get from satisfactory tools');
+  //   if (config) {
+  //     const calculator = new Calculator(config);
+  //     const newConfig = await calculator.getSatisfactoryToolsConfig(config.externalId as string);
+  //     console.log(newConfig);
+  //   }
+  // };
+
+  const cloneConfig = async () => {
+    const template = calculatorSchema.getTemplate();
+    const newConfig = {
+      ...template,
+      ...config,
+      id: template.id,
+      name: `${config?.name} (clone)`,
+    };
+    await configs?.actions?.set(newConfig, template.id);
+    toast.success('Config cloned');
+    router.push(`/app/satisfactory/calculator/${template.id}`);
   };
 
   return (
@@ -34,7 +51,8 @@ const ConfigureMetadataCard = () => {
         titleTypographyProps={{ variant: 'h6' }}
       />
       <CardContent>
-        <Grid container>
+        <TextField field={fieldDefinitions.name} />
+        {/* <Grid container>
           <Grid
             item
             xs={12}
@@ -61,8 +79,16 @@ const ConfigureMetadataCard = () => {
               Get from Satisfactory Tools
             </Button>
           </Grid>
-        </Grid>
+        </Grid> */}
       </CardContent>
+      <CardActions sx={{ justifyContent: 'flex-end' }}>
+        <Button
+          onClick={cloneConfig}
+          variant="contained"
+        >
+          Clone
+        </Button>
+      </CardActions>
     </Card>
   );
 };

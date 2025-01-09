@@ -11,8 +11,19 @@ const BuildableRecipeDetails = () => {
     items: items || [],
     field: 'className',
   }) as Recipe;
+
+  const options = {
+    buildableRecipeDetails: {
+      getLabel: (_params: any) => item?.name,
+      options: items?.map((item) => ({
+        key: item.className,
+        label: item.name,
+      })),
+    },
+  };
+
   return (
-    <DefaultPage currentPage={item?.name}>
+    <DefaultPage options={options}>
       <ItemOverview item={item}>
         <Typography
           variant="body1"

@@ -14,7 +14,10 @@ const getLabel = (item: string, amount: number) => {
   return `${prodName}\n${+amount.toFixed(3)} / min`;
 };
 
-export default class SatisfactoryEdge extends Edge {
+export default class SatisfactoryEdge extends Edge implements SatisfactoryEdgeProps {
+  public item: string;
+  public amount: number;
+
   constructor(edge: SatisfactoryEdgeProps) {
     super({
       source: edge.source,
@@ -22,5 +25,17 @@ export default class SatisfactoryEdge extends Edge {
       label: edge.label ?? getLabel(edge.item, edge.amount),
       class: 'edge',
     });
+    this.item = edge.item;
+    this.amount = edge.amount;
   }
+
+  toObject = () => {
+    return {
+      source: this.source,
+      target: this.target,
+      amount: this.amount,
+      item: this.item,
+      label: this.label,
+    };
+  };
 }

@@ -8,7 +8,7 @@ interface ItemDetailProps {
 
 const ItemDetail = ({ item }: ItemDetailProps) => {
   return (
-    <DefaultPage currentPage={item?.name}>
+    <DefaultPage>
       <ItemCard item={item} />
     </DefaultPage>
   );

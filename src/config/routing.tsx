@@ -304,6 +304,7 @@ export const routes: CustomRouteObject[] = [
             path: 'games',
             category: 'gameplay',
             element: <Outlet />,
+            loginRequired: true,
             children: [
               {
                 id: 'gamesIndex',

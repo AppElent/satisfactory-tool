@@ -113,8 +113,20 @@ class BaseDataSource<T> {
     if (this.options.YupValidationSchema) {
       try {
         await this.options.YupValidationSchema.validate(data, { abortEarly: false });
-      } catch (err: any) {
-        const validationErrors = err.errors?.join(' ');
+      } catch (error: any) {
+        const validationErrors = error.errors?.join(' ');
+        console.error('Validation failed:', validationErrors, error);
+
+        if (error instanceof yup.ValidationError) {
+          console.error('Validation Errors:', error.errors); // Array of error messages
+          console.error(
+            'Error Paths:',
+            error.inner.map((err) => err.path)
+          ); // Paths to the invalid fields
+          console.error('Original Value:', error.value); // The original object being validated
+        } else {
+          console.error('Unexpected error:', error);
+        }
         throw new Error(`Validation failed: ${validationErrors}`);
       }
     }

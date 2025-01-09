@@ -1,7 +1,7 @@
-import Pagination from '@/components/default/filters/pagination';
 import SearchBar from '@/components/default/ui/search-bar';
 import ItemCard from '@/components/satisfactory/cards/item-card';
-import useFilter from '@/hooks/use-filter';
+import Pagination from '@/libs/filters/components/pagination';
+import useFilter from '@/libs/filters/use-filter';
 import BaseItem from '@/libs/satisfactory/data/base-item';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import { Box, Grid, Stack } from '@mui/material';

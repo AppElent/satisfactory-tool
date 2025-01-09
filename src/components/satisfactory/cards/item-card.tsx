@@ -29,7 +29,7 @@ const ItemCard: React.FC<ItemCardProps> = ({ item, children }) => {
         </Typography>
         {children}
       </CardContent>
-      <CardActions>
+      <CardActions sx={{ justifyContent: 'flex-end' }}>
         <Button
           onClick={() => router.push(`${item.className}`)}
           size="small"

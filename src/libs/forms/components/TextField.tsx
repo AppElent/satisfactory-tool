@@ -29,7 +29,7 @@ const TextField = ({ name, field: fieldConfig, ...props }: CustomTextFieldProps)
       margin="dense"
       name={fieldName}
       label={fieldConfig?.label || fieldName}
-      value={field.value || ''}
+      value={field.value !== undefined ? field.value : ''}
       onChange={field.onChange}
       onBlur={field.onBlur}
       error={meta.touched && Boolean(meta.error)}

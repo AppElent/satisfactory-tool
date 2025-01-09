@@ -68,4 +68,15 @@ export default class Network implements NetworkInterface {
       edges: this.edges.map((e) => e.toObject()),
     };
   };
+
+  mergeNetworks = (networks: Network[]): void => {
+    const nodes = this.nodes || [];
+    const edges = this.edges || [];
+    for (const network of networks) {
+      nodes.push(...network.nodes);
+      edges.push(...network.edges);
+    }
+    this.nodes = nodes;
+    this.edges = edges;
+  };
 }

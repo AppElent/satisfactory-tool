@@ -28,7 +28,7 @@ const CalculatorDetails = () => {
           setConfig={setConfig}
           saveResult={(result) => {
             console.log('save result');
-            console.log(result);
+            console.log(result.toObject());
           }}
         />
       )}

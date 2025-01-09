@@ -41,4 +41,17 @@ export default class Schematic extends BaseItem implements SatisfactorySchematic
     this.mam = schematic.mam;
     this.alternate = schematic.alternate;
   }
+
+  toObject = () => {
+    return {
+      ...super.toObject(),
+      type: this.type,
+      cost: this.cost,
+      unlock: this.unlock,
+      time: this.time,
+      tier: this.tier,
+      mam: this.mam,
+      alternate: this.alternate,
+    };
+  };
 }

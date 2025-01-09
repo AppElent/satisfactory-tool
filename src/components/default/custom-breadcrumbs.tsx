@@ -38,15 +38,14 @@ const generateBreadcrumbs = (breadcrumbsConfig: PathItem[], pathname: string) =>
 };
 
 interface CustomBreadcrumbsProps {
-  currentPage?: string;
-  switchOptions?: {
-    label: string;
-    key: string;
-  }[];
+  // currentPage?: string;
+  // switchOptions?: {
+  //   label: string;
+  //   key: string;
+  // }[];
   options?: {
     [key: string]: {
       getLabel?: (params: { [key: string]: string }) => string;
-      getPath?: (params: { [key: string]: string }) => string;
       options: {
         label: string;
         key: string;
@@ -55,7 +54,7 @@ interface CustomBreadcrumbsProps {
   };
 }
 
-const CustomBreadcrumbs = ({ currentPage, switchOptions, options }: CustomBreadcrumbsProps) => {
+const CustomBreadcrumbs = ({ options }: CustomBreadcrumbsProps) => {
   const params = useParams();
   const { t } = useTranslation();
   const isMobile = useIsMobile();
@@ -68,27 +67,36 @@ const CustomBreadcrumbs = ({ currentPage, switchOptions, options }: CustomBreadc
     setAnchorEl(event.currentTarget);
   };
 
-  console.log(params, options);
-  // TODO: when details, to must be a link
-
   const handleItemClick = (item: { label: string; key: string }) => {
     // Route to the selectem item by replacing the last segment of the url with the className
     const urlSegments = window.location.pathname.split('/');
     urlSegments[urlSegments.length - 1] = item.key;
     const newUrl = urlSegments.join('/');
-    console.log(item, newUrl);
     router.push(newUrl);
     setAnchorEl(null);
+  };
+
+  const getLink = (link: string) => {
+    const urlSegments = link.split('/');
+    urlSegments.forEach((segment) => {
+      if (segment.startsWith(':')) {
+        const key = segment.slice(1);
+        if (params[key]) {
+          link = link.replace(segment, params[key]);
+        }
+      }
+    });
+    return link;
   };
 
   const handleClose = () => {
     setAnchorEl(null);
   };
 
-  // If currentPage is set, replace the last item with it
-  if (currentPage) {
-    items[items.length - 1].label = currentPage;
-  }
+  // // If currentPage is set, replace the last item with it
+  // if (currentPage) {
+  //   items[items.length - 1].label = currentPage;
+  // }
 
   return (
     <>
@@ -100,13 +108,14 @@ const CustomBreadcrumbs = ({ currentPage, switchOptions, options }: CustomBreadc
           >
             {items.map((item, index) => {
               const originalValue = item.translationKey ? t(item.translationKey) : item.label;
+              const optionFound = options?.[item.id];
               let value = originalValue;
-              if (options?.[item.id]) {
-                if (options[item.id].getLabel) {
-                  value = options[item.id].getLabel?.(params as any) || originalValue;
+              if (optionFound) {
+                if (optionFound.getLabel) {
+                  value = optionFound.getLabel?.(params as any) || originalValue;
                 }
               }
-              const to = options?.[item.id]?.getPath?.(params as any) || item.to;
+              const to = getLink(item.to || '');
               return (
                 <Stack
                   direction="row"
@@ -119,7 +128,7 @@ const CustomBreadcrumbs = ({ currentPage, switchOptions, options }: CustomBreadc
                       <Link
                         key={index}
                         component={RouterLink}
-                        to={to || item.to}
+                        to={to}
                         //underline="hover"
                         color="inherit"
                       >
@@ -127,7 +136,7 @@ const CustomBreadcrumbs = ({ currentPage, switchOptions, options }: CustomBreadc
                       </Link>
                     ) : (
                       <>
-                        {switchOptions ? (
+                        {optionFound?.options ? (
                           <>
                             <Link
                               key={index}
@@ -148,7 +157,7 @@ const CustomBreadcrumbs = ({ currentPage, switchOptions, options }: CustomBreadc
                               open={Boolean(anchorEl)}
                               onClose={handleClose}
                             >
-                              {switchOptions.map((dropdownItem, dropdownIndex) => (
+                              {optionFound.options.map((dropdownItem, dropdownIndex) => (
                                 <MenuItem
                                   key={dropdownIndex}
                                   // component={RouterLink}

@@ -63,4 +63,97 @@ export default class SatisfactoryNetwork extends Network {
     this.edges = edges;
     console.log(nodes, edges);
   };
+
+  generateEdges = (): void => {
+    const nodes = this.nodes;
+    const edges: SatisfactoryEdge[] = [];
+    for (const node of nodes) {
+      const inputs = node.getInputs();
+      console.log('INPUTS', node.id, inputs);
+      for (const input of inputs) {
+        let inputAmount = input.amount;
+        console.log('inputamount', input.amount);
+        const products = nodes.filter(
+          (n) => n.item === input.item && n.id !== node.id && n.type !== 'product'
+        );
+        for (const product of products) {
+          const usedAmount = product?.useAmount(product.item, inputAmount) || 0;
+          if (usedAmount > 0) {
+            const edge = new SatisfactoryEdge({
+              source: product.id,
+              target: node.id,
+              amount: usedAmount,
+              item: input.item,
+            });
+            inputAmount = inputAmount - usedAmount;
+            edges.push(edge);
+          }
+        }
+        const recipeNodes = (nodes as RecipeNode[]).filter(
+          (n) => n.type === 'recipe' && n.recipe?.products.some((i) => i.item === input.item)
+        );
+        for (const recipeNode of recipeNodes) {
+          // TODO: deze useamount hier is niet goed
+          const product = recipeNode.recipe?.products.find((i) => i.item === input.item);
+          const usedAmount = recipeNode.useAmount(product?.item as string, inputAmount);
+          console.log('RECIPE', node.item, recipeNode.id, usedAmount, inputAmount);
+          if (usedAmount > 0) {
+            const edge = new SatisfactoryEdge({
+              source: recipeNode.id,
+              target: node.id,
+              amount: usedAmount,
+              item: input.item,
+            });
+            edges.push(edge);
+          }
+        }
+      }
+    }
+    this.edges = edges;
+  };
+
+  fromNodes = (nodes: SatisfactoryNode[]): void => {
+    this.nodes = nodes.map((node) => {
+      if (node.type === 'recipe') {
+        return new RecipeNode(node);
+      }
+      return new ProductNode(node);
+    });
+    this.generateEdges();
+  };
+
+  fromObject = (object: { nodes: SatisfactoryNode[]; edges: SatisfactoryEdge[] }): void => {
+    this.fromNodes(object.nodes);
+    this.edges = object.edges.map((edge) => new SatisfactoryEdge(edge));
+  };
+
+  toObject = () => {
+    return {
+      nodes: this.nodes.map((node) => node.toObject()),
+      edges: this.edges.map((edge) => edge.toObject()),
+    };
+  };
+
+  // mergeNetworks = (networks: SatisfactoryNetwork[]): void => {
+  //   const nodes = this.nodes || [];
+  //   const edges = this.edges || [];
+  //   for (const network of networks) {
+  //     nodes.push(...network.nodes);
+  //     edges.push(...network.edges);
+  //   }
+  //   this.nodes = nodes;
+  //   this.edges = edges;
+  // };
+
+  getInputs = (): SatisfactoryNode[] => {
+    return this.nodes.filter((node) => ['input', 'mine'].includes(node.type));
+  };
+
+  getOutputs = (): SatisfactoryNode[] => {
+    return this.nodes.filter((node) => ['product', 'byproduct', 'sink'].includes(node.type));
+  };
+
+  getRecipes = (): SatisfactoryNode[] => {
+    return this.nodes.filter((node) => node.type === 'recipe');
+  };
 }

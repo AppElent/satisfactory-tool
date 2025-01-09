@@ -19,21 +19,38 @@ import {
   Typography,
 } from '@mui/material';
 import { FieldArray } from 'formik';
+import _ from 'lodash';
 import React, { useState } from 'react';
 import Autocomplete from './Autocomplete';
 import Select from './Select';
 import TextField from './TextField';
 
-interface AutocompleteChipListProps {
+interface TableProps {
   name?: string;
   field?: FieldConfig;
-  suggestions?: string[];
+  tableOptions?: {
+    template?: { [key: string]: string | number };
+    getTemplate?: () => { [key: string]: string | number };
+    editable?: boolean;
+    selectable?: boolean;
+    columns?: { [key: string]: FieldConfig };
+    title?: string;
+  };
   muiAutocompleteProps?: Partial<AutocompleteProps<any, any, any, any>>;
   muiChipProps?: ChipProps;
   muiTextFieldProps?: TextFieldProps;
 }
 
-const Table = ({ name, field: fieldConfig }: AutocompleteChipListProps) => {
+const defaultTableOptions = {
+  // template: {},
+  getTemplate: () => ({}),
+  editable: true,
+  selectable: false,
+  columns: {},
+  title: 'Table title',
+};
+
+const Table = ({ name, field: fieldConfig, tableOptions }: TableProps) => {
   const [selected, setSelected] = useState<number[]>([]);
   if (!name && !fieldConfig) {
     throw new Error('Either name or field must be provided');
@@ -41,9 +58,9 @@ const Table = ({ name, field: fieldConfig }: AutocompleteChipListProps) => {
   const fieldName = name || fieldConfig?.name;
   const data = useFormField(fieldName as string);
   const { field, helpers } = data;
-  // const [rows, setRows] = useState(
-  //   field.value.map((row: any, index: number) => ({ ...row, id: index }))
-  // );
+  const mergedTableOptions = _.merge({}, defaultTableOptions, tableOptions);
+  const { template, getTemplate } = mergedTableOptions;
+  console.log(template, getTemplate);
 
   const { editable, selectable, columns = {}, title } = fieldConfig?.custom?.table || {};
 
@@ -89,7 +106,7 @@ const Table = ({ name, field: fieldConfig }: AutocompleteChipListProps) => {
     );
   };
 
-  console.log(columns);
+  console.log(columns, getTemplate());
 
   // const handleDeleteRow = (rowId: number) => {
   //   setRows(rows.filter((row: any) => row.id !== rowId));
@@ -125,7 +142,7 @@ const Table = ({ name, field: fieldConfig }: AutocompleteChipListProps) => {
               {editable && (
                 <Tooltip title="Add Row">
                   <IconButton
-                    onClick={() => push({})}
+                    onClick={() => (getTemplate ? push(getTemplate()) : push(template || {}))}
                     color="primary"
                   >
                     <AddIcon />
@@ -148,7 +165,7 @@ const Table = ({ name, field: fieldConfig }: AutocompleteChipListProps) => {
             </Stack>
           </Toolbar>
           <TableContainer>
-            <DTable>
+            <DTable size="small">
               <TableHead>
                 <MUITableRow>
                   {Object.keys(columns).map((column, index) => (

@@ -1,6 +1,6 @@
 import { FieldConfig } from '@/libs/forms';
 import { faker } from '@faker-js/faker';
-import { merge } from 'lodash';
+import _, { merge } from 'lodash';
 import * as Yup from 'yup';
 
 export interface Schema {
@@ -14,7 +14,16 @@ export interface Schema {
 type YupSchema<T extends Yup.AnyObject> = Yup.ObjectSchema<T>;
 
 export default class DefaultSchema<T> {
-  constructor(public yupSchema: Yup.ObjectSchema<any>) {}
+  // public getCustomFieldDefinitions?: () => { [key: string]: { [key: string]: any } } | undefined;
+  public getCustomFieldDefinitions?: () => { [key: string]: Partial<FieldConfig> } | undefined;
+  constructor(
+    public yupSchema: Yup.ObjectSchema<any>
+    // public getCustomFieldDefinitions?: () => {
+    //   [key: string]: { [key: string]: Partial<FieldConfig> };
+    // }
+  ) {
+    // this.getCustomFieldDefinitions = () => customFieldDefinitions;
+  }
 
   #generateTestData = <T extends Yup.AnyObject>(schema: YupSchema<T>): T => {
     const shape = schema.fields;
@@ -62,6 +71,16 @@ export default class DefaultSchema<T> {
     return data as T;
   };
 
+  generateObjectName = () => {
+    return faker.word.noun();
+  };
+
+  generateName = () => {
+    const name = faker.word.verb() + ' ' + faker.word.noun();
+    // Capatalize first letter of each word
+    return name.replace(/\b\w/g, (l) => l.toUpperCase());
+  };
+
   _generateId = () => {
     return faker.string.uuid();
   };
@@ -78,8 +97,21 @@ export default class DefaultSchema<T> {
     return faker.string.uuid();
   };
 
-  getTemplate() {
-    return this.yupSchema.getDefault();
+  getTemplate(): Partial<T> {
+    const defaultValues = this.yupSchema.getDefault();
+    // Return all non undefined values
+    return Object.keys(defaultValues).reduce((acc: Partial<T>, key) => {
+      if (defaultValues[key] !== undefined) {
+        acc[key as keyof T] = defaultValues[key as keyof T];
+      }
+      return acc;
+    }, {});
+    // return this.yupSchema.getDefault();
+  }
+
+  getFieldTemplate(field: string) {
+    const template: { [key: string]: any } = this.getTemplate();
+    return template[field] || undefined;
   }
 
   getTestData = (count?: number): T | T[] => {
@@ -101,7 +133,7 @@ export default class DefaultSchema<T> {
     }
   };
 
-  getFieldDefinitions(fieldConfig?: { [key: string]: Partial<FieldConfig> }): {
+  getFieldDefinitions(): {
     [key: string]: FieldConfig;
   } {
     // Go through all fields and add them to the return schema.
@@ -140,8 +172,13 @@ export default class DefaultSchema<T> {
       });
     };
     extractFields(this.yupSchema);
-    const merged = merge({}, result, fieldConfig);
-    return merged;
+    const customFieldDefinitions = this.getCustomFieldDefinitions
+      ? this.getCustomFieldDefinitions()
+      : {};
+    const returnFieldDefinitions = _.merge({}, result, customFieldDefinitions);
+    return returnFieldDefinitions; //defaultFieldDefinitions;
+    // const merged = merge({}, result, fieldConfig);
+    // return merged;
   }
 }
 

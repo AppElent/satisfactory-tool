@@ -1,11 +1,12 @@
 import { FieldConfig } from '@/libs/forms';
 import Table from '@/libs/forms/components/Table';
-import calculatorSchemaClass from '@/schemas/satisfactory/calculator';
+import calculatorSchema from '@/schemas/satisfactory/calculator';
+import { productionItemSchema } from '@/schemas/satisfactory/production-item';
 import { Card, CardContent, CardHeader } from '@mui/material';
 import { useMemo } from 'react';
 
 const ConfigureProductionCard = () => {
-  const fieldDefinitions = useMemo(() => calculatorSchemaClass.getFieldDefinitions(), []);
+  const fieldDefinitions = useMemo(() => calculatorSchema.getFieldDefinitions(), []);
 
   const fieldConfig: FieldConfig = {
     ...fieldDefinitions.production,
@@ -29,7 +30,10 @@ const ConfigureProductionCard = () => {
         titleTypographyProps={{ variant: 'h6' }}
       />
       <CardContent>
-        <Table field={fieldConfig} />
+        <Table
+          field={fieldConfig}
+          tableOptions={{ getTemplate: () => productionItemSchema.getTemplate() }}
+        />
       </CardContent>
     </Card>
   );

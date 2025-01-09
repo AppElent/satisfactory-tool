@@ -1,13 +1,13 @@
 import CheckboxList from '@/libs/forms/components/CheckboxList';
 import useSatisfactoryCalculator from '@/libs/satisfactory/calculator/use-satisfactory-calculator';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
-import calculatorSchemaClass from '@/schemas/satisfactory/calculator';
+import calculatorSchema from '@/schemas/satisfactory/calculator';
 import { Card, CardContent, CardHeader, Grid, Typography } from '@mui/material';
 import { useMemo } from 'react';
 
 const ConfigureRecipesCard = () => {
   const { config } = useSatisfactoryCalculator();
-  const fieldDefinitions = useMemo(() => calculatorSchemaClass.getFieldDefinitions(), []);
+  const fieldDefinitions = useMemo(() => calculatorSchema.getFieldDefinitions(), []);
 
   const alternateFieldDefinition = useMemo(() => {
     return {
@@ -59,7 +59,10 @@ const ConfigureRecipesCard = () => {
           </Grid>
           <Grid item>
             <Typography variant="h6">Allowed alternate recipes</Typography>
-            <CheckboxList field={alternateFieldDefinition} />
+            <CheckboxList
+              field={alternateFieldDefinition}
+              options={{ inverted: true }}
+            />
           </Grid>
         </Grid>
       </CardContent>

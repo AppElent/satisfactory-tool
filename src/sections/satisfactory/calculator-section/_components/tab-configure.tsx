@@ -3,15 +3,18 @@ import { CustomForm } from '@/libs/forms';
 import useCustomFormik from '@/libs/forms/use-custom-formik';
 import useSatisfactoryCalculator from '@/libs/satisfactory/calculator/use-satisfactory-calculator';
 import { Calculator } from '@/schemas/satisfactory/calculator';
-import { Tab, Tabs, Typography } from '@mui/material';
+import { Grid, Tab, Tabs, Typography } from '@mui/material';
 import _ from 'lodash';
 import { useEffect } from 'react';
+import ConfigureAlternateRecipesCard from './configure-alternate-recipes-card';
+import ConfigureDefaultRecipesCard from './configure-default-recipes';
 import ConfigureInputsCard from './configure-inputs-card';
 import ConfigureMachinesCard from './configure-machines-card';
 import ConfigureMetadataCard from './configure-metadata-card';
 import ConfigureProductionCard from './configure-production-card';
-import ConfigureRecipesCard from './configure-recipes-card';
 import ConfigureResourcesCard from './configure-resources-card';
+import JsonConfigCard from './json-config.card';
+import SatisfactoryToolsCard from './satisfactory-tools-card';
 
 const tabsData = [
   {
@@ -27,8 +30,12 @@ const tabsData = [
     value: 'resources',
   },
   {
-    label: 'Recipes',
-    value: 'recipes',
+    label: 'Default recipes',
+    value: 'default-recipes',
+  },
+  {
+    label: 'Alternate recipes',
+    value: 'alternate-recipes',
   },
   {
     label: 'Inputs',
@@ -82,6 +89,8 @@ const TabConfigure = () => {
         <Tabs
           value={tabs.tab}
           onChange={tabs.handleTabChange}
+          variant="scrollable"
+          scrollButtons="auto"
         >
           <Tab
             label="Metadata"
@@ -96,8 +105,12 @@ const TabConfigure = () => {
             value="resources"
           />
           <Tab
-            label="Recipes"
-            value="recipes"
+            label="Default recipes"
+            value="default-recipes"
+          />
+          <Tab
+            label="Alternate recipes"
+            value="alternate-recipes"
           />
           <Tab
             label="Inputs"
@@ -108,10 +121,35 @@ const TabConfigure = () => {
             value="machines"
           />
         </Tabs>
-        {tabs.tab === 'metadata' && <ConfigureMetadataCard />}
+        {tabs.tab === 'metadata' && (
+          <Grid
+            container
+            spacing={2}
+          >
+            <Grid
+              item
+              xs={12}
+            >
+              <ConfigureMetadataCard />
+            </Grid>
+            <Grid
+              item
+              xs={12}
+            >
+              <SatisfactoryToolsCard />
+            </Grid>
+            <Grid
+              item
+              xs={12}
+            >
+              <JsonConfigCard />
+            </Grid>
+          </Grid>
+        )}
         {tabs.tab === 'production' && <ConfigureProductionCard />}
         {tabs.tab === 'resources' && <ConfigureResourcesCard setResources={setResources} />}
-        {tabs.tab === 'recipes' && <ConfigureRecipesCard />}
+        {tabs.tab === 'default-recipes' && <ConfigureDefaultRecipesCard />}
+        {tabs.tab === 'alternate-recipes' && <ConfigureAlternateRecipesCard />}
         {tabs.tab === 'inputs' && <ConfigureInputsCard />}
         {tabs.tab === 'machines' && <ConfigureMachinesCard />}
       </CustomForm>

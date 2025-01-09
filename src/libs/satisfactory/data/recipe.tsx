@@ -144,4 +144,25 @@ export default class Recipe extends BaseItem implements SatisfactoryRecipe {
       </Tooltip>
     );
   };
+
+  toObject = () => {
+    return {
+      ...super.toObject(),
+      alternate: this.alternate,
+      time: this.time,
+      inHand: this.inHand,
+      forBuilding: this.forBuilding,
+      inWorkshop: this.inWorkshop,
+      inMachine: this.inMachine,
+      manualTimeMultiplier: this.manualTimeMultiplier,
+      ingredients: this.ingredients,
+      products: this.products,
+      producedIn: this.producedIn,
+      isVariablePower: this.isVariablePower,
+      minPower: this.minPower,
+      maxPower: this.maxPower,
+      cyclesMin: this.cyclesMin,
+      rating: this.rating,
+    };
+  };
 }

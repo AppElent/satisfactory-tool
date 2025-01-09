@@ -12,16 +12,18 @@ const EquipmentDetails = () => {
     field: 'className',
   }) as Product;
 
-  const switchOptions = items.map((product) => ({
-    key: product.className,
-    label: product.name,
-  }));
+  const options = {
+    equipmentDetails: {
+      getLabel: (_params: any) => item?.name,
+      options: items.map((product) => ({
+        key: product.className,
+        label: product.name,
+      })),
+    },
+  };
 
   return (
-    <DefaultPage
-      currentPage={item?.name}
-      switchOptions={switchOptions}
-    >
+    <DefaultPage options={options}>
       <ItemOverview item={item}>
         <Typography
           variant="body1"

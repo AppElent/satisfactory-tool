@@ -7,6 +7,7 @@ export interface PathItem {
   translationKey?: string;
   to?: string;
   Icon: React.ReactNode;
+  loginRequired?: boolean;
   category?: string;
 }
 
@@ -65,6 +66,7 @@ const generateMenu = () => {
           label: item.label,
           translationKey: item.translationKey,
           Icon: item.Icon,
+          loginRequired: item.loginRequired,
           to: item.to,
         })),
       };

@@ -102,16 +102,21 @@ export class LocalStorageDataSource extends BaseDataSource {
   async set(data?: T, id?: any): Promise<void> {
     this.validate(data);
     if (this.options?.targetMode === 'document') {
-      this.saveData(id || data);
+      this.saveData(data);
       return;
     }
     const existingData = this.getData();
     const itemIndex = existingData.findIndex((d: any) => d.id === id);
     if (itemIndex === -1) {
-      throw new Error(`Item with ID ${id} does not exist.`);
+      existingData.push({
+        id,
+        ...data,
+      });
+    } else {
+      existingData[itemIndex] = data;
     }
 
-    existingData[itemIndex] = data;
+    // existingData[itemIndex] = data;
     this.saveData(existingData);
   }
 

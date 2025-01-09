@@ -144,17 +144,11 @@ export default class ToolsConnector {
       if (machineData === 'special__power') continue;
       if (customTypes.includes(machineClass)) {
         nodes.push(
-          new ProductNode(
-            // `${machineData}-${machineClass.toLowerCase()}`,
-            // machineClass.toLowerCase() as NodeType,
-            // machineData,
-            // amount,
-            {
-              type: machineClass.toLowerCase() as NodeType,
-              item: machineData,
-              amount,
-            }
-          )
+          new ProductNode({
+            type: machineClass.toLowerCase() as NodeType,
+            item: machineData,
+            amount,
+          })
         );
       } else {
         const [recipeClass] = machineData.split('@');
@@ -167,9 +161,12 @@ export default class ToolsConnector {
         );
       }
     }
-    const edges = this.calculator.generateEdges(nodes);
-    console.log(nodes);
-    return new SatisfactoryNetwork(nodes, edges);
+    // const edges = this.calculator.generateEdges(nodes);
+    // console.log(nodes);
+    const network = new SatisfactoryNetwork(nodes);
+    console.log(network);
+    network.generateEdges();
+    return network;
     // TODO: excess inputs and resources....
   };
 
@@ -202,7 +199,7 @@ export default class ToolsConnector {
       gameVersion: '0',
       schemaVersion: 1,
       name: config.name,
-      icon: config.production[0].item,
+      icon: config.production[0]?.item,
     };
   };
 
@@ -212,6 +209,7 @@ export default class ToolsConnector {
     if (request.blockedMachines) {
       console.log(request.blockedMachines);
       for (const machine of request.blockedMachines) {
+        // Add machine recipes to blockedRecipes
         console.log(machine);
         const recipes = this.calculator.data.recipes.filter(
           (recipe) => recipe.producedIn === machine && !recipe.alternate
@@ -222,17 +220,33 @@ export default class ToolsConnector {
           if (!request.blockedRecipes) request.blockedRecipes = [];
           request.blockedRecipes.push(...classNames);
         }
+        // Check if allowedAlternateRecipes contains any of the machine recipes
+        const alternateRecipes = this.calculator.data.recipes.filter(
+          (recipe) => recipe.producedIn === machine && recipe.alternate
+        );
+        console.log(alternateRecipes);
+        if (alternateRecipes.length > 0) {
+          const classNames = alternateRecipes.map((recipe) => recipe.className);
+          if (!request.allowedAlternateRecipes) request.allowedAlternateRecipes = [];
+          request.allowedAlternateRecipes = request.allowedAlternateRecipes.filter(
+            (recipe) => !classNames.includes(recipe)
+          );
+        }
       }
       delete request.blockedMachines;
     }
+    console.log(request);
     const result = await fetch(this.baseUrl + '/v2/solver', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(this.request),
+      body: JSON.stringify(request),
     });
     const res = await result.json();
+    if (res.code !== 200) {
+      throw new Error(res.error);
+    }
     console.log(res);
     this.result = res;
     return this.parseToolsResponse(res.result);

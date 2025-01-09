@@ -121,7 +121,6 @@ export class FirestoreDataSource<T> extends BaseDataSource<T> {
   // Parses filter and returns an object for provider specific filterand and the generic js filtering
   #parseFilters = (filterObject: FilterObject<T>): FilterReturn<T> => {
     let q = this.ref;
-    console.log(this.ref);
 
     // Apply filters
     if (filterObject.filters) {
@@ -166,7 +165,6 @@ export class FirestoreDataSource<T> extends BaseDataSource<T> {
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
         const data = docSnap.data();
-        console.log(data);
         return { id: docSnap.id, ...(data ? data : {}) } as T;
       } else {
         return this._getDefaultValue();
@@ -187,7 +185,6 @@ export class FirestoreDataSource<T> extends BaseDataSource<T> {
       const filterObject = filter || this.options.targetFilter || {};
       //console.log(filterObject, filter, this.options.targetFilter);
       const { provider: query, postFilter } = this.#parseFilters(filterObject);
-      console.log(query, postFilter);
 
       const querySnapshot = await getDocs(query);
       let documents: any[] = [];
@@ -286,7 +283,6 @@ export class FirestoreDataSource<T> extends BaseDataSource<T> {
             //   documents.push({ ...doc.data() } as T);
             // });
             const documents: T[] = snapshot.docs.map((doc) => doc.data() as T);
-            console.log('documents', documents);
             callback(this._applyPostFilters(documents, postFilter));
           });
 
