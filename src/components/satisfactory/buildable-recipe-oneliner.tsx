@@ -1,9 +1,10 @@
-import Recipe from '@/libs/satisfactory/data/recipe';
+import BuildableRecipe from '@/libs/satisfactory/data/buildable-recipe';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Box, Stack, Tooltip } from '@mui/material';
 
-const RecipeOneliner = ({ recipe }: { recipe: Recipe }) => {
+const BuildableRecipeOneliner = ({ recipe }: { recipe: BuildableRecipe }) => {
   console.log(recipe);
+  const product = recipe.getOutput();
   return (
     <Stack
       direction="row"
@@ -37,38 +38,33 @@ const RecipeOneliner = ({ recipe }: { recipe: Recipe }) => {
           </Box>
         ))}
       </Stack>
-      {!recipe.isBuildableRecipe() && (
-        <>
-          <Box>
-            <ArrowForwardIcon />
-          </Box>
-          <Stack
-            direction="row"
-            alignItems="center"
-            minWidth={'110px'}
-            spacing={1}
-          >
-            {recipe.getProducts().map((product) => (
-              <Box
-                key={product.product?.className}
-                display="flex"
-                alignItems="center"
-              >
-                {product.amount}x{' '}
-                <Tooltip title={product.product?.name}>
-                  <img
-                    src={product.product?.getIcon()}
-                    alt={product.name}
-                    style={{ width: '24px', height: '24px', marginLeft: '4px' }}
-                  />
-                </Tooltip>
-              </Box>
-            ))}
-          </Stack>
-        </>
-      )}
+
+      <Box>
+        <ArrowForwardIcon />
+      </Box>
+      <Stack
+        direction="row"
+        alignItems="center"
+        minWidth={'110px'}
+        spacing={1}
+      >
+        <Box
+          key={product.output?.className}
+          display="flex"
+          alignItems="center"
+        >
+          {product.amount}x{' '}
+          <Tooltip title={product.output?.name}>
+            <img
+              src={product.output?.getIcon()}
+              alt={product.name}
+              style={{ width: '24px', height: '24px', marginLeft: '4px' }}
+            />
+          </Tooltip>
+        </Box>
+      </Stack>
     </Stack>
   );
 };
 
-export default RecipeOneliner;
+export default BuildableRecipeOneliner;

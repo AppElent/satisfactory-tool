@@ -22,7 +22,6 @@ const SatisfactoryToolsCard = () => {
   const [json, setJson] = useState<string>('');
 
   const openInSatisfactoryTools = async () => {
-    console.log('open in satisfactory tools');
     if (config) {
       const calculator = new Calculator(config);
       const link = await calculator.saveSatisfactoryTools();
@@ -32,11 +31,9 @@ const SatisfactoryToolsCard = () => {
 
   const getFromSatisfactoryTools = async () => {
     try {
-      console.log('get from satisfactory tools');
       if (config) {
         const calculator = new Calculator(config);
         const newConfig = await calculator.getSatisfactoryToolsConfig(config.externalId as string);
-        console.log(newConfig);
         setJson(JSON.stringify(newConfig, null, 2));
         toast.success('Succesfully fetched Tools data');
       }

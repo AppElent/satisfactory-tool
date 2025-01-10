@@ -1,4 +1,5 @@
 import BaseItem from './base-item';
+import Buildable from './buildable';
 import { SatisfactoryBaseItem, SatisfactoryData } from './satisfactory-data';
 
 export interface SatisfactoryBuilding extends SatisfactoryBaseItem {
@@ -27,8 +28,8 @@ export default class Building extends BaseItem implements SatisfactoryBuilding {
     this.metadata = building.metadata;
   }
 
-  getBuildable = () => {
-    return this.data.findBuildable(this.className);
+  getBuildable = (): Buildable | undefined => {
+    return this.data.getBuildable(this.className);
   };
 
   toObject = () => {

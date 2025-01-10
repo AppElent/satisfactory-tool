@@ -27,7 +27,17 @@ export default class Buildable extends BaseItem implements SatisfactoryBuildable
     this.metadata = buildable.metadata;
   }
 
+  // getBuildableRecipe = (): BuildableRecipe => {
+  //   return this.data.buildableRecipes.find((r) =>
+  //     r.products.find((p) => p.item === this.className)
+  //   );
+  // };
+
   getRecipe = () => {
+    throw new Error('getRecipe() cannot be used from buildable. Use getBuildableRecipe() instead.');
+  };
+
+  getBuildableRecipe = () => {
     return this.data.buildableRecipes.find((r) =>
       r.products.find((p) => p.item === this.className)
     );

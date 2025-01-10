@@ -1,7 +1,8 @@
-import SatisfactoryNetwork from '@/libs/satisfactory/calculator/network/satisfactory-network';
-import { SatisfactoryCalculatorContextProvider } from '@/libs/satisfactory/calculator/use-satisfactory-calculator';
+import {
+  SatisfactoryCalculatorContextProvider,
+  SatisfactoryCalculatorContextProviderProps,
+} from '@/libs/satisfactory/calculator/use-satisfactory-calculator';
 import Tabs from '@/libs/tabs';
-import { Calculator } from '@/schemas/satisfactory/calculator';
 import { Box } from '@mui/material';
 import TabBuildList from './_components/tab-build-list';
 import TabConfigure from './_components/tab-configure';
@@ -25,19 +26,25 @@ const tabsData = [
   },
 ];
 
-interface CalculatorSectionProps {
-  config: Calculator;
-  setConfig?: (config: Calculator) => Promise<void>;
-  saveResult: (result: SatisfactoryNetwork) => any;
-}
+// interface CalculatorSectionProps {
+//   config: Calculator;
+//   setConfig?: (config: Calculator) => Promise<void>;
+//   saveResult: (result: SatisfactoryNetwork) => any;
+//   options?: {
+//     autoUpdate?: boolean;
+//     autoSave?: boolean;
+//   };
+// }
 
-const CalculatorSection = ({ config, setConfig, saveResult }: CalculatorSectionProps) => {
+const CalculatorSection = ({
+  config,
+  ...rest
+}: Omit<SatisfactoryCalculatorContextProviderProps, 'children'>) => {
   return (
     <Box>
       <SatisfactoryCalculatorContextProvider
         config={config}
-        saveConfig={setConfig}
-        saveResult={saveResult}
+        {...rest}
       >
         {config && <Tabs tabs={tabsData} />}
       </SatisfactoryCalculatorContextProvider>

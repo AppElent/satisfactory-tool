@@ -31,6 +31,7 @@ export interface SatisfactoryRecipe extends SatisfactoryBaseItem {
     score: string;
     description: string;
   };
+  type: string;
 }
 
 export type SatisfactoryBuildableRecipe = Omit<SatisfactoryRecipe, 'producedIn'>;
@@ -51,6 +52,8 @@ export default class Recipe extends BaseItem implements SatisfactoryRecipe {
   public maxPower: number;
   public cyclesMin: number;
   public rating?: SatisfactoryRecipe['rating'];
+  public type: SatisfactoryRecipe['type'];
+
   public data: SatisfactoryData;
 
   constructor(recipe: SatisfactoryRecipe, data: SatisfactoryData) {
@@ -70,8 +73,13 @@ export default class Recipe extends BaseItem implements SatisfactoryRecipe {
     this.maxPower = recipe.maxPower;
     this.cyclesMin = recipe.cyclesMin;
     this.rating = recipe.rating;
+    this.type = recipe.type;
     this.data = data;
   }
+
+  isBuildableRecipe = () => {
+    return this.forBuilding;
+  };
 
   getMachine = () => {
     return this.data.buildings.find((m) => m.className === this.producedIn);

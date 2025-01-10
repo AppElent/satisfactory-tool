@@ -6,14 +6,10 @@ const TabGraph = () => {
   const { result, calculate } = useSatisfactoryCalculator();
 
   useEffect(() => {
-    // const calculate = async () => {
-    //   await calculator.calculate();
-    //   console.log(calculator.result);
-    // };
-    calculate();
+    if (calculate && !result) {
+      calculate();
+    }
   }, []);
-
-  console.log(result);
 
   return <>{result && <CytoscapeGraph network={result} />}</>;
 };

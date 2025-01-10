@@ -13,13 +13,13 @@ export const gameYupSchema = Yup.object().shape({
   todos: Yup.array().of(Yup.string().required().min(3)).label('Todos'),
   powerStations: Yup.array().of(powerStationYupSchema).label('Power Stations'),
   version: Yup.string().required().label('Version'),
-  createdAt: Yup.date()
+  createdAt: Yup.string()
     .required()
-    .default(() => new Date())
+    .default(() => new Date().toISOString())
     .label('Created At'),
-  updatedAt: Yup.date()
+  updatedAt: Yup.string()
     .required()
-    .default(() => new Date())
+    .default(() => new Date().toISOString())
     .label('Updated At'),
 });
 

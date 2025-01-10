@@ -55,6 +55,13 @@ const collectibles = [
   'Desc_StingerParts_C', // stinger remains
 ];
 
+const ficsmasRecipes = Object.keys(data.recipes).filter(
+  (key) =>
+    data.recipes[key].name.toLowerCase().includes('ficsmas') ||
+    data.recipes[key].name.toLowerCase().includes('snowman') ||
+    data.recipes[key].name.toLowerCase().includes('candy cane')
+);
+
 const isEquipment = (item) => {
   return equipment.includes(item.name);
 };
@@ -202,6 +209,27 @@ console.log(tiers);
 // Show 5 random items from items
 //console.log(items.sort(() => Math.random() - 0.5).slice(0, 5));
 
+// const testvalues = Object.keys(data.recipes)
+//   .filter((recipe) => data.recipes[recipe].forBuilding === data.recipes[recipe].inMachine)
+//   .map((recipe) => {
+//     return {
+//       name: data.recipes[recipe].name,
+//       forBuilding: data.recipes[recipe].forBuilding,
+//       inMachine: data.recipes[recipe].inMachine,
+//     };
+//   });
+// console.log(testvalues);
+
+const getRecipeType = (recipe) => {
+  if (recipe.forBuilding) {
+    return 'building';
+  }
+  if (recipe.inMachine) {
+    return 'product';
+  }
+  return 'handcrafting';
+};
+
 const recipes = Object.keys(data.recipes)
   .filter((key) => !data.recipes[key].forBuilding)
   .filter((key) => data.recipes[key].inMachine)
@@ -225,6 +253,7 @@ const recipes = Object.keys(data.recipes)
         amountMin: (60 / recipe.time) * p.amount,
       })),
       rating: getRating(recipe),
+      type: getRecipeType(recipe),
     };
   });
 
@@ -259,12 +288,7 @@ const buildables = Object.keys(data.buildings).map((key) => {
     metadata: buildable.metadata,
   };
 });
-const ficsmasRecipes = Object.keys(data.recipes).filter(
-  (key) =>
-    data.recipes[key].name.toLowerCase().includes('ficsmas') ||
-    data.recipes[key].name.toLowerCase().includes('snowman') ||
-    data.recipes[key].name.toLowerCase().includes('candy cane')
-);
+
 // Recipes for buildables
 const buildableRecipes = Object.keys(data.recipes)
   .filter((key) => data.recipes[key].forBuilding || !data.recipes[key].inMachine)
@@ -288,6 +312,7 @@ const buildableRecipes = Object.keys(data.recipes)
           : buildables.find((building) => building.className === p.item).name,
         amountMin: (60 / recipe.time) * p.amount,
       })),
+      type: getRecipeType(recipe),
     };
   });
 

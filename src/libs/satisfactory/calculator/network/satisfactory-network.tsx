@@ -61,7 +61,6 @@ export default class SatisfactoryNetwork extends Network {
 
     this.nodes = nodes;
     this.edges = edges;
-    console.log(nodes, edges);
   };
 
   generateEdges = (): void => {
@@ -69,10 +68,8 @@ export default class SatisfactoryNetwork extends Network {
     const edges: SatisfactoryEdge[] = [];
     for (const node of nodes) {
       const inputs = node.getInputs();
-      console.log('INPUTS', node.id, inputs);
       for (const input of inputs) {
         let inputAmount = input.amount;
-        console.log('inputamount', input.amount);
         const products = nodes.filter(
           (n) => n.item === input.item && n.id !== node.id && n.type !== 'product'
         );
@@ -96,7 +93,6 @@ export default class SatisfactoryNetwork extends Network {
           // TODO: deze useamount hier is niet goed
           const product = recipeNode.recipe?.products.find((i) => i.item === input.item);
           const usedAmount = recipeNode.useAmount(product?.item as string, inputAmount);
-          console.log('RECIPE', node.item, recipeNode.id, usedAmount, inputAmount);
           if (usedAmount > 0) {
             const edge = new SatisfactoryEdge({
               source: recipeNode.id,

@@ -1,9 +1,11 @@
+import BuildableRecipeOneliner from '@/components/satisfactory/buildable-recipe-oneliner';
 import ItemOverview from '@/components/satisfactory/item-overview';
 import useParamItem from '@/hooks/use-param-item';
+import BuildableRecipe from '@/libs/satisfactory/data/buildable-recipe';
 import Product from '@/libs/satisfactory/data/product';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import DefaultPage from '@/pages/default/DefaultPage';
-import { Typography } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 
 const EquipmentDetails = () => {
   const items = satisfactoryData.products.filter((item) => item.isEquipment);
@@ -22,6 +24,8 @@ const EquipmentDetails = () => {
     },
   };
 
+  console.log(item, item.getBuildableRecipes());
+
   return (
     <DefaultPage options={options}>
       <ItemOverview item={item}>
@@ -31,6 +35,14 @@ const EquipmentDetails = () => {
         >
           {item.description}
         </Typography>
+        <Stack
+          direction="row"
+          spacing={2}
+          alignItems={'center'}
+        >
+          <Typography>Cost:</Typography>
+          <BuildableRecipeOneliner recipe={item.getBuildableRecipes()[0] as BuildableRecipe} />
+        </Stack>
       </ItemOverview>
     </DefaultPage>
   );

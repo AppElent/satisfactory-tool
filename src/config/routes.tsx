@@ -38,9 +38,11 @@ import Factories from '@/pages/satisfactory/factories';
 import FactoryDetails from '@/pages/satisfactory/factory-details';
 import GameDetails from '@/pages/satisfactory/game-details';
 import Games from '@/pages/satisfactory/games';
+import Home from '@/pages/satisfactory/home';
 import RawData from '@/pages/satisfactory/raw-data';
 import Statistics from '@/pages/satisfactory/statistics';
 import { CustomRouteObject, routes as routesImport } from './routing';
+import FactoryProductionDetails from '@/pages/satisfactory/factory-production-details';
 
 const routeElements: { [key: string]: JSX.Element } = {
   home: (
@@ -50,9 +52,9 @@ const routeElements: { [key: string]: JSX.Element } = {
       </Suspense>
     </PaperbaseLayout>
   ),
-  homeIndex: <>Home</>,
+  homeIndex: <Home />,
   // Satisfactory pages
-  satisfactoryIndex: <>TEST</>,
+  satisfactoryIndex: <Home />,
   codexIndex: <CodexIndex />,
   productsIndex: <Products />,
   productDetails: <ProductDetails />,
@@ -82,7 +84,8 @@ const routeElements: { [key: string]: JSX.Element } = {
   gamesIndex: <Games />,
   gameDetailsIndex: <GameDetails />,
   factoriesIndex: <Factories />,
-  factoryDetails: <FactoryDetails />,
+  factoryDetailsIndex: <FactoryDetails />,
+  factoryDetailsProduction: <FactoryProductionDetails />,
   statistics: <Statistics />,
   // Test pages
   testDataSources: <DataSources />,

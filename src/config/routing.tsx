@@ -338,6 +338,19 @@ export const routes: CustomRouteObject[] = [
                         getLabel: (params: any) => params.factoryId,
                         Icon: <BarChartIcon fontSize="inherit" />,
                         path: ':factoryId',
+                        component: <Outlet />,
+                        children: [
+                          {
+                            id: 'factoryDetailsIndex',
+                            index: true,
+                          },
+                          {
+                            id: 'factoryDetailsProduction',
+                            label: 'Production',
+                            Icon: <BarChartIcon fontSize="inherit" />,
+                            path: ':productionId',
+                          },
+                        ],
                       },
                     ],
                   },

@@ -7,11 +7,9 @@ const TabBuildList = () => {
   const { result, calculate, error } = useSatisfactoryCalculator();
 
   useEffect(() => {
-    // const calculate = async () => {
-    //   await calculator.calculate();
-    //   console.log(calculator.result);
-    // };
-    calculate();
+    if (calculate && !result) {
+      calculate();
+    }
   }, []);
 
   const emptyText =
@@ -19,12 +17,11 @@ const TabBuildList = () => {
       ? "Unfortunately we couldn't calculate any result.\nThis can be due to many things: missing resource required for the production line, not enough resources for the requested amount, disabled recipes required for the product, etc."
       : undefined;
 
-  console.log(result, error);
-
   return (
     <>
+      {error && <Typography>Error: {error}</Typography>}
       {emptyText && <Typography>{emptyText}</Typography>}
-      {!emptyText && (
+      {!emptyText && !error && (
         <Grid
           container
           spacing={1}
@@ -36,7 +33,7 @@ const TabBuildList = () => {
             <Card>
               <CardHeader
                 title="Inputs"
-                titleTypographyProps={'h6'}
+                titleTypographyProps={{ variant: 'h5' }}
               />
               <CardContent>
                 {result?.getInputs()?.map((node) => {
@@ -58,7 +55,7 @@ const TabBuildList = () => {
             <Card>
               <CardHeader
                 title="Outputs"
-                titleTypographyProps={'h6'}
+                titleTypographyProps={{ variant: 'h5' }}
               />
               <CardContent>
                 {result?.getOutputs()?.map((node) => {
@@ -80,7 +77,7 @@ const TabBuildList = () => {
             <Card>
               <CardHeader
                 title="Recipes"
-                titleTypographyProps={'h6'}
+                titleTypographyProps={{ variant: 'h5' }}
               />
               <CardContent>
                 {result?.getRecipes()?.map((node) => {
@@ -88,8 +85,8 @@ const TabBuildList = () => {
                   const machine = recipe?.getMachine();
                   return (
                     <div key={node.id}>
-                      {+node.amount.toPrecision(3)} x {recipe?.name} ({machine?.name}{' '}
-                      {machine?.getIconComponent()})
+                      {+node.amount.toPrecision(3)} x {recipe?.getIconComponent()}
+                      {recipe?.name} ({machine?.name} {machine?.getIconComponent()})
                     </div>
                   );
                 })}
@@ -99,15 +96,6 @@ const TabBuildList = () => {
         </Grid>
       )}
     </>
-
-    //   Build list
-    //   {result?.nodes.map((node) => (
-    //     <div key={node.id}>
-    //       {node.item} {node.amount}
-    //     </div>
-    //   ))}
-    //   {error && <div>Error: {error}</div>}
-    // </>
   );
 };
 

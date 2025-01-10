@@ -1,7 +1,7 @@
 import Mermaid from '@/libs/mermaid';
-import { SatisfactoryRecipe } from '@/libs/satisfactory/data/recipe';
+import Recipe from '@/libs/satisfactory/data/recipe';
 
-const RecipeGraph = ({ recipe }: { recipe: SatisfactoryRecipe }) => {
+const RecipeGraph = ({ recipe }: { recipe: Recipe }) => {
   let graphString = `%%{init: { "flowchart": { "useWidth": 300} } }%%
     
     graph LR;
@@ -11,7 +11,7 @@ const RecipeGraph = ({ recipe }: { recipe: SatisfactoryRecipe }) => {
     
     %% create nodes %%`;
   graphString += `
-            ${recipe.className}(["${recipe.name}"]);`;
+            ${recipe.className}(["${recipe.getMachine()?.name}"]);`;
   recipe.products.forEach((product) => {
     graphString += `
             ${product.item}["${product.name}"];`;

@@ -4,7 +4,8 @@ import DefaultPage from '@/pages/default/DefaultPage';
 import calculatorSchemaClass, {
   Calculator as CalculatorType,
 } from '@/schemas/satisfactory/calculator';
-import { Button, Card, CardActions, CardContent, CardHeader, Grid } from '@mui/material';
+import CalculatorConfigCard from '@/sections/satisfactory/calculator-config-card';
+import { Button, Grid2 as Grid } from '@mui/material';
 
 // const tabsData = [
 //   {
@@ -41,24 +42,10 @@ const Calculator = () => {
         {data?.data?.map((config) => {
           return (
             <Grid
-              item
-              xs={12}
-              sm={6}
+              size={12}
               key={config.id}
             >
-              <Card onClick={() => router.push(`${config.id}`)}>
-                <CardHeader title={config?.name} />
-                <CardContent>ID: {config.id}</CardContent>
-                <CardActions sx={{ justifyContent: 'flex-end' }}>
-                  <Button onClick={() => router.push(`${config.id}`)}>Edit</Button>
-                </CardActions>
-              </Card>
-              {/* <Card
-            key={config.id}
-            onClick={() => router.push(`${config.id}`)}
-          >
-            {config?.name}
-          </Card> */}
+              <CalculatorConfigCard config={config} />
             </Grid>
           );
         })}

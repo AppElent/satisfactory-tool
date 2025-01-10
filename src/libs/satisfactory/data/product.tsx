@@ -55,6 +55,12 @@ export default class Product extends BaseItem implements SatisfactoryItem {
     );
   };
 
+  getBuildableRecipes = () => {
+    return this.data.buildableRecipes.filter((recipe) =>
+      recipe.products.find((p) => p.item === this.className)
+    );
+  };
+
   getDefaultRecipe = () => {
     const recipes = this.getDefaultRecipes().filter(
       (recipe) =>

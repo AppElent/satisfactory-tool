@@ -128,7 +128,6 @@ export default class ToolsConnector {
     this.guiVersion = satisfactoryData.version.tools.gui;
     this.defaultSolveRequest.gameVersion = this.apiVersion;
     const resourceMax = satisfactoryData.getResourceMax();
-    console.log(resourceMax);
     this.defaultSolveRequest.resourceMax = {
       ...this.defaultSolveRequest.resourceMax,
       ...resourceMax,
@@ -161,10 +160,7 @@ export default class ToolsConnector {
         );
       }
     }
-    // const edges = this.calculator.generateEdges(nodes);
-    // console.log(nodes);
     const network = new SatisfactoryNetwork(nodes);
-    console.log(network);
     network.generateEdges();
     return network;
     // TODO: excess inputs and resources....
@@ -207,14 +203,11 @@ export default class ToolsConnector {
     // Remove blockedMachines from request and add blockedRecipes
     const request = { ...this.request };
     if (request.blockedMachines) {
-      console.log(request.blockedMachines);
       for (const machine of request.blockedMachines) {
         // Add machine recipes to blockedRecipes
-        console.log(machine);
         const recipes = this.calculator.data.recipes.filter(
           (recipe) => recipe.producedIn === machine && !recipe.alternate
         );
-        console.log(recipes);
         if (recipes.length > 0) {
           const classNames = recipes.map((recipe) => recipe.className);
           if (!request.blockedRecipes) request.blockedRecipes = [];
@@ -224,7 +217,6 @@ export default class ToolsConnector {
         const alternateRecipes = this.calculator.data.recipes.filter(
           (recipe) => recipe.producedIn === machine && recipe.alternate
         );
-        console.log(alternateRecipes);
         if (alternateRecipes.length > 0) {
           const classNames = alternateRecipes.map((recipe) => recipe.className);
           if (!request.allowedAlternateRecipes) request.allowedAlternateRecipes = [];
@@ -235,7 +227,6 @@ export default class ToolsConnector {
       }
       delete request.blockedMachines;
     }
-    console.log(request);
     const result = await fetch(this.baseUrl + '/v2/solver', {
       method: 'POST',
       headers: {
@@ -273,14 +264,11 @@ export default class ToolsConnector {
     // if id is URL, get query param named share
     if (id.includes('share=')) {
       const url = new URL(id);
-      console.log(url);
       id = url.searchParams.get('share') || '';
     }
-    console.log(id);
 
     const result = await fetch(this.baseUrl + '/v1/share/' + id);
     const res = (await result.json()).data;
-    console.log(res);
     const returnData = {
       name: res.metadata.name,
       production: res.request.production.map((production: ProductionItem) => ({
@@ -297,21 +285,7 @@ export default class ToolsConnector {
       sinkableResources: res.request.sinkableResources,
       blockedMachines: res.request.blockedMachines,
     };
-    // if (returnData.request.blockedMachines && returnData.request.blockedMachines.length > 0) {
-    //   console.log(returnData.request.blockedMachines);
-    //   for (const machine of returnData.request.blockedMachines) {
-    //     console.log(machine);
-    //     const recipes = this.calculator.data.recipes.filter(
-    //       (recipe) => recipe.producedIn === machine && !recipe.alternate
-    //     );
-    //     console.log(recipes);
-    //     if (recipes.length > 0) {
-    //       const classNames = recipes.map((recipe) => recipe.className);
-    //       returnData.request.blockedRecipes.push(...classNames);
-    //     }
-    //   }
-    //   delete returnData.request.blockedMachines;
-    // }
+
     return returnData;
   };
 }

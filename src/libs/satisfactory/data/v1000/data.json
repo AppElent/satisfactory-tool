@@ -3363,7 +3363,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-ironrod-c",
@@ -3396,7 +3397,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-ingotiron-c",
@@ -3429,7 +3431,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 30
+      "cyclesMin": 30,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-rocketfuel-nitro-c",
@@ -3486,7 +3489,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 25
+      "cyclesMin": 25,
+      "type": "product"
     },
     {
       "slug": "recipe-rocketfuel-c",
@@ -3531,7 +3535,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-packagedrocketfuel-c",
@@ -3570,7 +3575,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "product"
     },
     {
       "slug": "recipe-unpackagerocketfuel-c",
@@ -3609,7 +3615,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-ionizedfuel-dark-c",
@@ -3654,7 +3661,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-darkenergy-c",
@@ -3687,7 +3695,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-quantumenergy-c",
@@ -3713,7 +3722,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-darkmatter-c",
@@ -3752,7 +3762,8 @@
       "isVariablePower": true,
       "minPower": 500,
       "maxPower": 1500,
-      "cyclesMin": 30
+      "cyclesMin": 30,
+      "type": "product"
     },
     {
       "slug": "recipe-superpositionoscillator-c",
@@ -3809,7 +3820,8 @@
       "isVariablePower": true,
       "minPower": 0,
       "maxPower": 2000,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-temporalprocessor-c",
@@ -3866,7 +3878,8 @@
       "isVariablePower": true,
       "minPower": 0,
       "maxPower": 2000,
-      "cyclesMin": 3
+      "cyclesMin": 3,
+      "type": "product"
     },
     {
       "slug": "recipe-spaceelevatorpart-12-c",
@@ -3923,7 +3936,8 @@
       "isVariablePower": true,
       "minPower": 0,
       "maxPower": 2000,
-      "cyclesMin": 4
+      "cyclesMin": 4,
+      "type": "product"
     },
     {
       "slug": "recipe-ionizedfuel-c",
@@ -3968,7 +3982,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 2.5
+      "cyclesMin": 2.5,
+      "type": "product"
     },
     {
       "slug": "recipe-packagedionizedfuel-c",
@@ -4007,7 +4022,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-unpackageionizedfuel-c",
@@ -4046,7 +4062,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-diamond-turbo-c",
@@ -4085,7 +4102,8 @@
       "isVariablePower": true,
       "minPower": 250,
       "maxPower": 750,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-samfluctuator-c",
@@ -4130,7 +4148,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-ficsitemesh-c",
@@ -4163,7 +4182,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-ficsiteingot-iron-c",
@@ -4202,7 +4222,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-timecrystal-c",
@@ -4235,7 +4256,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 6
+      "cyclesMin": 6,
+      "type": "product"
     },
     {
       "slug": "recipe-diamond-c",
@@ -4268,7 +4290,8 @@
       "isVariablePower": true,
       "minPower": 250,
       "maxPower": 750,
-      "cyclesMin": 30
+      "cyclesMin": 30,
+      "type": "product"
     },
     {
       "slug": "recipe-ingotsam-c",
@@ -4301,7 +4324,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 30
+      "cyclesMin": 30,
+      "type": "product"
     },
     {
       "slug": "recipe-spaceelevatorpart-10-c",
@@ -4346,7 +4370,8 @@
       "isVariablePower": true,
       "minPower": 500,
       "maxPower": 1500,
-      "cyclesMin": 0.5
+      "cyclesMin": 0.5,
+      "type": "product"
     },
     {
       "slug": "recipe-ficsiteingot-al-c",
@@ -4385,7 +4410,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 30
+      "cyclesMin": 30,
+      "type": "product"
     },
     {
       "slug": "recipe-ficsiteingot-cat-c",
@@ -4424,7 +4450,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-bauxite-caterium-c",
@@ -4463,7 +4490,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-bauxite-copper-c",
@@ -4502,7 +4530,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-caterium-copper-c",
@@ -4541,7 +4570,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-caterium-quartz-c",
@@ -4580,7 +4610,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-coal-iron-c",
@@ -4619,7 +4650,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-coal-limestone-c",
@@ -4658,7 +4690,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-copper-quartz-c",
@@ -4697,7 +4730,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-copper-sulfur-c",
@@ -4736,7 +4770,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-iron-limestone-c",
@@ -4775,7 +4810,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-limestone-sulfur-c",
@@ -4814,7 +4850,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-nitrogen-bauxite-c",
@@ -4853,7 +4890,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-nitrogen-caterium-c",
@@ -4892,7 +4930,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-quartz-bauxite-c",
@@ -4931,7 +4970,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-quartz-coal-c",
@@ -4970,7 +5010,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-sulfur-coal-c",
@@ -5009,7 +5050,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-sulfur-iron-c",
@@ -5048,7 +5090,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-uranium-bauxite-c",
@@ -5087,7 +5130,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-turbofuel-c",
@@ -5126,7 +5170,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 3.75
+      "cyclesMin": 3.75,
+      "type": "product"
     },
     {
       "slug": "recipe-packagedturbofuel-c",
@@ -5165,7 +5210,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-unpackageturbofuel-c",
@@ -5204,7 +5250,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-coal-1-c",
@@ -5237,7 +5284,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-coal-2-c",
@@ -5270,7 +5318,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-enrichedcoal-c",
@@ -5309,7 +5358,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-circuitboard-c",
@@ -5348,7 +5398,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-liquidfuel-c",
@@ -5387,7 +5438,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-petroleumcoke-c",
@@ -5420,7 +5472,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-plastic-c",
@@ -5459,7 +5512,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-rubber-c",
@@ -5498,7 +5552,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-residualfuel-c",
@@ -5531,7 +5586,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-residualplastic-c",
@@ -5574,7 +5630,8 @@
       "rating": {
         "score": "D",
         "description": "Similar to Residual Rubber, produces plastic from leftover resources, but the output is inefficient compared to other options."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-residualrubber-c",
@@ -5617,7 +5674,8 @@
       "rating": {
         "score": "D",
         "description": "An option for producing rubber from residual resources, but efficiency is low and production rates are subpar."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-diamond-pink-c",
@@ -5656,7 +5714,8 @@
       "isVariablePower": true,
       "minPower": 100,
       "maxPower": 400,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-diamond-petroleum-c",
@@ -5689,7 +5748,8 @@
       "isVariablePower": true,
       "minPower": 250,
       "maxPower": 750,
-      "cyclesMin": 30
+      "cyclesMin": 30,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-diamond-oilbased-c",
@@ -5722,7 +5782,8 @@
       "isVariablePower": true,
       "minPower": 250,
       "maxPower": 750,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-diamond-cloudy-c",
@@ -5761,7 +5822,8 @@
       "isVariablePower": true,
       "minPower": 250,
       "maxPower": 750,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-darkmatter-trap-c",
@@ -5800,7 +5862,8 @@
       "isVariablePower": true,
       "minPower": 500,
       "maxPower": 1500,
-      "cyclesMin": 30
+      "cyclesMin": 30,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-darkmatter-crystallization-c",
@@ -5833,7 +5896,8 @@
       "isVariablePower": true,
       "minPower": 500,
       "maxPower": 1500,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-wetconcrete-c",
@@ -5872,7 +5936,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-turboheavyfuel-c",
@@ -5911,7 +5976,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-steelrod-c",
@@ -5944,7 +6010,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 12
+      "cyclesMin": 12,
+      "type": "product"
     },
     {
       "slug": "recipe-steelbeam-c",
@@ -5977,7 +6044,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-steelpipe-c",
@@ -6010,7 +6078,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-ingotsteel-c",
@@ -6049,7 +6118,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-spaceelevatorpart-2-c",
@@ -6088,7 +6158,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 2.5
+      "cyclesMin": 2.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-steelcanister-c",
@@ -6121,7 +6192,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-fluidcanister-c",
@@ -6154,7 +6226,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-fuel-c",
@@ -6193,7 +6266,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-liquidbiofuel-c",
@@ -6232,7 +6306,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-packagedbiofuel-c",
@@ -6271,7 +6346,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-packagedcrudeoil-c",
@@ -6310,7 +6386,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-packagedoilresidue-c",
@@ -6349,7 +6426,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-packagedwater-c",
@@ -6388,7 +6466,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 30
+      "cyclesMin": 30,
+      "type": "product"
     },
     {
       "slug": "recipe-unpackagebiofuel-c",
@@ -6427,7 +6506,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 30
+      "cyclesMin": 30,
+      "type": "product"
     },
     {
       "slug": "recipe-unpackagefuel-c",
@@ -6466,7 +6546,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 30
+      "cyclesMin": 30,
+      "type": "product"
     },
     {
       "slug": "recipe-unpackageoil-c",
@@ -6505,7 +6586,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 30
+      "cyclesMin": 30,
+      "type": "product"
     },
     {
       "slug": "recipe-unpackageoilresidue-c",
@@ -6544,7 +6626,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-unpackagewater-c",
@@ -6583,7 +6666,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-steamedcoppersheet-c",
@@ -6622,7 +6706,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-rubberconcrete-c",
@@ -6661,7 +6746,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-recycledrubber-c",
@@ -6704,7 +6790,8 @@
       "rating": {
         "score": "F",
         "description": "Attempts to produce Rubber from recycled materials, resulting in inefficient resource usage and lower output quality."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-purequartzcrystal-c",
@@ -6743,7 +6830,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-quartzcrystal-c",
@@ -6776,7 +6864,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-pureironingot-c",
@@ -6815,7 +6904,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-purecopperingot-c",
@@ -6858,7 +6948,8 @@
       "rating": {
         "score": "F",
         "description": "Offers a pure Copper Ingot production method, lacking significant benefits over standard processes."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-purecateriumingot-c",
@@ -6901,7 +6992,8 @@
       "rating": {
         "score": "F",
         "description": "Provides a method for producing Caterium Ingots from pure ore, but with negligible efficiency improvements."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-purealuminumingot-c",
@@ -6938,7 +7030,8 @@
       "rating": {
         "score": "B",
         "description": "Simplifies Aluminum Ingot production by refining pure aluminum, reducing processing complexity."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-aluminumcasing-c",
@@ -6971,7 +7064,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 30
+      "cyclesMin": 30,
+      "type": "product"
     },
     {
       "slug": "recipe-aluminumsheet-c",
@@ -7010,7 +7104,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-aluminasolution-c",
@@ -7055,7 +7150,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-aluminumscrap-c",
@@ -7100,7 +7196,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "product"
     },
     {
       "slug": "recipe-packagedalumina-c",
@@ -7139,7 +7236,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "product"
     },
     {
       "slug": "recipe-ingotaluminum-c",
@@ -7178,7 +7276,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-silica-c",
@@ -7211,7 +7310,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-crystaloscillator-c",
@@ -7256,7 +7356,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 0.5
+      "cyclesMin": 0.5,
+      "type": "product"
     },
     {
       "slug": "recipe-unpackagealumina-c",
@@ -7295,7 +7396,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-polymerresin-c",
@@ -7334,7 +7436,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-plasticsmartplating-c",
@@ -7379,7 +7482,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 2.5
+      "cyclesMin": 2.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-highspeedwiring-c",
@@ -7428,7 +7532,8 @@
       "rating": {
         "score": "A",
         "description": "Streamlines Automated Wiring production, enhancing assembly line speed and efficiency."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-encasedindustrialbeam-c",
@@ -7467,7 +7572,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 6
+      "cyclesMin": 6,
+      "type": "product"
     },
     {
       "slug": "recipe-motor-c",
@@ -7506,7 +7612,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-stator-c",
@@ -7545,7 +7652,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-spaceelevatorpart-3-c",
@@ -7584,7 +7692,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 2.5
+      "cyclesMin": 2.5,
+      "type": "product"
     },
     {
       "slug": "recipe-ailimiter-c",
@@ -7623,7 +7732,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-heavyoilresidue-c",
@@ -7662,7 +7772,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-heavyflexibleframe-c",
@@ -7717,7 +7828,8 @@
       "rating": {
         "score": "S",
         "description": "Simplifies Heavy Modular Frame assembly by introducing flexible materials, reducing manufacturing steps."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-computer-c",
@@ -7762,7 +7874,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 2.5
+      "cyclesMin": 2.5,
+      "type": "product"
     },
     {
       "slug": "recipe-modularframeheavy-c",
@@ -7813,7 +7926,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 2
+      "cyclesMin": 2,
+      "type": "product"
     },
     {
       "slug": "recipe-spaceelevatorpart-4-c",
@@ -7858,7 +7972,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1
+      "cyclesMin": 1,
+      "type": "product"
     },
     {
       "slug": "recipe-spaceelevatorpart-5-c",
@@ -7909,7 +8024,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1
+      "cyclesMin": 1,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-fusedwire-c",
@@ -7948,7 +8064,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 3
+      "cyclesMin": 3,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-flexibleframework-c",
@@ -7993,7 +8110,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 3.75
+      "cyclesMin": 3.75,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-electrodecircuitboard-c",
@@ -8032,7 +8150,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-electroaluminumscrap-c",
@@ -8081,7 +8200,8 @@
       "rating": {
         "score": "C",
         "description": "Offers an alternative Aluminum Scrap production method using electrodes, with minimal resource savings."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-dilutedpackagedfuel-c",
@@ -8120,7 +8240,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 30
+      "cyclesMin": 30,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-copperrotor-c",
@@ -8159,7 +8280,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 3.75
+      "cyclesMin": 3.75,
+      "type": "product"
     },
     {
       "slug": "recipe-modularframe-c",
@@ -8198,7 +8320,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1
+      "cyclesMin": 1,
+      "type": "product"
     },
     {
       "slug": "recipe-rotor-c",
@@ -8237,7 +8360,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 4
+      "cyclesMin": 4,
+      "type": "product"
     },
     {
       "slug": "recipe-coppersheet-c",
@@ -8270,7 +8394,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-spaceelevatorpart-1-c",
@@ -8309,7 +8434,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 2
+      "cyclesMin": 2,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-copperalloyingot-c",
@@ -8352,7 +8478,8 @@
       "rating": {
         "score": "A",
         "description": "Increases Copper Ingot output by combining copper with additional materials, boosting production rates."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-cokesteelingot-c",
@@ -8395,7 +8522,8 @@
       "rating": {
         "score": "A",
         "description": "Offers an efficient Steel Ingot recipe by utilizing coke, improving steel production processes."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-coatedironplate-c",
@@ -8434,7 +8562,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-coatedironcanister-c",
@@ -8473,7 +8602,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-coatedcable-c",
@@ -8512,7 +8642,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-boltedframe-c",
@@ -8551,7 +8682,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 2.5
+      "cyclesMin": 2.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-adheredironplate-c",
@@ -8594,7 +8726,8 @@
       "rating": {
         "score": "C",
         "description": "Provides a reinforced Iron Plate recipe using adhesive materials, with limited production benefits."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-turbopressuremotor-c",
@@ -8649,7 +8782,8 @@
       "rating": {
         "score": "B",
         "description": "Enhances Turbo Motor production by introducing pressure-based components, increasing output efficiency."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-plutoniumcell-c",
@@ -8688,7 +8822,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-pressureconversioncube-c",
@@ -8727,7 +8862,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1
+      "cyclesMin": 1,
+      "type": "product"
     },
     {
       "slug": "recipe-nitricacid-c",
@@ -8772,7 +8908,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-nonfissileuranium-c",
@@ -8829,7 +8966,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 2.5
+      "cyclesMin": 2.5,
+      "type": "product"
     },
     {
       "slug": "recipe-copperdust-c",
@@ -8862,7 +9000,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-plutonium-c",
@@ -8901,7 +9040,8 @@
       "isVariablePower": true,
       "minPower": 250,
       "maxPower": 750,
-      "cyclesMin": 1
+      "cyclesMin": 1,
+      "type": "product"
     },
     {
       "slug": "recipe-plutoniumfuelrod-c",
@@ -8952,7 +9092,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 0.25
+      "cyclesMin": 0.25,
+      "type": "product"
     },
     {
       "slug": "recipe-packagednitricacid-c",
@@ -8991,7 +9132,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 30
+      "cyclesMin": 30,
+      "type": "product"
     },
     {
       "slug": "recipe-spaceelevatorpart-9-c",
@@ -9030,7 +9172,8 @@
       "isVariablePower": true,
       "minPower": 500,
       "maxPower": 1500,
-      "cyclesMin": 0.5
+      "cyclesMin": 0.5,
+      "type": "product"
     },
     {
       "slug": "recipe-unpackagenitricacid-c",
@@ -9069,7 +9212,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-turboblendfuel-c",
@@ -9124,7 +9268,8 @@
       "rating": {
         "score": "B",
         "description": "Provides an alternative fuel recipe that combines multiple resources, offering a balanced energy source."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-uraniumcell-c",
@@ -9175,7 +9320,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-coolingsystem-c",
@@ -9226,7 +9372,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 6
+      "cyclesMin": 6,
+      "type": "product"
     },
     {
       "slug": "recipe-battery-c",
@@ -9277,7 +9424,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-computersuper-c",
@@ -9328,7 +9476,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1.875
+      "cyclesMin": 1.875,
+      "type": "product"
     },
     {
       "slug": "recipe-radiocontrolunit-c",
@@ -9373,7 +9522,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1.25
+      "cyclesMin": 1.25,
+      "type": "product"
     },
     {
       "slug": "recipe-sulfuricacid-c",
@@ -9412,7 +9562,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-packagedsulfuricacid-c",
@@ -9451,7 +9602,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-spaceelevatorpart-7-c",
@@ -9490,7 +9642,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 0.75
+      "cyclesMin": 0.75,
+      "type": "product"
     },
     {
       "slug": "recipe-highspeedconnector-c",
@@ -9535,7 +9688,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 3.75
+      "cyclesMin": 3.75,
+      "type": "product"
     },
     {
       "slug": "recipe-unpackagesulfuricacid-c",
@@ -9574,7 +9728,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-superstatecomputer-c",
@@ -9629,7 +9784,8 @@
       "rating": {
         "score": "A",
         "description": "Improves Supercomputer production efficiency by utilizing advanced state components."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-electromagneticcontrolrod-c",
@@ -9668,7 +9824,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 2
+      "cyclesMin": 2,
+      "type": "product"
     },
     {
       "slug": "recipe-nuclearfuelrod-c",
@@ -9713,7 +9870,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 0.4
+      "cyclesMin": 0.4,
+      "type": "product"
     },
     {
       "slug": "recipe-spaceelevatorpart-6-c",
@@ -9752,7 +9910,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 0.5
+      "cyclesMin": 0.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-sloppyalumina-c",
@@ -9795,7 +9954,8 @@
       "rating": {
         "score": "B",
         "description": "Offers a less precise but faster Alumina Solution production method, trading efficiency for speed."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-radiocontrolsystem-c",
@@ -9846,7 +10006,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1.5
+      "cyclesMin": 1.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-plutoniumfuelunit-c",
@@ -9885,7 +10046,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 0.5
+      "cyclesMin": 0.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-ocsupercomputer-c",
@@ -9924,7 +10086,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 3
+      "cyclesMin": 3,
+      "type": "product"
     },
     {
       "slug": "recipe-heatsink-c",
@@ -9963,7 +10126,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-fusedmodularframe-c",
@@ -10008,7 +10172,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1.5
+      "cyclesMin": 1.5,
+      "type": "product"
     },
     {
       "slug": "recipe-gastank-c",
@@ -10041,7 +10206,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "product"
     },
     {
       "slug": "recipe-packagednitrogen-c",
@@ -10080,7 +10246,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "product"
     },
     {
       "slug": "recipe-unpackagenitrogen-c",
@@ -10119,7 +10286,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-instantscrap-c",
@@ -10180,7 +10348,8 @@
       "rating": {
         "score": "F",
         "description": "Introduces a rapid Aluminum Scrap production method, resulting in resource inefficiencies and lower quality output."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-instantplutoniumcell-c",
@@ -10219,7 +10388,8 @@
       "isVariablePower": true,
       "minPower": 250,
       "maxPower": 750,
-      "cyclesMin": 0.5
+      "cyclesMin": 0.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-heatfusedframe-c",
@@ -10270,7 +10440,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 3
+      "cyclesMin": 3,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-fertileuranium-c",
@@ -10327,7 +10498,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-electricmotor-c",
@@ -10370,7 +10542,8 @@
       "rating": {
         "score": "C",
         "description": "Provides an alternative Motor recipe utilizing electric components, with moderate efficiency improvements."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-dilutedfuel-c",
@@ -10413,7 +10586,8 @@
       "rating": {
         "score": "C",
         "description": "Introduces a fuel dilution process to extend fuel supply, offering marginal efficiency improvements."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-coolingdevice-c",
@@ -10458,7 +10632,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 2.5
+      "cyclesMin": 2.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-classicbattery-c",
@@ -10509,7 +10684,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-automatedminer-c",
@@ -10548,7 +10724,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1
+      "cyclesMin": 1,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-alcladcasing-c",
@@ -10587,7 +10764,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-steelpipe-molded-c",
@@ -10626,7 +10804,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-steelpipe-iron-c",
@@ -10663,7 +10842,8 @@
       "rating": {
         "score": "B",
         "description": "Enables pipe production directly from iron, useful when steel is limited, but less efficient than steel pipes."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-steelcastedplate-c",
@@ -10702,7 +10882,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-steelbeam-molded-c",
@@ -10741,7 +10922,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-steelbeam-aluminum-c",
@@ -10774,7 +10956,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-aluminumrod-c",
@@ -10807,7 +10990,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-ailimiter-plastic-c",
@@ -10846,7 +11030,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 4
+      "cyclesMin": 4,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-silica-distilled-c",
@@ -10897,7 +11082,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-quartz-purified-c",
@@ -10942,7 +11128,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-quartz-fused-c",
@@ -10981,7 +11168,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 3
+      "cyclesMin": 3,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-ironingot-leached-c",
@@ -11020,7 +11208,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-ironingot-basic-c",
@@ -11059,7 +11248,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-copperingot-tempered-c",
@@ -11098,7 +11288,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-copperingot-leached-c",
@@ -11137,7 +11328,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-cateriumingot-tempered-c",
@@ -11176,7 +11368,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-cateriumingot-leached-c",
@@ -11215,7 +11408,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 6
+      "cyclesMin": 6,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-wire-2-c",
@@ -11248,7 +11442,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-wire-1-c",
@@ -11285,7 +11480,8 @@
       "rating": {
         "score": "A",
         "description": "Allows wire production from iron, offering flexibility when copper is scarce, though less efficient than copper wire."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-uraniumcell-1-c",
@@ -11340,7 +11536,8 @@
       "rating": {
         "score": "D",
         "description": "An alternative for uranium cell production, but the efficiency gain is marginal and not worth the additional complexity."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-ingotcaterium-c",
@@ -11373,7 +11570,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-turbomotor-1-c",
@@ -11424,7 +11622,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 0.9375
+      "cyclesMin": 0.9375,
+      "type": "product"
     },
     {
       "slug": "recipe-motorturbo-c",
@@ -11475,7 +11674,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1.875
+      "cyclesMin": 1.875,
+      "type": "product"
     },
     {
       "slug": "recipe-spaceelevatorpart-8-c",
@@ -11526,7 +11726,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 0.5
+      "cyclesMin": 0.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-stator-c",
@@ -11565,7 +11766,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 4
+      "cyclesMin": 4,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-silica-c",
@@ -11604,7 +11806,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-screw-2-c",
@@ -11637,7 +11840,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-screw-c",
@@ -11674,7 +11878,8 @@
       "rating": {
         "score": "S",
         "description": "Eliminates the need for rods in screw production, directly casting screws from ingots, greatly enhancing efficiency."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-rotor-c",
@@ -11713,7 +11918,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-encasedindustrialbeam-c",
@@ -11752,7 +11958,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 4
+      "cyclesMin": 4,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-reinforcedironplate-2-c",
@@ -11795,7 +12002,8 @@
       "rating": {
         "score": "A",
         "description": "Reduces the need for screws in reinforced iron plate production by substituting with wire, simplifying the process."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-reinforcedironplate-1-c",
@@ -11834,7 +12042,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-radiocontrolunit-1-c",
@@ -11883,7 +12092,8 @@
       "rating": {
         "score": "F",
         "description": "Provides an alternative Radio Control Unit recipe with increased complexity and minimal efficiency gains."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-quickwire-c",
@@ -11922,7 +12132,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-plastic-1-c",
@@ -11961,7 +12172,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-nuclearfuelrod-1-c",
@@ -12012,7 +12224,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 0.2
+      "cyclesMin": 0.2,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-motor-1-c",
@@ -12057,7 +12270,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1.25
+      "cyclesMin": 1.25,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-modularframe-c",
@@ -12100,7 +12314,8 @@
       "rating": {
         "score": "B",
         "description": "Improves Modular Frame assembly by incorporating steel, increasing structural integrity."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-ingotsteel-2-c",
@@ -12139,7 +12354,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 2.5
+      "cyclesMin": 2.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-ingotsteel-1-c",
@@ -12182,7 +12398,8 @@
       "rating": {
         "score": "B",
         "description": "Introduces a solid-state method for Steel Ingot production, enhancing material strength and quality."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-ingotiron-c",
@@ -12221,7 +12438,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-highspeedconnector-c",
@@ -12270,7 +12488,8 @@
       "rating": {
         "score": "A",
         "description": "Optimizes High-Speed Connector manufacturing by incorporating silicon, reducing resource strain."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-modularframeheavy-c",
@@ -12325,7 +12544,8 @@
       "rating": {
         "score": "S",
         "description": "Significantly streamlines Heavy Modular Frame production by reducing complexity and resource consumption."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-heatsink-1-c",
@@ -12364,7 +12584,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-gunpowder-1-c",
@@ -12403,7 +12624,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-electromagneticcontrolrod-1-c",
@@ -12446,7 +12668,8 @@
       "rating": {
         "score": "C",
         "description": "Introduces a method for producing Electromagnetic Control Rods using connection rods, offering slight efficiency gains."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-crystaloscillator-c",
@@ -12491,7 +12714,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1.875
+      "cyclesMin": 1.875,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-concrete-c",
@@ -12530,7 +12754,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-computer-2-c",
@@ -12573,7 +12798,8 @@
       "rating": {
         "score": "S",
         "description": "Enhances Computer manufacturing by incorporating crystal components, improving overall efficiency."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-computer-1-c",
@@ -12618,7 +12844,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 3.75
+      "cyclesMin": 3.75,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-circuitboard-2-c",
@@ -12661,7 +12888,8 @@
       "rating": {
         "score": "S",
         "description": "Offers a more efficient method for Circuit Board production, utilizing Caterium resources effectively."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-circuitboard-1-c",
@@ -12704,7 +12932,8 @@
       "rating": {
         "score": "S",
         "description": "Provides an alternative Circuit Board recipe that leverages silicon, optimizing production chains."
-      }
+      },
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-cable-2-c",
@@ -12743,7 +12972,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 2.5
+      "cyclesMin": 2.5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-cable-1-c",
@@ -12782,7 +13012,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-ficsonium-c",
@@ -12827,7 +13058,8 @@
       "isVariablePower": true,
       "minPower": 500,
       "maxPower": 1500,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-ficsoniumfuelrod-c",
@@ -12884,7 +13116,8 @@
       "isVariablePower": true,
       "minPower": 0,
       "maxPower": 2000,
-      "cyclesMin": 2.5
+      "cyclesMin": 2.5,
+      "type": "product"
     },
     {
       "slug": "recipe-singularitycell-c",
@@ -12935,7 +13168,8 @@
       "isVariablePower": true,
       "minPower": 0,
       "maxPower": 0,
-      "cyclesMin": 1
+      "cyclesMin": 1,
+      "type": "product"
     },
     {
       "slug": "recipe-spaceelevatorpart-11-c",
@@ -12986,7 +13220,8 @@
       "isVariablePower": true,
       "minPower": 500,
       "maxPower": 1500,
-      "cyclesMin": 1
+      "cyclesMin": 1,
+      "type": "product"
     },
     {
       "slug": "recipe-filterhazmat-c",
@@ -13031,7 +13266,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 3.75
+      "cyclesMin": 3.75,
+      "type": "product"
     },
     {
       "slug": "recipe-quickwire-c",
@@ -13064,7 +13300,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 12
+      "cyclesMin": 12,
+      "type": "product"
     },
     {
       "slug": "recipe-biofuel-c",
@@ -13097,7 +13334,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-protein-hog-c",
@@ -13130,7 +13368,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-protein-spitter-c",
@@ -13163,7 +13402,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-biomass-mycelia-c",
@@ -13196,7 +13436,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-powercrystalshard-1-c",
@@ -13229,7 +13470,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-gunpowder-c",
@@ -13268,7 +13510,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-alienpowerfuel-c",
@@ -13325,7 +13568,8 @@
       "isVariablePower": true,
       "minPower": 0,
       "maxPower": 2000,
-      "cyclesMin": 2.5
+      "cyclesMin": 2.5,
+      "type": "product"
     },
     {
       "slug": "recipe-protein-stinger-c",
@@ -13358,7 +13602,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-protein-crab-c",
@@ -13391,7 +13636,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 20
+      "cyclesMin": 20,
+      "type": "product"
     },
     {
       "slug": "recipe-aliendnacapsule-c",
@@ -13424,7 +13670,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-biomass-alienprotein-c",
@@ -13457,7 +13704,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-spikedrebar-c",
@@ -13490,7 +13738,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-cartridgesmart-c",
@@ -13529,7 +13778,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 2.5
+      "cyclesMin": 2.5,
+      "type": "product"
     },
     {
       "slug": "recipe-rebar-stunshot-c",
@@ -13568,7 +13818,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-filtergasmask-c",
@@ -13613,7 +13864,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 7.5
+      "cyclesMin": 7.5,
+      "type": "product"
     },
     {
       "slug": "recipe-nobeliskgas-c",
@@ -13652,7 +13904,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-alternate-polyesterfabric-c",
@@ -13691,7 +13944,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 30
+      "cyclesMin": 30,
+      "type": "product"
     },
     {
       "slug": "recipe-fabric-c",
@@ -13730,7 +13984,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-syntheticpowershard-c",
@@ -13787,7 +14042,8 @@
       "isVariablePower": true,
       "minPower": 0,
       "maxPower": 2000,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-powercrystalshard-3-c",
@@ -13820,7 +14076,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 2.5
+      "cyclesMin": 2.5,
+      "type": "product"
     },
     {
       "slug": "recipe-powercrystalshard-2-c",
@@ -13853,7 +14110,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-nobeliskshockwave-c",
@@ -13892,7 +14150,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1
+      "cyclesMin": 1,
+      "type": "product"
     },
     {
       "slug": "recipe-rebar-spreadshot-c",
@@ -13931,7 +14190,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-cartridgechaos-packaged-c",
@@ -13976,7 +14236,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-cartridgechaos-c",
@@ -14021,7 +14282,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-nobelisknuke-c",
@@ -14072,7 +14334,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 0.5
+      "cyclesMin": 0.5,
+      "type": "product"
     },
     {
       "slug": "recipe-cartridge-c",
@@ -14111,7 +14374,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-rebar-explosive-c",
@@ -14156,7 +14420,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-nobeliskcluster-c",
@@ -14195,7 +14460,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 2.5
+      "cyclesMin": 2.5,
+      "type": "product"
     },
     {
       "slug": "recipe-nobelisk-c",
@@ -14234,7 +14500,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-gunpowdermk2-c",
@@ -14273,7 +14540,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-biomass-leaves-c",
@@ -14306,7 +14574,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 12
+      "cyclesMin": 12,
+      "type": "product"
     },
     {
       "slug": "recipe-biomass-wood-c",
@@ -14339,7 +14608,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-ironplatereinforced-c",
@@ -14378,7 +14648,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 5
+      "cyclesMin": 5,
+      "type": "product"
     },
     {
       "slug": "recipe-concrete-c",
@@ -14411,7 +14682,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-screw-c",
@@ -14444,7 +14716,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 10
+      "cyclesMin": 10,
+      "type": "product"
     },
     {
       "slug": "recipe-cable-c",
@@ -14477,7 +14750,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 30
+      "cyclesMin": 30,
+      "type": "product"
     },
     {
       "slug": "recipe-wire-c",
@@ -14510,7 +14784,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 15
+      "cyclesMin": 15,
+      "type": "product"
     },
     {
       "slug": "recipe-ingotcopper-c",
@@ -14543,7 +14818,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 30
+      "cyclesMin": 30,
+      "type": "product"
     }
   ],
   "buildableRecipes": [
@@ -14577,7 +14853,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-8x4-c",
@@ -14609,7 +14886,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-8x4-conveyorhole-01-c",
@@ -14641,7 +14919,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-8x4-conveyorhole-02-c",
@@ -14673,7 +14952,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-8x4-conveyorhole-03-c",
@@ -14705,7 +14985,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-8x4-corner-01-c",
@@ -14737,7 +15018,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-8x4-corner-2-c",
@@ -14769,7 +15051,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-8x4-window-01-c",
@@ -14801,7 +15084,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-8x4-window-02-c",
@@ -14833,7 +15117,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-8x4-window-03-c",
@@ -14865,7 +15150,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-8x4-window-04-c",
@@ -14897,7 +15183,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-8x8-corner-01-c",
@@ -14929,7 +15216,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-8x8-corner-2-c",
@@ -14961,7 +15249,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-angular-8x4-c",
@@ -14993,7 +15282,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-angular-8x8-c",
@@ -15025,7 +15315,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-cdoor-8x4-c",
@@ -15057,7 +15348,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-fliptris-8x1-c",
@@ -15089,7 +15381,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-fliptris-8x2-c",
@@ -15121,7 +15414,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-fliptris-8x4-c",
@@ -15153,7 +15447,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-fliptris-8x8-c",
@@ -15185,7 +15480,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-gate-8x4-c",
@@ -15217,7 +15513,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-sdoor-8x4-c",
@@ -15249,7 +15546,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-tris-8x1-c",
@@ -15281,7 +15579,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-tris-8x2-c",
@@ -15313,7 +15612,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-tris-8x4-c",
@@ -15345,7 +15645,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-concrete-tris-8x8-c",
@@ -15377,7 +15678,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-8x4-01-c",
@@ -15409,7 +15711,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-conveyor-8x4-01-c",
@@ -15441,7 +15744,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-conveyor-8x4-02-c",
@@ -15473,7 +15777,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-conveyor-8x4-03-c",
@@ -15505,7 +15810,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-door-8x4-01-c",
@@ -15537,7 +15843,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-door-8x4-03-c",
@@ -15569,7 +15876,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-gate-8x4-01-c",
@@ -15601,7 +15909,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-orange-8x1-c",
@@ -15633,7 +15942,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-orange-8x4-corner-01-c",
@@ -15665,7 +15975,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-orange-8x4-corner-02-c",
@@ -15697,7 +16008,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-orange-8x8-corner-01-c",
@@ -15729,7 +16041,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-orange-8x8-corner-02-c",
@@ -15761,7 +16074,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-orange-angular-8x4-c",
@@ -15793,7 +16107,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-orange-angular-8x8-c",
@@ -15825,7 +16140,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-orange-fliptris-8x1-c",
@@ -15857,7 +16173,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-orange-fliptris-8x2-c",
@@ -15889,7 +16206,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-orange-fliptris-8x4-c",
@@ -15921,7 +16239,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-orange-fliptris-8x8-c",
@@ -15953,7 +16272,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-orange-tris-8x1-c",
@@ -15985,7 +16305,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-orange-tris-8x2-c",
@@ -16017,7 +16338,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-orange-tris-8x4-c",
@@ -16049,7 +16371,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-orange-tris-8x8-c",
@@ -16081,7 +16404,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-window-8x4-01-c",
@@ -16113,7 +16437,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-window-8x4-02-c",
@@ -16145,7 +16470,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-window-8x4-03-c",
@@ -16177,7 +16503,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-window-8x4-04-c",
@@ -16209,7 +16536,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-steelwall-8x4-gate-01-c",
@@ -16241,7 +16569,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-steelwall-8x4-window-01-c",
@@ -16273,7 +16602,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-steelwall-8x4-window-02-c",
@@ -16305,7 +16635,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-steelwall-8x4-window-03-c",
@@ -16337,7 +16668,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-steelwall-8x4-window-04-c",
@@ -16369,7 +16701,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-steel-8x4-corner-01-c",
@@ -16401,7 +16734,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-steel-8x4-corner-2-c",
@@ -16433,7 +16767,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-steel-8x8-corner-01-c",
@@ -16465,7 +16800,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-steel-8x8-corner-2-c",
@@ -16497,7 +16833,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-steelwall-8x1-c",
@@ -16529,7 +16866,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-steelwall-fliptris-8x1-c",
@@ -16561,7 +16899,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-steelwall-fliptris-8x2-c",
@@ -16593,7 +16932,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-steelwall-fliptris-8x4-c",
@@ -16625,7 +16965,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-steelwall-fliptris-8x8-c",
@@ -16657,7 +16998,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-steelwall-tris-8x1-c",
@@ -16689,7 +17031,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-steelwall-tris-8x2-c",
@@ -16721,7 +17064,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-steelwall-tris-8x4-c",
@@ -16753,7 +17097,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-steelwall-tris-8x8-c",
@@ -16785,7 +17130,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-8x4-02-c",
@@ -16817,7 +17163,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-conveyor-8x4-01-steel-c",
@@ -16849,7 +17196,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-conveyor-8x4-02-steel-c",
@@ -16881,7 +17229,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-conveyor-8x4-03-steel-c",
@@ -16913,7 +17262,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-door-8x4-01-steel-c",
@@ -16945,7 +17295,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-door-8x4-03-steel-c",
@@ -16977,7 +17328,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wallset-steel-angular-8x4-c",
@@ -17009,7 +17361,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wallset-steel-angular-8x8-c",
@@ -17041,7 +17394,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorceilingattachment-c",
@@ -17085,7 +17439,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorpole-c",
@@ -17129,7 +17484,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorpolewall-c",
@@ -17173,7 +17529,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorbeltmk1-c",
@@ -17205,7 +17562,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-powerline-c",
@@ -17237,7 +17595,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-powerpolemk1-c",
@@ -17281,7 +17640,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-powerpolewall-c",
@@ -17319,7 +17679,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-tradingpost-c",
@@ -17351,7 +17712,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-workbench-c",
@@ -17389,7 +17751,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-xenozapper-c",
@@ -17439,7 +17802,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1.5
+      "cyclesMin": 1.5,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-generatorcoal-c",
@@ -17483,7 +17847,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pipesupport-c",
@@ -17521,7 +17886,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pipesupportwall-c",
@@ -17565,7 +17931,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pipeline-c",
@@ -17597,7 +17964,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pipelinejunction-cross-c",
@@ -17629,7 +17997,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pipelinepump-c",
@@ -17667,7 +18036,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pipestoragetank-c",
@@ -17705,7 +18075,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-waterpump-c",
@@ -17749,7 +18120,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-resourcesink-c",
@@ -17793,7 +18165,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-resourcesinkshop-c",
@@ -17837,7 +18210,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quantumencoder-c",
@@ -17893,7 +18267,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-converter-c",
@@ -17943,7 +18318,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-oilpump-c",
@@ -17987,7 +18363,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-oilrefinery-c",
@@ -18037,7 +18414,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-valve-c",
@@ -18075,7 +18453,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-smeltermk1-c",
@@ -18119,7 +18498,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-packager-c",
@@ -18163,7 +18543,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-minermk2-c",
@@ -18213,7 +18594,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-manufacturermk1-c",
@@ -18263,7 +18645,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-assemblermk1-c",
@@ -18307,7 +18690,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-hadroncollider-c",
@@ -18363,7 +18747,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-blender-c",
@@ -18413,7 +18798,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-generatornuclear-c",
@@ -18469,7 +18855,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-frackingextractor-c",
@@ -18507,7 +18894,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-frackingsmasher-c",
@@ -18563,7 +18951,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-dronestation-c",
@@ -18619,7 +19008,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-dronetransport-c",
@@ -18675,7 +19065,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorbeltmk5-c",
@@ -18707,7 +19098,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorliftmk5-c",
@@ -18739,7 +19131,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-minermk3-c",
@@ -18795,7 +19188,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorbeltmk6-c",
@@ -18833,7 +19227,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorliftmk6-c",
@@ -18871,7 +19266,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-portal-c",
@@ -18927,7 +19323,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-portalsatellite-c",
@@ -18977,7 +19374,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-blueprintdesigner-mk3-c",
@@ -19027,7 +19425,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-hoverpack-c",
@@ -19077,7 +19476,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 0.5
+      "cyclesMin": 0.5,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-hazmatsuit-c",
@@ -19127,7 +19527,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 0.5
+      "cyclesMin": 0.5,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-railroadblocksignal-c",
@@ -19165,7 +19566,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-railroadpathsignal-c",
@@ -19203,7 +19605,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-blueprintdesigner-mk2-c",
@@ -19253,7 +19656,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pipelinemk2-c",
@@ -19291,7 +19695,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pipelinepumpmk2-c",
@@ -19335,7 +19740,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-traindockingstation-c",
@@ -19391,7 +19797,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-traindockingstationliquid-c",
@@ -19447,7 +19854,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-trainplatformempty-c",
@@ -19485,7 +19893,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-trainplatformempty-02-c",
@@ -19523,7 +19932,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-trainstation-c",
@@ -19573,7 +19983,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-railroadtrack-c",
@@ -19611,7 +20022,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-freightwagon-c",
@@ -19655,7 +20067,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-locomotive-c",
@@ -19711,7 +20124,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-jetpack-c",
@@ -19761,7 +20175,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1
+      "cyclesMin": 1,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-conveyorbeltmk4-c",
@@ -19793,7 +20208,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorliftmk4-c",
@@ -19825,7 +20241,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-truck-c",
@@ -19875,7 +20292,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-generatorfuel-c",
@@ -19931,7 +20349,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-industrialtank-c",
@@ -19975,7 +20394,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorbeltmk3-c",
@@ -20007,7 +20427,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorliftmk3-c",
@@ -20039,7 +20460,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pipesupportstackable-c",
@@ -20083,7 +20505,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-storagecontainermk2-c",
@@ -20121,7 +20544,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-blueprintdesigner-c",
@@ -20171,7 +20595,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pipehyperstart-c",
@@ -20215,7 +20640,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-hyperpolestackable-c",
@@ -20259,7 +20685,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-hypertubewallsupport-c",
@@ -20297,7 +20724,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pipehypersupport-c",
@@ -20335,7 +20763,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pipehyper-c",
@@ -20373,7 +20802,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-powerstoragemk1-c",
@@ -20417,7 +20847,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-powertower-c",
@@ -20461,7 +20892,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-powertowerplatform-c",
@@ -20505,7 +20937,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-xenobasher-c",
@@ -20555,7 +20988,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 0.75
+      "cyclesMin": 0.75,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-truckstation-c",
@@ -20599,7 +21033,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-tractor-c",
@@ -20643,7 +21078,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorbeltmk2-c",
@@ -20675,7 +21111,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorliftmk2-c",
@@ -20707,7 +21144,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorpolestackable-c",
@@ -20751,7 +21189,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-jumppadadjustable-c",
@@ -20795,7 +21234,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ujellylandingpad-c",
@@ -20839,7 +21279,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-chainsaw-c",
@@ -20889,7 +21330,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1
+      "cyclesMin": 1,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-mam-c",
@@ -20933,7 +21375,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-storageplayer-c",
@@ -20971,7 +21414,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-objectscanner-c",
@@ -21015,7 +21459,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1.5
+      "cyclesMin": 1.5,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-conveyorattachmentmerger-c",
@@ -21053,7 +21498,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorattachmentsplitter-c",
@@ -21091,7 +21537,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorliftmk1-c",
@@ -21123,7 +21570,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddle-ficsit-4x1-c",
@@ -21155,7 +21603,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddle-ficsit-4x2-c",
@@ -21187,7 +21636,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddle-ficsit-4x4-c",
@@ -21219,7 +21669,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleincorner-ficsit-8x1-c",
@@ -21251,7 +21702,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleincorner-ficsit-8x2-c",
@@ -21283,7 +21735,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleincorner-ficsit-8x4-c",
@@ -21315,7 +21768,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleoutcorner-ficsit-4x1-c",
@@ -21347,7 +21801,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleoutcorner-ficsit-4x2-c",
@@ -21379,7 +21834,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleoutcorner-ficsit-4x4-c",
@@ -21411,7 +21867,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-stair-ficsitset-8x1-01-c",
@@ -21443,7 +21900,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-stair-ficsitset-8x2-01-c",
@@ -21475,7 +21933,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-stair-ficsitset-8x4-01-c",
@@ -21507,7 +21966,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundation-8x1-01-c",
@@ -21539,7 +21999,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundation-8x2-01-c",
@@ -21571,7 +22032,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundation-8x4-01-c",
@@ -21603,7 +22065,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipe-c",
@@ -21635,7 +22098,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipe-02-c",
@@ -21667,7 +22131,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipecorner-01-c",
@@ -21699,7 +22164,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipecorner-02-c",
@@ -21731,7 +22197,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipecorner-03-c",
@@ -21763,7 +22230,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipecorner-04-c",
@@ -21795,7 +22263,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-8x1-01-c",
@@ -21827,7 +22296,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-8x2-01-c",
@@ -21859,7 +22329,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-8x4-01-c",
@@ -21891,7 +22362,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-8x4-inverted-01-c",
@@ -21923,7 +22395,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-8x8x8-c",
@@ -21955,7 +22428,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-diagonal-8x1-01-c",
@@ -21987,7 +22461,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-diagonal-8x1-02-c",
@@ -22019,7 +22494,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-diagonal-8x2-01-c",
@@ -22051,7 +22527,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-diagonal-8x2-02-c",
@@ -22083,7 +22560,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-diagonal-8x4-01-c",
@@ -22115,7 +22593,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-diagonal-8x4-02-c",
@@ -22147,7 +22626,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampdouble-c",
@@ -22179,7 +22659,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampdouble-8x1-c",
@@ -22211,7 +22692,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampinverted-8x1-c",
@@ -22243,7 +22725,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampinverted-8x1-corner-01-c",
@@ -22275,7 +22758,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampinverted-8x1-corner-02-c",
@@ -22307,7 +22791,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampinverted-8x2-01-c",
@@ -22339,7 +22824,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampinverted-8x2-corner-01-c",
@@ -22371,7 +22857,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampinverted-8x2-corner-02-c",
@@ -22403,7 +22890,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampinverted-8x4-corner-01-c",
@@ -22435,7 +22923,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampinverted-8x4-corner-02-c",
@@ -22467,7 +22956,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-lookouttower-c",
@@ -22505,7 +22995,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-downquarterpipe-concrete-8x4-c",
@@ -22537,7 +23028,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-downquarterpipe-concreteincorner-8x4-c",
@@ -22569,7 +23061,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-downquarterpipe-concreteoutcorner-8x4-c",
@@ -22601,7 +23094,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundation-concrete-8x1-c",
@@ -22633,7 +23127,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundation-concrete-8x2-c",
@@ -22665,7 +23160,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundation-concrete-8x4-c",
@@ -22697,7 +23193,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-concrete-8x1-c",
@@ -22729,7 +23226,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-concrete-8x2-c",
@@ -22761,7 +23259,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-concrete-8x4-c",
@@ -22793,7 +23292,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-dcorner-concrete-8x1-c",
@@ -22825,7 +23325,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-dcorner-concrete-8x2-c",
@@ -22857,7 +23358,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-dcorner-concrete-8x4-c",
@@ -22889,7 +23391,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-ucorner-concrete-8x1-c",
@@ -22921,7 +23424,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-ucorner-concrete-8x2-c",
@@ -22953,7 +23457,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-ucorner-concrete-8x4-c",
@@ -22985,7 +23490,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipe-concrete-8x4-c",
@@ -23017,7 +23523,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipeincorner-concrete-8x4-c",
@@ -23049,7 +23556,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddle-concrete-8x1-c",
@@ -23081,7 +23589,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddle-concrete-8x2-c",
@@ -23113,7 +23622,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddle-concrete-8x4-c",
@@ -23145,7 +23655,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleincorner-concrete-8x1-c",
@@ -23177,7 +23688,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleincorner-concrete-8x2-c",
@@ -23209,7 +23721,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleincorner-concrete-8x4-c",
@@ -23241,7 +23754,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleoutcorner-concrete-4x1-c",
@@ -23273,7 +23787,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleoutcorner-concrete-4x2-c",
@@ -23305,7 +23820,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleoutcorner-concrete-4x4-c",
@@ -23337,7 +23853,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipeoutcorner-concrete-8x4-c",
@@ -23369,7 +23886,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-concrete-8x1-c",
@@ -23401,7 +23919,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-concrete-8x2-c",
@@ -23433,7 +23952,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-concrete-8x4-c",
@@ -23465,7 +23985,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-downcorner-concrete-8x1-c",
@@ -23497,7 +24018,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-downcorner-concrete-8x2-c",
@@ -23529,7 +24051,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-downcorner-concrete-8x4-c",
@@ -23561,7 +24084,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-upcorner-concrete-8x1-c",
@@ -23593,7 +24117,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-upcorner-concrete-8x2-c",
@@ -23625,7 +24150,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-upcorner-concrete-8x4-c",
@@ -23657,7 +24183,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampdouble-concrete-8x1-c",
@@ -23689,7 +24216,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampdouble-concrete-8x2-c",
@@ -23721,7 +24249,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampdouble-concrete-8x4-c",
@@ -23753,7 +24282,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-stair-concrete-8x1-c",
@@ -23785,7 +24315,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-stair-concrete-8x2-c",
@@ -23817,7 +24348,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-stair-concrete-8x4-c",
@@ -23849,7 +24381,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-downquarterpipe-grip-8x4-c",
@@ -23881,7 +24414,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-downquarterpipe-gripincorner-8x4-c",
@@ -23913,7 +24447,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-downquarterpipe-gripoutcorner-8x4-c",
@@ -23945,7 +24480,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundation-metal-8x1-c",
@@ -23977,7 +24513,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundation-metal-8x2-c",
@@ -24009,7 +24546,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundation-metal-8x4-c",
@@ -24041,7 +24579,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-dcorner-metal-8x1-c",
@@ -24073,7 +24612,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-dcorner-metal-8x2-c",
@@ -24105,7 +24645,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-dcorner-metal-8x4-c",
@@ -24137,7 +24678,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-metal-8x1-c",
@@ -24169,7 +24711,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-metal-8x2-c",
@@ -24201,7 +24744,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-metal-8x4-c",
@@ -24233,7 +24777,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-ucorner-metal-8x1-c",
@@ -24265,7 +24810,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-ucorner-metal-8x2-c",
@@ -24297,7 +24843,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-ucorner-metal-8x4-c",
@@ -24329,7 +24876,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipe-grip-8x4-c",
@@ -24361,7 +24909,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipeincorner-grip-8x4-c",
@@ -24393,7 +24942,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddle-grip-8x1-c",
@@ -24425,7 +24975,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddle-grip-8x2-c",
@@ -24457,7 +25008,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddle-grip-8x4-c",
@@ -24489,7 +25041,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleincorner-grip-8x1-c",
@@ -24521,7 +25074,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleincorner-grip-8x2-c",
@@ -24553,7 +25107,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleincorner-grip-8x4-c",
@@ -24585,7 +25140,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleoutcorner-grip-4x1-c",
@@ -24617,7 +25173,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleoutcorner-grip-4x2-c",
@@ -24649,7 +25206,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleoutcorner-grip-4x4-c",
@@ -24681,7 +25239,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipeoutcorner-grip-8x4-c",
@@ -24713,7 +25272,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-downcorner-metal-8x1-c",
@@ -24745,7 +25305,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-downcorner-metal-8x2-c",
@@ -24777,7 +25338,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-downcorner-metal-8x4-c",
@@ -24809,7 +25371,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-metal-8x1-c",
@@ -24841,7 +25404,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-metal-8x2-c",
@@ -24873,7 +25437,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-metal-8x4-c",
@@ -24905,7 +25470,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-upcorner-metal-8x1-c",
@@ -24937,7 +25503,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-upcorner-metal-8x2-c",
@@ -24969,7 +25536,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-upcorner-metal-8x4-c",
@@ -25001,7 +25569,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampdouble-metal-8x1-c",
@@ -25033,7 +25602,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampdouble-metal-8x2-c",
@@ -25065,7 +25635,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampdouble-metal-8x4-c",
@@ -25097,7 +25668,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-stair-gripmetal-8x1-c",
@@ -25129,7 +25701,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-stair-gripmetal-8x2-c",
@@ -25161,7 +25734,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-stair-gripmetal-8x4-c",
@@ -25193,7 +25767,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-downquarterpipe-concretepolished-8x4-c",
@@ -25225,7 +25800,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-downquarterpipe-concretepolishedincorner-8x4-c",
@@ -25257,7 +25833,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-downquarterpipe-concretepolishedoutcorner-8x4-c",
@@ -25289,7 +25866,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundation-concretepolished-8x1-c",
@@ -25321,7 +25899,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-dcorner-polished-8x1-c",
@@ -25353,7 +25932,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-dcorner-polished-8x2-c",
@@ -25385,7 +25965,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-dcorner-polished-8x4-c",
@@ -25417,7 +25998,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-polished-8x1-c",
@@ -25449,7 +26031,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-polished-8x2-c",
@@ -25481,7 +26064,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-polished-8x4-c",
@@ -25513,7 +26097,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-ucorner-polished-8x1-c",
@@ -25545,7 +26130,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-ucorner-polished-8x2-c",
@@ -25577,7 +26163,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-ucorner-polished-8x4-c",
@@ -25609,7 +26196,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipe-concretepolished-8x4-c",
@@ -25641,7 +26229,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipeincorner-concretepolished-8x4-c",
@@ -25673,7 +26262,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddle-polishedconcrete-8x1-c",
@@ -25705,7 +26295,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddle-polishedconcrete-8x2-c",
@@ -25737,7 +26328,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddle-polishedconcrete-8x4-c",
@@ -25769,7 +26361,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleincorner-polishedconcrete-8x1-c",
@@ -25801,7 +26394,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleincorner-polishedconcrete-8x2-c",
@@ -25833,7 +26427,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleincorner-polishedconcrete-8x4-c",
@@ -25865,7 +26460,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleoutcorner-polishedconcrete-4x1-c",
@@ -25897,7 +26493,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleoutcorner-polishedconcrete-4x2-c",
@@ -25929,7 +26526,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleoutcorner-polishedconcrete-4x4-c",
@@ -25961,7 +26559,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipeoutcorner-concretepolished-8x4-c",
@@ -25993,7 +26592,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-downcorner-polished-8x1-c",
@@ -26025,7 +26625,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-downcorner-polished-8x2-c",
@@ -26057,7 +26658,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-downcorner-polished-8x4-c",
@@ -26089,7 +26691,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-polished-8x1-c",
@@ -26121,7 +26724,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-polished-8x2-c",
@@ -26153,7 +26757,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-polished-8x4-c",
@@ -26185,7 +26790,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-upcorner-polished-8x1-c",
@@ -26217,7 +26823,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-upcorner-polished-8x2-c",
@@ -26249,7 +26856,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-upcorner-polished-8x4-c",
@@ -26281,7 +26889,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampdouble-polished-8x1-c",
@@ -26313,7 +26922,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampdouble-polished-8x2-c",
@@ -26345,7 +26955,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampdouble-polished-8x4-c",
@@ -26377,7 +26988,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-stair-polishedconcrete-8x1-c",
@@ -26409,7 +27021,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-stair-polishedconcrete-8x2-c",
@@ -26441,7 +27054,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-stair-polishedconcrete-8x4-c",
@@ -26473,7 +27087,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-downquarterpipe-asphalt-8x4-c",
@@ -26505,7 +27120,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-downquarterpipe-asphaltincorner-8x4-c",
@@ -26537,7 +27153,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-downquarterpipe-asphaltoutcorner-8x4-c",
@@ -26569,7 +27186,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundation-asphalt-8x1-c",
@@ -26601,7 +27219,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundation-asphalt-8x2-c",
@@ -26633,7 +27252,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundation-asphalt-8x4-c",
@@ -26665,7 +27285,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-asphalt-8x1-c",
@@ -26697,7 +27318,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-asphalt-8x2-c",
@@ -26729,7 +27351,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-asphalt-8x4-c",
@@ -26761,7 +27384,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-dcorner-asphalt-8x1-c",
@@ -26793,7 +27417,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-dcorner-asphalt-8x2-c",
@@ -26825,7 +27450,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-dcorner-asphalt-8x4-c",
@@ -26857,7 +27483,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-ucorner-asphalt-8x1-c",
@@ -26889,7 +27516,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-ucorner-asphalt-8x2-c",
@@ -26921,7 +27549,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-invertedramp-ucorner-asphalt-8x4-c",
@@ -26953,7 +27582,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipe-asphalt-8x4-c",
@@ -26985,7 +27615,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipeincorner-asphalt-8x4-c",
@@ -27017,7 +27648,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddle-asphalt-8x1-c",
@@ -27049,7 +27681,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddle-asphalt-8x2-c",
@@ -27081,7 +27714,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddle-asphalt-8x4-c",
@@ -27113,7 +27747,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleincorner-asphalt-8x1-c",
@@ -27145,7 +27780,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleincorner-asphalt-8x2-c",
@@ -27177,7 +27813,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleincorner-asphalt-8x4-c",
@@ -27209,7 +27846,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleoutcorner-asphalt-4x1-c",
@@ -27241,7 +27879,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleoutcorner-asphalt-4x2-c",
@@ -27273,7 +27912,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipemiddleoutcorner-asphalt-4x4-c",
@@ -27305,7 +27945,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-quarterpipeoutcorner-asphalt-8x4-c",
@@ -27337,7 +27978,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-asphalt-8x1-c",
@@ -27369,7 +28011,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-asphalt-8x2-c",
@@ -27401,7 +28044,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-asphalt-8x4-c",
@@ -27433,7 +28077,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-downcorner-asphalt-8x1-c",
@@ -27465,7 +28110,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-downcorner-asphalt-8x2-c",
@@ -27497,7 +28143,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-downcorner-asphalt-8x4-c",
@@ -27529,7 +28176,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-upcorner-asphalt-8x1-c",
@@ -27561,7 +28209,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-upcorner-asphalt-8x2-c",
@@ -27593,7 +28242,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-upcorner-asphalt-8x4-c",
@@ -27625,7 +28275,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampdouble-asphalt-8x1-c",
@@ -27657,7 +28308,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampdouble-asphalt-8x2-c",
@@ -27689,7 +28341,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-rampdouble-asphalt-8x4-c",
@@ -27721,7 +28374,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-stair-asphalt-8x1-c",
@@ -27753,7 +28407,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-stair-asphalt-8x2-c",
@@ -27785,7 +28440,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-stair-asphalt-8x4-c",
@@ -27817,7 +28473,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-medicinalinhaleralienorgans-c",
@@ -27855,7 +28512,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 3
+      "cyclesMin": 3,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-rebargun-c",
@@ -27899,7 +28557,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1
+      "cyclesMin": 1,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-alienpowerbuilding-c",
@@ -27961,7 +28620,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-centralstorage-c",
@@ -28011,7 +28671,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-generatorgeothermal-c",
@@ -28067,7 +28728,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorattachmentsplitterprogrammable-c",
@@ -28111,7 +28773,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-powerpolemk3-c",
@@ -28155,7 +28818,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-prioritypowerswitch-c",
@@ -28199,7 +28863,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-bladerunners-c",
@@ -28243,7 +28908,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1
+      "cyclesMin": 1,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-powerpolemk2-c",
@@ -28287,7 +28953,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-powerswitch-c",
@@ -28331,7 +28998,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-conveyorattachmentsplittersmart-c",
@@ -28375,7 +29043,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-zipline-c",
@@ -28425,7 +29094,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1.5
+      "cyclesMin": 1.5,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-gasmask-c",
@@ -28469,7 +29139,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1
+      "cyclesMin": 1,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-therapeuticinhaler-c",
@@ -28513,7 +29184,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 3
+      "cyclesMin": 3,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-medicinalinhaler-c",
@@ -28551,7 +29223,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 3
+      "cyclesMin": 3,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-parachute-c",
@@ -28589,7 +29262,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1.5
+      "cyclesMin": 1.5,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-nutritionalinhaler-c",
@@ -28633,7 +29307,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 3
+      "cyclesMin": 3,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-radartower-c",
@@ -28683,7 +29358,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-explorer-c",
@@ -28733,7 +29409,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-spaceriflemk1-c",
@@ -28783,7 +29460,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 0.5
+      "cyclesMin": 0.5,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-nobeliskdetonator-c",
@@ -28827,7 +29505,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 0.75
+      "cyclesMin": 0.75,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-flat-frame-01-c",
@@ -28859,7 +29538,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundation-frame-01-c",
@@ -28891,7 +29571,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundationglass-01-c",
@@ -28929,7 +29610,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-frame-01-c",
@@ -28961,7 +29643,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ramp-frame-inverted-01-c",
@@ -28993,7 +29676,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-frame-01-c",
@@ -29025,7 +29709,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-railing-01-c",
@@ -29057,7 +29742,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pillar-small-metal-c",
@@ -29095,7 +29781,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pillarbase-small-c",
@@ -29127,7 +29814,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pillarbase-c",
@@ -29159,7 +29847,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pillarmiddle-c",
@@ -29197,7 +29886,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ladder-c",
@@ -29229,7 +29919,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-factorycart-c",
@@ -29273,7 +29964,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 3
+      "cyclesMin": 3,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-cyberwagon-c",
@@ -29305,7 +29997,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-gate-automated-8x4-c",
@@ -29337,7 +30030,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-hypertubewallhole-c",
@@ -29375,7 +30069,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pipesupportwallhole-c",
@@ -29419,7 +30114,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundationpassthrough-pipe-c",
@@ -29463,7 +30159,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-powerpolewalldouble-c",
@@ -29501,7 +30198,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-powerpolewalldoublemk2-c",
@@ -29539,7 +30237,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-powerpolewallmk2-c",
@@ -29577,7 +30276,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-powerpolewalldoublemk3-c",
@@ -29615,7 +30315,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-powerpolewallmk3-c",
@@ -29653,7 +30354,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-streetlight-c",
@@ -29697,7 +30399,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-ceilinglight-c",
@@ -29741,7 +30444,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-floodlightpole-c",
@@ -29785,7 +30489,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-floodlightwall-c",
@@ -29829,7 +30534,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-orange-01-c",
@@ -29861,7 +30567,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-orange-02-c",
@@ -29893,7 +30600,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-orange-03-c",
@@ -29925,7 +30633,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-orange-04-c",
@@ -29957,7 +30666,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-orange-incorner-01-c",
@@ -29989,7 +30699,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-orange-incorner-02-c",
@@ -30021,7 +30732,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-orange-incorner-03-c",
@@ -30053,7 +30765,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-orange-outcorner-01-c",
@@ -30085,7 +30798,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-orange-outcorner-02-c",
@@ -30117,7 +30831,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-orange-outcorner-03-c",
@@ -30149,7 +30864,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-window-01-c",
@@ -30181,7 +30897,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-window-02-c",
@@ -30213,7 +30930,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-window-03-c",
@@ -30245,7 +30963,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-window-04-c",
@@ -30277,7 +30996,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-window-incorner-01-c",
@@ -30309,7 +31029,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-window-incorner-02-c",
@@ -30341,7 +31062,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-window-incorner-03-c",
@@ -30373,7 +31095,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-window-outcorner-01-c",
@@ -30405,7 +31128,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-window-outcorner-02-c",
@@ -30437,7 +31161,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-window-outcorner-03-c",
@@ -30469,7 +31194,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-a-01-c",
@@ -30501,7 +31227,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-a-02-c",
@@ -30533,7 +31260,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-a-03-c",
@@ -30565,7 +31293,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-a-04-c",
@@ -30597,7 +31326,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-metal-incorner-01-c",
@@ -30629,7 +31359,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-metal-incorner-02-c",
@@ -30661,7 +31392,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-metal-incorner-03-c",
@@ -30693,7 +31425,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-metal-outcorner-01-c",
@@ -30725,7 +31458,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-metal-outcorner-02-c",
@@ -30757,7 +31491,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-metal-outcorner-03-c",
@@ -30789,7 +31524,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-tar-01-c",
@@ -30821,7 +31557,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-tar-02-c",
@@ -30853,7 +31590,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-tar-03-c",
@@ -30885,7 +31623,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-tar-04-c",
@@ -30917,7 +31656,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-tar-incorner-01-c",
@@ -30949,7 +31689,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-tar-incorner-02-c",
@@ -30981,7 +31722,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-tar-incorner-03-c",
@@ -31013,7 +31755,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-tar-outcorner-01-c",
@@ -31045,7 +31788,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-tar-outcorner-02-c",
@@ -31077,7 +31821,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-roof-tar-outcorner-03-c",
@@ -31109,7 +31854,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pipelinemk2-noindicator-c",
@@ -31147,7 +31893,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pipeline-noindicator-c",
@@ -31179,7 +31926,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-storagemedkit-c",
@@ -31217,7 +31965,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-lightscontrolpanel-c",
@@ -31261,7 +32010,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-standalonewidgetsign-small-c",
@@ -31299,7 +32049,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-standalonewidgetsign-smallverywide-c",
@@ -31337,7 +32088,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-standalonewidgetsign-smallwide-c",
@@ -31375,7 +32127,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-standalonewidgetsign-square-tiny-c",
@@ -31413,7 +32166,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundationpassthrough-hypertube-c",
@@ -31457,7 +32211,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-storagehazard-c",
@@ -31495,7 +32250,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-goldencart-c",
@@ -31539,7 +32295,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 3
+      "cyclesMin": 3,
+      "type": "handcrafting"
     },
     {
       "slug": "recipe-wall-window-8x4-05-c",
@@ -31577,7 +32334,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-window-8x4-06-c",
@@ -31615,7 +32373,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-window-8x4-07-c",
@@ -31653,7 +32412,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-window-thin-8x4-01-c",
@@ -31691,7 +32451,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-wall-window-thin-8x4-02-c",
@@ -31729,7 +32490,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pillar-small-frame-c",
@@ -31761,7 +32523,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pillarmiddle-frame-c",
@@ -31793,7 +32556,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-chainlinkfence-c",
@@ -31825,7 +32589,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-tarpfence-c",
@@ -31857,7 +32622,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-barrier-low-01-c",
@@ -31895,7 +32661,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-barrier-tall-01-c",
@@ -31933,7 +32700,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-concrete-barrier-01-c",
@@ -31965,7 +32733,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-standalonewidgetsign-medium-c",
@@ -32003,7 +32772,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-standalonewidgetsign-portrait-c",
@@ -32041,7 +32811,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-standalonewidgetsign-square-c",
@@ -32079,7 +32850,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-standalonewidgetsign-square-small-c",
@@ -32117,7 +32889,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-foundationpassthrough-lift-c",
@@ -32161,7 +32934,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pillar-small-concrete-c",
@@ -32193,7 +32967,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-pillarmiddle-concrete-c",
@@ -32225,7 +33000,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-catwalk-cross-c",
@@ -32263,7 +33039,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-catwalk-ramp-c",
@@ -32301,7 +33078,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-catwalk-stairs-c",
@@ -32339,7 +33117,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-catwalk-straight-c",
@@ -32377,7 +33156,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-catwalk-t-c",
@@ -32415,7 +33195,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-catwalk-turn-c",
@@ -32453,7 +33234,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-standalonewidgetsign-huge-c",
@@ -32497,7 +33279,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-standalonewidgetsign-large-c",
@@ -32541,7 +33324,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-beam-c",
@@ -32573,7 +33357,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-beam-connector-c",
@@ -32605,7 +33390,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-beam-connector-double-c",
@@ -32637,7 +33423,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-beam-painted-c",
@@ -32669,7 +33456,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-beam-support-c",
@@ -32701,7 +33489,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-generatorbiomass-automated-c",
@@ -32745,7 +33534,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-spaceelevator-c",
@@ -32795,7 +33585,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-minermk1-c",
@@ -32839,7 +33630,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-storagecontainermk1-c",
@@ -32877,7 +33669,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-constructormk1-c",
@@ -32915,7 +33708,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-smelterbasicmk1-c",
@@ -32953,7 +33747,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-workshop-c",
@@ -32991,7 +33786,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 60
+      "cyclesMin": 60,
+      "type": "building"
     },
     {
       "slug": "recipe-portableminer-c",
@@ -33029,7 +33825,8 @@
       "isVariablePower": false,
       "minPower": 0,
       "maxPower": 1,
-      "cyclesMin": 1.5
+      "cyclesMin": 1.5,
+      "type": "handcrafting"
     }
   ],
   "resources": [

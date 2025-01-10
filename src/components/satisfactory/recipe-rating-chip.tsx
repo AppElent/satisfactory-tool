@@ -1,4 +1,5 @@
-import { Chip } from '@mui/material';
+import { SatisfactoryRecipe } from '@/libs/satisfactory/data/recipe';
+import { Chip, Tooltip } from '@mui/material';
 
 const getRatingColor = (rating: string) => {
   switch (rating) {
@@ -17,15 +18,20 @@ const getRatingColor = (rating: string) => {
   }
 };
 
-const RecipeRatingChip = ({ rating }: { rating: string }) => {
-  const color = getRatingColor(rating);
+const RecipeRatingChip = ({ rating }: { rating: SatisfactoryRecipe['rating'] }) => {
+  if (!rating) {
+    return null;
+  }
+  const color = getRatingColor(rating.score);
   return (
-    <Chip
-      sx={{ ml: 1 }}
-      color={color}
-      label={rating}
-      size="small"
-    />
+    <Tooltip title={`${rating?.description}`}>
+      <Chip
+        sx={{ ml: 1 }}
+        color={color}
+        label={`${rating.score}-tier`}
+        size="small"
+      />
+    </Tooltip>
   );
 };
 

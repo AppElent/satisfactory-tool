@@ -8,8 +8,24 @@ export default class BuildableRecipe extends Recipe implements SatisfactoryBuild
     super(recipe, data);
   }
 
+  getProducts = () => {
+    throw new Error(
+      'getProducts() is not allowed from a BuildableRecipe. Use getOutput() instead.'
+    );
+  };
+
+  getOutput = () => {
+    const buildable = this.data.buildables.find(
+      (buildable) => buildable.className === this.products[0].item
+    );
+    return {
+      ...this.products[0],
+      output: buildable,
+    };
+  };
+
   getBuildable = () => {
-    return this.data.buildables.find((buildable) => buildable.className === this.products[0].item);
+    return this.data.getBuildable(this.products[0].item);
   };
 
   getIcon = () => {

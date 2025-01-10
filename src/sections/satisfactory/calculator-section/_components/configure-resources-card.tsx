@@ -28,9 +28,7 @@ const ConfigureResourcesCard = ({ setResources }: ConfigureResourcesCardProps) =
             variant="contained"
             color="primary"
             onClick={() => {
-              console.log('set to max');
               const resources = satisfactoryData.getResourceMax();
-              console.log(resources);
               setResources(resources);
             }}
           >
@@ -40,7 +38,6 @@ const ConfigureResourcesCard = ({ setResources }: ConfigureResourcesCardProps) =
             variant="contained"
             color="primary"
             onClick={() => {
-              console.log('set to 0');
               // Iterate resources and crete
               const resources = satisfactoryData.resources.reduce(
                 (acc: { [key: string]: string }, resource) => {
@@ -49,7 +46,6 @@ const ConfigureResourcesCard = ({ setResources }: ConfigureResourcesCardProps) =
                 },
                 {}
               );
-              console.log(resources);
               setResources(resources);
             }}
           >

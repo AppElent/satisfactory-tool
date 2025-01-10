@@ -51,7 +51,7 @@ const RecipeOverview = ({ title, recipes }: ProductProps) => {
                 <Link to={getPath('recipeDetails')?.to.replace(':id', recipe.className)}>
                   {recipe.name}
                 </Link>
-                {recipe.rating?.score && <RecipeRatingChip rating={recipe.rating.score} />}
+                {recipe.rating && <RecipeRatingChip rating={recipe.rating} />}
               </ListItemText>
 
               <ListItemIcon>
@@ -100,6 +100,7 @@ const ProductDetails = () => {
               Tier: {item.tier} <br />
               Is resource: {item.isResource ? 'Yes' : 'No'} <br />
               Sink points: {item.sinkPoints} <br />
+              <br />
               Tags:{' '}
               {item.tags.map((tag) => (
                 <Chip

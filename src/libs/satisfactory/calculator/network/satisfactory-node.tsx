@@ -65,13 +65,11 @@ export default class SatisfactoryNode extends Node implements SatisfactoryNodePr
   };
 
   useAmount = (item: string, amount: number) => {
-    console.log('amount', amount);
     // Check usedAmount against amount and return the amount that can be used
     // Also account for overflow
     // TODO: add item to params and add to usedAmount
     const usedAmount = this.usedAmount[item];
     const grossAmount = this.grossAmount[item];
-    console.log(usedAmount, grossAmount, this.grossAmount);
     if (usedAmount + amount > grossAmount) {
       const remaining = Math.round((grossAmount - usedAmount) * 1000) / 1000;
       this.usedAmount[item] = grossAmount;

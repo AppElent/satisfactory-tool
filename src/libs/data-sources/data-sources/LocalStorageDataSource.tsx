@@ -128,13 +128,8 @@ export class LocalStorageDataSource extends BaseDataSource {
       return;
     }
     const existingData = this.getData();
-    const itemIndex = existingData.findIndex((d: any) => d.id === id);
-    if (id && itemIndex > -1) {
-      delete existingData[itemIndex];
-      this.saveData(existingData);
-    } else {
-      throw new Error('Document not found');
-    }
+    const newData = existingData.filter((d: any) => d.id !== id);
+    this.saveData(newData);
   }
 
   // Subscribe to changes in the storage data

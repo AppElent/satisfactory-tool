@@ -151,7 +151,12 @@ const CheckboxList = ({ name, field: fieldConfig, options }: CustomCheckboxListP
           )}
         </Box>
       )}
-      <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+      <List
+        sx={{
+          width: '100%',
+          bgcolor: 'background.paper',
+        }}
+      >
         {filteredOptions.map((item) => {
           const labelId = `checkbox-list-label-${item.key}`;
           const itemIsChecked = () => {
@@ -173,6 +178,11 @@ const CheckboxList = ({ name, field: fieldConfig, options }: CustomCheckboxListP
               disablePadding
               onClick={() => handleToggle(item.key)}
               secondaryAction={item.secondaryAction}
+              sx={{
+                '&:hover': {
+                  backgroundColor: 'rgba(0, 0, 0, 0.08)',
+                },
+              }}
               // secondaryAction={}
             >
               <ListItemButton

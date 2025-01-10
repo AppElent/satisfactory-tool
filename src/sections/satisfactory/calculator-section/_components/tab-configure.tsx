@@ -1,3 +1,4 @@
+import useKeyboardShortcut from '@/hooks/use-keyboard-shortcut';
 import useTabs from '@/hooks/use-tabs';
 import { CustomForm } from '@/libs/forms';
 import useCustomFormik from '@/libs/forms/use-custom-formik';
@@ -48,34 +49,36 @@ const tabsData = [
 ];
 
 const TabConfigure = () => {
-  // const data = useData<Calculator[]>('calculator_configs');
-  // const item = useParamItem({
-  //   items: data.data || [],
-  // });
-  const { config, saveConfig } = useSatisfactoryCalculator();
+  const { config, saveConfig, options } = useSatisfactoryCalculator();
   const tabs = useTabs(tabsData);
 
   const formik = useCustomFormik({
     initialValues: config,
     onSubmit: async (values) => {
-      console.log(values);
+      if (saveConfig) {
+        saveConfig(values as Calculator);
+      }
     },
     enableReinitialize: true,
   });
 
+  useKeyboardShortcut('s', () => {
+    console.log('SAVE USING CTRL-S', formik.values, saveConfig);
+    saveConfig?.(formik.values as Calculator);
+  });
+
   useEffect(() => {
-    console.log(formik.values);
-    if (formik.dirty && formik.values?.id && !_.isEqual(formik.values, config)) {
-      console.log('Saving config to storage');
-      //data.actions.update(formik.values as Calculator[], formik.values.id); // TODO: fix typings
-      if (saveConfig) {
-        saveConfig(formik.values as Calculator);
-      }
+    if (
+      options?.autoSave &&
+      formik.dirty &&
+      formik.values?.id &&
+      !_.isEqual(formik.values, config)
+    ) {
+      formik.handleSubmit();
     }
   }, [formik.values, saveConfig]);
 
   const setResources = (resources: any) => {
-    //data.actions.update({ resourceMax: resources }, formik.values.id);
     formik.setValues({ ...formik.values, resourceMax: resources });
   };
 

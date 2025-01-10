@@ -1,9 +1,11 @@
 import ItemOverview from '@/components/satisfactory/item-overview';
+import RecipeOneliner from '@/components/satisfactory/recipe-oneliner';
 import useParamItem from '@/hooks/use-param-item';
 import Buildable from '@/libs/satisfactory/data/buildable';
+import BuildableRecipe from '@/libs/satisfactory/data/buildable-recipe';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import DefaultPage from '@/pages/default/DefaultPage';
-import { Typography } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 
 const BuildableDetails = () => {
   const items = satisfactoryData.buildables;
@@ -33,6 +35,14 @@ const BuildableDetails = () => {
           <br />
           Power: {item.metadata.powerConsumption} MW
         </Typography>
+        <Stack
+          direction="row"
+          spacing={2}
+          alignItems={'center'}
+        >
+          <Typography>Cost:</Typography>
+          <RecipeOneliner recipe={item.getBuildableRecipe() as BuildableRecipe} />
+        </Stack>
       </ItemOverview>
     </DefaultPage>
   );

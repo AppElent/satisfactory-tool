@@ -144,7 +144,7 @@ const JsonConfigCard = () => {
           fullWidth
           label="JSON"
           multiline
-          onChange={(e) => setJson(e.target.value)}
+          onChange={(e) => setJsonState(e.target.value)}
           rows={10}
           value={json}
           variant="outlined"

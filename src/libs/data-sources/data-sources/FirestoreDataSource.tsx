@@ -224,7 +224,8 @@ export class FirestoreDataSource<T> extends BaseDataSource<T> {
       }
       const docRef = this.#getRef(id);
       data = this.#clearUndefinedValues(data);
-      this.validate(data);
+      await this.validate(data);
+      console.log(docRef, data, id);
       await updateDoc(docRef, data as UpdateData<Partial<T>>);
     } catch (error) {
       console.error('Error updating document:', error);

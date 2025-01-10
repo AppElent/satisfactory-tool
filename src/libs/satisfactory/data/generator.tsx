@@ -20,7 +20,7 @@ export default class Generator extends BaseItem implements SatisfactoryGenerator
   }
 
   getBuildable = () => {
-    return this.data.findBuildable(this.className);
+    return this.data.getBuildable(this.className);
   };
 
   toObject = () => {

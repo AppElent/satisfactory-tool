@@ -2,6 +2,7 @@
 
 import ItemOverview from '@/components/satisfactory/item-overview';
 import RecipeGraph from '@/components/satisfactory/recipe-graph';
+import RecipeOneliner from '@/components/satisfactory/recipe-oneliner';
 import useParamItem from '@/hooks/use-param-item';
 import Recipe from '@/libs/satisfactory/data/recipe';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
@@ -35,6 +36,8 @@ const RecipeDetails = () => {
           Alternate: {item.alternate ? 'Yes' : 'No'} <br></br>
           Machine: {item.getMachine()?.name}
         </Typography>
+        <br></br>
+        <RecipeOneliner recipe={item} />
       </ItemOverview>
       <RecipeGraph recipe={item} />
     </DefaultPage>
