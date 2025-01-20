@@ -18,6 +18,8 @@ const firebaseProvider = new FirebaseAuthProvider({
   logout: '/logout',
 });
 
+// const devFilter = import.meta.env.DEV ? 'ja' : 'ZMG16rhpzbdKd8LXUIiNOD7Jul23';
+
 const dataSources = {
   games: new FirestoreDataSource<Game>(
     {
