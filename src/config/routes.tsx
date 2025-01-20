@@ -9,6 +9,41 @@ import DataSources from '@/pages/default/test/data-sources/index';
 import FileUploads from '@/pages/default/test/file-uploads';
 import Forms from '@/pages/default/test/forms';
 import Translations from '@/pages/default/test/translations';
+import Calculator from '@/pages/satisfactory/calculator';
+import CalculatorDetails from '@/pages/satisfactory/calculator-details';
+import BeltsDetail from '@/pages/satisfactory/codex/belt-details';
+import Belts from '@/pages/satisfactory/codex/belts';
+import BuildableDetails from '@/pages/satisfactory/codex/buildable-details';
+import BuildableRecipeDetails from '@/pages/satisfactory/codex/buildable-recipe-details';
+import BuildableRecipes from '@/pages/satisfactory/codex/buildable-recipes';
+import Buildables from '@/pages/satisfactory/codex/buildables';
+import BuildingDetails from '@/pages/satisfactory/codex/building-details';
+import Buildings from '@/pages/satisfactory/codex/buildings';
+import CodexIndex from '@/pages/satisfactory/codex/codex-index';
+import Equipment from '@/pages/satisfactory/codex/equipment';
+import EquipmentDetails from '@/pages/satisfactory/codex/equipment-details';
+import GeneratorDetails from '@/pages/satisfactory/codex/generator-details';
+import Generators from '@/pages/satisfactory/codex/generators';
+import MinerDetails from '@/pages/satisfactory/codex/miner-details';
+import Miners from '@/pages/satisfactory/codex/miners';
+import ProductDetails from '@/pages/satisfactory/codex/product-details';
+import Products from '@/pages/satisfactory/codex/products';
+import RecipeDetails from '@/pages/satisfactory/codex/recipe-details';
+import Recipes from '@/pages/satisfactory/codex/recipes';
+import ResourceDetails from '@/pages/satisfactory/codex/resource-details';
+import Resources from '@/pages/satisfactory/codex/resources';
+import SchematicDetails from '@/pages/satisfactory/codex/schematic-details';
+import Schematics from '@/pages/satisfactory/codex/schematics';
+import Factories from '@/pages/satisfactory/factories';
+import FactoryDetails from '@/pages/satisfactory/factory-details';
+import FactoryProductionDetails from '@/pages/satisfactory/factory-production-details';
+import GameDetails from '@/pages/satisfactory/game-details';
+import Games from '@/pages/satisfactory/games';
+import Home from '@/pages/satisfactory/home';
+import PowerStationDetails from '@/pages/satisfactory/power-station-details';
+import PowerStations from '@/pages/satisfactory/power-stations';
+import RawData from '@/pages/satisfactory/raw-data';
+import Statistics from '@/pages/satisfactory/statistics';
 import { CustomRouteObject, routes as routesImport } from './routing';
 
 const routeElements: { [key: string]: JSX.Element } = {
@@ -19,28 +54,43 @@ const routeElements: { [key: string]: JSX.Element } = {
       </Suspense>
     </PaperbaseLayout>
   ),
-  homeIndex: <>Home</>,
-  // Recipe pages
-  // homeIndex: <HomePage />,
-  // recipesIndex: <RecipeOverviewPage />,
-  // myRecipes: <MyRecipeOverviewPage />,
-  // myRecipesIndex: <MyRecipeOverviewPage />,
-  // recipeDetails: <RecipeDetailsPage />,
-  // myRecipeDetails: <RecipeDetailsPage />,
+  homeIndex: <Home />,
   // Satisfactory pages
-  // satisfactoryIndex: <>TEST</>,
-  // products: <Products />,
-  // recipes: <Recipes />,
-  // rawData: <RawData />,
-  // generators: <Generators />,
-  // buildables: <Buildables />,
-  // buildings: <Buildings />,
-  // schematics: <Schematics />,
-  // belts: <Belts />,
-  // miners: <Miners />,
-  // resources: <Resources />,
-  // calculator: <Calculator />,
-  // games: <Games />,
+  satisfactoryIndex: <Home />,
+  codexIndex: <CodexIndex />,
+  productsIndex: <Products />,
+  productDetails: <ProductDetails />,
+  recipesIndex: <Recipes />,
+  recipeDetails: <RecipeDetails />,
+  equipmentIndex: <Equipment />,
+  equipmentDetails: <EquipmentDetails />,
+  rawData: <RawData />,
+  generatorsIndex: <Generators />,
+  generatorDetails: <GeneratorDetails />,
+  buildablesIndex: <Buildables />,
+  buildableDetails: <BuildableDetails />,
+  buildableRecipesIndex: <BuildableRecipes />,
+  buildableRecipeDetails: <BuildableRecipeDetails />,
+  buildingsIndex: <Buildings />,
+  buildingDetails: <BuildingDetails />,
+  schematicsIndex: <Schematics />,
+  schematicDetails: <SchematicDetails />,
+  beltsIndex: <Belts />,
+  beltDetails: <BeltsDetail />,
+  minersIndex: <Miners />,
+  minerDetails: <MinerDetails />,
+  resourcesIndex: <Resources />,
+  resourceDetails: <ResourceDetails />,
+  calculatorIndex: <Calculator />,
+  calculatorDetails: <CalculatorDetails />,
+  gamesIndex: <Games />,
+  gameDetailsIndex: <GameDetails />,
+  factoriesIndex: <Factories />,
+  factoryDetailsIndex: <FactoryDetails />,
+  factoryDetailsProduction: <FactoryProductionDetails />,
+  powerStationsIndex: <PowerStations />,
+  powerStationDetails: <PowerStationDetails />,
+  statistics: <Statistics />,
   // Test pages
   testDataSources: <DataSources />,
   testFileUploads: <FileUploads />,
@@ -78,21 +128,5 @@ function generateRouteObjects(routes: CustomRouteObject[]): RouteObject[] {
 }
 
 const routes = generateRouteObjects(routesImport);
-
-// export const paths = getAllPaths(routes);
-// console.log(paths);
-
-// Function to create a flat list of all paths with custom properties
-// export function getAllPaths(routes: CustomRouteObject[], parentPath: string = ''): any[] {
-//   return routes.flatMap((route) => {
-//     const currentPath = route.path
-//       ? `${parentPath}/${route.path}`.replace(/\/+/g, '/')
-//       : parentPath;
-//     const { children, ...routeInfo } = route;
-//     const currentRoute = { ...routeInfo, to: currentPath };
-//     const childrenPaths = children ? getAllPaths(children, currentPath) : [];
-//     return [currentRoute, ...childrenPaths];
-//   });
-// }
 
 export default routes;
