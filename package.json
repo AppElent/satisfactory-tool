@@ -1,5 +1,5 @@
 {
-  "name": "template-vite-ts-react-app",
+  "name": "satisfactory-tool",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -38,6 +38,7 @@
     "json-edit-react": "^1.17.1",
     "lodash": "^4.17.21",
     "material-ui-confirm": "^3.0.16",
+    "mermaid": "^11.4.1",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
