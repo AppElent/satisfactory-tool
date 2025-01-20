@@ -25,7 +25,7 @@ import Autocomplete from './Autocomplete';
 import Select from './Select';
 import TextField from './TextField';
 
-interface TableProps {
+export interface TableProps {
   name?: string;
   field?: FieldConfig;
   tableOptions?: {
@@ -47,7 +47,7 @@ const defaultTableOptions = {
   editable: true,
   selectable: false,
   columns: {},
-  title: 'Table title',
+  //title: 'Table title',
 };
 
 const Table = ({ name, field: fieldConfig, tableOptions }: TableProps) => {
@@ -58,11 +58,20 @@ const Table = ({ name, field: fieldConfig, tableOptions }: TableProps) => {
   const fieldName = name || fieldConfig?.name;
   const data = useFormField(fieldName as string);
   const { field, helpers } = data;
-  const mergedTableOptions = _.merge({}, defaultTableOptions, tableOptions);
-  const { template, getTemplate } = mergedTableOptions;
-  console.log(template, getTemplate);
+  // const mergedTableOptions = _.merge({}, defaultTableOptions, tableOptions);
+  // const { template, getTemplate } = mergedTableOptions;
+  // console.log(template, getTemplate);
 
-  const { editable, selectable, columns = {}, title } = fieldConfig?.custom?.table || {};
+  // const { editable, selectable, columns = {}, title } = fieldConfig?.custom?.table || {};
+  // Merge tableOptions with fieldConfig.custom.table
+  const mergedTableOptions = _.merge(
+    {},
+    defaultTableOptions,
+    fieldConfig?.custom?.table,
+    tableOptions
+  );
+  const { template, getTemplate, editable, selectable, columns = {}, title } = mergedTableOptions;
+  console.log(mergedTableOptions);
 
   // useEffect(() => {
   //     if (field.value.length === 0) {
@@ -131,7 +140,9 @@ const Table = ({ name, field: fieldConfig, tableOptions }: TableProps) => {
               variant="h6"
               id="tableTitle"
             >
-              {selected.length > 0 ? `${selected.length} selected` : title || 'Table'}
+              {selected.length > 0
+                ? `${selected.length} selected`
+                : title || fieldConfig?.label || 'Table'}
             </Typography>
             <Stack
               direction="row"

@@ -37,6 +37,16 @@ const FactoryDetails = () => {
     },
   };
 
+  const deleteConfig = async (id: string) => {
+    try {
+      await data.actions.delete(id);
+      toast.success('Config deleted');
+    } catch (e: any) {
+      console.error(e);
+      toast.error('Error deleting config');
+    }
+  };
+
   const createNewConfig = async () => {
     const config = calculatorSchema.getTemplate();
     //update factory with new config
@@ -109,7 +119,10 @@ const FactoryDetails = () => {
                 size={12}
                 key={production.id}
               >
-                <CalculatorConfigCard config={production} />
+                <CalculatorConfigCard
+                  config={production}
+                  deleteConfig={() => deleteConfig(production.id)}
+                />
               </Grid>
             );
           })}

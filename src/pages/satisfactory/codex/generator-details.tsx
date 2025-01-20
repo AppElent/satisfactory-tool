@@ -43,6 +43,15 @@ const GeneratorDetails = () => {
             recipe={item.getBuildable()?.getBuildableRecipe() as BuildableRecipe}
           />
         </Stack>
+        <Typography variant="h6">Fuels:</Typography>
+        {item.getFuels()?.map((fuel) => {
+          return (
+            <>
+              {fuel?.name}
+              <br />
+            </>
+          );
+        })}
       </ItemOverview>
     </DefaultPage>
   );

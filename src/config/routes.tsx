@@ -36,13 +36,15 @@ import SchematicDetails from '@/pages/satisfactory/codex/schematic-details';
 import Schematics from '@/pages/satisfactory/codex/schematics';
 import Factories from '@/pages/satisfactory/factories';
 import FactoryDetails from '@/pages/satisfactory/factory-details';
+import FactoryProductionDetails from '@/pages/satisfactory/factory-production-details';
 import GameDetails from '@/pages/satisfactory/game-details';
 import Games from '@/pages/satisfactory/games';
 import Home from '@/pages/satisfactory/home';
+import PowerStationDetails from '@/pages/satisfactory/power-station-details';
+import PowerStations from '@/pages/satisfactory/power-stations';
 import RawData from '@/pages/satisfactory/raw-data';
 import Statistics from '@/pages/satisfactory/statistics';
 import { CustomRouteObject, routes as routesImport } from './routing';
-import FactoryProductionDetails from '@/pages/satisfactory/factory-production-details';
 
 const routeElements: { [key: string]: JSX.Element } = {
   home: (
@@ -86,6 +88,8 @@ const routeElements: { [key: string]: JSX.Element } = {
   factoriesIndex: <Factories />,
   factoryDetailsIndex: <FactoryDetails />,
   factoryDetailsProduction: <FactoryProductionDetails />,
+  powerStationsIndex: <PowerStations />,
+  powerStationDetails: <PowerStationDetails />,
   statistics: <Statistics />,
   // Test pages
   testDataSources: <DataSources />,

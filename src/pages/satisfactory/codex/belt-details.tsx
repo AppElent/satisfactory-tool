@@ -1,9 +1,11 @@
 import ItemOverview from '@/components/satisfactory/item-overview';
+import RecipeOneliner from '@/components/satisfactory/recipe-oneliner';
 import useParamItem from '@/hooks/use-param-item';
 import Belt from '@/libs/satisfactory/data/belt';
+import BuildableRecipe from '@/libs/satisfactory/data/buildable-recipe';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import DefaultPage from '@/pages/default/DefaultPage';
-import { Typography } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 
 const BeltDetails = () => {
   const belts = satisfactoryData.belts;
@@ -31,6 +33,14 @@ const BeltDetails = () => {
         >
           Belt rate: {item.rate}
         </Typography>
+        <Stack
+          direction="row"
+          spacing={2}
+          alignItems={'center'}
+        >
+          <Typography>Cost:</Typography>
+          <RecipeOneliner recipe={item.getBuildable()?.getBuildableRecipe() as BuildableRecipe} />
+        </Stack>
       </ItemOverview>
     </DefaultPage>
   );

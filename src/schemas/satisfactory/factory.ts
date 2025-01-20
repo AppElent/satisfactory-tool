@@ -1,15 +1,35 @@
 import * as Yup from 'yup';
-import DefaultSchema from '..';
-import { Calculator, calculatorYupSchema } from './calculator';
+import DefaultSchema, { createDefaultSchema } from '..';
+import { Calculator, calculatorYupSchema, createCalculatorSchema } from './calculator';
 
 export const factoryYupSchema = Yup.object().shape({
   id: Yup.string().required().min(3).label('ID'),
   name: Yup.string().required().min(3).label('Name').default(''),
-  description: Yup.string().min(3).label('Description').default(''),
+  description: Yup.string().label('Description').default(''),
   production: Yup.array().of(calculatorYupSchema).default([]),
 });
 
 export type Factory = Yup.InferType<typeof factoryYupSchema>;
+
+export const createFactorySchema = () => {
+  const defaultSchema = createDefaultSchema<Factory>(factoryYupSchema);
+  return {
+    ...defaultSchema,
+    getTemplate: () => {
+      return {
+        ...defaultSchema.getTemplate(),
+        id: defaultSchema.generateNanoId(),
+        name: defaultSchema.generateName(),
+      };
+    },
+    clean: (factory: Factory) => {
+      factory.production = factory.production?.map((calculator) =>
+        createCalculatorSchema().clean(calculator)
+      );
+      return factory;
+    },
+  };
+};
 
 export class FactorySchema extends DefaultSchema<Factory> {
   constructor(public yupSchema: Yup.ObjectSchema<any>) {
@@ -20,6 +40,7 @@ export class FactorySchema extends DefaultSchema<Factory> {
     return {
       ...super.getTemplate(),
       id: this._generateNanoId(),
+      name: '',
     };
   };
 }

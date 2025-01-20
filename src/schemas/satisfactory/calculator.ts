@@ -1,8 +1,12 @@
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import * as Yup from 'yup';
-import DefaultSchema from '..';
-import { productionInputYupSchema } from './production-input';
-import { productionItemSchema, productionItemYupSchema } from './production-item';
+import DefaultSchema, { createDefaultSchema } from '..';
+import { createProductionInputSchema, productionInputYupSchema } from './production-input';
+import {
+  createProductionItemSchema,
+  productionItemSchema,
+  productionItemYupSchema,
+} from './production-item';
 
 export const resourceListSchema = Yup.object().shape({
   Desc_OreIron_C: Yup.number().required().default(0).label('Iron Ore'),
@@ -27,7 +31,7 @@ export const calculatorYupSchema = Yup.object().shape({
   externalId: Yup.string().min(3).label('External ID'),
   name: Yup.string().required().min(3).default('').label('Name'),
   production: Yup.array().of(productionItemYupSchema).default([]).label('Production'),
-  input: Yup.array().of(productionInputYupSchema).default([]),
+  input: Yup.array().of(productionInputYupSchema).default([]).label('Input'),
   allowedAlternateRecipes: Yup.array().of(Yup.string().min(3).required()).default([]),
   blockedRecipes: Yup.array().of(Yup.string().min(3).required()).default([]),
   blockedResources: Yup.array().of(Yup.string().min(3).required()).default([]),
@@ -41,6 +45,113 @@ export const calculatorYupSchema = Yup.object().shape({
 });
 
 export type Calculator = Yup.InferType<typeof calculatorYupSchema>;
+
+export const createCalculatorSchema = () => {
+  const productionItemFieldDefinitions = createProductionItemSchema().getFieldDefinitions();
+  const productionInputFieldDefinitions = createProductionInputSchema().getFieldDefinitions();
+  const customFieldDefinitions = {
+    // 'production.item': {
+    //   options: satisfactoryData.products.map((product) => ({
+    //     key: product.className,
+    //     label: product.name,
+    //     img: product.getIconComponent(),
+    //   })),
+    //   definition: 'autocomplete',
+    //   custom: {
+    //     muiTableCellProps: {
+    //       width: 450,
+    //     },
+    //   },
+    // },
+    'production.item': productionItemFieldDefinitions.item,
+    'production.mode': productionItemFieldDefinitions.mode,
+    // {
+    //   options: [
+    //     { key: 'perMinute', value: 'Per Minute' },
+    //     { key: 'max', value: 'Max' },
+    //   ],
+    //   definition: 'select',
+    // },
+    allowedAlternateRecipes: {
+      options: satisfactoryData.recipes
+        .filter((r) => r.alternate)
+        .map((recipe) => {
+          return {
+            key: recipe.className,
+            value: recipe.className,
+            label: recipe.name,
+            img: recipe.getIcon(),
+          };
+        }),
+    },
+    blockedRecipes: {
+      options: satisfactoryData.recipes
+        .filter((r) => !r.alternate)
+        .map((recipe) => {
+          return {
+            key: recipe.className,
+            value: recipe.className,
+            label: recipe.name,
+            img: recipe.getIcon(),
+          };
+        }),
+    },
+    blockedMachines: {
+      options: satisfactoryData.buildings.map((machine) => {
+        return {
+          key: machine.className,
+          value: machine.className,
+          label: machine.name,
+          img: machine.getIcon(),
+        };
+      }),
+    },
+    'input.item': productionInputFieldDefinitions.item,
+    // {
+    //   options: satisfactoryData.products.map((product) => ({
+    //     key: product.className,
+    //     label: product.name,
+    //     img: product.getIconComponent(),
+    //   })),
+    //   definition: 'autocomplete',
+    //   custom: {
+    //     muiTableCellProps: {
+    //       width: 450,
+    //     },
+    //   },
+    // },
+  };
+  const defaultSchema = createDefaultSchema<Calculator>(
+    calculatorYupSchema,
+    customFieldDefinitions
+  );
+
+  return {
+    ...defaultSchema,
+    getTemplate: () => {
+      const resourceMax = satisfactoryData.getResourceMax();
+      return {
+        ...defaultSchema.getTemplate(),
+        id: defaultSchema.generateNanoId(),
+        name: '',
+        resourceMax,
+        blockedMachines: ['Desc_Converter_C'],
+        production: [productionItemSchema.getTemplate()],
+      };
+    },
+    clean: (calculator: Calculator) => {
+      calculator.production = calculator.production?.filter(
+        (prod) => prod.item && prod.item !== ''
+      );
+      calculator.input = calculator.input?.filter((input) => input.item && input.item !== '');
+      calculator.name =
+        calculator.name ||
+        satisfactoryData.getProduct(calculator?.production?.[0]?.item)?.name ||
+        'No products';
+      return calculator;
+    },
+  };
+};
 
 class CalculatorSchema extends DefaultSchema<Calculator> {
   constructor(public yupSchema: Yup.ObjectSchema<any>) {

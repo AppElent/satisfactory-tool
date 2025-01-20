@@ -9,6 +9,7 @@ const CalculatorDetails = () => {
   const data = useData<Calculator>('calculator_configs');
   const item = useParamItem({
     items: data.data || [],
+    id: 'calculatorId',
   });
 
   const saveConfig = async (config: Calculator) => {

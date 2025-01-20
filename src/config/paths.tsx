@@ -1,3 +1,4 @@
+import { useParams } from 'react-router-dom';
 import config from '.';
 import { paths } from './routing';
 
@@ -44,7 +45,32 @@ const menuCategories: MenuCategory[] = [
   },
 ];
 
-export const getPath = (id: string) => paths.find((path) => path.id === id);
+export const getPath = (id: string, params?: { [key: string]: string | undefined }) => {
+  const path = paths.find((path) => path.id === id);
+  if (!path) {
+    return null;
+  }
+  const pathCopy = { ...path };
+  if (params) {
+    let newPath = path.to;
+    Object.keys(params).forEach((key) => {
+      newPath = newPath.replace(`:${key}`, params[key]);
+    });
+    pathCopy.to = newPath;
+  }
+
+  return pathCopy;
+};
+
+export const useCurrentPath = () => {
+  const params = useParams();
+  let windowPath = window.location.pathname;
+  Object.keys(params).forEach((key) => {
+    windowPath = windowPath.replace(params[key] as string, `:${key}`);
+  });
+  const path = paths.find((path) => path.to === windowPath);
+  return path || null;
+};
 
 const generateMenu = () => {
   const menu = menuCategories
@@ -76,5 +102,7 @@ const generateMenu = () => {
 };
 
 export const menu = generateMenu();
+
+console.log('PATHS', paths);
 
 export default paths;

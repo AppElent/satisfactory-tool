@@ -1,15 +1,27 @@
-import useRouter from '@/hooks/use-router';
-import { Factory } from '@/schemas/satisfactory/factory';
-import { Button, Card, CardActions, CardContent, CardHeader } from '@mui/material';
+import FactoryOverview from '@/components/satisfactory/factory-overview';
 
-interface TabFactoriesProps {
-  factories: Factory[];
-}
+const TabFactories = () => {
+  // const router = usePathRouter();
+  // const params = useParams();
 
-const TabFactories = ({ factories }: TabFactoriesProps) => {
-  const router = useRouter();
+  // const handleFactoryAdd = async () => {
+  //   const factory = await createFactory();
+  //   console.log(factory);
+  //   toast.success(`Factory ${factory.name} created`);
+  //   router.push('factoryDetails', { factoryId: factory.id });
+  // };
+
+  // const handleFactoryDelete = async (id: string) => {
+  //   console.log('Delete factory', id);
+  //   const game = JSON.parse(JSON.stringify(item));
+  //   game.factories = game.factories.filter((factory: any) => factory.id !== id);
+  //   data.actions.update(game, game.id);
+  //   toast.success('Factory deleted');
+  // };
+
   return (
     <div>
+      {/* <FloatingButton handleAdd={handleFactoryAdd} />
       {factories.map((factory: any) => {
         return (
           <Card key={factory.id}>
@@ -21,14 +33,15 @@ const TabFactories = ({ factories }: TabFactoriesProps) => {
               <Button
                 size="small"
                 color="primary"
-                onClick={() => router.push(`factories/${factory.id}`)}
+                onClick={() => router.push('factoryDetails', { factoryId: factory.id })}
               >
                 Edit
               </Button>
             </CardActions>
           </Card>
         );
-      })}
+      })} */}
+      <FactoryOverview />
     </div>
   );
 };

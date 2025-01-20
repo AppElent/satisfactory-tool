@@ -206,7 +206,7 @@ export class FirestoreDataSource<T> extends BaseDataSource<T> {
         throw new Error('add() can only be used with collections');
       // Validate new data
       item = this.#clearUndefinedValues(item);
-      this.validate(item, { full: false });
+      this.validate(item);
       const docRef = await addDoc(this.ref, item);
       const newDoc = await getDoc(docRef);
       return { id: docRef.id, ...newDoc.data() } as T;
@@ -224,7 +224,10 @@ export class FirestoreDataSource<T> extends BaseDataSource<T> {
       }
       const docRef = this.#getRef(id);
       data = this.#clearUndefinedValues(data);
-      await this.validate(data);
+      const validateResult = await this.validate(data, { strict: false });
+      if (!validateResult.valid) {
+        throw new Error('Validation failed');
+      }
       console.log(docRef, data, id);
       await updateDoc(docRef, data as UpdateData<Partial<T>>);
     } catch (error) {
@@ -241,7 +244,7 @@ export class FirestoreDataSource<T> extends BaseDataSource<T> {
         throw new Error('set() requires an ID when using collections');
       }
       data = this.#clearUndefinedValues(data);
-      this.validate(data);
+      this.validate(data); // TODO: fix validation everywhere
       const docRef = this.#getRef(id);
       await setDoc(docRef, data);
     } catch (error) {

@@ -52,7 +52,6 @@ const CytoscapeGraph = ({ network }: { network: SatisfactoryNetwork }) => {
 
   return (
     <div>
-      <h1>Cytoscape Graph</h1>
       <div style={{ position: 'relative', width: '100%', height: '600px' }}>
         <div
           ref={cyRef}

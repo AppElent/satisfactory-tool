@@ -1,12 +1,13 @@
 import { FieldConfig } from '@/libs/forms';
 import Table from '@/libs/forms/components/Table';
-import calculatorSchema from '@/schemas/satisfactory/calculator';
+import { createCalculatorSchema } from '@/schemas/satisfactory/calculator';
 import { productionItemSchema } from '@/schemas/satisfactory/production-item';
 import { Card, CardContent, CardHeader } from '@mui/material';
-import { useMemo } from 'react';
 
 const ConfigureProductionCard = () => {
-  const fieldDefinitions = useMemo(() => calculatorSchema.getFieldDefinitions(), []);
+  //const fieldDefinitions = useMemo(() => calculatorSchema.getFieldDefinitions(), []);
+  const fieldDefinitions = createCalculatorSchema().getFieldDefinitions();
+  console.log(fieldDefinitions);
 
   const fieldConfig: FieldConfig = {
     ...fieldDefinitions.production,

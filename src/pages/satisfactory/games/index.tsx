@@ -1,5 +1,5 @@
 import FloatingButton from '@/components/default/floating-button';
-import useRouter from '@/hooks/use-router';
+import usePathRouter from '@/hooks/use-path-router';
 import { useAuth } from '@/libs/auth';
 import { useData } from '@/libs/data-sources';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
@@ -11,7 +11,7 @@ import { toast } from 'react-toastify';
 const Games = () => {
   const games = useData('games');
   console.log('Games', games);
-  const router = useRouter();
+  const router = usePathRouter();
   const auth = useAuth({ redirectUnauthenticated: true });
 
   const handleAddGame = async () => {
@@ -20,11 +20,21 @@ const Games = () => {
       template.owner = auth.user?.id || '';
       const createdGame = await games?.actions.set(template, template.id);
       console.log(createdGame);
-      router.push(`${template.id}`);
+      router.push('gameDetails', { gameId: template.id });
       toast.success(`Game ${template.name} created`);
     } catch (e) {
       console.error(e);
       toast.error('Failed to create game');
+    }
+  };
+
+  const handleDeleteGame = async (id: string) => {
+    try {
+      await games?.actions.delete(id);
+      toast.success('Game deleted');
+    } catch (e) {
+      console.error(e);
+      toast.error('Failed to delete game');
     }
   };
 
@@ -69,8 +79,18 @@ const Games = () => {
                 <CardActions sx={{ justifyContent: 'flex-end' }}>
                   <Button
                     size="small"
+                    color="error"
+                    onClick={() => {
+                      handleDeleteGame(game.id);
+                    }}
+                  >
+                    Delete
+                  </Button>
+                  <Button
+                    size="small"
                     color="primary"
-                    onClick={() => router.push(`${game.id}`)}
+                    variant="contained"
+                    onClick={() => router.push('gameDetails', { gameId: game.id })}
                   >
                     Edit
                   </Button>

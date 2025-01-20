@@ -17,7 +17,7 @@ export default class Belt extends BaseItem implements SatisfactoryBelts {
   }
 
   getBuildable = () => {
-    return this.data.findBuildable(this.className);
+    return this.data.getBuildable(this.className);
   };
 
   toObject = () => {

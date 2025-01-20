@@ -4,9 +4,11 @@ import { CustomForm } from '@/libs/forms';
 import useCustomFormik from '@/libs/forms/use-custom-formik';
 import useSatisfactoryCalculator from '@/libs/satisfactory/calculator/use-satisfactory-calculator';
 import { Calculator } from '@/schemas/satisfactory/calculator';
+import { createProductionInputSchema } from '@/schemas/satisfactory/production-input';
+import { createProductionItemSchema } from '@/schemas/satisfactory/production-item';
 import { Grid, Tab, Tabs, Typography } from '@mui/material';
 import _ from 'lodash';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import ConfigureAlternateRecipesCard from './configure-alternate-recipes-card';
 import ConfigureDefaultRecipesCard from './configure-default-recipes';
 import ConfigureInputsCard from './configure-inputs-card';
@@ -52,8 +54,20 @@ const TabConfigure = () => {
   const { config, saveConfig, options } = useSatisfactoryCalculator();
   const tabs = useTabs(tabsData);
 
+  const configValue = useMemo(() => {
+    if (config.production?.length === 0) {
+      const productionItemTemplate = createProductionItemSchema().getTemplate();
+      config.production.push(productionItemTemplate);
+    }
+    if (config.input?.length === 0) {
+      const inputItemTemplate = createProductionInputSchema().getTemplate();
+      config.input.push(inputItemTemplate);
+    }
+    return config;
+  }, [config]);
+
   const formik = useCustomFormik({
-    initialValues: config,
+    initialValues: configValue,
     onSubmit: async (values) => {
       if (saveConfig) {
         saveConfig(values as Calculator);

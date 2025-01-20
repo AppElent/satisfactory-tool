@@ -140,7 +140,7 @@ export default class ToolsConnector {
     for (const recipeData in response) {
       const amount = parseFloat(response[recipeData] + '');
       const [machineData, machineClass] = recipeData.split('#');
-      if (machineData === 'special__power') continue;
+      if (machineData === 'special__power' || machineData === 'Maximise') continue;
       if (customTypes.includes(machineClass)) {
         nodes.push(
           new ProductNode({

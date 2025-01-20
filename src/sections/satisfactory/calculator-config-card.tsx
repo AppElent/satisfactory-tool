@@ -2,12 +2,13 @@ import useRouter from '@/hooks/use-router';
 import { Calculator } from '@/schemas/satisfactory/calculator';
 import { Button, Card, CardActions, CardContent, CardHeader } from '@mui/material';
 
-const CalculatorConfigCard = ({ config }: { config: Calculator }) => {
-  const router = useRouter();
+interface CalculatorConfigCardProps {
+  config: Calculator;
+  deleteConfig: () => void;
+}
 
-  const handleDelete = () => {
-    console.log('delete');
-  };
+const CalculatorConfigCard = ({ config, deleteConfig }: CalculatorConfigCardProps) => {
+  const router = useRouter();
 
   return (
     <Card>
@@ -16,7 +17,7 @@ const CalculatorConfigCard = ({ config }: { config: Calculator }) => {
       <CardActions sx={{ justifyContent: 'flex-end' }}>
         <Button
           color="error"
-          onClick={handleDelete}
+          onClick={() => deleteConfig()}
         >
           Delete
         </Button>

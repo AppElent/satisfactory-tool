@@ -23,6 +23,10 @@ export default class Generator extends BaseItem implements SatisfactoryGenerator
     return this.data.getBuildable(this.className);
   };
 
+  getFuels = () => {
+    return this.fuel.map((fuel) => this.data.getProduct(fuel));
+  };
+
   toObject = () => {
     return {
       ...super.toObject(),

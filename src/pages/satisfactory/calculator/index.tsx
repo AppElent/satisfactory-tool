@@ -6,6 +6,7 @@ import calculatorSchemaClass, {
 } from '@/schemas/satisfactory/calculator';
 import CalculatorConfigCard from '@/sections/satisfactory/calculator-config-card';
 import { Button, Grid2 as Grid } from '@mui/material';
+import { toast } from 'react-toastify';
 
 // const tabsData = [
 //   {
@@ -31,6 +32,16 @@ const Calculator = () => {
     router.push(`${config.id}`);
   };
 
+  const deleteConfig = async (id: string) => {
+    try {
+      await data.actions.delete(id);
+      toast.success('Config deleted');
+    } catch (e: any) {
+      console.error(e);
+      toast.error('Error deleting config');
+    }
+  };
+
   return (
     <DefaultPage>
       <Button onClick={createNewConfig}>Create config</Button>
@@ -45,7 +56,10 @@ const Calculator = () => {
               size={12}
               key={config.id}
             >
-              <CalculatorConfigCard config={config} />
+              <CalculatorConfigCard
+                config={config}
+                deleteConfig={() => deleteConfig(config.id)}
+              />
             </Grid>
           );
         })}

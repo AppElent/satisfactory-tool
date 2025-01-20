@@ -1,7 +1,7 @@
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import * as Yup from 'yup';
-import DefaultSchema from '..';
-import { factoryYupSchema } from './factory';
+import DefaultSchema, { createDefaultSchema } from '..';
+import { createFactorySchema, factoryYupSchema } from './factory';
 import { powerStationYupSchema } from './powerStation';
 
 export const gameYupSchema = Yup.object().shape({
@@ -9,8 +9,8 @@ export const gameYupSchema = Yup.object().shape({
   name: Yup.string().required().min(3).label('Name'),
   owner: Yup.string().required().min(3).label('Owner'),
   factories: Yup.array().of(factoryYupSchema).label('Factories').default([]),
-  notes: Yup.string().min(3).label('Notes'),
-  todos: Yup.array().of(Yup.string().required().min(3)).label('Todos'),
+  notes: Yup.string().label('Notes').default(''),
+  //todos: Yup.array().of(Yup.string().required().min(3)).label('Todos'),
   powerStations: Yup.array().of(powerStationYupSchema).label('Power Stations'),
   version: Yup.string().required().label('Version'),
   createdAt: Yup.string()
@@ -22,6 +22,29 @@ export const gameYupSchema = Yup.object().shape({
     .default(() => new Date().toISOString())
     .label('Updated At'),
 });
+
+export type Game = Yup.InferType<typeof gameYupSchema>;
+
+export const createGameSchema = () => {
+  const defaultSchema = createDefaultSchema<Game>(gameYupSchema);
+  return {
+    ...defaultSchema,
+    getTemplate: () => {
+      return {
+        ...defaultSchema.getTemplate(),
+        version: satisfactoryData.version.key,
+        id: defaultSchema.generateNanoId(),
+        name: defaultSchema.generateName(),
+      };
+    },
+    clean: (game: Game) => {
+      game.factories = game.factories?.map((factory) => createFactorySchema().clean(factory));
+      game.powerStations = game.powerStations || [];
+      // game.todos = game.todos || [];
+      return game;
+    },
+  };
+};
 
 export class GameSchema extends DefaultSchema<Game> {
   constructor(public yupSchema: Yup.ObjectSchema<any>) {
@@ -39,8 +62,6 @@ export class GameSchema extends DefaultSchema<Game> {
 }
 
 export const gameSchema = new GameSchema(gameYupSchema);
-
-export type Game = Yup.InferType<typeof gameYupSchema>;
 
 // export default class GameClass implements Game {
 //   id: string;

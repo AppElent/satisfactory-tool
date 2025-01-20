@@ -1,4 +1,5 @@
-import useRouter from '@/hooks/use-router';
+import usePathRouter from '@/hooks/use-path-router';
+import SubmitButton from '@/libs/forms/components/SubmitButton';
 import TextField from '@/libs/forms/components/TextField';
 import useSatisfactoryCalculator from '@/libs/satisfactory/calculator/use-satisfactory-calculator';
 import calculatorSchema from '@/schemas/satisfactory/calculator';
@@ -9,7 +10,7 @@ import { toast } from 'react-toastify';
 const ConfigureMetadataCard = () => {
   const { config, deleteConfig, createConfig } = useSatisfactoryCalculator();
   const fieldDefinitions = useMemo(() => calculatorSchema.getFieldDefinitions(), []);
-  const router = useRouter();
+  const router = usePathRouter();
 
   const handleDelete = async () => {
     if (config && deleteConfig) {
@@ -33,7 +34,7 @@ const ConfigureMetadataCard = () => {
 
     await createConfig?.(newConfig, template.id);
     toast.success('Config cloned');
-    router.push(`/app/satisfactory/calculator/${template.id}`);
+    router.push('calculatorDetails', { calculatorId: template.id });
   };
 
   return (
@@ -57,11 +58,12 @@ const ConfigureMetadataCard = () => {
         {createConfig && (
           <Button
             onClick={cloneConfig}
-            variant="contained"
+            variant="outlined"
           >
             Clone
           </Button>
         )}
+        <SubmitButton>Save</SubmitButton>
       </CardActions>
     </Card>
   );

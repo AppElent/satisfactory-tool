@@ -1,21 +1,28 @@
-import Notepad from '@/components/default/notepad';
-import { useState } from 'react';
+import Notepad from '@/libs/forms/components/Notepad';
+import { createGameSchema } from '@/schemas/satisfactory/game';
 
 const TabNotepad = () => {
-  const [data, setData] = useState<string>('');
+  const fieldDefinitions = createGameSchema().getFieldDefinitions();
   return (
+    // <Notepad
+    //   placeholder={'Scribble here...'}
+    //   sx={{
+    //     flexGrow: 1,
+    //     minHeight: '60vh',
+    //   }}
+    //   name="scribble"
+    //   value={data}
+    //   onChange={(v: string) => {
+    //     if (v !== data) {
+    //       setData(v);
+    //     }
+    //   }}
+    // />
     <Notepad
-      placeholder={'Scribble here...'}
+      field={fieldDefinitions.notes}
       sx={{
         flexGrow: 1,
         minHeight: '60vh',
-      }}
-      name="scribble"
-      value={data}
-      onChange={(v: string) => {
-        if (v !== data) {
-          setData(v);
-        }
       }}
     />
   );

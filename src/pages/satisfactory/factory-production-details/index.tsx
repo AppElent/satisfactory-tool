@@ -3,9 +3,10 @@ import { useData } from '@/libs/data-sources';
 import SatisfactoryNetwork from '@/libs/satisfactory/calculator/network/satisfactory-network';
 import DefaultPage from '@/pages/default/DefaultPage';
 import { Calculator } from '@/schemas/satisfactory/calculator';
-import { Game } from '@/schemas/satisfactory/game';
+import { createGameSchema, Game } from '@/schemas/satisfactory/game';
 import CalculatorSection from '@/sections/satisfactory/calculator-section';
 import _ from 'lodash';
+import { toast } from 'react-toastify';
 
 const FactoryProductionDetails = () => {
   const data = useData<Game>('games');
@@ -28,7 +29,16 @@ const FactoryProductionDetails = () => {
     const productionIndex = factory?.production?.findIndex((p) => p.id === config.id);
     const newGame = JSON.parse(JSON.stringify(game));
     _.set(newGame, `factories.[${factoryIndex}].production.[${productionIndex}]`, config);
-    data.actions.update(newGame, newGame.id);
+    const cleanedGame = await createGameSchema().clean(newGame);
+    const validate = await createGameSchema().validate(cleanedGame);
+    console.log(cleanedGame, validate);
+    if (!validate.valid) {
+      toast.error('Validation failed');
+    } else {
+      data.actions.update(newGame, newGame.id);
+    }
+
+    //data.actions.update(newGame, newGame.id);
   };
 
   // const saveConfig = async (config: Calculator) => {
