@@ -25,14 +25,6 @@ interface MenuCategory {
 
 const menuCategories: MenuCategory[] = [
   {
-    id: 'codex',
-    label: 'Codex',
-  },
-  {
-    id: 'gameplay',
-    label: 'Gameplay',
-  },
-  {
     id: 'settings',
     label: 'Settings',
     translationKey: 'common:menu.settings',
