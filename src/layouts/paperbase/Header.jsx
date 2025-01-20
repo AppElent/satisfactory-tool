@@ -1,6 +1,5 @@
 import LanguageSwitch from '@/components/default/layout/language-switch';
 import UserMenu from '@/components/default/layout/user-menu';
-import VersionSelector from '@/components/satisfactory/version-selector';
 import useRouter from '@/hooks/use-router';
 import { useAuth } from '@/libs/auth';
 import IssueDialog from '@/sections/default/issue-dialog';
@@ -64,9 +63,6 @@ function Header(props) {
               item
               xs
             />
-            <Grid item>
-              <VersionSelector />
-            </Grid>
             <Grid item>
               <IssueDialog />
             </Grid>
