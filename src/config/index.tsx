@@ -53,9 +53,9 @@ export interface AppConfig {
  */
 const config: AppConfig = {
   meta: {
-    title: 'AppElent Template',
+    title: 'Satisfactory Tool',
     version: 'v0.0.1',
-    url: 'www.appelent.nl',
+    url: 'satisfactory.appelent.nl',
     copyright: 'AppElent',
   },
   paths: {
