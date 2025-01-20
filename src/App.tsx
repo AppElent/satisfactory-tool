@@ -41,6 +41,7 @@ const dataSources = {
     defaultData: [],
     subscribe: true,
   }),
+};
 
 function App() {
   console.log('App config', firebaseProvider, dataSources, routes, config);
