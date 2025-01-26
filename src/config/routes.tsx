@@ -97,6 +97,8 @@ const routeElements: { [key: string]: JSX.Element } = {
   testAuthProviders: <TestAuthProviders />,
   testForms: <Forms />,
   testTranslations: <Translations />,
+  testFilters: <FiltersPage />,
+  testSchemas: <SchemaPage />,
   // Default pages
   login: <SignIn mode="signin" />,
   signup: <SignIn mode="signup" />,

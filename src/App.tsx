@@ -2,7 +2,8 @@ import ScrollToTop from '@/components/default/scroll-to-top';
 import '@/config/firebase';
 import { db } from '@/config/firebase';
 import routes from '@/config/routes';
-import { FirebaseAuthProvider } from '@/libs/auth';
+import FirebaseAuthProvider from './libs/auth/auth-providers/FirebaseAuthProvider';
+
 import FirestoreDataSource from '@/libs/data-sources/data-sources/FirestoreDataSource';
 import LocalStorageDataSource from '@/libs/data-sources/data-sources/LocalStorageDataSource';
 
