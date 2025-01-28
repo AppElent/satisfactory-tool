@@ -1,6 +1,6 @@
 import * as Yup from 'yup';
-import DefaultSchema, { createDefaultSchema } from '..';
-import { Calculator, calculatorYupSchema, createCalculatorSchema } from './calculator';
+import { createDefaultSchema } from '..';
+import { calculatorYupSchema, createCalculatorSchema } from './calculator';
 
 export const factoryYupSchema = Yup.object().shape({
   id: Yup.string().required().min(3).label('ID'),
@@ -31,39 +31,39 @@ export const createFactorySchema = () => {
   };
 };
 
-export class FactorySchema extends DefaultSchema<Factory> {
-  constructor(public yupSchema: Yup.ObjectSchema<any>) {
-    super(yupSchema);
-  }
+// export class FactorySchema extends DefaultSchema<Factory> {
+//   constructor(public yupSchema: Yup.ObjectSchema<any>) {
+//     super(yupSchema);
+//   }
 
-  getTemplate = () => {
-    return {
-      ...super.getTemplate(),
-      id: this._generateNanoId(),
-      name: '',
-    };
-  };
-}
+//   getTemplate = () => {
+//     return {
+//       ...super.getTemplate(),
+//       id: this._generateNanoId(),
+//       name: '',
+//     };
+//   };
+// }
 
-export const factorySchema = new FactorySchema(factoryYupSchema);
+// export const factorySchema = new FactorySchema(factoryYupSchema);
 
-export default class FactoryClass implements Factory {
-  id: string;
-  name: string;
-  description: string;
-  production: Calculator[];
+// export default class FactoryClass implements Factory {
+//   id: string;
+//   name: string;
+//   description: string;
+//   production: Calculator[];
 
-  constructor(factory: Factory) {
-    this.id = factory.id;
-    this.name = factory.name;
-    this.description = factory.description;
-    this.production = factory.production;
-    // this.calculator = factory.calculator;
-    // this.recipes = factory.recipes;
-  }
+//   constructor(factory: Factory) {
+//     this.id = factory.id;
+//     this.name = factory.name;
+//     this.description = factory.description;
+//     this.production = factory.production;
+//     // this.calculator = factory.calculator;
+//     // this.recipes = factory.recipes;
+//   }
 
-  // getNetworks = () => {
-  //   const networks = this.production.map((calculator) => calculator.result);
-  //   return networks;
-  // };
-}
+//   // getNetworks = () => {
+//   //   const networks = this.production.map((calculator) => calculator.result);
+//   //   return networks;
+//   // };
+// }

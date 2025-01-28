@@ -1,12 +1,8 @@
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import * as Yup from 'yup';
-import DefaultSchema, { createDefaultSchema } from '..';
+import { createDefaultSchema } from '..';
 import { createProductionInputSchema, productionInputYupSchema } from './production-input';
-import {
-  createProductionItemSchema,
-  productionItemSchema,
-  productionItemYupSchema,
-} from './production-item';
+import { createProductionItemSchema, productionItemYupSchema } from './production-item';
 
 export const resourceListSchema = Yup.object().shape({
   Desc_OreIron_C: Yup.number().required().default(0).label('Iron Ore'),
@@ -129,14 +125,14 @@ export const createCalculatorSchema = () => {
   return {
     ...defaultSchema,
     getTemplate: () => {
-      const resourceMax = satisfactoryData.getResourceMax();
+      const resourceMax = satisfactoryData.getResourceMax() as Calculator['resourceMax'];
       return {
         ...defaultSchema.getTemplate(),
         id: defaultSchema.generateNanoId(),
         name: '',
         resourceMax,
         blockedMachines: ['Desc_Converter_C'],
-        production: [productionItemSchema.getTemplate()],
+        production: [createProductionItemSchema().getTemplate()],
       };
     },
     clean: (calculator: Calculator) => {
@@ -153,261 +149,261 @@ export const createCalculatorSchema = () => {
   };
 };
 
-class CalculatorSchema extends DefaultSchema<Calculator> {
-  constructor(public yupSchema: Yup.ObjectSchema<any>) {
-    super(yupSchema);
-    this.getCustomFieldDefinitions = () => ({
-      'production.item': {
-        options: satisfactoryData.products.map((product) => ({
-          key: product.className,
-          label: product.name,
-          img: product.getIconComponent(),
-        })),
-        definition: 'autocomplete',
-        custom: {
-          muiTableCellProps: {
-            width: 450,
-          },
-        },
-      },
-      'production.mode': {
-        options: [
-          { key: 'perMinute', value: 'Per Minute' },
-          { key: 'max', value: 'Max' },
-        ],
-        definition: 'select',
-      },
-      allowedAlternateRecipes: {
-        options: satisfactoryData.recipes
-          .filter((r) => r.alternate)
-          .map((recipe) => {
-            return {
-              key: recipe.className,
-              value: recipe.className,
-              label: recipe.name,
-              img: recipe.getIcon(),
-            };
-          }),
-      },
-      blockedRecipes: {
-        options: satisfactoryData.recipes
-          .filter((r) => !r.alternate)
-          .map((recipe) => {
-            return {
-              key: recipe.className,
-              value: recipe.className,
-              label: recipe.name,
-              img: recipe.getIcon(),
-            };
-          }),
-      },
-      blockedMachines: {
-        options: satisfactoryData.buildings.map((machine) => {
-          return {
-            key: machine.className,
-            value: machine.className,
-            label: machine.name,
-            img: machine.getIcon(),
-          };
-        }),
-      },
-      'input.item': {
-        options: satisfactoryData.products.map((product) => ({
-          key: product.className,
-          label: product.name,
-          img: product.getIconComponent(),
-        })),
-        definition: 'autocomplete',
-        custom: {
-          muiTableCellProps: {
-            width: 450,
-          },
-        },
-      },
-    });
-  }
+// class CalculatorSchema extends DefaultSchema<Calculator> {
+//   constructor(public yupSchema: Yup.ObjectSchema<any>) {
+//     super(yupSchema);
+//     this.getCustomFieldDefinitions = () => ({
+//       'production.item': {
+//         options: satisfactoryData.products.map((product) => ({
+//           key: product.className,
+//           label: product.name,
+//           img: product.getIconComponent(),
+//         })),
+//         definition: 'autocomplete',
+//         custom: {
+//           muiTableCellProps: {
+//             width: 450,
+//           },
+//         },
+//       },
+//       'production.mode': {
+//         options: [
+//           { key: 'perMinute', value: 'Per Minute' },
+//           { key: 'max', value: 'Max' },
+//         ],
+//         definition: 'select',
+//       },
+//       allowedAlternateRecipes: {
+//         options: satisfactoryData.recipes
+//           .filter((r) => r.alternate)
+//           .map((recipe) => {
+//             return {
+//               key: recipe.className,
+//               value: recipe.className,
+//               label: recipe.name,
+//               img: recipe.getIcon(),
+//             };
+//           }),
+//       },
+//       blockedRecipes: {
+//         options: satisfactoryData.recipes
+//           .filter((r) => !r.alternate)
+//           .map((recipe) => {
+//             return {
+//               key: recipe.className,
+//               value: recipe.className,
+//               label: recipe.name,
+//               img: recipe.getIcon(),
+//             };
+//           }),
+//       },
+//       blockedMachines: {
+//         options: satisfactoryData.buildings.map((machine) => {
+//           return {
+//             key: machine.className,
+//             value: machine.className,
+//             label: machine.name,
+//             img: machine.getIcon(),
+//           };
+//         }),
+//       },
+//       'input.item': {
+//         options: satisfactoryData.products.map((product) => ({
+//           key: product.className,
+//           label: product.name,
+//           img: product.getIconComponent(),
+//         })),
+//         definition: 'autocomplete',
+//         custom: {
+//           muiTableCellProps: {
+//             width: 450,
+//           },
+//         },
+//       },
+//     });
+//   }
 
-  getTemplate = (): any => {
-    const resourceMax = satisfactoryData.getResourceMax();
-    return {
-      ...super.getTemplate(),
-      id: this._generateNanoId(),
-      name: '',
-      resourceMax,
-      blockedMachines: ['Desc_Converter_C'],
-      production: [productionItemSchema.getTemplate()],
-    };
-  };
+//   getTemplate = (): any => {
+//     const resourceMax = satisfactoryData.getResourceMax();
+//     return {
+//       ...super.getTemplate(),
+//       id: this._generateNanoId(),
+//       name: '',
+//       resourceMax,
+//       blockedMachines: ['Desc_Converter_C'],
+//       production: [productionItemSchema.getTemplate()],
+//     };
+//   };
 
-  // getFieldDefinitions = (): {
-  //   [key: string]: FieldConfig;
-  // } => {
-  //   const defaultFieldDefinitions = super.getFieldDefinitions();
-  //   // const customFieldDefinitions: { [key: string]: Partial<FieldConfig> } = {
-  //   //   'production.item': {
-  //   //     options: satisfactoryData.products.map((product) => ({
-  //   //       key: product.className,
-  //   //       label: product.name,
-  //   //       img: product.getIconComponent(),
-  //   //     })),
-  //   //     definition: 'autocomplete',
-  //   //     custom: {
-  //   //       muiTableCellProps: {
-  //   //         width: 450,
-  //   //       },
-  //   //     },
-  //   //   },
-  //   //   'production.mode': {
-  //   //     options: [
-  //   //       { key: 'perMinute', value: 'Per Minute' },
-  //   //       { key: 'max', value: 'Max' },
-  //   //     ],
-  //   //     definition: 'select',
-  //   //   },
-  //   //   allowedAlternateRecipes: {
-  //   //     options: satisfactoryData.recipes
-  //   //       .filter((r) => r.alternate)
-  //   //       .map((recipe) => {
-  //   //         return {
-  //   //           key: recipe.className,
-  //   //           value: recipe.className,
-  //   //           label: recipe.name,
-  //   //           img: recipe.getIcon(),
-  //   //         };
-  //   //       }),
-  //   //   },
-  //   //   blockedRecipes: {
-  //   //     options: satisfactoryData.recipes
-  //   //       .filter((r) => !r.alternate)
-  //   //       .map((recipe) => {
-  //   //         return {
-  //   //           key: recipe.className,
-  //   //           value: recipe.className,
-  //   //           label: recipe.name,
-  //   //           img: recipe.getIcon(),
-  //   //         };
-  //   //       }),
-  //   //   },
-  //   //   blockedMachines: {
-  //   //     options: satisfactoryData.buildings.map((machine) => {
-  //   //       return {
-  //   //         key: machine.className,
-  //   //         value: machine.className,
-  //   //         label: machine.name,
-  //   //         img: machine.getIcon(),
-  //   //       };
-  //   //     }),
-  //   //   },
-  //   //   'input.item': {
-  //   //     options: satisfactoryData.products.map((product) => ({
-  //   //       key: product.className,
-  //   //       label: product.name,
-  //   //       img: product.getIconComponent(),
-  //   //     })),
-  //   //     definition: 'autocomplete',
-  //   //     custom: {
-  //   //       muiTableCellProps: {
-  //   //         width: 450,
-  //   //       },
-  //   //     },
-  //   //   },
-  //   // };
-  //   // defaultFieldDefinitions['production.item'] = {
-  //   //   ...defaultFieldDefinitions['production.item'],
-  //   //   options: satisfactoryData.products.map((product) => ({
-  //   //     key: product.className,
-  //   //     label: product.name,
-  //   //     img: product.getIconComponent(),
-  //   //   })),
-  //   //   definition: 'autocomplete',
-  //   // };
-  //   // _.set(defaultFieldDefinitions['production.item'], 'custom.muiTableCellProps', {
-  //   //   width: 450,
-  //   // });
-  //   // _.set(defaultFieldDefinitions['input.item'], 'custom.muiTableCellProps', {
-  //   //   width: 450,
-  //   // });
-  //   // // _.set(defaultFieldDefinitions['production.item'], 'custom.muiAutocompleteProps', {
-  //   // //   width: 300,
-  //   // // });
-  //   // defaultFieldDefinitions['production.mode'] = {
-  //   //   ...defaultFieldDefinitions['production.mode'],
-  //   //   options: [
-  //   //     { key: 'perMinute', value: 'Per Minute' },
-  //   //     { key: 'max', value: 'Max' },
-  //   //   ],
-  //   //   definition: 'select',
-  //   // };
-  //   // defaultFieldDefinitions.allowedAlternateRecipes.options = satisfactoryData.recipes
-  //   //   .filter((r) => r.alternate)
-  //   //   .map((recipe) => {
-  //   //     return {
-  //   //       key: recipe.className,
-  //   //       value: recipe.className,
-  //   //       label: recipe.name,
-  //   //       img: recipe.getIcon(),
-  //   //     };
-  //   //   });
-  //   // defaultFieldDefinitions.blockedRecipes.options = satisfactoryData.recipes
-  //   //   .filter((r) => !r.alternate)
-  //   //   .map((recipe) => {
-  //   //     return {
-  //   //       key: recipe.className,
-  //   //       value: recipe.className,
-  //   //       label: recipe.name,
-  //   //       img: recipe.getIcon(),
-  //   //     };
-  //   //   });
-  //   // defaultFieldDefinitions.blockedMachines.options = satisfactoryData.buildings.map((machine) => {
-  //   //   return {
-  //   //     key: machine.className,
-  //   //     value: machine.className,
-  //   //     label: machine.name,
-  //   //     img: machine.getIcon(),
-  //   //   };
-  //   // });
-  //   // defaultFieldDefinitions['input.item'] = {
-  //   //   ...defaultFieldDefinitions['production.item'],
-  //   //   options: satisfactoryData.products.map((product) => ({
-  //   //     key: product.className,
-  //   //     label: product.name,
-  //   //     img: product.getIconComponent(),
-  //   //   })),
-  //   //   definition: 'autocomplete',
-  //   // };
-  //   const customFieldDefinitions = this.getCustomFieldDefinitions
-  //     ? this.getCustomFieldDefinitions()
-  //     : {};
-  //   const returnFieldDefinitions = _.merge({}, defaultFieldDefinitions, customFieldDefinitions);
-  //   return returnFieldDefinitions; //defaultFieldDefinitions;
-  // };
+//   // getFieldDefinitions = (): {
+//   //   [key: string]: FieldConfig;
+//   // } => {
+//   //   const defaultFieldDefinitions = super.getFieldDefinitions();
+//   //   // const customFieldDefinitions: { [key: string]: Partial<FieldConfig> } = {
+//   //   //   'production.item': {
+//   //   //     options: satisfactoryData.products.map((product) => ({
+//   //   //       key: product.className,
+//   //   //       label: product.name,
+//   //   //       img: product.getIconComponent(),
+//   //   //     })),
+//   //   //     definition: 'autocomplete',
+//   //   //     custom: {
+//   //   //       muiTableCellProps: {
+//   //   //         width: 450,
+//   //   //       },
+//   //   //     },
+//   //   //   },
+//   //   //   'production.mode': {
+//   //   //     options: [
+//   //   //       { key: 'perMinute', value: 'Per Minute' },
+//   //   //       { key: 'max', value: 'Max' },
+//   //   //     ],
+//   //   //     definition: 'select',
+//   //   //   },
+//   //   //   allowedAlternateRecipes: {
+//   //   //     options: satisfactoryData.recipes
+//   //   //       .filter((r) => r.alternate)
+//   //   //       .map((recipe) => {
+//   //   //         return {
+//   //   //           key: recipe.className,
+//   //   //           value: recipe.className,
+//   //   //           label: recipe.name,
+//   //   //           img: recipe.getIcon(),
+//   //   //         };
+//   //   //       }),
+//   //   //   },
+//   //   //   blockedRecipes: {
+//   //   //     options: satisfactoryData.recipes
+//   //   //       .filter((r) => !r.alternate)
+//   //   //       .map((recipe) => {
+//   //   //         return {
+//   //   //           key: recipe.className,
+//   //   //           value: recipe.className,
+//   //   //           label: recipe.name,
+//   //   //           img: recipe.getIcon(),
+//   //   //         };
+//   //   //       }),
+//   //   //   },
+//   //   //   blockedMachines: {
+//   //   //     options: satisfactoryData.buildings.map((machine) => {
+//   //   //       return {
+//   //   //         key: machine.className,
+//   //   //         value: machine.className,
+//   //   //         label: machine.name,
+//   //   //         img: machine.getIcon(),
+//   //   //       };
+//   //   //     }),
+//   //   //   },
+//   //   //   'input.item': {
+//   //   //     options: satisfactoryData.products.map((product) => ({
+//   //   //       key: product.className,
+//   //   //       label: product.name,
+//   //   //       img: product.getIconComponent(),
+//   //   //     })),
+//   //   //     definition: 'autocomplete',
+//   //   //     custom: {
+//   //   //       muiTableCellProps: {
+//   //   //         width: 450,
+//   //   //       },
+//   //   //     },
+//   //   //   },
+//   //   // };
+//   //   // defaultFieldDefinitions['production.item'] = {
+//   //   //   ...defaultFieldDefinitions['production.item'],
+//   //   //   options: satisfactoryData.products.map((product) => ({
+//   //   //     key: product.className,
+//   //   //     label: product.name,
+//   //   //     img: product.getIconComponent(),
+//   //   //   })),
+//   //   //   definition: 'autocomplete',
+//   //   // };
+//   //   // _.set(defaultFieldDefinitions['production.item'], 'custom.muiTableCellProps', {
+//   //   //   width: 450,
+//   //   // });
+//   //   // _.set(defaultFieldDefinitions['input.item'], 'custom.muiTableCellProps', {
+//   //   //   width: 450,
+//   //   // });
+//   //   // // _.set(defaultFieldDefinitions['production.item'], 'custom.muiAutocompleteProps', {
+//   //   // //   width: 300,
+//   //   // // });
+//   //   // defaultFieldDefinitions['production.mode'] = {
+//   //   //   ...defaultFieldDefinitions['production.mode'],
+//   //   //   options: [
+//   //   //     { key: 'perMinute', value: 'Per Minute' },
+//   //   //     { key: 'max', value: 'Max' },
+//   //   //   ],
+//   //   //   definition: 'select',
+//   //   // };
+//   //   // defaultFieldDefinitions.allowedAlternateRecipes.options = satisfactoryData.recipes
+//   //   //   .filter((r) => r.alternate)
+//   //   //   .map((recipe) => {
+//   //   //     return {
+//   //   //       key: recipe.className,
+//   //   //       value: recipe.className,
+//   //   //       label: recipe.name,
+//   //   //       img: recipe.getIcon(),
+//   //   //     };
+//   //   //   });
+//   //   // defaultFieldDefinitions.blockedRecipes.options = satisfactoryData.recipes
+//   //   //   .filter((r) => !r.alternate)
+//   //   //   .map((recipe) => {
+//   //   //     return {
+//   //   //       key: recipe.className,
+//   //   //       value: recipe.className,
+//   //   //       label: recipe.name,
+//   //   //       img: recipe.getIcon(),
+//   //   //     };
+//   //   //   });
+//   //   // defaultFieldDefinitions.blockedMachines.options = satisfactoryData.buildings.map((machine) => {
+//   //   //   return {
+//   //   //     key: machine.className,
+//   //   //     value: machine.className,
+//   //   //     label: machine.name,
+//   //   //     img: machine.getIcon(),
+//   //   //   };
+//   //   // });
+//   //   // defaultFieldDefinitions['input.item'] = {
+//   //   //   ...defaultFieldDefinitions['production.item'],
+//   //   //   options: satisfactoryData.products.map((product) => ({
+//   //   //     key: product.className,
+//   //   //     label: product.name,
+//   //   //     img: product.getIconComponent(),
+//   //   //   })),
+//   //   //   definition: 'autocomplete',
+//   //   // };
+//   //   const customFieldDefinitions = this.getCustomFieldDefinitions
+//   //     ? this.getCustomFieldDefinitions()
+//   //     : {};
+//   //   const returnFieldDefinitions = _.merge({}, defaultFieldDefinitions, customFieldDefinitions);
+//   //   return returnFieldDefinitions; //defaultFieldDefinitions;
+//   // };
 
-  // getFieldDefinition = (id: string) => {
-  //   const fieldDefinitions = this.getFieldDefinitions();
-  //   return fieldDefinitions[id];
-  // };
+//   // getFieldDefinition = (id: string) => {
+//   //   const fieldDefinitions = this.getFieldDefinitions();
+//   //   return fieldDefinitions[id];
+//   // };
 
-  // getFieldDefinitions = () => {
-  //   return {
-  //     ...super.getFieldDefinitions(),
-  //     custom: {
-  //       table: {
-  //         columns: [
-  //           { label: 'Name', key: 'name' },
-  //           { label: 'Production', key: 'production' },
-  //           { label: 'Input', key: 'input' },
-  //           { label: 'Allowed Recipes', key: 'allowedAlternateRecipes' },
-  //           { label: 'Blocked Recipes', key: 'blockedRecipes' },
-  //           { label: 'Blocked Resources', key: 'blockedResources' },
-  //           { label: 'Blocked Machines', key: 'blockedMachines' },
-  //           { label: 'Sinkable Resources', key: 'sinkableResources' },
-  //           { label: 'Resource Max', key: 'resourceMax' },
-  //         ],
-  //       },
-  //     }
-  //   }
-  // }
-}
+//   // getFieldDefinitions = () => {
+//   //   return {
+//   //     ...super.getFieldDefinitions(),
+//   //     custom: {
+//   //       table: {
+//   //         columns: [
+//   //           { label: 'Name', key: 'name' },
+//   //           { label: 'Production', key: 'production' },
+//   //           { label: 'Input', key: 'input' },
+//   //           { label: 'Allowed Recipes', key: 'allowedAlternateRecipes' },
+//   //           { label: 'Blocked Recipes', key: 'blockedRecipes' },
+//   //           { label: 'Blocked Resources', key: 'blockedResources' },
+//   //           { label: 'Blocked Machines', key: 'blockedMachines' },
+//   //           { label: 'Sinkable Resources', key: 'sinkableResources' },
+//   //           { label: 'Resource Max', key: 'resourceMax' },
+//   //         ],
+//   //       },
+//   //     }
+//   //   }
+//   // }
+// }
 
-const calculatorSchema = new CalculatorSchema(calculatorYupSchema);
-export default calculatorSchema;
+// const calculatorSchema = new CalculatorSchema(calculatorYupSchema);
+// export default calculatorSchema;

@@ -1,6 +1,6 @@
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import * as Yup from 'yup';
-import DefaultSchema, { createDefaultSchema } from '..';
+import { createDefaultSchema } from '..';
 import { createFactorySchema, factoryYupSchema } from './factory';
 import { powerStationYupSchema } from './powerStation';
 
@@ -46,22 +46,22 @@ export const createGameSchema = () => {
   };
 };
 
-export class GameSchema extends DefaultSchema<Game> {
-  constructor(public yupSchema: Yup.ObjectSchema<any>) {
-    super(yupSchema);
-  }
+// export class GameSchema extends DefaultSchema<Game> {
+//   constructor(public yupSchema: Yup.ObjectSchema<any>) {
+//     super(yupSchema);
+//   }
 
-  getTemplate() {
-    return {
-      ...super.getTemplate(),
-      id: this._generateNanoId(),
-      name: this.generateName(),
-      version: satisfactoryData.version.key,
-    };
-  }
-}
+//   getTemplate() {
+//     return {
+//       ...super.getTemplate(),
+//       id: this._generateNanoId(),
+//       name: this.generateName(),
+//       version: satisfactoryData.version.key,
+//     };
+//   }
+// }
 
-export const gameSchema = new GameSchema(gameYupSchema);
+// export const gameSchema = new GameSchema(gameYupSchema);
 
 // export default class GameClass implements Game {
 //   id: string;

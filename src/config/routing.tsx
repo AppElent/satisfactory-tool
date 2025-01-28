@@ -1,6 +1,7 @@
 import appRoutes from '@/routes/appRoutes';
 import { Home as HomeIcon } from '@mui/icons-material';
 import BarChartIcon from '@mui/icons-material/BarChart';
+import { JSX } from 'react';
 import { Outlet, RouteObject } from 'react-router-dom';
 
 export type CustomRouteObject = RouteObject & {

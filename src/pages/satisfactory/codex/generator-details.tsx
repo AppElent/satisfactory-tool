@@ -46,10 +46,10 @@ const GeneratorDetails = () => {
         <Typography variant="h6">Fuels:</Typography>
         {item.getFuels()?.map((fuel) => {
           return (
-            <>
+            <div key={fuel?.className}>
               {fuel?.name}
               <br />
-            </>
+            </div>
           );
         })}
       </ItemOverview>

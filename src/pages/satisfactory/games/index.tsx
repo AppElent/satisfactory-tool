@@ -1,10 +1,10 @@
 import FloatingButton from '@/components/default/floating-button';
 import usePathRouter from '@/hooks/use-path-router';
-import { useAuth } from '@/libs/auth';
+import useAuth from '@/libs/auth/use-auth';
 import { useData } from '@/libs/data-sources';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import DefaultPage from '@/pages/default/DefaultPage';
-import { gameSchema } from '@/schemas/satisfactory/game';
+import { createGameSchema } from '@/schemas/satisfactory/game';
 import { Button, Card, CardActions, CardContent, Grid, Typography } from '@mui/material';
 import { toast } from 'react-toastify';
 
@@ -16,7 +16,7 @@ const Games = () => {
 
   const handleAddGame = async () => {
     try {
-      const template = gameSchema.getTemplate();
+      const template = createGameSchema().getTemplate();
       template.owner = auth.user?.id || '';
       const createdGame = await games?.actions.set(template, template.id);
       console.log(createdGame);

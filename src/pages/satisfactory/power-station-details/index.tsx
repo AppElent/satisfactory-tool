@@ -17,7 +17,7 @@ const PowerStationDetails = () => {
   const game = useParamItem({
     items: data.data || [],
     id: 'gameId',
-  });
+  }) as Game;
   const powerStation = useParamItem({
     items: game?.powerStations || [],
     id: 'powerStationId',

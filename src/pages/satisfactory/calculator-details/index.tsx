@@ -10,7 +10,7 @@ const CalculatorDetails = () => {
   const item = useParamItem({
     items: data.data || [],
     id: 'calculatorId',
-  });
+  }) as Calculator;
 
   const saveConfig = async (config: Calculator) => {
     data.actions.update(config, config.id);

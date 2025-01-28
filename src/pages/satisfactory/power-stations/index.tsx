@@ -11,7 +11,7 @@ const PowerStations = () => {
   const game = useParamItem({
     items: data.data || [],
     id: 'gameId',
-  });
+  }) as Game;
 
   const createPowerStation = useCallback(() => {
     const template = createPowerStationSchema().getTemplate();

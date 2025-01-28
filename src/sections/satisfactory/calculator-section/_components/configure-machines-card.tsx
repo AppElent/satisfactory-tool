@@ -1,10 +1,10 @@
 import CheckboxList from '@/libs/forms/components/CheckboxList';
-import calculatorSchema from '@/schemas/satisfactory/calculator';
+import { createCalculatorSchema } from '@/schemas/satisfactory/calculator';
 import { Card, CardContent, CardHeader, Typography } from '@mui/material';
 import { useMemo } from 'react';
 
 const ConfigureMachinesCard = () => {
-  const fieldDefinitions = useMemo(() => calculatorSchema.getFieldDefinitions(), []);
+  const fieldDefinitions = useMemo(() => createCalculatorSchema().getFieldDefinitions(), []);
 
   return (
     <Card>

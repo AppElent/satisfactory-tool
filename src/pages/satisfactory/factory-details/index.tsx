@@ -4,12 +4,12 @@ import { useData } from '@/libs/data-sources';
 import { CustomForm } from '@/libs/forms';
 import useCustomFormik from '@/libs/forms/use-custom-formik';
 import DefaultPage from '@/pages/default/DefaultPage';
-import calculatorSchema from '@/schemas/satisfactory/calculator';
+import { createCalculatorSchema } from '@/schemas/satisfactory/calculator';
 import { Factory } from '@/schemas/satisfactory/factory';
 import { Game } from '@/schemas/satisfactory/game';
+import CalculatorConfigCard from '@/sections/satisfactory/calculator-config-card';
 import { Button, Grid2 as Grid, Stack, Typography } from '@mui/material';
 import { toast } from 'react-toastify';
-import CalculatorConfigCard from '../../../sections/satisfactory/calculator-config-card';
 import FactoryMetadata from './_components/factory-metadata';
 
 const FactoryDetails = () => {
@@ -18,7 +18,7 @@ const FactoryDetails = () => {
   const game = useParamItem({
     items: data.data || [],
     id: 'gameId',
-  });
+  }) as Game;
   const factory = useParamItem({
     items: game?.factories || [],
     id: 'factoryId',
@@ -48,7 +48,7 @@ const FactoryDetails = () => {
   };
 
   const createNewConfig = async () => {
-    const config = calculatorSchema.getTemplate();
+    const config = createCalculatorSchema().getTemplate();
     //update factory with new config
     const newGame = JSON.parse(JSON.stringify(game));
     const newFactory = JSON.parse(JSON.stringify(factory));

@@ -101,16 +101,16 @@ const ProductDetails = () => {
               Is resource: {item.isResource ? 'Yes' : 'No'} <br />
               Sink points: {item.sinkPoints} <br />
               <br />
-              Tags:{' '}
-              {item.tags.map((tag) => (
-                <Chip
-                  key={tag}
-                  label={tag}
-                  color="primary"
-                  size="small"
-                />
-              ))}
             </Typography>
+            Tags:{' '}
+            {item.tags.map((tag) => (
+              <Chip
+                key={tag}
+                label={tag}
+                color="primary"
+                size="small"
+              />
+            ))}
           </ItemOverview>
         </Grid>
         <Grid size={12}>

@@ -1,10 +1,10 @@
 import SubmitButton from '@/libs/forms/components/SubmitButton';
 import TextField from '@/libs/forms/components/TextField';
-import { factorySchema } from '@/schemas/satisfactory/factory';
+import { createFactorySchema } from '@/schemas/satisfactory/factory';
 import { Card, CardActions, CardContent, CardHeader, Grid2 as Grid } from '@mui/material';
 
 const FactoryMetadata = () => {
-  const fieldDefinitions = factorySchema.getFieldDefinitions();
+  const fieldDefinitions = createFactorySchema().getFieldDefinitions();
   console.log('fieldDefinitions', fieldDefinitions);
   return (
     <Card>

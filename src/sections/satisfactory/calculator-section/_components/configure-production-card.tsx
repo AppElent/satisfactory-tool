@@ -1,7 +1,7 @@
 import { FieldConfig } from '@/libs/forms';
 import Table from '@/libs/forms/components/Table';
 import { createCalculatorSchema } from '@/schemas/satisfactory/calculator';
-import { productionItemSchema } from '@/schemas/satisfactory/production-item';
+import { createProductionItemSchema } from '@/schemas/satisfactory/production-item';
 import { Card, CardContent, CardHeader } from '@mui/material';
 
 const ConfigureProductionCard = () => {
@@ -33,7 +33,7 @@ const ConfigureProductionCard = () => {
       <CardContent>
         <Table
           field={fieldConfig}
-          tableOptions={{ getTemplate: () => productionItemSchema.getTemplate() }}
+          tableOptions={{ getTemplate: () => createProductionItemSchema().getTemplate() }}
         />
       </CardContent>
     </Card>

@@ -1,6 +1,6 @@
 import TextField from '@/libs/forms/components/TextField';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
-import calculatorSchema from '@/schemas/satisfactory/calculator';
+import { createCalculatorSchema } from '@/schemas/satisfactory/calculator';
 import { Button, Card, CardContent, CardHeader, Grid, Stack } from '@mui/material';
 import { useMemo } from 'react';
 
@@ -9,7 +9,7 @@ interface ConfigureResourcesCardProps {
 }
 
 const ConfigureResourcesCard = ({ setResources }: ConfigureResourcesCardProps) => {
-  const fieldDefinitions = useMemo(() => calculatorSchema.getFieldDefinitions(), []);
+  const fieldDefinitions = useMemo(() => createCalculatorSchema().getFieldDefinitions(), []);
   const fieldKeys = Object.keys(fieldDefinitions).filter((key) => key.startsWith('resourceMax.'));
 
   return (

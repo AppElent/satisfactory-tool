@@ -1,6 +1,6 @@
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
 import * as Yup from 'yup';
-import DefaultSchema, { createDefaultSchema } from '..';
+import { createDefaultSchema } from '..';
 
 export const productionItemYupSchema = Yup.object().shape({
   item: Yup.string().required().label('Product'),
@@ -44,22 +44,30 @@ export const createProductionItemSchema = () => {
   );
   return {
     ...defaultSchema,
+    getTemplate: (): ProductionItem => {
+      return {
+        ...defaultSchema.getTemplate(),
+        mode: 'perMinute',
+        amount: 0,
+        ratio: 100,
+      };
+    },
   };
 };
 
-export class ProductionItemSchema extends DefaultSchema<ProductionItem> {
-  constructor(public yupSchema: Yup.ObjectSchema<any>) {
-    super(yupSchema);
-  }
+// export class ProductionItemSchema extends DefaultSchema<ProductionItem> {
+//   constructor(public yupSchema: Yup.ObjectSchema<any>) {
+//     super(yupSchema);
+//   }
 
-  getTemplate(): { [key: string]: any } {
-    return {
-      ...super.getTemplate(),
-      mode: 'perMinute',
-      amount: 0,
-      ratio: 100,
-    };
-  }
-}
+//   getTemplate(): { [key: string]: any } {
+//     return {
+//       ...super.getTemplate(),
+//       mode: 'perMinute',
+//       amount: 0,
+//       ratio: 100,
+//     };
+//   }
+// }
 
-export const productionItemSchema = new ProductionItemSchema(productionItemYupSchema);
+// export const productionItemSchema = new ProductionItemSchema(productionItemYupSchema);

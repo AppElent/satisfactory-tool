@@ -1,13 +1,13 @@
 import CheckboxList from '@/libs/forms/components/CheckboxList';
 import useSatisfactoryCalculator from '@/libs/satisfactory/calculator/use-satisfactory-calculator';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
-import calculatorSchema from '@/schemas/satisfactory/calculator';
+import { createCalculatorSchema } from '@/schemas/satisfactory/calculator';
 import { Card, CardContent, CardHeader, Grid, Typography } from '@mui/material';
 import { useMemo } from 'react';
 
 const ConfigureRecipesCard = () => {
   const { config } = useSatisfactoryCalculator();
-  const fieldDefinitions = useMemo(() => calculatorSchema.getFieldDefinitions(), []);
+  const fieldDefinitions = useMemo(() => createCalculatorSchema().getFieldDefinitions(), []);
 
   const alternateFieldDefinition = useMemo(() => {
     return {

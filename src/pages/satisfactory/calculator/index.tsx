@@ -1,8 +1,9 @@
 import useRouter from '@/hooks/use-router';
 import { useData } from '@/libs/data-sources';
 import DefaultPage from '@/pages/default/DefaultPage';
-import calculatorSchemaClass, {
+import {
   Calculator as CalculatorType,
+  createCalculatorSchema,
 } from '@/schemas/satisfactory/calculator';
 import CalculatorConfigCard from '@/sections/satisfactory/calculator-config-card';
 import { Button, Grid2 as Grid } from '@mui/material';
@@ -26,7 +27,7 @@ const Calculator = () => {
   // const [, setResult] = useState<any[]>();
 
   const createNewConfig = async () => {
-    const config = calculatorSchemaClass.getTemplate();
+    const config = createCalculatorSchema().getTemplate();
     const newItem = await data.actions.add(config);
     console.log(config, data, newItem);
     router.push(`${config.id}`);

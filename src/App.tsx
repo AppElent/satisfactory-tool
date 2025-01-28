@@ -41,7 +41,7 @@ const dataSources = {
   calculator_configs: new LocalStorageDataSource({
     target: 'calculator_configs',
     targetMode: 'collection',
-    defaultData: [],
+    defaultValue: [],
     subscribe: true,
   }),
 };

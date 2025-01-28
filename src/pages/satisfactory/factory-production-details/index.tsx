@@ -3,6 +3,7 @@ import { useData } from '@/libs/data-sources';
 import SatisfactoryNetwork from '@/libs/satisfactory/calculator/network/satisfactory-network';
 import DefaultPage from '@/pages/default/DefaultPage';
 import { Calculator } from '@/schemas/satisfactory/calculator';
+import { Factory } from '@/schemas/satisfactory/factory';
 import { createGameSchema, Game } from '@/schemas/satisfactory/game';
 import CalculatorSection from '@/sections/satisfactory/calculator-section';
 import _ from 'lodash';
@@ -13,11 +14,11 @@ const FactoryProductionDetails = () => {
   const game = useParamItem({
     items: data.data || [],
     id: 'gameId',
-  });
+  }) as Game;
   const factory = useParamItem({
     items: game?.factories || [],
     id: 'factoryId',
-  });
+  }) as Factory;
   const production = useParamItem({
     items: factory?.production || [],
     id: 'productionId',

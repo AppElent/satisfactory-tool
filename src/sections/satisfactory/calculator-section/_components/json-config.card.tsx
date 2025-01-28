@@ -1,8 +1,8 @@
 import JsonEditor from '@/components/default/json-editor';
 import useSatisfactoryCalculator from '@/libs/satisfactory/calculator/use-satisfactory-calculator';
 import satisfactoryData from '@/libs/satisfactory/data/satisfactory-data';
-import calculatorSchema from '@/schemas/satisfactory/calculator';
-import { productionItemSchema } from '@/schemas/satisfactory/production-item';
+import { createCalculatorSchema } from '@/schemas/satisfactory/calculator';
+import { createProductionItemSchema } from '@/schemas/satisfactory/production-item';
 import {
   Button,
   Card,
@@ -80,7 +80,7 @@ const JsonConfigCard = () => {
       !satisfactoryData.excludeBuildProducts.includes(product.className) &&
       !product.isResource &&
       !['consumable', 'ammo', 'equipment'].includes(product.category);
-    const presetConfig = calculatorSchema.getTemplate();
+    const presetConfig = createCalculatorSchema().getTemplate();
     presetConfig.id = config.id;
     presetConfig.name = config.name;
     presetConfig.externalId = config.externalId;
@@ -91,7 +91,7 @@ const JsonConfigCard = () => {
         .filter((pr) => filter(pr))
         .map((product) => {
           return {
-            ...productionItemSchema.getTemplate(),
+            ...createProductionItemSchema().getTemplate(),
             item: product.className,
             amount: 1,
           };
@@ -99,7 +99,7 @@ const JsonConfigCard = () => {
     } else if (key === 'endproducts') {
       presetConfig.production = satisfactoryData.getEndProducts().map((product) => {
         return {
-          ...productionItemSchema.getTemplate(),
+          ...createProductionItemSchema().getTemplate(),
           item: product.className,
           amount: 1,
         };

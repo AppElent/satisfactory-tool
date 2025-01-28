@@ -2,14 +2,14 @@ import usePathRouter from '@/hooks/use-path-router';
 import SubmitButton from '@/libs/forms/components/SubmitButton';
 import TextField from '@/libs/forms/components/TextField';
 import useSatisfactoryCalculator from '@/libs/satisfactory/calculator/use-satisfactory-calculator';
-import calculatorSchema from '@/schemas/satisfactory/calculator';
+import { createCalculatorSchema } from '@/schemas/satisfactory/calculator';
 import { Button, Card, CardActions, CardContent, CardHeader } from '@mui/material';
 import { useMemo } from 'react';
 import { toast } from 'react-toastify';
 
 const ConfigureMetadataCard = () => {
   const { config, deleteConfig, createConfig } = useSatisfactoryCalculator();
-  const fieldDefinitions = useMemo(() => calculatorSchema.getFieldDefinitions(), []);
+  const fieldDefinitions = useMemo(() => createCalculatorSchema().getFieldDefinitions(), []);
   const router = usePathRouter();
 
   const handleDelete = async () => {
@@ -24,7 +24,7 @@ const ConfigureMetadataCard = () => {
   };
 
   const cloneConfig = async () => {
-    const template = calculatorSchema.getTemplate();
+    const template = createCalculatorSchema().getTemplate();
     const newConfig = {
       ...template,
       ...config,

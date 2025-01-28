@@ -2,7 +2,7 @@ import JsonEditor from '@/components/default/json-editor';
 import CustomTextField from '@/libs/forms/components/TextField';
 import Calculator from '@/libs/satisfactory/calculator';
 import useSatisfactoryCalculator from '@/libs/satisfactory/calculator/use-satisfactory-calculator';
-import calculatorSchema from '@/schemas/satisfactory/calculator';
+import { createCalculatorSchema } from '@/schemas/satisfactory/calculator';
 import {
   Button,
   Card,
@@ -18,7 +18,7 @@ import { toast } from 'react-toastify';
 const SatisfactoryToolsCard = () => {
   const { config } = useSatisfactoryCalculator();
   //const [toolsConfig, setToolsConfig] = useState<string>();
-  const fieldDefinitions = useMemo(() => calculatorSchema.getFieldDefinitions(), []);
+  const fieldDefinitions = useMemo(() => createCalculatorSchema().getFieldDefinitions(), []);
   const [json, setJson] = useState<string>('');
 
   const openInSatisfactoryTools = async () => {
