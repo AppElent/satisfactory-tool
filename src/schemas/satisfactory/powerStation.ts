@@ -4,7 +4,7 @@ import { createDefaultSchema } from '..';
 
 const generatorYupSchema = Yup.object().shape({
   type: Yup.string().required().min(3).label('Generator type'),
-  amount: Yup.number().required().label('Amount'),
+  amount: Yup.number().required().label('Amount').default(0),
   fuel: Yup.string().default('').label('Fuel'),
   potential: Yup.number().label('Potential'),
 });

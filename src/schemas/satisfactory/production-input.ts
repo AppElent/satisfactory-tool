@@ -4,7 +4,7 @@ import { createDefaultSchema } from '..';
 
 export const productionInputYupSchema = Yup.object().shape({
   item: Yup.string().required().label('Product'),
-  amount: Yup.number().required().label('Amount'),
+  amount: Yup.number().required().label('Amount').default(0),
 });
 
 export type ProductionInput = Yup.InferType<typeof productionInputYupSchema>;
