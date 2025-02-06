@@ -90,8 +90,14 @@
     "deleteError": "Fout bij het verwijderen van {{resource}} (statuscode: {{statusCode}})",
     "editSuccess": "Succesvol bewerkte {{resource}}",
     "editError": "Fout bij het bewerken van {{resource}} (statuscode: {{statusCode}})",
-    "importProgress": "Importeren: {{processed}}/{{total}}"
+    "importProgress": "Importeren: {{processed}}/{{total}}",
+    "updatedSuccess": "{{resource}} succesvol geupdate",
+    "updatedError": "{{resource}} update mislukt"
   },
   "loading": "Laden",
-  "buttons": {}
+  "buttons": {},
+  "menu": {
+    "settings": "Instellingen",
+    "profile": "Profiel"
+  }
 }

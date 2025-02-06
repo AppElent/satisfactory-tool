@@ -9,18 +9,19 @@ import {
   DialogTitle,
   IconButton,
 } from '@mui/material';
-import { useCallback, useState } from 'react';
+import { ComponentProps, useCallback, useState } from 'react';
 import Cropper from 'react-easy-crop';
 
 interface ImageCropperProps {
   imageUrl: string;
   filename: string;
   onSave: (file: File, path: string) => Promise<string>;
+  onCancel?: () => void;
   dialog?: {
     isOpen: boolean;
     close: () => void;
   };
-  cropperProps?: any;
+  cropperProps?: Partial<ComponentProps<typeof Cropper>>;
 }
 
 async function convertImageToDataURL(url: string): Promise<string> {
@@ -115,6 +116,7 @@ const ImageCropper = ({ imageUrl, filename, onSave, dialog, cropperProps }: Imag
                 onCropChange={setCrop}
                 onZoomChange={setZoom}
                 onCropComplete={onCropComplete}
+                {...cropperProps}
               />
             </div>
           )}

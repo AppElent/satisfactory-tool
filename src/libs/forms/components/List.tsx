@@ -22,9 +22,10 @@ import {
 import { FieldArray, useField } from 'formik';
 import _ from 'lodash';
 
-type CustomListProps = {
+export type CustomListProps = {
   name?: string;
   field?: FieldConfig;
+  reorderable?: boolean;
   muiListProps?: ListProps;
   muiListItemProps?: ListItemProps;
   muiListItemTextProps?: ListItemTextProps;
@@ -35,6 +36,9 @@ interface CustomListItemProps extends CustomListProps {
   name: string;
   index: number;
   remove: () => void;
+  muiTextFieldProps?: TextFieldProps;
+  muiListItemProps?: ListItemProps;
+  muiListItemTextProps?: ListItemTextProps;
 }
 
 const ListItem = ({ name, index, remove, ...props }: CustomListItemProps) => {
@@ -50,7 +54,7 @@ const ListItem = ({ name, index, remove, ...props }: CustomListItemProps) => {
       >
         <TextField
           fullWidth
-          margin="dense"
+          // margin="dense"
           {...field}
           {...props}
           value={field.value || ''}
@@ -119,7 +123,7 @@ const List = ({ name, field: fieldConfig, ...props }: CustomListProps) => {
             </IconButton>
             <Typography variant="h6">{fieldConfig?.label || fieldName}</Typography>
           </Stack>
-          {fieldConfig?.custom?.reorderable ? (
+          {fieldConfig?.custom?.list?.reorderable ? (
             <DragDropContext onDragEnd={onDragEnd}>
               <Droppable droppableId="droppable-list">
                 {(provided) => (
@@ -130,7 +134,7 @@ const List = ({ name, field: fieldConfig, ...props }: CustomListProps) => {
                   >
                     <MUIList
                       dense
-                      {...newProps?.muiListProps}
+                      {...newProps}
                     >
                       {field.value?.map((_item: any, index: number) => (
                         <Draggable
@@ -152,7 +156,7 @@ const List = ({ name, field: fieldConfig, ...props }: CustomListProps) => {
                                   name={`${field.name}.${index}`}
                                   index={index}
                                   remove={() => remove(index)}
-                                  {...newProps?.muiListItemProps}
+                                  {...newProps}
                                 />
                               </Box>
                             </Stack>
